@@ -1,0 +1,47 @@
+body {
+  font: 14px Helvetica;
+  width: auto;
+  height: auto;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+header {
+  text-align: center;
+  width: auto;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #ff9933;
+}
+section {
+  width: 60%;
+  height: 40%;
+  float: left;
+  background: #99ccff;
+}
+aside {
+  width: 20%;
+  height: 40%;
+  float: right;
+  background: #cc99ff;
+}
+nav {
+  width: 20%;
+  height: 40%;
+  float: left;
+  background: #00ffff;
+}
+footer {
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  float: left;
+  margin-top: 10px;
+  background: #66ff66;
+}

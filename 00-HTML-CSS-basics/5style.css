@@ -1,0 +1,175 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+p,
+h2 {
+  margin: 0em 1.25rem 0em;
+}
+p {
+  padding-bottom: 1.25em;
+}
+body {
+  font: 16px Helvetica;
+  width: auto;
+  height: auto;
+  background: #fff;
+}
+a {
+  font-weight:bold;
+  text-decoration: none;
+  color: black;
+}
+aside,
+footer,
+header,
+nav,
+section{
+  display: inline-block;
+}
+.header {
+  text-align: center;
+  font-size: 46px;
+  width: auto;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+  display: none;
+}
+.content {
+  font-size: 16px;
+  width: 60%;
+  height: 40%;
+  float: left;  
+}
+.sidebar {
+  font-size: 16px;
+  width: 20%;
+  height: 40%;
+  float: right;
+  display: none;
+}
+.navigation {
+  font-size: 10px;	
+  width: 20%;
+  height: 40%;
+  float: left;  
+}
+.footer {
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+  height: 30%;
+  float: left;
+  margin-top: 10px;
+  display: none;
+}
+.column {
+  position: absolute;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.07);
+  height: 100%;
+  top: 0px;
+}
+.column-01 {
+  left: 16.66667%;
+}
+.column-02 {
+  left: 33.33334%;
+}
+.column-03 {
+  left: 50%;
+}
+.column-04 {
+  left: 66.66667%;
+}
+.column-05 {
+  left: 83.33334%;
+}
+.textBeforeGrid{
+  position: absolute;
+  top: 0px;
+  left: 480px;
+  width: 50%;
+}
+.gridRow1 {
+  position: absolute;
+  display: inline;
+  top: 250px;
+  left: 0px;
+}
+.gridRow2 {
+  position: absolute;
+  display: inline;
+  top: 570px;
+  left: 0px;
+}
+.gridFreeRow2 {
+  position: absolute;
+  display: inline;
+  top: 490px;
+  left: 0px; 
+}
+.gridColLeft {
+  position: absolute;
+  display: inline;
+  top: 0px;
+  left: 20px;
+}
+.gridColCenter {
+  position: absolute;
+  display: inline;
+  top: 0px;
+  left: 470px;
+}
+.gridColRight {
+  position: absolute;
+  display: inline;
+  top: 0px;
+  left: 920px;
+}
+.button {
+  height: 10.75rem;
+  width: 3rem;
+  line-height: 10rem;
+  color: #fff;
+  padding: 25;
+  background-color: #000;
+  position: fixed;
+  top: 50%;
+  margin-top: -5rem;
+  text-align: center;
+  font-size: 1rem;  
+  border: 1px solid #222;
+  right: -1px;  
+}
+.textButton {  
+  height: 10.75rem;
+  width: 1rem;
+  line-height: 10rem;
+  color: #fff;
+  padding: 0 ;
+  background-color: #000;
+  position: fixed;
+  top: 50%;
+  margin-top: -5rem;
+  text-align: center;
+  font-size: 1rem;  
+  border: 0px solid #222;
+  right: 0px;
+  text-decoration: none; 
+}
+div.text {
+  display: none;
+}
+div.text :hover {
+  display: block;
+}
+a.hover {    
+    color: rgba(0,0,0,0);    
+}
+
+a.hover:hover {    
+    color: rgba(0,0,0,1);
+}

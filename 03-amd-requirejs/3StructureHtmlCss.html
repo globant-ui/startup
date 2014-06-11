@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basic Structure</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="3style.css" rel="stylesheet" type="text/css" title="Default Style"/>
+    <script src="jquery-1.11.1.js"></script>
+    <script src="require.js"></script>
+    <script src="movie.js"></script>
+     <script>
+      $(document).ready(function(){        
+        $("section.content").fadeIn();        
+      });
+    </script>
+    <script>
+     // Set up Movies
+      var terminator= new Movie();
+      var ironman= new Social();
+      var batman= new Downloadable();
+      var obs= new MovieObserver();
+      terminator.set("title","Terminator");      
+      ironman.set("title","Iron Man");      
+      batman.set("title","Batman Begins");
+      terminator.addObserver(obs);
+      ironman.addObserver(obs);
+      batman.addObserver(obs);
+      terminator.play();
+      ironman.play();
+      batman.play();
+      terminator.stop();
+      batman.download();
+      ironman.like();
+      ironman.share("V. Rivas");
+      var actor1= new Actor();
+      actor1.set("name","Christian Bale");
+      var actor2= new Actor();
+      actor2.set("name","Michael Caine");
+      batman.addActor(actor1);
+      batman.addActor(actor2);
+    </script>
+  </head>
+  <body>
+  	<header>
+      <h1>Título del encabezado centrado</h1>
+      <p>Texto del encabezado centrado</p>
+    </header>
+    <nav>
+      <h3>Título del Nav</h3>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <h2>Título 1</h2>
+        <p>Texto 1</p>
+      </article>
+      <article>
+        <h2>Título 2</h2>
+        <p>Texto 2</p>
+      </article>
+    </section>
+    <aside>
+      <h3>Título del Aside</h3>
+      <p>Contenido del Aside</p>
+    </aside>
+    <footer>
+      <p>Texto de pie de página centrado</p>
+    </footer>
+  </body>
+</html>

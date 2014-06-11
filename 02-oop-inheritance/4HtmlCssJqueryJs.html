@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML+CSS+JQuery+JavaScript</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/grid.css">
+    <link href="4style.css" rel="stylesheet" type="text/css" title="Default Style"/>        
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="hashmap.js"></script>
+    <script type="text/javascript">
+      function Hashmap(obj){
+          this.length = 0;
+          this.items = {};
+          for (var p in obj) {
+              if (obj.hasOwnProperty(p)) {
+                  this.items[p] = obj[p];
+                  this.length++;
+              }
+          }
+          this.setItem = function(key, value)
+          {
+              var previous = undefined;
+              if (this.hasItem(key)) {
+                  previous = this.items[key];
+              }
+              else {
+                  this.length++;
+              }
+              this.items[key] = value;
+              return previous;
+          }
+          this.getItem = function(key) {
+              return this.hasItem(key) ? this.items[key] : undefined;
+          }
+          this.hasItem = function(key)
+          {
+              return this.items.hasOwnProperty(key);
+          }         
+          this.removeItem = function(key)
+          {
+              if (this.hasItem(key)) {
+                  previous = this.items[key];
+                  this.length--;
+                  delete this.items[key];
+                  return previous;
+              }
+              else {
+                  return undefined;
+              }
+          }
+          this.keys = function()
+          {
+              var keys = [];
+              for (var k in this.items) {
+                  if (this.hasItem(k)) {
+                      keys.push(k);
+                  }
+              }
+              return keys;
+          }
+          this.values = function()
+          {
+              var values = [];
+              for (var k in this.items) {
+                  if (this.hasItem(k)) {
+                      values.push(this.items[k]);
+                  }
+              }
+              return values;
+          }
+          this.each = function(fn) {
+              for (var k in this.items) {
+                  if (this.hasItem(k)) {
+                      fn(k, this.items[k]);
+                  }
+              }
+          }
+          this.clear = function()
+          {
+              this.items = {}
+              this.length = 0;
+          }
+      }
+    </script>
+    <script>
+      // MOVIE
+      function Movie() {
+        var attributes = new Hashmap();
+        var observers = [];
+
+        console.log("new movie");
+        this.set = function (key,value) {
+          attributes.setItem(key,value);
+        };
+        this.get = function (key) {
+          return attributes.getItem(key);
+        };    
+        this.play = function () {
+          this.notifyObservers("play "+ this.get("title"));
+        };
+        this.stop = function () {          
+          this.notifyObservers("stop "+ this.get("title"));
+        };
+        this.addObserver= function(observer) {
+          observers.push(observer);
+          console.log("observer added in "+ this.get("title"));
+        };
+        this.removeObserver= function(observer) {
+          var index = this.observers.indexOf(observer)
+          if (~index) {
+            this.observers.splice(index, 1)
+          }
+        };
+        this.notifyObservers= function(message) {
+          for (var i = observers.length - 1; i >= 0; i--) {
+            observers[i].update(message);
+          };
+        }
+      }  
+      //MovieObserver
+      function MovieObserver(){ 
+        console.log("new observer");
+
+        this.update= function(message){
+          console.log(message);
+        };
+      }
+      // Set up Movies
+      var terminator= new Movie();
+      var ironman= new Movie();
+      var batman= new Movie();
+      var obs= new MovieObserver();
+      terminator.set("title","Terminator");      
+      ironman.set("title","Iron Man");      
+      batman.set("title","Batman Begins");
+      terminator.addObserver(obs);
+      ironman.addObserver(obs);
+      batman.addObserver(obs);
+      terminator.play();
+      ironman.play();
+      terminator.stop();
+            
+    </script>
+  </head>
+    <body>
+      <header class= "header">
+        <h1>Título del encabezado centrado</h1>
+        <p>Texto del encabezado centrado</p>
+      </header>
+      <nav class= "navigation">    
+        <h3>Título del Nav</h3>
+        <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+        </ul>
+      </nav>
+      <section class= "content">
+        <article>
+          <h2>Título 1</h2>
+          <p>Texto 1</p>
+        </article>
+        <article>
+          <h2>Título 2</h2>
+          <p>Texto 2</p>
+        </article>
+      </section>
+      <aside class= "sidebar">
+        <h3>Título del Aside</h3>
+        <p>Contenido del Aside</p>
+      </aside>
+      <footer class= "footer">
+        <p>Texto de pie de página centrado</p>
+      </footer>
+  </body>
+</html>

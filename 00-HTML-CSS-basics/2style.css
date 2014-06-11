@@ -1,0 +1,26 @@
+.htmlHeader {
+  color: orange;
+}
+.UListHeader {
+  color: green;	
+}
+.OListHeader {
+  color: red;
+}
+.DescListHeader {
+  color: blue;
+}
+.Oelements {
+  color: grey;
+}
+.Uelements {
+  color: rgba(0,255,0,1);	
+}
+dl {
+  color: green;
+  font-weight: bold;
+}
+.htmlP {
+  color: black;	
+  font-style: normal;
+}

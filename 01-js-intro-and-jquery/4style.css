@@ -1,0 +1,49 @@
+body {
+  font: 14px Helvetica;
+  width: auto;
+  height: auto;
+  background: #fff;
+}
+aside,
+footer,
+header,
+nav,
+section{
+  display: inline-block;
+}
+.header {
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+}
+.content {
+  text-align: center;
+  width: 60%;
+  height: 40%;
+  float: left;  
+}
+.sidebar {  
+  text-align: center;
+  width: 20%;
+  height: 40%;
+  float: right;  
+}
+.navigation {
+  text-align: center;
+  width: 20%;
+  height: 40%;
+  float: left;  
+}
+.footer {
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+  height: 30%;
+  float: left;
+  margin-top: 10px;  
+}
+.hiddenText{
+  text-align: center; 
+}

@@ -1,0 +1,45 @@
+body {
+  font: 14px Helvetica;
+  width: auto;
+  height: auto;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+header {
+  text-align: center;
+  width: auto;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+}
+section {
+  text-align: center;
+  width: 60%;
+  height: 40%;
+  float: left;  
+}
+aside {
+  text-align: center;
+  width: 20%;
+  height: 40%;
+  float: right;  
+}
+nav {
+  text-align: center;
+  width: 20%;
+  height: 40%;
+  float: left;  
+}
+footer {
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  float: left;
+  margin-top: 10px;  
+}
