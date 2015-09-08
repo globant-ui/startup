@@ -1,0 +1,34 @@
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>A funny cat video</th>
+            <th>A deep house sound</th>        
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <canvas id="myCanvas" width="512" height="455"></canvas>
+                <script>
+                  var canvas = document.getElementById("myCanvas");
+                  var context = canvas.getContext("2d");
+                  var oldTruck = new Image();
+                  oldTruck.onload = function() {
+                    context.drawImage(oldTruck, 0, 0);
+                  };
+                  oldTruck.src = 'images/oldTruck.png';  
+                </script>
+            </td>
+            <td>
+                <video src="video/theOMGcat.mp4" width="320" height="240" preload controls></video>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="sound/claptone%20-%20No%20Eyes%20feat.%20Jaw%20_%20Exploited.mp3" type="audio/mp3">              
+                Your browser does not support the audio element.
+                </audio> 
+            </td>
+        </tr>
+    </tbody>
+</table>
