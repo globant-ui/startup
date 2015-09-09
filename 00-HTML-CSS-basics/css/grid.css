@@ -1,0 +1,80 @@
+* {
+	box-sizing:border-box;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+
+.clearfix {
+	overflow: auto;
+}
+
+/*
+
+=============================
+
+Grid system
+
+=============================
+
+*/
+
+.column {
+		float:left;
+		padding: 0 1rem;
+}
+
+.thumbnail {
+	background: #CCCCCC;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: auto;
+}
+
+.thumbnail > .description {
+	display: none;
+}
+
+.thumbnail:hover > .description {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background: rgba(20,20,20,0.3);
+	color: #fff;
+}
+
+.row {
+}
+
+
+/*
+
+=============================
+
+Exercise 2.6 Media queries
+
+=============================
+
+*/
+
+
+
+
+@media (min-width: 480px) {
+
+	
+	.column.full {width: 100%;}
+	.column.half {width: 50%;}
+	.column.third {width: 33.3%;}
+	.column.fourth {width: 25%;}
+	.column.two-thirds {width: 66.67%;}
+
+}
