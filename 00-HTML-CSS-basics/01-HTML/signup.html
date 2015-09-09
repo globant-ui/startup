@@ -1,0 +1,53 @@
+<header>Sign Up!</header>
+<form id="signup-form" action="backend" method="post"> 
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="firstName">First Name:</label> <input type="text" name="firstName" id="firstName" value="" placeholder="First Name" autofocus="" required="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastName">Last Name:</label> <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name" required="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label> <input type="email" name="email" id="email" value="" placeholder="Email" required="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="birthday">Birthday:</label> <input type="date" name="birthday" id="birthday" value="" required=""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="favSport">Favourite Sport:</label>
+                    <select name="favSport" id="favSport" required="">
+                        <option value="">Select Sport</option>
+                        <option value="football">Football</option>                
+                        <option value="golf">Golf</option>
+                        <option value="rugby">Rugby</option>                
+                        <option value="swimming">Swimming</option>
+                        <option value="tennis">Tennis</option>
+                        <option value="volleyball">Volleyball</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bio">Bio:</label>
+                    <textarea name="bio" id="bio" cols="25" rows="3" required=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="submit" />
+                    <input type="reset" value="clear" />
+                </td>                
+            </tr>
+        </tbody>
+    </table>
+</form>
