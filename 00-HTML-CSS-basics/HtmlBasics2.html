@@ -1,31 +1,66 @@
-<h1> HTML Basics: Exercise 2 </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Html Basics, Ex. 2">
+    <meta name="keywords" content="HTML,Globant, BootCamp">
+    <meta name="author" content="Nahuel A. Veron">
+    <!-- Meta Viewport to make compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<table border="1" style="width:50%">
+    <!-- Style for Table, without it, it will look bad,
+         Using internal Style (And Not Inline) to comply
+         with W3C Validator -->
+    <style>
+      table {
+        width: 50%;
+      }
+      table, th, td {
+        border: 2px solid gray;
+        border-collapse: collapse;
+      }
+    </style>
 
-  <!-- Table Header -->
-  <tr>
-    <td><strong>Money (AR$)</strong></td>
-    <td><strong>Description</strong></td>
-  </tr>
+    <title>Html Basics, Excercise 2</title>
+  </head>
 
-  <!-- Table Elements -->
-  <tr>
-    <td>$ 120</td>
-    <td>Dinner</td>
-  </tr>
+  <body>
+  <h1> HTML Basics: Exercise 2 </h1>
 
-  <tr>
-    <td>$ 70</td>
-    <td>Fuel</td>
-  </tr>
+  <!-- This can be done with border="1" and style="border:1px solid gray",
+       but it will make a warning on W3C Validator, so i made a internal css
+       on head to supply a better solution -->
+  <table>
 
-  <tr>
-    <td>$ 10.999</td>
-    <td>PlayStation 4</td>
-  </tr>
+      <!-- Table Header -->
+      <tr>
+        <td><strong>Money (AR$)</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
 
-  <tr>
-    <td>$ 680</td>
-    <td>G.T.A. V For PS4</td>
-  </tr>
-</table>
+      <!-- Table Elements -->
+      <tr>
+        <td>$ 120</td>
+        <td>Dinner</td>
+      </tr>
+
+      <tr>
+        <td>$ 70</td>
+        <td>Fuel</td>
+      </tr>
+
+      <tr>
+        <td>$ 10.999</td>
+        <td>PlayStation 4</td>
+      </tr>
+
+      <tr>
+        <td>$ 680</td>
+        <td>G.T.A. V For PS4</td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+

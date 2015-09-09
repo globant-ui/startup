@@ -1,49 +1,79 @@
-<h1> HTML Basics: Exercise 4 </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Html Basics, Ex. 4">
+    <meta name="keywords" content="HTML,Globant, BootCamp">
+    <meta name="author" content="Nahuel A. Veron">
+    <!-- Meta Viewport to make compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<form action="#" method="POST">
+    <title>Html Basics, Excercise 4</title>
 
-  <!-- First Name Elements -->
-  <label for="firstName">First Name:</label>
-  <br />
-  <input type="text" name="firstName" required/>
-  <br />
+    <!-- We Will Need to use a Polyfill because firefox and IE
+         don't support input type="date" correctly -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <!-- Configure Webshims & Polyfill -->
+    <script>
+      webshims.setOptions('forms-ext', {types: 'date'});
+      webshims.polyfill('forms forms-ext');
+    </script>
 
-  <!-- Last Name Elements -->
-  <label for="lastName">Last Name:</label>
-  <br />
-  <input type="text" name="lastName" required />
-  <br />
+  </head>
 
-  <!-- email Elements -->
-  <label for="Email">Email:</label>
-  <br />
-  <input type="email" name="email" required />
-  <br />
+  <body>
+    <h1> HTML Basics: Exercise 4 </h1>
+    <form action="#" method="POST">
 
-  <!-- birthDay Elements -->
-  <label for="birthDay">Birthday:</label>
-  <br />
-  <input type="date" name="birthDay" required />
-  <br />
-  
-  <!-- favoriteSport Elements -->
-  <label for="favoriteSport">Favorite Sport:</label>
-  <br />
-  <select name="favoriteSport">
-    <option>Basketball</option>
-    <option>FootBall</option>
-    <option>BaseBall</option>
-    <option>Tennis</option>
-    <option>VolleyBall</option>
-  </select>
-  <br />
-  
-  <!-- bio Elements -->
-  <label for="bio">Biography:</label>
-  <br />
-  <textarea name="bio" rows="4" cols="50"></textarea>
-  <br />
-  <!-- Submit and Reset Buttons -->
-  <input type="submit" value="Complete Form!" />
-  <input type="reset" value="Reset" />
-</form>
+    <!-- First Name Elements -->
+    <label for="firstName">First Name:</label>
+    <br />
+    <input type="text" name="firstName" id="firstName" required/>
+    <br />
+
+    <!-- Last Name Elements -->
+    <label for="lastName">Last Name:</label>
+    <br />
+    <input type="text" name="lastName" id="lastName" required />
+    <br />
+
+    <!-- email Elements -->
+    <label for="email">Email:</label>
+    <br />
+    <input type="email" name="email" id="email" required />
+    <br />
+
+    <!-- birthDay Elements, I use Polyfill to guarantee
+         compatibility with Firefox, IE and Old Browsers -->
+    <label for="birthDay">Birthday:</label>
+    <br />
+    <input type="date" name="birthDay" id="birthDay" required />
+    <br />
+
+    <!-- favoriteSport Elements -->
+    <label for="favoriteSport">Favorite Sport:</label>
+    <br />
+    <select name="favoriteSport" id="favoriteSport">
+      <option>Basketball</option>
+      <option>FootBall</option>
+      <option>BaseBall</option>
+      <option>Tennis</option>
+      <option>VolleyBall</option>
+    </select>
+    <br />
+
+    <!-- bio Elements -->
+    <label for="bio">Biography:</label>
+    <br />
+    <textarea name="bio" id="bio" rows="4" cols="50" spellcheck="true"></textarea>
+    <br />
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Complete Form!" />
+    <input type="reset" value="Reset" />
+  </form>
+  </body>
+</html>
+
+

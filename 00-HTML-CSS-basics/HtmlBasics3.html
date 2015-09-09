@@ -1,23 +1,40 @@
-<h1> HTML Basics: Exercise 3 </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Html Basics, Ex. 3">
+    <meta name="keywords" content="HTML,Globant, BootCamp">
+    <meta name="author" content="Nahuel A. Veron">
+    <!-- Meta Viewport to make compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<img src="uiTest.png" alt="An Example Image..." >
+    <title>Html Basics, Excercise 3</title>
+  </head>
 
-<br />
+  <body>
+    <h1> HTML Basics: Exercise 3 </h1>
 
-<!-- Video provided by http://techslides.com/ -->
-<video width="400" controls>
-  <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
-  <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg"> 
-  <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
-  <source src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp">
-  Your browser does not support HTML5 video.
-</video>
+    <img src="./Resources/uiTest.png" alt="An Example Image..." height="180" width="240">
+    <br />
 
-<p>Video provided by <a href="http://techslides.com/">TechSlides</a> </p>
-<br />
+    <video width="400" controls>
+      <!-- Video Sources -->
+      <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
+      <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+      <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+      <source src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp">
+      <!-- Track Sources -->
+      <track src="./Resources/captions.vtt" kind="captions" srclang="en" label="English">
+      <!-- Message for Non-Compatible HTML5 Browsers -->
+      Your browser does not support HTML5 video.
+    </video>
 
-<audio controls>
-  <source src="alarm.mp3" type="audio/mpeg">
-</audio>
+    <br />
 
-<p> Audio from <a href="http://soundbible.com/1911-Mandatory-Evacuation.html">Soundible</a> with licence <em> Creative Commons - Attribution 3.0</em></p>
+    <audio controls>
+      <source src="./Resources/alarm.mp3" type="audio/mpeg">
+    </audio>
+
+  </body>
+</html>
