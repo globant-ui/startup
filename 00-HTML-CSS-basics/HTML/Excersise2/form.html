@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Demian-Moschin">
+    <meta name="description" content="Submit form for web developers">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <title>Form completition</title>
+
+  </head>
+
+  <body>
+
+    <form id="sign-form" accept-charset="UTF-8">
+
+      <fieldset>
+        <legend>Personal information: </legend>
+        <p>
+         <label>First Name:<input form="sign-form" autofocus name="firstName" required size="20" maxlength="20" placeholder="e.g.: John" /></label>
+        </p>
+        <p>
+          <label>Last Name:<input form="sign-form" name="lastName" required size="20" maxlength="20" placeholder="e.g.: Doe"/></label>
+        </p>
+        <p>
+          <label>Birthday:<input type="date" form="sign-form" name="birthday"  /></label>
+        </p>
+        <p>
+          <label>E-Mail:<input type="email"  name="email" placeholder="user@mydomain.com" form="sign-form" required pattern=".*@*$.*"/></label>
+        </p>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Tell us a little bit more about you!</legend>
+        <p>
+          <label>Choose your favourite sport:
+            <select>
+              <option value="Swimming" selected label="Swimming">Swimming</option>
+              <option value="Kayaking" label="Kayaking">Kayaking</option>
+              <option value="Runnig" label="Runnig">Runnig</option>
+              <option value="Gym classes" label="Gym classes">Gym classes</option>
+            </select>
+          </label>
+        </p>
+
+      <p>
+        <textarea cols="100" rows="5" name="biography" placeholder="Litte bio to get to know you better :)"></textarea>
+      </p>
+      </fieldset>
+
+      
+
+
+      <button type="submit">Submit</button>
+
+      <button type="reset">Reset</button>
+
+    </form>
+
+  </body>
+
+</html>
