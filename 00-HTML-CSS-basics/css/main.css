@@ -1,0 +1,204 @@
+
+/*
+===============================================
+Exercise 2.2
+===============================================
+*/
+html {
+	font-family: 'Arial';
+	font-size: 14px !important;
+}
+
+body > header {
+	background:#ce93d8;
+	text-align: center;
+}
+
+body > footer {
+	background:#9fa8da;
+	text-align: center;
+}
+
+body > aside {
+	background: #90caf9;
+}
+
+body > nav {
+	background: #ddd;
+}
+
+body > section {
+	background: #ccc;
+}
+
+body > header, body > footer {
+	text-align: center;
+}
+
+/*
+===============================================
+Exercise 2.3
+===============================================
+*/
+
+.header{
+	font-size:46px;
+}
+.footer{
+	font-size:10px;
+}
+.content{
+	font-size:14px;
+}
+.navigation{
+	font-size:12px;
+}
+.sidebar{
+	font-size:10px;
+}
+.mobile-button{
+	display: none;
+}
+
+/*
+===============================================
+Exercise 2.4 
+===============================================
+*/
+
+[class$="r"] {
+	background:magenta;
+}
+
+/*
+===============================================
+Exercise 2.5 
+===============================================
+*/
+
+
+[class*="a"]:not([class$="r"]){
+	background:blue!important;
+}
+
+
+/*
+===============================================
+Exercise 2.6
+===============================================
+
+
+html [class]{
+	font-family: 'Arial' !important;
+	font-size: 14px !important;
+}
+*/
+
+/*
+===============================================
+Exercise 2.7 
+===============================================
+
+.oh-no-inline-styles {
+	background: black !important;
+}
+
+*/
+
+
+/*
+===============================================
+Exercise 2.8
+===============================================
+
+*/
+
+html {
+}
+
+header{
+	margin-bottom: 15px;
+}
+
+nav, section, aside {
+	vertical-align: top;
+	box-sizing:border-box;
+	padding: 0;
+}
+
+nav {
+	width: 28%;
+	display: inline-block;
+}
+section {
+	width: 40%;
+	margin: 0 2% 15px 2%;
+	display: inline-block;
+}
+
+aside {
+	width: 28%;
+	display: inline-block;
+}
+footer {
+}
+
+/*
+===============================================
+Media queries
+===============================================
+
+*/
+
+@media (max-width: 720px){
+
+	nav  {
+		width: 25%;
+		display: inline-block;
+	}
+
+	section{
+		width: 70%;
+		margin: 0 0 1em 5%;
+	}
+
+	aside{
+		display: none;
+	}
+	header {
+		position: relative;
+	}
+	.mobile-button {
+		display: none;
+	}
+
+}
+
+@media (max-width: 480px){
+
+	nav  {
+		display: none;
+	}
+
+	aside {
+		display: none;
+	}
+
+	section{
+		width: 100%;
+		margin: 0 0 1em 0;
+	}
+	header {
+		position: relative;
+	}
+	.mobile-button {
+		display: block;
+		width: 50px;
+		height: 100%;
+		background: #ccc;
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1,width=device-width" />
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="/bower_components/normalize-css/normalize.css" />
+		<title>Exercise 1.6</title>
+
+		<style type="text/css">
+
+		input:not([type="submit"]):not([type="reset"]), textarea, select {
+			width: 100%;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Exercise 1.6</h1>
+		
+		<form>
+
+			<fieldset>
+				<legend>Sign up form</legend>
+				<label for="firstName">First name:</label>
+				<input type="text" name="firstName" placeholder="Enter your first name" required pattern=".{3,}" autofocus />
+				<label for="lastName">Last name:</label>
+				<input type="text" name="lastName" placeholder="Enter your last name" required pattern=".{3,}" />
+				<label for="mail">E-mail:</label>
+				<input type="email" name="mail" placeholder="Enter a valid e-mail address" required />
+				<label for="birthday">Birthday:</label>
+				<input type="text" name="birthday" placeholder="Enter your birthday ex: dd-mm-yyyy" required pattern="\d{2}-\d{2}-\d{4}" title="dd-mm-yyyy" /><br />
+				<label for="favouriteSport">Favourite sport</label>
+				<select name="favouriteSport">
+					<option>Soccer</option>
+					<option>Basketball</option>
+					<option>Baseball</option>
+					<option>Rugby</option>
+					<option>Other</option>
+				</select><br />
+				<label for="userBio">Small biography:</label>
+				<textarea name="userBio" rows="5"></textarea>
+
+				<input type="submit" value="Send!" />
+
+				<input type="reset" value="Clear values" />
+ 
+			</fieldset>
+
+		</form>
+
+	</body>
+</html>
