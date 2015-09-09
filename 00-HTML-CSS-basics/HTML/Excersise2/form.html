@@ -18,23 +18,18 @@
 
       <fieldset>
         <legend>Personal information: </legend>
-        <p>
-         <label>First Name:<input form="sign-form" autofocus name="firstName" required size="20" maxlength="20" placeholder="e.g.: John" /></label>
-        </p>
-        <p>
-          <label>Last Name:<input form="sign-form" name="lastName" required size="20" maxlength="20" placeholder="e.g.: Doe"/></label>
-        </p>
-        <p>
-          <label>Birthday:<input type="date" form="sign-form" name="birthday"  /></label>
-        </p>
-        <p>
-          <label>E-Mail:<input type="email"  name="email" placeholder="user@mydomain.com" form="sign-form" required pattern=".*@*$.*"/></label>
-        </p>
+          <label for="first-name">First Name:</label>
+          <input id="first-name" autofocus name="first-name" required size="20" maxlength="20" placeholder="e.g.: John" />
+          <label for="last-name">Last Name:</label>
+          <input name="last-name" id="last-name" required size="20" maxlength="20" placeholder="e.g.: Doe"/>
+          <label for="date">Birthday:</label>
+          <input type="date" id="date" name="birthday" />
+          <label for="email">E-Mail:</label>
+          <input type="email"  name="email" id="email" placeholder="user@mydomain.com" required pattern=".*@*$.*"/>
       </fieldset>
       
       <fieldset>
         <legend>Tell us a little bit more about you!</legend>
-        <p>
           <label>Choose your favourite sport:
             <select>
               <option value="Swimming" selected label="Swimming">Swimming</option>
@@ -43,11 +38,8 @@
               <option value="Gym classes" label="Gym classes">Gym classes</option>
             </select>
           </label>
-        </p>
 
-      <p>
-        <textarea cols="100" rows="5" name="biography" placeholder="Litte bio to get to know you better :)"></textarea>
-      </p>
+        <textarea cols="100" rows="5" name="biography" placeholder="Little bio to get to know you better :)"></textarea>
       </fieldset>
 
       
