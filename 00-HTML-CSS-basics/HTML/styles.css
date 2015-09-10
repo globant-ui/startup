@@ -1,0 +1,8 @@
+.error{
+   	border: 1px solid rgba(215, 0, 0, 0.75);
+   	box-shadow:inset 0px 0px 2px 0px rgba(255, 0, 0, 0.75);
+	}
+
+.font{
+		font-family: tahoma;
+}		
