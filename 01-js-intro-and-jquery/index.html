@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Javascript and Jquery">
+    <meta name="keywords" content="JS, jQuery ,Globant, BootCamp">
+    <meta name="author" content="Nahuel A. Veron">
+    <!-- Meta Viewport to make compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- jQuery CDN -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Styles -->
+    <style>
+      section         { text-align: center; margin-top: 5px; margin-bottom: 5px;}
+      #hiddenSection  { display: none; }
+    </style>
+
+    <!-- jQuery Scripts -->
+    <script>
+      // Shows a Hidden Element
+      function showHidden()
+      {
+        $('.area').focus();
+        $('#hiddenSection').fadeIn();
+      }
+      window.onload = showHidden;
+
+      function getResponse()
+      {
+        console.log('TEXT: ' + $('.area').textContent);
+      }
+    </script>
+
+    <title>Javascript and Jquery</title>
+  </head>
+
+  <body>
+
+    <section id="hiddenSection">
+      <p>This is a Hidden Section</p>
+    </section>
+
+    <section>
+      <input type="text" class="area" placeholder="This will be Focused" />
+    </section>
+
+    <section>
+      <button type="button" onclick="getResponse()">Button</button>
+    </section>
+
+  </body>
+</html>
