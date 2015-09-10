@@ -21,7 +21,10 @@ h1 em {
 
 /* Section */
 section {
+    clear: both;
     background: white;
+    display: block;
+    float: left;
     margin: 0 0 20px 0;
     padding: 20px 0 20px 20px;
 }
@@ -31,12 +34,15 @@ section:after {
     display: table;
     clear: both;
 }
-section [class*='col-']:last-of-type {
+section:last-of-type {
     padding-right: 20px;
 }
 
 /* Article */
 article {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    height: auto;
+    position: relative;
     float: left;
     padding-right: 20px;
     width: 33.33%;
