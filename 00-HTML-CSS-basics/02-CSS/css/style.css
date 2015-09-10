@@ -1,0 +1,83 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+header, footer, aside, nav, article, section{
+    margin: 12px 12px 12px 12px;
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px;
+    border-radius: 25px;
+    display: block;
+}
+html{
+    font-size: 14px;
+    font-family: inherit;
+}
+
+header{
+    background-color: aqua;
+    text-align: center;
+    height: 100px;
+}
+
+nav{    
+	background-color: darkslategray;
+    float: left;       
+    min-height: 550px;
+    position: absolute;
+    margin: 0px 0px 0px 12px;
+}
+
+aside{
+    background-color: dimgrey;
+    float: right;    
+    min-height: 550px;
+    margin: 0px 12px 0px 0px;
+}
+
+footer{
+    background-color: darkcyan;
+    text-align: center;    
+    height: 100px;
+}
+
+article{
+    min-height: 300px;
+}
+
+.header{
+    font-size: 46px;
+}
+
+.content header{
+    height: 70px;
+}
+
+.footer{
+    
+}
+
+.content {
+    margin: auto auto auto auto;
+    width: 960px;
+    min-height: 500px;
+    font-size: 14px; 
+    float: center;    
+}
+
+.navigation{
+    font-size: 12px;
+}
+
+.sidebar{
+    font-size: 10px;
+}
+
+[class$="r"] {
+    background-color: magenta;
+} 
+
+[class*="a"]:not([class$="r"]) {
+    background-color: blue;
+}
