@@ -1,0 +1,52 @@
+/* Body Rules (W/ Global Font Definition) */
+body {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    font: 14px Arial, sans-serif ;
+}
+
+/* Header And Footer On Body Rules */
+body > header, body > footer {
+    width: 100%;
+    float: left;
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Footer on Body Rules */
+body > footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+/* Nav, Section & Aside Rules */
+
+nav {
+    float: left;
+    width: 25%;
+}
+section {
+    width: 50%;
+    float: left;
+    background-color: aqua;
+    text-align: center;
+}
+aside {
+    float: right;
+    width: 25%;
+    text-align: right;
+}
+
+/* Class Rules */
+
+.header { font-size: 46px; }
+.footer { font-size: 10px; }
+.content { font-size: 14px; }
+.navigation { font-size: 12px; }
+.sidebar {  font-size: 10px; }
+
+/* If the class attribute finishes with r (example header, footer), the background must be magenta. */
+*[class$="r"] {background-color: magenta;}
