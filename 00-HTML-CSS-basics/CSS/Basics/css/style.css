@@ -1,0 +1,52 @@
+
+/*font styles*/
+/*----------*/
+
+@font-face{
+  font-family: 'MyFont';
+  src:url('../fonts/amatic/Amatic-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+ 
+}
+
+/*element selectors*/
+/*----------------*/
+html{
+  font-family: MyFont, Ubuntu, Arial, TimesNewRoman, sans-serif;
+}
+
+header,footer{
+  text-align: center;
+}
+/*Class elements*/
+
+.header{
+  font-size: 46px;
+}
+.footer{
+  font-size: 10px;
+}
+.content{
+  font-size: 14px;
+}
+.navigation{
+  font-size: 12px;
+}
+.sidebar{
+  font-size: 10px;
+}
+
+/*Class selectors*/
+/*---------------*/
+
+/*class attribute that ends with 'r'* (already validated) */ 
+*[class$="r"]{
+  background-color: magenta;
+}
+
+/*class attribute containing 'a', which doesn't end with 'r' (already validated) */
+*[class*="a"] *:not([class$="r"]) {
+  background-color: blue;
+}
