@@ -1,0 +1,64 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+code {
+  background: #7f7f7f;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+.default {
+  background: none;
+  color: #666;
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  background: #eaeaed;
+  border-radius: 6px;
+  clear: both;
+  *zoom: 1;
+}
+.group,
+header,
+aside,
+article,
+footer {
+  margin: 24px 1.5% 24px 1.5%;
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+nav {
+  margin: 0 1.5% 24px 1.5%;
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+aside {
+	margin: 0 1.5% 24px 1.5%;
+  display: inline-block;
+  width: 20%;
+  float: right;
+}
+section {
+  display: inline-block;
+  width: 51%;
+}
+footer {
+  margin-bottom: 0;
+}
+
