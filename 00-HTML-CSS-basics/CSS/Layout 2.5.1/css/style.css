@@ -1,0 +1,113 @@
+
+/*font styles*/
+/*----------*/
+
+@font-face {
+  font-family: 'MyFont';
+  src:url('../fonts/amatic/Amatic-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+ 
+}
+
+/*element selectors*/
+/*----------------*/
+
+/*applying box-sizing property in order to stablish same-sized boxes*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: MyFont, Ubuntu, Arial, TimesNewRoman, sans-serif;
+}
+
+
+header{
+  top: 0;
+}
+
+/*Class elements*/
+
+.header {
+  padding-top: 1rem;
+  width: 100%;
+  font-size: 3.286rem;
+  background-color: grey !important; /*Point 6: override inline style*/
+}
+
+
+
+
+.text-alignment-center{
+   text-align: center;
+}
+
+/*Class selectors*/
+/*--------------*/
+/*class attribute that ends with 'r'* (already validated) */ 
+*[class] {
+  display: inline-block;
+}
+
+/*class attribute that ends with 'r'* (already validated) */ 
+*[class$="r"] {
+  background-color: magenta;
+}
+
+/*class attribute containing 'a', which doesn't end with 'r' (already validated) */
+*[class*="a"]*:not([class$="r"]) {
+  background-color: blue;
+}
+
+
+/*Media queries*/
+/*------------*/
+
+@media screen and (max-width:599px) {
+  *[class] {
+    width: 100%;
+
+  }
+  .footer{
+    position: relative;
+    bottom: 0rem;
+  
+  }
+
+  
+}
+
+@media screen and (min-width:600px) {
+  .navigation {
+      float: left;
+      width: 30%;
+      height: 100%;  
+      font-size: 0.857rem; /*12px*/
+    }
+
+  .content {
+      width: 40%;
+      height: 100%;
+      font-size: 1rem; /*14px*/
+    }
+
+  .sidebar {
+      float: right;
+      width: 30%;
+      height: 100%;
+      font-size: 0.714rem; /*10px*/
+    }
+  .footer {
+    font-size: 0.714rem; /*10px*/
+    min-width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0rem;
+    margin: 0;
+  }
+}
+

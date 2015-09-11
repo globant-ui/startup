@@ -1,0 +1,133 @@
+
+/*font styles*/
+/*----------*/
+
+@font-face {
+  font-family: 'MyFont';
+  src:url('../fonts/open-sans/OpenSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+ 
+}
+
+/*element selectors*/
+/*----------------*/
+
+/*applying box-sizing property in order to stablish same-sized boxes*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: MyFont, Ubuntu, Arial, TimesNewRoman, sans-serif;
+}
+
+body{
+  background-color: white;
+
+}
+
+header{
+  top: 0;
+}
+
+/*Class elements*/
+/*--------------*/
+
+.header {
+  padding-top: 1rem;
+  width: 100%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.text-alignment-center{
+   text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 48 rem;
+  width: 90%;
+  opacity: 0.8;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+.odd-section {
+   
+    }
+
+.even-section {
+  
+    }
+
+
+.container:last-child {
+  height: 10%
+}
+
+
+.row:nth-child(odd) {
+   text-align: center;
+    /*background: #fff;
+    opacity: 0.8;*/
+   background-color: rgba(74, 115, 148, 0.4);
+}
+
+
+.row:nth-child(even) {
+    text-align: center;
+    /*background: #eee;*/
+    background-color: rgba(53, 67, 94, 0.4);
+}
+
+/* End Class elements*/
+/*------------------*/
+
+
+
+
+
+/*Media queries*/
+/*------------*/
+
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }
+
+}
+
+@media (min-width: 40rem) {
+  .column.flow-opposite { float: right; }
+}
+
+/* End Media queries*/
+/*------------*/
