@@ -1,0 +1,40 @@
+body{
+	font-family: Tahoma;
+  	width: 100%;
+}
+
+.container{
+	text-align: center;
+	width: 60%
+}
+
+.albumnes{
+  float: right;
+  width: 40%;
+}
+
+.picture{
+  float: left;
+  margin: 2%;
+}
+
+.error{
+	color: #FF0000;
+}
+
+.cont_style{
+	background-color: #ED8694;
+	margin: 3%;
+	border-radius: 15px;
+}
+
+.link{
+	float: right;
+	margin-right: 2%;
+}
+
+.text_style{
+	text-align: center;
+	margin:1%;
+
+}
