@@ -30,7 +30,7 @@ function manageResponse(data)
         // Html Element Target
         var htmlTarget = $('#result');
         htmlTarget.html(htmlTarget.html() +
-        '<article id="result" class="box">' +
+        '<article class="box result">' +
             '<div class="img-container">' +
                 '<img src="' + value['images'][2]['url'] + '" alt="' + value['name'] + '"/>' +
             '</div>' +
