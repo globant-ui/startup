@@ -29,7 +29,6 @@ section {
     padding: 20px 0 20px 20px;
 }
 section:after {
-    /* Or @extend clearfix */
     content: "";
     display: table;
     clear: both;

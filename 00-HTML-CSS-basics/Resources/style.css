@@ -1,9 +1,35 @@
 /* Body Rules (W/ Global Font Definition) */
-body {
+html
+{
     position: relative;
     margin: 0 auto;
     width: 100%;
+
+    /* Global Font Definition,
+     * 2.2 Selector and properties, exercise 2.
+     */
     font: 14px Arial, sans-serif ;
+}
+/* a with color white for readability */
+a
+{
+    color: white;
+}
+
+/* Global Font that Overrides all other fonts,
+ * 2.3 Specificity, exercise 6.
+ */
+*
+{
+    font-size: 12px !important;
+}
+
+/* Background to the header, footer, aside and nav,
+ * 2.2 Selectors and properties, exercise 1.
+ */
+body > header, footer, aside, nav
+{
+    background-color: aqua;
 }
 
 /* Header And Footer On Body Rules */
@@ -12,6 +38,10 @@ body > header, body > footer {
     float: left;
     background-color: green;
     border-radius: 10px;
+
+    /* Center the header and footer text
+     * 2.2 Selector and properties, exercise 2.
+     */
     text-align: center;
 }
 
@@ -40,13 +70,30 @@ aside {
     text-align: right;
 }
 
-/* Class Rules */
+/* Using the new added classes figure out how to override (...),
+ * 2.3 Specificity, exercise 3
+ */
 
-.header { font-size: 46px; }
-.footer { font-size: 10px; }
-.content { font-size: 14px; }
+.header     { font-size: 46px; }
+.footer     { font-size: 10px; }
+.content    { font-size: 14px; }
 .navigation { font-size: 12px; }
-.sidebar {  font-size: 10px; }
+.sidebar    { font-size: 10px; }
 
-/* If the class attribute finishes with r (example header, footer), the background must be magenta. */
+/* If the class attribute finishes with r (example header, footer), the background must be magenta.
+ * 2.3 Specificity, exercise 4.
+ */
 *[class$="r"] {background-color: magenta;}
+
+/* If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.
+ * 2.3 Specificity, exercise 5.
+ */
+*[class*="a"]:not([class$="r"])
+{
+    background-color: blue;
+}
+
+/* Override Inline Styles using !important, is not recommended,
+ * 2.3 exercise 7.
+ */
+.oh-no-inline-styles { background: green !important; font-weight: normal; }
