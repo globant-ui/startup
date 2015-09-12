@@ -44,9 +44,17 @@ function manageResponse(data)
     })
 }
 
-function manageError()
+function manageError(xhr, status, error)
 {
-
+    // Html Element Target
+    var htmlTarget = $('#result');
+    htmlTarget.html(htmlTarget.html() +
+    '<article id="result" class="box">' +
+        '<div class="content-container">' +
+            '<p><strong>ERROR: '+ error + ' - ' + status +' </strong></p>' +
+            '<p><em>' + xhr.responseText + '</em></p>' +
+        '</div>' +
+    '</article>')
 }
 
 function search()
