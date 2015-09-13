@@ -1,4 +1,26 @@
 /***************************************/
+// Function that will run on DOM Ready, it will generate some examples
+function onDOMReady()
+{
+    var terminator = new Movie();
+    // Set Movie Title and Director
+    terminator.set('title', 'Terminator');
+    terminator.set('director', 'James Cameron');
+    //Play and Share (with Me :D )
+    terminator.play();
+    terminator.share('Nahuel A. Veron');
+    // Generate Actors
+    var arnold = new Actor('Arnold Schwarzenegger ', '68');
+    // Put Actor in Movie
+    terminator.pushActor(arnold);
+    // Show data from the actor
+    console.log('The Main Actor is ' + terminator.getActors()[0].getName() + ' and he has ' +
+        terminator.getActors()[0].getAge() + ' years.');
+    // Stop Movie
+    terminator.stop();
+}
+
+/***************************************/
 // MovieObserver will listens for 'playing' and 'stopped',
 // For having only ONE Observer, i will use Pub/Sub with Singleton
 
