@@ -64,9 +64,14 @@ function sucessfulResponse (data)
 
         /* Mark name */
         var html = targetText.html();
-        html = html.substring(0, 8) + '<mark>' + html.substring(8) + '</mark>';
+        html = markName(html);
         targetText.html(html)
     }
+}
+// Mark name
+function markName(internalHtml)
+{
+    return html.substring(0, 8) + '<mark>' + html.substring(8) + '</mark>';
 }
 
 // On Button Click
