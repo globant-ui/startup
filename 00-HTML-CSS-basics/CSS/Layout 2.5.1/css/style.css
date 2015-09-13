@@ -25,10 +25,21 @@ html {
   font-family: MyFont, Ubuntu, Arial, TimesNewRoman, sans-serif;
 }
 
+body > *:nth-child(odd) {
+    /*background: #fff;
+    opacity: 0.8;*/
+   background-color: rgba(74, 115, 148, 0.4);
+}
+
+body > *:nth-child(even) {
+    /*background: #eee;*/
+    background-color: rgba(13, 47, 94, 0.4);
+}
 
 header{
   top: 0;
 }
+
 
 /*Class elements*/
 
@@ -36,39 +47,21 @@ header{
   padding-top: 1rem;
   width: 100%;
   font-size: 3.286rem;
-  background-color: grey !important; /*Point 6: override inline style*/
+}
+
+.header,
+.footer {
+  text-align: center;
 }
 
 
-
-
-.text-alignment-center{
-   text-align: center;
-}
-
-/*Class selectors*/
-/*--------------*/
-/*class attribute that ends with 'r'* (already validated) */ 
-*[class] {
-  display: inline-block;
-}
-
-/*class attribute that ends with 'r'* (already validated) */ 
-*[class$="r"] {
-  background-color: magenta;
-}
-
-/*class attribute containing 'a', which doesn't end with 'r' (already validated) */
-*[class*="a"]*:not([class$="r"]) {
-  background-color: blue;
-}
 
 
 /*Media queries*/
 /*------------*/
 
 @media screen and (max-width:599px) {
-  *[class] {
+  body > * {
     width: 100%;
 
   }
@@ -78,29 +71,32 @@ header{
   
   }
 
+.sidebar {
+   display: none;
+  }
   
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px) and ( max-width: 960px ) {
+  body > * {
+    width: 100%;
+
+  }
   .navigation {
-      float: left;
-      width: 30%;
-      height: 100%;  
-      font-size: 0.857rem; /*12px*/
-    }
+    display: inline-block;
+    vertical-align: top;
+  }
 
   .content {
-      width: 40%;
-      height: 100%;
-      font-size: 1rem; /*14px*/
-    }
+    display: inline-block;
+    vertical-align: top;
+  }
 
   .sidebar {
-      float: right;
-      width: 30%;
-      height: 100%;
-      font-size: 0.714rem; /*10px*/
-    }
+    display: inline-block;
+    vertical-align: top;
+
+  }
   .footer {
     font-size: 0.714rem; /*10px*/
     min-width: 100%;
@@ -108,6 +104,34 @@ header{
     position: absolute;
     bottom: 0rem;
     margin: 0;
+  } 
+}
+
+@media screen and ( min-width: 961px ) {
+
+  /* Here we see a white-space problem with the inline-block layout*/
+  /* Comment to Andres : See if margin-left solution is a good practise, or must be avoided*/
+  .navigation {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    margin-left: -0.1em
   }
+
+  .content {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-left: -0.1em
+
+  }
+
+  .sidebar {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+   margin-left: -0.1em 
+  }
+
 }
 
