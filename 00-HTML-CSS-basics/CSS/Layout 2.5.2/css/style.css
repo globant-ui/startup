@@ -34,27 +34,16 @@ header{
   top: 0;
 }
 
-/*Class elements*/
+/* Grid structure  : for more detail , */
+/* please visti http://adamkaplan.me/grid/ */
 /*--------------*/
-
-.header {
-  padding-top: 1rem;
-  width: 100%;
-  font-size: 2rem;
-  text-align: left;
-}
-
-.text-alignment-center{
-   text-align: center;
-}
 
 .container {
   margin: 0 auto;
-  max-width: 48 rem;
   width: 90%;
-  opacity: 0.8;
+  
+  background-color: aliceblue;
 }
-
 
 .clearfix:before,
 .clearfix:after {
@@ -70,33 +59,63 @@ header{
   *zoom: 1;
 }
 
+.column {
+    float: left;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
-.odd-section {
-   
-    }
+.column.full { width: 100%; }
+.column.two-thirds { width: 66.7%; }
+.column.half { width: 50%; }
+.column.third { width: 33.3%;}
+.column.fourth { width: 25%; }
+.column.flow-opposite { float: right; }
 
-.even-section {
-  
-    }
+/*end grid structure*/
+/*--------------*/
 
 
+/*Class elements*/
+/*--------------*/
+
+.header {
+  padding-top: 1em;
+  width: 100%;
+  font-size: 2em;
+}
 .container:last-child {
   height: 10%
 }
 
-
-.row:nth-child(odd) {
-   text-align: center;
-    /*background: #fff;
-    opacity: 0.8;*/
-   background-color: rgba(74, 115, 148, 0.4);
+.header,
+.footer {
+  text-align: center;
 }
 
+.image {
+  /**/
+  height: auto;
+  width: 100%;
+}
 
-.row:nth-child(even) {
-    text-align: center;
-    /*background: #eee;*/
-    background-color: rgba(53, 67, 94, 0.4);
+.title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1000;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.title:hover {
+  opacity: 1;
 }
 
 /* End Class elements*/
@@ -104,30 +123,15 @@ header{
 
 
 
-
-
-/*Media queries*/
-/*------------*/
-
-@media (min-width: 40rem) {
-  .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .column.full { width: 100%; }
-  .column.two-thirds { width: 66.7%; }
-  .column.half { width: 50%; }
-  .column.third { width: 33.3%; }
-  .column.fourth { width: 25%; }
-  .column.flow-opposite { float: right; }
-
+@media screen and ( max-width: 1024px ) {
+.image { width: 200px; }
 }
-
-@media (min-width: 40rem) {
-  .column.flow-opposite { float: right; }
+@media screen and ( min-width:1025px ) and ( max-width: 1280px ) {
+.image { width: 300px; }
 }
+@media screen and ( min-width: 1081px ) {
+.image { width: 400px; }
+}
+.image{ height: auto; }
 
-/* End Media queries*/
-/*------------*/
+
