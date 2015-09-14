@@ -39,14 +39,14 @@ var MovieObserver = (function()
 
         // MovieObserver Prototype
         MovieObserver.prototype = {
-            publish: function(event)
+            publish: function(event, movieName)
             {
                 // Will send a notify to all subscribed
 
                 for (var i in this.subscribers)
                 {
                     // Notify all subscribers
-                    this.subscribers[i].notify(event);
+                    this.subscribers[i].notify(event, movieName);
                 }
             },
             subscribe: function(subscriber)
@@ -113,13 +113,13 @@ var Movie = (function()
     Movie.prototype =
     {
         /* Object Methods */
-        play: function () { MovieObserver.getInstance().publish('playing'); },
-        stop: function () { MovieObserver.getInstance().publish('stopped'); },
+        play: function () { MovieObserver.getInstance().publish('playing', this.hashmap.title); },
+        stop: function () { MovieObserver.getInstance().publish('stopped', this.hashmap.title); },
 
         /* Event that runs when a notify is incoming */
-        notify: function(event) {
+        notify: function(event, movieName) {
             // Check if event is for started
-            if (event == 'playing')
+            if (event == 'playing' && movieName == this.hashmap.title)
             {
                 if (typeof this.hashmap['title'] !== 'undefined')
                 {
@@ -128,7 +128,7 @@ var Movie = (function()
                 else console.log('The Movie is Playing');
             }
             // Check if event is for stopped
-            else if (event == 'stopped')
+            else if (event == 'stopped' && movieName == this.hashmap.title)
             {
                 if (typeof this.hashmap['title'] !== 'undefined')
                 {
