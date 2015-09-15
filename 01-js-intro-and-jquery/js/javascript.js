@@ -42,7 +42,7 @@ var removeClassFunction = (function() {
 
 var delegateFunction =  (function() {
   //Private variables
-  var obj = $('button');
+  var obj = $('.button-delegates');
   var eventType = 'click';
   var selectedSection = $('section.hidden-section');
   var ajaxReturn ;

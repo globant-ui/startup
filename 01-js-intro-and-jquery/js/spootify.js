@@ -43,5 +43,36 @@ var dataAPI =  (function() {
 })();
 
 
+
+
+
+var spootifySearch =  (function() {
+  //Private variables
+  var obj = $(".button-artists");
+  var eventType = 'click';
+  var ajaxReturn ;
+
+  var getData = function() {
+    var artist;
+    artist = document.getElementById("search-input").value;
+    if (artist) {dataAPI.searchResult(artist); };
+    
+  };
+
+  var functionDelegate = function() {
+    obj.delegate(obj, eventType, getData); 
+  };
+
+  //public API
+  return {
+    searchInSpootify: functionDelegate
+  };//end return 
+  
+})();
+
+
+
+
 //Passing a named function instead of an anonymous function 
-$(document).ready(dataAPI.searchResult('Rolling Stones'));
+
+$(document).ready(spootifySearch.searchInSpootify());
