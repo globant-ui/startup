@@ -2,22 +2,27 @@
 // Function that will run on DOM Ready, it will generate some examples
 function onDOMReady()
 {
-    var terminator = new Movie();
-    // Set Movie Title and Director
-    terminator.set('title', 'Terminator');
-    terminator.set('director', 'James Cameron');
-    //Play and Share (with Me :D )
-    terminator.play();
-    terminator.share('Nahuel A. Veron');
-    // Generate Actors
-    var arnold = new Actor('Arnold Schwarzenegger ', '68');
-    // Put Actor in Movie
-    terminator.pushActor(arnold);
-    // Show data from the actor
-    console.log('The Main Actor is ' + terminator.getActors()[0].getName() + ' and he has ' +
-        terminator.getActors()[0].getAge() + ' years.');
-    // Stop Movie
-    terminator.stop();
+	var terminator = new Movie();
+  // Set Movie Title and Director
+  terminator.set('title', 'Terminator');
+  terminator.set('director', 'James Cameron');
+
+  //Play and Share (with Me :D )
+  terminator.play();
+  terminator.share('Nahuel A. Veron');
+
+  // Generate Actors
+  var arnold = new Actor('Arnold Schwarzenegger ', '68');
+
+  // Put Actor in Movie
+  terminator.pushActor(arnold);
+
+  // Show data from the actor
+  console.log('The Main Actor is ' + terminator.getActors()[0].getName() + ' and he has ' +
+    terminator.getActors()[0].getAge() + ' years.');
+
+	// Stop Movie
+  terminator.stop();
 }
 
 /***************************************/
@@ -26,47 +31,48 @@ function onDOMReady()
 
 var MovieObserver = (function()
 {
-    // Will Hold the Singleton Instance
-    var instance;
+  // Will Hold the Singleton Instance
+  var instance;
 
-    function generateInstance()
+  function generateInstance()
+  {
+    // MovieObserver Constructor
+    function MovieObserver()
     {
-        // MovieObserver Constructor
-        function MovieObserver()
-        {
-            this.subscribers = [];
-        }
-
-        // MovieObserver Prototype
-        MovieObserver.prototype = {
-            publish: function(event, movieName)
-            {
-                // Will send a notify to all subscribed
-
-                for (var i in this.subscribers)
-                {
-                    // Notify all subscribers
-                    this.subscribers[i].notify(event, movieName);
-                }
-            },
-            subscribe: function(subscriber)
-            {
-                // Add a Subscriber on list of subscribers
-                this.subscribers.push(subscriber);
-            }
-        };
-
-        return new MovieObserver();
+      this.subscribers = [];
     }
 
-    // Will Return actual instance or generate a new if doesn't exist.
-    return {
-        getInstance: function()
+    // MovieObserver Prototype
+    MovieObserver.prototype =
+    {
+      publish: function(event, movieName)
+      {
+        // Will send a notify to all subscribed
+				for (var i in this.subscribers)
         {
-            if (!instance) { instance = generateInstance(); }
-            return instance;
+          // Notify all subscribers
+          this.subscribers[i].notify(event, movieName);
         }
+      },
+
+	    subscribe: function(subscriber)
+      {
+        // Add a Subscriber on list of subscribers
+        this.subscribers.push(subscriber);
+      }
     };
+
+	  return new MovieObserver();
+    }
+
+  // Will Return actual instance or generate a new if doesn't exist.
+  return {
+	  getInstance: function()
+    {
+      if (!instance) { instance = generateInstance(); }
+      return instance;
+    }
+  };
 })();
 
 /***************************************/
@@ -99,104 +105,116 @@ var MovieObserver = (function()
 // Movie Module
 var Movie = (function()
 {
+	// Movie Constructor
+  function Movie()
+  {
+    Extend (Movie,Social);
+    MovieObserver.getInstance().subscribe(this);
+    this.hashmap = {};
+    this.hashmap.actors = [];
+  }
 
-    // Movie Constructor
-    function Movie()
+  // Movie Prototype
+  Movie.prototype =
+  {
+    /* Object Methods */
+    play: function () { MovieObserver.getInstance().publish('playing', this.hashmap.title); },
+    stop: function () { MovieObserver.getInstance().publish('stopped', this.hashmap.title); },
+
+    /* Event that runs when a notify is incoming */
+    notify: function(event, movieName)
     {
-        Extend (Movie,Social);
-        MovieObserver.getInstance().subscribe(this);
-        this.hashmap = {};
-        this.hashmap.actors = [];
+      // Check if event is for started
+      if (event == 'playing' && movieName == this.hashmap.title)
+      {
+        if (typeof this.hashmap.title !== 'undefined')
+        {
+          console.log('Playing ' + this.hashmap.title + '...');
+        }
+        else
+        {
+	        console.log('The Movie is Playing');
+        }
+      }
+
+      // Check if event is for stopped
+      else if (event == 'stopped' && movieName == this.hashmap.title)
+      {
+        if (typeof this.hashmap.title !== 'undefined')
+        {
+          console.log('Stopped ' + this.hashmap.title);
+        }
+        else
+        {
+	        console.log('The Movie has stopped');
+        }
+      }
+    },
+
+    /* Getter and Setter */
+    get: function (indexKey)
+    {
+      if (typeof this.hashmap[indexKey] !== 'undefined')
+      {
+        return this.hashmap[indexKey];
+      }
+      else
+      {
+	      return undefined;
+      }
+    },
+
+	  set: function(indexKey, value)
+	  {
+      this.hashmap[indexKey] = value;
+	  },
+
+    /* Actor is a Jagged Array into HashMap */
+    getActors: function()
+    {
+      return this.hashmap.actors;
+    },
+
+    pushActor: function(actor)
+    {
+      if (actor instanceof(Actor))
+      {
+        this.hashmap.actors.push(actor);
+      }
     }
 
-    // Movie Prototype
-    Movie.prototype =
-    {
-        /* Object Methods */
-        play: function () { MovieObserver.getInstance().publish('playing', this.hashmap.title); },
-        stop: function () { MovieObserver.getInstance().publish('stopped', this.hashmap.title); },
+  };
 
-        /* Event that runs when a notify is incoming */
-        notify: function(event, movieName) {
-            // Check if event is for started
-            if (event == 'playing' && movieName == this.hashmap.title)
-            {
-                if (typeof this.hashmap['title'] !== 'undefined')
-                {
-                    console.log('Playing ' + this.hashmap['title'] + '...');
-                }
-                else console.log('The Movie is Playing');
-            }
-            // Check if event is for stopped
-            else if (event == 'stopped' && movieName == this.hashmap.title)
-            {
-                if (typeof this.hashmap['title'] !== 'undefined')
-                {
-                    console.log('Stopped ' + this.hashmap['title']);
-                }
-                else console.log('The Movie has stopped');
-            }
-        },
-
-        /* Getter and Setter */
-        get: function (indexKey)
-        {
-            if (typeof this.hashmap[indexKey] !== 'undefined') {
-                return this.hashmap[indexKey];
-            }
-            else return undefined;
-        },
-        set: function(indexKey, value)
-        {
-            this.hashmap[indexKey] = value;
-        },
-
-        /* Actor is a Jagged Array into HashMap */
-        getActors: function()
-        {
-            return this.hashmap.actors;
-        },
-
-        pushActor: function(actor)
-        {
-            if (actor instanceof(Actor))
-            {
-                this.hashmap.actors.push(actor);
-            }
-        }
-
-    };
-
-    // It Will Return Movie Constructor!
-    return Movie;
-
+  // It Will Return Movie Constructor!
+  return Movie;
 })();
 
 /***************************************/
 // DownloadableMovie Module
 var DownloadableMovie = (function()
 {
-    //DownloadableMovie constructor, it will call
-    //parent constructor using a technique called "constructor stealing"
-    function DownloadableMovie()
-    {
-        //We then apply the 'Parent' constructor logic to 'this', by calling the 'Parent' function
-        //using 'apply', which allow us to specify the object that 'this' should reference
-        //during the function execution.
-        Movie.apply(this);
-    }
+	// DownloadableMovie constructor, it will call
+    // parent constructor using a technique called "constructor stealing"
+  function DownloadableMovie()
+  {
+    // We then apply the 'Parent' constructor logic to 'this', by calling the 'Parent' function
+    // using 'apply', which allow us to specify the object that 'this' should reference
+    // during the function execution.
+    Movie.apply(this);
+  }
 
-    // DownloadableMovie inherits from Movie
-    DownloadableMovie.prototype = Object.create(Movie.prototype);
-    // Add GetDownload
-    DownloadableMovie.prototype.getDownload = function()
+  // DownloadableMovie inherits from Movie
+  DownloadableMovie.prototype = Object.create(Movie.prototype);
+
+  // Add GetDownload
+  DownloadableMovie.prototype.getDownload = function()
+  {
+    // Check if title exist
+    if (typeof this.hashmap.title !== 'undefined')
     {
-        // Check if title exist
-        if (typeof this.hashmap.title !== 'undefined')
-        {
-            console.log('Downloading ' + this.hashmap.title);
-        }
-    };
+      console.log('Downloading ' + this.hashmap.title);
+    }
+  };
 
     // Return Constructor
     return DownloadableMovie;
@@ -209,58 +227,58 @@ var Social = function() {};
 // Methods for Mixin defined in his prototype
 Social.prototype =
 {
-    share: function(friendName)
-    {
-        console.log('Sharing ' + this.hashmap.title + ' with ' + friendName);
-    },
-    like: function()
-    {
-        console.log('I like ' + this.hashmap.title );
-    }
+	share: function(friendName)
+  {
+    console.log('Sharing ' + this.hashmap.title + ' with ' + friendName);
+  },
+  like: function()
+  {
+    console.log('I like ' + this.hashmap.title );
+  }
 };
 
 /***************************************/
 // Extend for mix a mixing into a Object
 function Extend(rcv, giv)
 {
-    // Fore Each Method in Giv Prototype
-    for (var method in giv.prototype)
+	// Fore Each Method in Giv Prototype
+  for (var method in giv.prototype)
+  {
+    // We don't want to overwrite a method
+    if (!rcv.hasOwnProperty (method))
     {
-        // We don't want to overwrite a method
-        if (!rcv.hasOwnProperty (method))
-        {
-            rcv.prototype[method] = giv.prototype[method];
-        }
+      rcv.prototype[method] = giv.prototype[method];
     }
+  }
 }
 
 /***************************************/
 // Actor Module
 var Actor = (function()
 {
-    // Actor Constructor
-    function Actor()
+	// Actor Constructor
+  function Actor()
+  {
+    // Constructor Overload for 2 Arguments
+    if (arguments.length == 2)
     {
-        // Constructor Overload for 2 Arguments
-        if (arguments.length == 2)
-        {
-            this.Name= arguments[0];
-            this.Age = arguments[1];
-        }
-        // Default Constructor w/o Arguments
-        else
-        {
-            this.Name= '';
-            this.Age = '';
-        }
+      this.Name= arguments[0];
+      this.Age = arguments[1];
     }
-
-
-    // Actor Prototype
-    Actor.prototype =
+    // Default Constructor w/o Arguments
+    else
     {
-        getName : function() { return this.Name },
-        getAge  : function() { return this.Age }
-    };
-    return Actor;
+      this.Name= '';
+      this.Age = '';
+    }
+  }
+
+  // Actor Prototype
+  Actor.prototype =
+  {
+	  getName : function() { return this.Name; },
+    getAge  : function() { return this.Age; }
+  };
+
+	return Actor;
 })();

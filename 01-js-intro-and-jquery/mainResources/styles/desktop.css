@@ -1,18 +1,18 @@
 section.basic
 {
-    text-align: center;
-    margin: 5px 5% 5px 5%;
-    padding-bottom: 5px;
-    width: 40%;
-    float: left;
+	text-align: center;
+  margin: 5px 5% 5px 5%;
+  padding-bottom: 5px;
+  width: 40%;
+  float: left;
 }
 article,header
 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 #hiddenSection
 {
-    display: none;
+  display: none;
 }
 
 /* State of response on targetText */
@@ -21,25 +21,25 @@ article,header
 
 .box
 {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 10px;
-    padding: 5px 5px;
-    overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 5px 5px;
+  overflow: hidden;
 }
 .img-container
 {
-    float: left;
-    width: 13%;
-    height: 64px;
+  float: left;
+  width: 13%;
+  height: 64px;
 }
 .content-container
 {
-    float: left;
-    height: 64px;
-    width: 87%;
+  float: left;
+  height: 64px;
+  width: 87%;
 }
 .content-container > p
 {
-    margin:0;
-    text-align: left;
+  margin:0;
+  text-align: left;
 }

@@ -1,64 +1,73 @@
 /* Global Rules */
 /* Make all box-sizing as border-box */
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+*
+{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-body {
-    padding: 10px 50px 200px;
-    background-color: black;
+body
+{
+  padding: 10px 50px 200px;
+  background-color: black;
 }
 
 /* Text */
-h1 {
-    color: white;
+h1
+{
+  color: white;
 }
-h1 em {
-    color: gray;
-    font-size: 16px;
+h1 em
+{
+  color: gray;
+  font-size: 16px;
 }
 
 /* Section */
-section {
-    clear: both;
-    background: white;
-    display: block;
-    float: left;
-    margin: 0 0 20px 0;
-    padding: 20px 0 20px 20px;
+section
+{
+  clear: both;
+  background: white;
+  display: block;
+  float: left;
+  margin: 0 0 20px 0;
+  padding: 20px 0 20px 20px;
 }
-section:after {
-    content: "";
-    display: table;
-    clear: both;
+section:after
+{
+  content: "";
+  display: table;
+  clear: both;
 }
-section:last-of-type {
-    padding-right: 20px;
+section:last-of-type
+{
+  padding-right: 20px;
 }
 
 /* Article */
-article {
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-    height: auto;
-    position: relative;
-    float: left;
-    padding-right: 20px;
-    width: 33.33%;
+article
+{
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  height: auto;
+  position: relative;
+  float: left;
+  padding-right: 20px;
+  width: 33.33%;
 }
 
 /* Div W/ Class "module" */
-.module {
-    align-content: center;
-    padding: 20px;
-    background: #eee;
-    height: 100%;
-    width: 100%;
+.module
+{
+  align-content: center;
+  padding: 20px;
+  background: #eee;
+  height: 100%;
+  width: 100%;
 }
 
 /* Img Rerizer */
-img {
-    max-width:100%;
-    max-height:100%;
+img
+{
+  max-width:100%;
+  max-height:100%;
 }
-

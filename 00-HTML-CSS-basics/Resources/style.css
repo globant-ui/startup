@@ -1,19 +1,19 @@
 /* Body Rules (W/ Global Font Definition) */
 html
 {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
+	position: relative;
+  margin: 0 auto;
+  width: 100%;
 
-    /* Global Font Definition,
-     * 2.2 Selector and properties, exercise 2.
-     */
-    font: 14px Arial, sans-serif ;
+  /* Global Font Definition,
+   * 2.2 Selector and properties, exercise 2.
+   */
+  font: 14px Arial, sans-serif ;
 }
 /* a with color white for readability */
 a
 {
-    color: white;
+	color: white;
 }
 
 /* Global Font that Overrides all other fonts,
@@ -21,7 +21,7 @@ a
  */
 *
 {
-    font-size: 12px !important;
+	font-size: 12px !important;
 }
 
 /* Background to the header, footer, aside and nav,
@@ -29,45 +29,50 @@ a
  */
 body > header, footer, aside, nav
 {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 /* Header And Footer On Body Rules */
-body > header, body > footer {
-    width: 100%;
-    float: left;
-    background-color: green;
-    border-radius: 10px;
+body > header, body > footer
+{
+  width: 100%;
+  float: left;
+  background-color: green;
+  border-radius: 10px;
 
-    /* Center the header and footer text
-     * 2.2 Selector and properties, exercise 2.
-     */
-    text-align: center;
+  /* Center the header and footer text
+   * 2.2 Selector and properties, exercise 2.
+   */
+  text-align: center;
 }
 
 /* Footer on Body Rules */
-body > footer {
-    width: 100%;
-    bottom: 0;
-    position: fixed;
+body > footer
+{
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }
 
 /* Nav, Section & Aside Rules */
 
-nav {
-    float: left;
-    width: 25%;
+nav
+{
+  float: left;
+  width: 25%;
 }
-section {
-    width: 50%;
-    float: left;
-    background-color: aqua;
-    text-align: center;
+section
+{
+  width: 50%;
+  float: left;
+  background-color: aqua;
+  text-align: center;
 }
-aside {
-    float: right;
-    width: 25%;
-    text-align: right;
+aside
+{
+  float: right;
+  width: 25%;
+  text-align: right;
 }
 
 /* Using the new added classes figure out how to override (...),
@@ -90,7 +95,7 @@ aside {
  */
 *[class*="a"]:not([class$="r"])
 {
-    background-color: blue;
+  background-color: blue;
 }
 
 /* Override Inline Styles using !important, is not recommended,

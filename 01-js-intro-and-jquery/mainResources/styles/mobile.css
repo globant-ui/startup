@@ -1,21 +1,21 @@
 section.basic
 {
-    text-align: center;
-    margin: 5px 5% 5px 5%;
-    padding-bottom: 5px;
-    width: 40%;
-    float: left;
+  text-align: center;
+  margin: 5px 5% 5px 5%;
+  padding-bottom: 5px;
+  width: 40%;
+  float: left;
 }
 
 
 article,header
 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 #hiddenSection
 {
-    display: none;
+  display: none;
 }
 
 /* State of response on targetText */
@@ -24,26 +24,26 @@ article,header
 
 .box
 {
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 10px;
-    padding: 5px 5px;
-    overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 5px 5px;
+  overflow: hidden;
 }
 
 .box > input
 {
-    width: 90%;
-    margin-bottom: 5px;
+  width: 90%;
+  margin-bottom: 5px;
 }
 
 .img-container
 {
-    width: auto;
-    height: 64px;
+  width: auto;
+  height: 64px;
 }
 
 .content-container > p
 {
-    margin:0;
-    text-align: center;
+  margin:0;
+  text-align: center;
 }
