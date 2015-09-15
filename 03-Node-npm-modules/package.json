@@ -1,0 +1,33 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "A Startup Project for Bootcamp in Globant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+    "jquery": "^1.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Negan1911/startup.git"
+  },
+  "keywords": [
+    "Startup",
+    "Globant",
+    "Project",
+    "Node.Js",
+    "Html",
+    "CSS",
+    "Javascript",
+    "BackBone",
+    "AngularJS"
+  ],
+  "author": "Nahuel A. Veron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Negan1911/startup/issues"
+  },
+  "homepage": "https://github.com/Negan1911/startup"
+}

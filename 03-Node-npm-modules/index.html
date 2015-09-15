@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="movies.js"></script>
+    <style>
+        .aligned
+        {
+            text-align: center;
+            width: auto;
+            margin: 5px;
+        }
+        .hidden
+        {
+            display: none;
+        }
+        #randomQuote
+        {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header class="aligned">
+        <h2>Director Quotes</h2>
+        <small>Get Quotes by <span id="director">??</span>, the director of <span id="movie">??</span>.</small>
+    </header>
+    <section class="aligned">
+        <input type="button" id="getRandom" value="Get Random Quote" />
+    </section>
+    <section class="aligned hidden" id="targetSection">
+        <p id="randomQuote"></p>
+    </section>
+</body>
+</html>
