@@ -54,9 +54,9 @@ var delegateFunction =  (function() {
     ajaxReturn = result.response;
     selectedSection.append("<p>" + ajaxReturn + "</p>");
     })
-    
+
     .always(function() {
-      alert("Success Demian!!");
+      alert("delegateFunction working");
     })
 
     .fail(function() {
@@ -76,6 +76,7 @@ var delegateFunction =  (function() {
   
 })();
 
+/*--------- finished ones -----------------*/
 
 
 //Passing a named function instead of an anonymous function 
