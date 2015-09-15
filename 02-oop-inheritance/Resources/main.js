@@ -137,6 +137,7 @@ var Movie = (function()
                 else console.log('The Movie has stopped');
             }
         },
+
         /* Getter and Setter */
         get: function (indexKey)
         {
@@ -149,19 +150,21 @@ var Movie = (function()
         {
             this.hashmap[indexKey] = value;
         },
+
         /* Actor is a Jagged Array into HashMap */
+        getActors: function()
+        {
+            return this.hashmap.actors;
+        },
+
         pushActor: function(actor)
         {
             if (actor instanceof(Actor))
             {
                 this.hashmap.actors.push(actor);
             }
-        },
-
-        getActors: function()
-        {
-            return this.hashmap.actors;
         }
+
     };
 
     // It Will Return Movie Constructor!

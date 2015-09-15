@@ -5,7 +5,7 @@
     <option bitwise="true" />
     <option boss="true" />
     <option browser="true" />
-    <option browserify="false" />
+    <option browserify="true" />
     <option camelcase="true" />
     <option couch="false" />
     <option curly="true" />
