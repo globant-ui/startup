@@ -1,0 +1,45 @@
+body
+{
+    background-color: #11073B;
+}
+
+section.main
+{
+    margin: 10%;
+    width: auto;
+    height: auto;
+    color: white;
+}
+h2.title
+{
+    font-family: 'Raleway', serif;
+}
+article.box
+{
+    background-color: #CDC6EB;
+    border: 2px solid rgb(128, 24, 255);
+    width: 80%;
+    position: absolute;
+    color: black;
+    border-radius: 7px;
+}
+
+article.box-image
+{
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+article.box-data
+{
+    float: left;
+    width: 68%;
+    margin-right: 2%;
+}
+article.box > article
+{
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
