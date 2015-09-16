@@ -1,0 +1,30 @@
+{
+  "name": "html5bootcamp",
+  "version": "1.0.0",
+  "description": "The future of Web Applications is here!",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaramendia/html5bootcamp.git"
+  },
+  "keywords": [
+    "HTML5",
+    "BootCamp",
+    "Globant-ui",
+    "CSS",
+    "JavaScript",
+    "JQuery" 
+  ],
+  "author": "Aramendia Yamila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaramendia/html5bootcamp/issues"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "homepage": "https://github.com/yaramendia/html5bootcamp#readme"
+}
