@@ -13,6 +13,7 @@
 
     <!-- We Will Need to use a Polyfill because firefox and IE
          don't support input type="date" correctly -->
+     <!-- It is a good practice include js files at the bottom of the body -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
     <!-- Configure Webshims & Polyfill -->
@@ -55,6 +56,7 @@
     <!-- favoriteSport Elements -->
     <label for="favoriteSport">Favorite Sport:</label>
     <br />
+    <!-- It might have an empty <option> if I don't want select anyone -->
     <select name="favoriteSport" id="favoriteSport">
       <option>Basketball</option>
       <option>FootBall</option>
