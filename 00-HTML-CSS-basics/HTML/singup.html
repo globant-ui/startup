@@ -1,7 +1,9 @@
+<!-- Good indentation -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Registration</title>
+	<!-- It is a good practice include js files at the end of the body -->
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
 	<script>
@@ -10,6 +12,7 @@
 		webshims.polyfill('forms forms-ext');
 		//These libraries are used to work in other browsers incompatible with html5
 	</script>
+	<!-- You could use CDN repository also -->
 	<script src="jquery-2.1.4.js" type="text/javascript"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,11 +21,17 @@
 </head>
 
 <body>
+	<!-- You could use <header> and <section> or <article> -->
+	<!-- If there is not a h1, you should use it instead of h2 -->
 	<h2 class='font'>Registration form</h2>
+	<!-- 
+		* And the tag form ?!
+		* It is not a good practice use table for layouting. Old solution.
+	-->
 	<table>
 		<tr>
 			<td>
-				<input type="text" id="name" size="25" placeholder="Name" >
+				<input type="text" id="name" size="25" placeholder="Name" > <!-- Nice using placeholder -->
 			 </td>
 		</tr>
 		<tr>
@@ -37,7 +46,7 @@
 		</tr>
 		<tr>
 			<td>
-				<p class='font'>Birthday</p>
+				<p class='font'>Birthday</p><!-- Why didn't you use <label> tag? -->
 				<input type="date" id="bday">
 			</td>
 		</tr>
