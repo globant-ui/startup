@@ -18,6 +18,7 @@ Movie.prototype =
 */
 
 //MOVIEOBSERVER
+//pub/sub
 var MovieObserver=(function()
 {
 	function MovieObserver(){
@@ -44,6 +45,7 @@ MovieObserver.prototype=
 return new MovieObserver();
 })();
 
+
 //MODULE MOVIE
 var Movie= (function()
 {
@@ -69,7 +71,7 @@ var Movie= (function()
 		},
 
 		notify: function(event){
-			if (event == 'playing')
+			if (event=='playing')
 			{
 				console.log('Playing '+ this.hashmap['title']);
 			}
@@ -101,7 +103,6 @@ var Movie= (function()
         	return aux;
         }
 	};
-
 return Movie;
 })();
 
@@ -116,7 +117,7 @@ var DownloadableMovie= (function()
 	DownloadableMovie.prototype=Object.create(Movie.prototype);
 	DownloadableMovie.prototype.getDownload = function()
 	{
-		console.log('Downloading '+this.hashmap.title);
+		console.log('Downloading '+this.get('title'));
 	};
 	
 return DownloadableMovie;
@@ -124,16 +125,15 @@ return DownloadableMovie;
 
 //MIXIN SOCIAL
 var Social= function(){};
-
 Social.prototype=
 {
 	share: function(friendName)
 	{
-		console.log('Sharing '+ this.hashmap.title+' with '+ friendName);
+		console.log('Sharing '+ this.get('title')+' with '+ friendName);
 	},
 	like: function()
 	{
-		console.log('You like '+this.hashmap.title+'!');
+		console.log('You like '+this.get('title')+'!');
 	}
 };
 
@@ -173,7 +173,7 @@ var act1= new Actor("Arnold","Schwarzenegger");
 var act2= new Actor("Linda","Hamilton");
 m1.push_actor(act1);
 m1.push_actor(act2);
-console.log('The movie '+m1.get('title')+' / Actors : '+m1.get_actors());
+console.log('The movie '+ m1.get('title') + ' / Actors : ' + m1.get_actors());
 m1.stop();
 
 m2.play();
