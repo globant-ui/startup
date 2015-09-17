@@ -48,7 +48,7 @@ var MovieObserver = (function()
       publish: function(event, movieName)
       {
         // Will send a notify to all subscribed
-				for (var i in this.subscribers)
+		for (var i in this.subscribers)
         {
           // Notify all subscribers
           this.subscribers[i].notify(event, movieName);
@@ -160,13 +160,13 @@ var Movie = (function()
       }
       else
       {
-	      return undefined;
+	    return undefined;
       }
     },
 
 	  set: function(indexKey, value)
 	  {
-      this.hashmap[indexKey] = value;
+        this.hashmap[indexKey] = value;
 	  },
 
     /* Actor is a Jagged Array into HashMap */
@@ -276,7 +276,7 @@ var Actor = (function()
   // Actor Prototype
   Actor.prototype =
   {
-	  getName : function() { return this.Name; },
+    getName : function() { return this.Name; },
     getAge  : function() { return this.Age; }
   };
 
