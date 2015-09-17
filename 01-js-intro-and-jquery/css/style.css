@@ -28,19 +28,23 @@ html {
 header{
   top: 0;
 }
+
 li {
   display: inline-block;
-    
 }
+
 ul {
   list-style-type: none; 
 }
+
 ul>li>a {
   text-decoration: none;
 }
+
 section {
   text-align: center;
 }
+
 .container {
   width: 80%;
   background-color: rgba(187, 154, 44, 0.6);
@@ -49,6 +53,7 @@ section {
   max-width: 80%;
   height: 100%;
 }
+
 .main-section {
   float: left;
   max-width: 65%;
@@ -58,28 +63,30 @@ section {
   float: right;
   max-width: 33%;
 }
+
 .main-footer {
   display: inline-block;
   width: 100%;
   text-align: center;
   font-style: oblique;
 }
+
 .hidden-section {
   float: left;
   display: none; /* can be changed with jQuery "fadeIn" */
 }
+
 .albums {
     min-width: 300px;
     min-height: 300px;
     display: inline-block;
     text-align: center;
-    
 }
 
 .font-color-primary {
  color:aliceblue;
-
 }
+
 .font-color-secondary {
   color: rgba(187, 154, 44, 0.8);
 }
