@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Personal data validation">
+<meta name="author" content="Chino">
+<meta name="viewport" content="width=500, initial-scale=1">
+<title>Personal data validation</title>
+</head>
+<form id="contact-form" action="thanks.html" method="get">
+    	<ul>
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required="" value="" />
+        </li>
+        <li>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="last name" id="lastname" value="" />
+        </li>
+        <li>
+            <label for="email">Email:</label>
+            <input type="email" required placeholder="Enter a valid email address" id="email" value=""/>
+        </li>
+        <li>
+        	<label for="birthday">Birthday:</label>
+        	<input type="date" id="birthday" value=""/>
+        </li>
+        <li>
+        	<label for="favouritesport">Choose your favourite sport:</label>
+  				<select name="sport" id="favouritesport">
+				    <option value="">Sport</option>
+				    <option value="basketball">Basketball</option>
+				    <option value="football">Football</option>
+				    <option value="baseball">Baseball</option>
+				    <option value="tennis">Tennis</option>
+				    <option value="soccer">Soccer</option>
+				    <option value="hockey">Hockey</option>
+  				</select>
+  		</li>
+  		<li>
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" cols="25" rows="3"></textarea>
+        </li>
+        <li>
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </li>
+    </ul>
+</form>
