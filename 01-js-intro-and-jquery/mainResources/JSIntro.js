@@ -1,5 +1,6 @@
 // Will Run on DOM Ready!
-$(document).ready(function() {
+$(document).ready(function ()
+{
   // When the page has finished loading the section must fade in.
   // Topic 1, exercise 5
 
@@ -7,7 +8,7 @@ $(document).ready(function() {
   // Function will focus when fade in completes.
   // Topic 1, exercise 6
 
-  $('#hiddenSection').fadeIn(400, function()
+  $('#hiddenSection').fadeIn(400, function ()
   {
     $('.alias').focus();
   });
@@ -34,7 +35,7 @@ function handleError(xhr, status, error)
 }
 
 // Will Handle a successful response
-function sucessfulResponse (data)
+function sucessfulResponse(data)
 {
   // jQuery Target
   var targetText = $('#targetText');
@@ -42,7 +43,7 @@ function sucessfulResponse (data)
   // Check for errors
   if (data.error)
   {
-    var xhrerr = {responseText: data.error };
+    var xhrerr = {responseText: data.error};
     return handleError(xhrerr, status, '');
   }
   // Check if data has no response
@@ -77,7 +78,7 @@ function markName(internalHtml)
 // On Button Click
 function getResponse()
 {
-	// Get the name of the user!
+  // Get the name of the user!
   var name = $('.alias').val();
 
   // Url of webserver
@@ -85,12 +86,12 @@ function getResponse()
 
   // Get the response
   $.ajax({
-    type: 'GET',
-    url: ((name != null) && (name != undefined)) ? url + name : name,
-    async: true,
-    data: { get_param: 'response' },
+    type    : 'GET',
+    url     : ((name != null) && (name != undefined)) ? url + name : name,
+    async   : true,
+    data    : {get_param: 'response'},
     dataType: 'json',
-    error: handleError,
-    success: sucessfulResponse
+    error   : handleError,
+    success : sucessfulResponse
   });
 }
