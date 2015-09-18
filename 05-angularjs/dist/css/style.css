@@ -1,0 +1,59 @@
+body
+{
+  background-color : #11073B;
+}
+
+section.main
+{
+  margin : 10%;
+  width  : auto;
+  height : auto;
+  color  : white;
+}
+
+.title
+{
+  font-family : 'Raleway', serif;
+}
+
+.box
+{
+  background-color : #CDC6EB;
+  border           : 2px solid rgb(128, 24, 255);
+  width            : 80%;
+  position         : absolute;
+  color            : black;
+  border-radius    : 7px;
+}
+
+.box-image
+{
+  display : inline-block;
+  width   : 256px;
+  height  : 256px;
+  margin  : 1%;
+}
+
+.box-image > img
+{
+  width  : 256px;
+  height : 256px;
+}
+
+.box-data
+{
+  display        : inline-block;
+  width          : auto;
+  margin         : 1%;
+  vertical-align : top;
+}
+
+.box > article
+{
+  margin-top    : 4px;
+  margin-bottom : 4px;
+}
+
+table > *
+{
+}
