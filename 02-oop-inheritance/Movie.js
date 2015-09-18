@@ -25,7 +25,6 @@ var DownloadableMovie = (function () {
   };
 })();
 
-
 var Movie = function (name) {
   this.name = name;
     
@@ -57,9 +56,25 @@ Movie.prototype.up = function () {
 };
 
 
+var social = {
+  sharewith : function (user) {
+    console.log(this.name + ' is sharing with ' + user);
+  },
+  
+  likeit : function (user) {
+    console.log(this.name + ' is liked for ' + user);
+  }
+};
+
+
+$.extend(Movie.prototype, social);
+
+
 var movie = new Movie('StarWars');
 movie.play();
 movie.down();
+movie.sharewith('chino');
+movie.likeit('chino');
 
 
 var movie = new Movie('Back to the future');
