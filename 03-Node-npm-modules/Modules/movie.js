@@ -1,5 +1,5 @@
 // Movie Module
-var Movie = (function()
+var Movie = (function ()
 {
   // Movie Constructor
   function Movie()
@@ -25,13 +25,13 @@ var Movie = (function()
       }
     },
 
-	  set: function(indexKey, value)
+    set: function (indexKey, value)
     {
       this.hashmap[indexKey] = value;
     },
 
     /* Actor is a Jagged Array into HashMap */
-    pushActor: function(actor)
+    pushActor: function (actor)
     {
       if (actor instanceof(Actor))
       {
@@ -39,18 +39,18 @@ var Movie = (function()
       }
     },
 
-	  getActors: function()
+    getActors: function ()
     {
       return this.hashmap.actors;
     },
 
     /* Director is a Jagged Array into HashMap */
-    getDirectors: function()
+    getDirectors: function ()
     {
       return this.hashmap.directors;
     },
 
-    pushDirector: function(director)
+    pushDirector: function (director)
     {
       if (director instanceof(Director))
       {

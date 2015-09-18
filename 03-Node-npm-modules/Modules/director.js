@@ -1,7 +1,7 @@
 // Require Movie Module
 require('./movie.js');
 // Director Module
-var Director = (function()
+var Director = (function ()
 {
   // Director Constructor
   function Director()
@@ -18,15 +18,15 @@ var Director = (function()
   Director.prototype =
   {
     /* Getter and Setter for HashMap */
-    get: function(index)
+    get  : function (index)
     {
       return this.hashmap[index];
     },
-    set: function(index, value)
+    set  : function (index, value)
     {
       this.hashmap[index] = value;
     },
-    speak: function()
+    speak: function ()
     {
       // Return a Random Quote from the Director
       var rand = Math.floor(Math.random() * ( 1 + (this.hashmap.quotes.length - 1) ));
