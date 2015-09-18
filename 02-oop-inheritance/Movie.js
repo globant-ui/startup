@@ -55,6 +55,11 @@ Movie.prototype.up = function () {
   DownloadableMovie.notdownloadable(this.name);
 };
 
+Movie.prototype.cast = function (actors){
+    this.actors = actors;
+    console.log(actors + ' acting on ' + this.name);
+}
+
 
 var social = {
   sharewith : function (user) {
@@ -74,7 +79,8 @@ var movie = new Movie('StarWars');
 movie.play();
 movie.down();
 movie.sharewith('chino');
-movie.likeit('chino');
+movie.likeit('pepe');
+movie.cast('Harrison Ford');
 
 
 var movie = new Movie('Back to the future');
