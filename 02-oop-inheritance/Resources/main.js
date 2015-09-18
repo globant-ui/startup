@@ -1,3 +1,4 @@
+
 /***************************************/
 // Function that will run on DOM Ready, it will generate some examples
 function onDOMReady()
@@ -25,6 +26,8 @@ function onDOMReady()
 
 	// Stop Movie
   terminator.Stop();
+
+
 }
 
 /***************************************/
