@@ -19,7 +19,7 @@ function manageResponse(data)
       dataType: 'json',
       error: function(fstp, status, error)
       {
-        //console.log('err:' + fstp.responseText);
+        console.log('error: ' + fstp.responseText);
       },
 
       success: function (response)
