@@ -1,0 +1,28 @@
+<article class="box-centered">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="secondary">Year</th>
+        <th class="secondary">Genre</th>
+        <th>  </th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="movie in data track by $index">
+      <tr>
+        <td>{{movie.title}}</td>
+        <td class="secondary">{{movie.year}}</td>
+        <td class="secondary">{{movie.genre}}</td>
+        <td class="actions"><a href="{{'./index.html#/movie/' + $index}}">Details...</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td class="secondary"></td>
+        <td class="secondary"></td>
+        <td class="actions"><a href="{{'./index.html#/movie/' + 'add'}}">Add</a></td>
+      </tr>
+    </tfoot>
+  </table>
+</article>

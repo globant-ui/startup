@@ -1,9 +1,48 @@
-<article class="box-image">
-  <img src="http://img2.wikia.nocookie.net/__cb20130819212538/dragon-stones/images/f/fc/256x256.gif" alt="test" />
+<!-- View Details -->
+<article class="box-image" ng-show="movieId != 'add' && edit == 0">
+  <img ng-src="{{data[movieId].imgUrl}}" alt="{{data[movieId].title}}" />
+  <div class="bar">
+    <a class="bar" ng-click="editMode()">Edit</a> | <a class="bar" ng-click="deleteItem()">Delete</a></div>
 </article>
-<article class="box-data">
-  <h2 class="title">Test</h2>
-  <p><em>Year: 1992</em></p>
-  <p><em>Genre: Action</em></p>
-  <p><em>Lorem Ipsum here</em></p>
+<article class="box-data" ng-show="movieId != 'add' && edit == 0">
+  <h2 class="title">{{data[movieId].title}} </h2>
+  <p><em>Year: {{data[movieId].year}}</em></p>
+  <p><em>Genre: {{data[movieId].genre}}</em></p>
+  <span class="desc"><em>{{data[movieId].desc}}</em></span>
+</article>
+<!-- Edit -->
+<article class="box-image" ng-show="movieId != 'add' && edit != 0">
+  <img ng-src="{{data[movieId].imgUrl}}" alt="{{data[movieId].title}}" />
+  <div class="bar">
+    <a class="bar" ng-click="normalMode()">Save</a></div>
+</article>
+<article class="box-data" ng-show="movieId != 'add' && edit != 0">
+  <label>Title:</label>
+  <input type="text" placeholder="Title" ng-model="data[movieId].title" value="{{data[movieId].title}}" /><br>
+  <label>Year:</label>
+  <input type="text" placeholder="Year" ng-model="data[movieId].year" value="{{data[movieId].year}}"><br>
+  <label>Genre:</label>
+  <input type="text" placeholder="Genre" ng-model="data[movieId].genre" value="{{data[movieId].genre}}"><br>
+  <label>Img URL:</label>
+  <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="data[movieId].imgUrl" value="{{data[movieId].imgUrl}}"><br>
+
+  <textarea placeholder="Description" ng-model="data[movieId].desc">{{data[movieId].desc}}</textarea>
+</article>
+<!-- Add -->
+<article class="box-image" ng-show="movieId == 'add'">
+  <img ng-src="{{target.imgUrl}}" alt="{{target.title}}" />
+  <div class="bar">
+    <a class="bar" ng-click="normalMode()">Save</a></div>
+</article>
+<article class="box-data" ng-show="movieId =='add'">
+  <label>Title:</label>
+  <input type="text" placeholder="Title" ng-model="target.title" value="{{target.title}}" /><br>
+  <label>Year:</label>
+  <input type="text" placeholder="Year" ng-model="target.year" value="{{target.year}}"><br>
+  <label>Genre:</label>
+  <input type="text" placeholder="Genre" ng-model="target.genre" value="{{target.genre}}"><br>
+  <label>Img URL:</label>
+  <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="target.imgUrl" value="{{target.imgUrl}}"><br>
+
+  <textarea placeholder="Description..." ng-model="target.desc">{{target.desc}}</textarea>
 </article>
