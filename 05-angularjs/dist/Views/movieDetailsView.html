@@ -1,48 +1,58 @@
 <!-- View Details -->
-<article class="box-image" ng-show="movieId != 'add' && edit == 0">
-  <img ng-src="{{data[movieId].imgUrl}}" alt="{{data[movieId].title}}" />
+<article class="box-image" ng-show="action == 'view'">
+  <img ng-src="{{data.movies[movieId].imgUrl}}" alt="{{data.movies[movieId].title}}" />
   <div class="bar">
-    <a class="bar" ng-click="editMode()">Edit</a> | <a class="bar" ng-click="deleteItem()">Delete</a></div>
+    <input type="button" class="bar bar-2" ng-click="editClick()" value="Edit">
+    <input type="button" class="bar bar-2" ng-click="delClick()" value="Delete">
+  </div>
 </article>
-<article class="box-data" ng-show="movieId != 'add' && edit == 0">
-  <h2 class="title">{{data[movieId].title}} </h2>
-  <p><em>Year: {{data[movieId].year}}</em></p>
-  <p><em>Genre: {{data[movieId].genre}}</em></p>
-  <span class="desc"><em>{{data[movieId].desc}}</em></span>
+<article class="box-data" ng-show="action == 'view'">
+  <h2 class="title">{{data.movies[movieId].title}} </h2>
+  <p><em>Year: {{data.movies[movieId].year}}</em></p>
+  <p><em>Genre: {{data.movies[movieId].genre}}</em></p>
+  <span class="desc"><em>{{data.movies[movieId].desc}}</em></span>
 </article>
 <!-- Edit -->
-<article class="box-image" ng-show="movieId != 'add' && edit != 0">
-  <img ng-src="{{data[movieId].imgUrl}}" alt="{{data[movieId].title}}" />
-  <div class="bar">
-    <a class="bar" ng-click="normalMode()">Save</a></div>
+<article class="box-image" ng-show="action == 'edit'">
+  <img ng-src="{{tItem.imgUrl}}" alt="{{tItem.title}}" />
+  <div class="bar"><input type="submit" form="editForm" class="bar" ng-click="editItem(editForm.$valid)" value="Save"></div>
 </article>
-<article class="box-data" ng-show="movieId != 'add' && edit != 0">
-  <label>Title:</label>
-  <input type="text" placeholder="Title" ng-model="data[movieId].title" value="{{data[movieId].title}}" /><br>
-  <label>Year:</label>
-  <input type="text" placeholder="Year" ng-model="data[movieId].year" value="{{data[movieId].year}}"><br>
-  <label>Genre:</label>
-  <input type="text" placeholder="Genre" ng-model="data[movieId].genre" value="{{data[movieId].genre}}"><br>
-  <label>Img URL:</label>
-  <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="data[movieId].imgUrl" value="{{data[movieId].imgUrl}}"><br>
+<article class="box-data" ng-show="action == 'edit'">
+  <form novalidate name="editForm" id="editForm" >
+    <label>Title:</label>
+    <input type="text" placeholder="Title" ng-model="tItem.title" required/><br>
 
-  <textarea placeholder="Description" ng-model="data[movieId].desc">{{data[movieId].desc}}</textarea>
+    <label>Year:</label>
+    <input type="number" min="1000" max="9999" placeholder="Year" ng-model="tItem.year" required><br>
+
+    <label>Genre:</label>
+    <input type="text" placeholder="Genre" ng-model="tItem.genre"   required><br>
+
+    <label>Img URL:</label>
+    <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="tItem.imgUrl"><br>
+
+    <textarea placeholder="Description" ng-model="tItem.desc"></textarea>
+  </form>
 </article>
 <!-- Add -->
-<article class="box-image" ng-show="movieId == 'add'">
-  <img ng-src="{{target.imgUrl}}" alt="{{target.title}}" />
-  <div class="bar">
-    <a class="bar" ng-click="normalMode()">Save</a></div>
+<article class="box-image" ng-show="action == 'add'">
+  <img ng-src="{{tItem.imgUrl}}" alt="{{tItem.title}}" />
+  <div class="bar"><input type="submit" form="addForm" class="bar" ng-click="addItem(addForm.$valid)" value="Save"></div>
 </article>
-<article class="box-data" ng-show="movieId =='add'">
-  <label>Title:</label>
-  <input type="text" placeholder="Title" ng-model="target.title" value="{{target.title}}" /><br>
-  <label>Year:</label>
-  <input type="text" placeholder="Year" ng-model="target.year" value="{{target.year}}"><br>
-  <label>Genre:</label>
-  <input type="text" placeholder="Genre" ng-model="target.genre" value="{{target.genre}}"><br>
-  <label>Img URL:</label>
-  <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="target.imgUrl" value="{{target.imgUrl}}"><br>
+<article class="box-data" ng-show="action =='add'">
+  <form novalidate name="addForm" id="addForm" >
+    <label>Title:</label>
+    <input type="text" placeholder="Title" ng-model="tItem.title" required/><br>
 
-  <textarea placeholder="Description..." ng-model="target.desc">{{target.desc}}</textarea>
+    <label>Year:</label>
+    <input type="number" min="1000" max="9999" placeholder="Year" ng-model="tItem.year" required><br>
+
+    <label>Genre:</label>
+    <input type="text" placeholder="Genre" ng-model="tItem.genre" required><br>
+
+    <label>Img URL:</label>
+    <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="tItem.imgUrl"><br>
+
+    <textarea placeholder="Description" ng-model="tItem.desc"></textarea>
+  </form>
 </article>

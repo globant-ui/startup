@@ -8,9 +8,9 @@
     text-align: right;
     margin: 2px;
   }
-
   input
   {
+    border: 2px solid gray;
     width: 40%;
     margin: 2px;
   }
@@ -33,6 +33,7 @@
 
   input
   {
+    border: 2px solid gray;
     width: 98%;
     margin: 2px;
   }
@@ -42,6 +43,13 @@
     height : 170px;
     margin: 2px;
   }
+}
 
+/* Angular Style on Form Validation */
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
 
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
 }

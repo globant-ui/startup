@@ -24,6 +24,7 @@ section.main
   position         : absolute;
   color            : black;
   border-radius    : 7px;
+  padding          : 1%;
 }
 
 .box-image
@@ -64,40 +65,50 @@ section.main
 /* Links on Details */
 .bar
 {
-  width: 256px;
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
+  width       : 256px;
+  text-align  : center;
+  font-family : Helvetica, Arial, sans-serif;
 }
-.bar > a
+
+.bar > a, input.bar
 {
-  background-color: blue;
-  border-radius: 3px;
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  font-size: small;
-  text-decoration: none;
+  background-color : blue;
+  border-radius    : 3px;
+  border-color     : transparent;
+  color            : white;
+  font-family      : 'Quicksand', sans-serif;
+  font-size        : small;
+  text-decoration  : none;
+}
+
+input.bar-2
+{
+  display : inline;
+  width   : 30%;
 }
 
 /* Correct Layout for Mobile Phones */
-@media only screen and (max-width: 600px)
+@media only screen and (max-width : 600px)
 {
   .secondary
   {
-    display: none;
+    display : none;
   }
 
   .box-data
   {
-    display: block;
-    width: 96%;
+    display : block;
+    width   : 96%;
   }
+
   .box-image > img
   {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 256px;
+    display      : block;
+    margin-left  : auto;
+    margin-right : auto;
+    width        : 256px;
   }
+
   .box-image
   {
     display : block;
@@ -107,7 +118,7 @@ section.main
 }
 
 /* Correct image for real small phones */
-@media only screen and (max-width: 320px)
+@media only screen and (max-width : 320px)
 {
   .box-image
   {
@@ -115,8 +126,9 @@ section.main
     width   : 98%;
     margin  : 1%;
   }
+
   .box-image > img
   {
-    width: 98%;
+    width : 98%;
   }
 }

@@ -1,108 +1,110 @@
-var ctrls = angular.module('startupControllers', []);
+var ctrls = angular.module('startupControllers', ['ngStorage']);
 
-// Movie Model, data in LocalHost
-var Datas = [
-  {
-    title : 'Terminator',
-    year  : '1984',
-    genre : 'Action',
-    desc  : 'A human-looking indestructible cyborg is sent' +
-    ' from 2029 to 1984 to assassinate a waitress,' +
-    ' whose unborn son will lead humanity in a war' +
-    ' against the machines, while a soldier from that' +
-    ' war is sent to protect her at all costs.',
-    imgUrl: 'http://img08.deviantart.net/c2a5/i/2009/156/e/2/terminator_salvation_icon_by_phrozendemon.png'
-  },
-  {
-    title : 'Alien',
-    year  : '1979',
-    genre : 'Horror',
-    desc  : 'The commercial vessel Nostromo receives a distress' +
-    ' call from an unexplored planet. After searching for' +
-    ' survivors, the crew heads home only to realize that' +
-    ' a deadly bioform has joined them.',
-    imgUrl: 'https://pbs.twimg.com/profile_images/595342556726104064/kmqEH843.jpg'
-  },
-  {
-    title : 'Robocop',
-    year  : '1987',
-    genre : 'Action',
-    desc  : 'In a dystopic and crime-ridden Detroit,' +
-    ' a terminally wounded cop returns to the force as' +
-    ' a powerful cyborg haunted by submerged memories.',
-    imgUrl: 'http://media.urbandictionary.com/image/large/robocop-28550.jpg'
-  },
-  {
-    title : 'Blade Runner',
-    year  : '1982',
-    genre : 'Sci-Fi',
-    desc  : 'A blade runner must pursue and try to terminate' +
-    ' four replicants who stole a ship in space and have ' +
-    'returned to Earth to find their creator.',
-    imgUrl: 'http://www.vangelislyrics.com/covers/hblade.jpg'
-  }
-];
 
 // Movie Details Controller
-ctrls.controller('MovieDetailsCtrl', ['$scope', '$routeParams', '$window', function ($scope, $routeParams, $window, LocalStorage)
+ctrls.controller('MovieDetailsCtrl', function ($scope, $window, $routeParams, $localStorage)
 {
- // Get Data
+  // Get Route Parameter
+  $scope.action = 'view';
+  // Get Param id
   $scope.movieId = $routeParams.id;
-  $scope.edit = 0;
-  $scope.data = LocalStorage.getData();
+  // Bind data to controller from LocalStorage
+  $scope.data = $localStorage.$default({movies:[]});
 
-  // Generate new Item
-  if ($routeParams.id === 'add')
+  // Action to clicks
+  $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
+  $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
+});
+
+// Movie Editor Controller
+ctrls.controller('MovieEditorCtrl', function ($scope, $routeParams, $window, $localStorage, $timeout)
+{
+  // Get Action Parameters
+  $scope.action = $routeParams.action;
+  // Get Param id
+  $scope.movieId = $routeParams.id;
+  // Bind data to controller from LocalStorage
+  $scope.data = $localStorage.$default({movies:[]});
+
+  // Check if action is delete, it will automatically delete the item
+  if ($scope.action === 'del')
   {
-    $scope.target =
+    // Delete Item from Source
+    $scope.data.movies.splice($scope.movieId, 1);
+    // Redirect to List
+    $window.location.href = './';
+  }
+
+  // Check if action is edit, and define needed methods and fields
+  else if ($scope.action === 'edit')
+  {
+    // We use a transitory item because don't want a
+    // realtime-binding and only want to save when user
+    // press 'Save' and the content is valid!.
+    $scope.tItem =
+    {
+      title : $scope.data.movies[$scope.movieId].title,
+      year  : $scope.data.movies[$scope.movieId].year,
+      genre : $scope.data.movies[$scope.movieId].genre,
+      desc  : $scope.data.movies[$scope.movieId].desc,
+      imgUrl: $scope.data.movies[$scope.movieId].imgUrl
+    };
+
+    // Define editItem Method
+    $scope.editItem = function (state)
+    {
+      // Validate Only if is true
+      if (state === true)
+      {
+        // Pass Transitory Item to data
+        $scope.data.movies[$scope.movieId].title = $scope.tItem.title;
+        $scope.data.movies[$scope.movieId].year = $scope.tItem.year;
+        $scope.data.movies[$scope.movieId].genre = $scope.tItem.genre;
+        $scope.data.movies[$scope.movieId].imgUrl = $scope.tItem.imgUrl;
+        $scope.data.movies[$scope.movieId].desc = $scope.tItem.desc;
+
+        // Back To View, with a timeout of 200msec to finish saving
+        $timeout(function(){
+          $window.location.href = './#/view/' + $scope.movieId;
+        },200);
+      }
+    };
+  }
+
+  // Check if action is add, and define needed methods and fields
+  else if ($scope.action === 'add')
+  {
+    // We use a transitory item because don't want a
+    // realtime-binding and only want to save when user
+    // press 'Save' and the content is valid!.
+    $scope.tItem =
     {
       title : '',
-      year  : '',
+      year  : 0,
       genre : '',
       desc: '',
       imgUrl: 'http://img2.wikia.nocookie.net/__cb20130819212538/dragon-stones/images/f/fc/256x256.gif'
     };
-  }
 
-  // Enable Edit Mode
-  $scope.editMode = function ()
-  {
-    // Enable edit mode
-    $scope.edit = 1;
-  };
-
-  // Disable Edit Mode
-  $scope.normalMode = function ()
-  {
-    //Save if new item
-    if ($routeParams.id === 'add')
+    // Define addItem Method
+    $scope.addItem = function (state)
     {
-      Datas.push($scope.target);
-      $window.location.href = './';
-    }
-    $scope.edit = 0;
-  };
+      // Add only if is valid
+      if (state === true)
+      {
+        // Push item to Data
+        $scope.data.movies.push($scope.tItem);
 
-  // Delete Item
-  $scope.deleteItem = function()
-  {
-    // Delete Item from Source
-    $scope.data.splice($routeParams.id, 1);
-    // Redirect to List
-    $window.location.href = './';
-  };
-
-  // Back To List
-  $scope.backList = function()
-  {
-    $window.location.href = './';
-  };
-
-}]);
+        // Go Back to List
+        $window.location.href = './';
+      }
+    };
+  }
+});
 
 // Movie List Controller
-ctrls.controller('MovieListCtrl', ['$scope', 'IntStorage', function ($scope, LocalStorage)
+ctrls.controller('MovieListCtrl', function ($scope, $localStorage)
 {
-  LocalStorage.setData(Datas);
-  $scope.data = LocalStorage.getData();
-}]);
+  // Bind data to controller from LocalStorage
+  $scope.data = $localStorage.$default({movies:[]});
+});

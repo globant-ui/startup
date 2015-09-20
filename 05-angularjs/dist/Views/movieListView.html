@@ -8,12 +8,12 @@
         <th>  </th>
       </tr>
     </thead>
-    <tbody ng-repeat="movie in data track by $index">
+    <tbody ng-repeat="movie in data.movies track by $index">
       <tr>
         <td>{{movie.title}}</td>
         <td class="secondary">{{movie.year}}</td>
         <td class="secondary">{{movie.genre}}</td>
-        <td class="actions"><a href="{{'./index.html#/movie/' + $index}}">Details...</a></td>
+        <td class="actions"><a href="{{'./#/view/' + $index}}">Details...</a></td>
       </tr>
     </tbody>
     <tfoot>
@@ -21,7 +21,7 @@
         <td></td>
         <td class="secondary"></td>
         <td class="secondary"></td>
-        <td class="actions"><a href="{{'./index.html#/movie/' + 'add'}}">Add</a></td>
+        <td class="actions"><a href="{{'./index.html#/add'}}">Add</a></td>
       </tr>
     </tfoot>
   </table>
