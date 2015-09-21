@@ -22,7 +22,7 @@ $(document).ready(function ()
 function handleError(xhr, status, error)
 {
   // jQuery Target
-  var targetText = $('#targetText');
+  var targetText = $('#targetText'); /* Nice keeping in a variable */
 
   // Clean element classes
   targetText.removeClass();
@@ -44,7 +44,7 @@ function sucessfulResponse(data)
   if (data.error)
   {
     var xhrerr = {responseText: data.error};
-    return handleError(xhrerr, status, '');
+    return handleError(xhrerr, status, ''); /* Where is defined "status"? */
   }
   // Check if data has no response
   else if (!data.response)
@@ -61,7 +61,7 @@ function sucessfulResponse(data)
     targetText.addClass('success');
 
     // Add Text on Target
-    targetText.text(data.response);
+    targetText.text(data.response); /* If it pass the text already highlighted? */
 
     /* Mark name */
     var html = targetText.html();
@@ -87,9 +87,9 @@ function getResponse()
   // Get the response
   $.ajax({
     type    : 'GET',
-    url     : ((name != null) && (name != undefined)) ? url + name : name,
+    url     : ((name != null) && (name != undefined)) ? url + name : name, /* It sounds too complex */
     async   : true,
-    data    : {get_param: 'response'},
+    data    : {get_param: 'response'}, /* Is it needed? */
     dataType: 'json',
     error   : handleError,
     success : sucessfulResponse

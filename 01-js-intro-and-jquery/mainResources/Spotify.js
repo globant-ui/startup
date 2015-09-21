@@ -15,11 +15,11 @@ function manageResponse(data)
     $.ajax({
       type    : 'GET',
       url     : value.href,
-      async   : false,
+      async   : false, /* Why?! It doesn't have a good performance! */
       dataType: 'json',
       error   : function (fstp, status, error)
       {
-        console.log('error: ' + fstp.responseText);
+        console.log('error: ' + fstp.responseText); /* Why don't have one error function for all errors? */
       },
 
       success: function (response)
@@ -31,14 +31,14 @@ function manageResponse(data)
     // Html Element Target
     var htmlTarget = $('#result');
     htmlTarget.html(htmlTarget.html() +
-      '<article class="box result">' +
+      '<article class="box result">' + /* Good using <article> */
       '<div class="img-container">' +
       '<img src="' + value.images[2].url + '" alt="' + value.name + '"/>' +
       '</div>' +
       '<div class="content-container">' +
-      '<p><strong>' + value.name + '</strong></p>' +
+      '<p><strong>' + value.name + '</strong></p>' + /* It should be a <header> */
       '<p><em>' + value.album_type + ', ' + release + '</em></p>' +
-      '<p><a href="' + value.external_urls.spotify + '" target="_blank">See it on Spotify!</a></p>' +
+      '<p><a href="' + value.external_urls.spotify + '" target="_blank">See it on Spotify!</a></p>' + /* <a> should be alone */
       '</div>' +
       '</article>');
   });
@@ -49,7 +49,7 @@ function manageError(xhr, status, error)
   // Html Element Target
   var htmlTarget = $('#result');
   htmlTarget.html(htmlTarget.html() +
-    '<article id="result" class="box">' +
+    '<article id="result" class="box">' + /* An error is not an <article> */
     '<div class="content-container">' +
     '<p><strong>ERROR: ' + error + ' - ' + status + ' </strong></p>' +
     '<p><em>' + xhr.responseText + '</em></p>' +

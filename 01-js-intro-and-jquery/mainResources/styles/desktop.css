@@ -18,10 +18,10 @@ article, header
 }
 
 /* State of response on targetText */
-.success
+.success /* Good having semantic css classes */
 { color : green; }
 
-.failed
+.failed /* Good having semantic css classes */
 { color : red; }
 
 .box
