@@ -1,23 +1,9 @@
 var ctrls = angular.module('startupControllers', ['ngStorage']);
 
 
-// Movie Details Controller
-ctrls.controller('MovieDetailsCtrl', function ($scope, $window, $routeParams, $localStorage)
-{
-  // Get Route Parameter
-  $scope.action = 'view';
-  // Get Param id
-  $scope.movieId = $routeParams.id;
-  // Bind data to controller from LocalStorage
-  $scope.data = $localStorage.$default({movies:[]});
-
-  // Action to clicks
-  $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
-  $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
-});
-
 // Movie Editor Controller
-ctrls.controller('MovieEditorCtrl', function ($scope, $routeParams, $window, $localStorage, $timeout)
+ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$localStorage',
+  function ($scope, $routeParams, $window, $localStorage, $timeout)
 {
   // Get Action Parameters
   $scope.action = $routeParams.action;
@@ -26,8 +12,16 @@ ctrls.controller('MovieEditorCtrl', function ($scope, $routeParams, $window, $lo
   // Bind data to controller from LocalStorage
   $scope.data = $localStorage.$default({movies:[]});
 
+  // Check if action is view
+  if ($scope.action === 'view')
+  {
+    // Action to clicks
+    $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
+    $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
+  }
+
   // Check if action is delete, it will automatically delete the item
-  if ($scope.action === 'del')
+  else if ($scope.action === 'del')
   {
     // Delete Item from Source
     $scope.data.movies.splice($scope.movieId, 1);
@@ -100,11 +94,11 @@ ctrls.controller('MovieEditorCtrl', function ($scope, $routeParams, $window, $lo
       }
     };
   }
-});
+}]);
 
 // Movie List Controller
-ctrls.controller('MovieListCtrl', function ($scope, $localStorage)
+ctrls.controller('MovieListCtrl', ['$scope', '$localStorage', function ($scope, $localStorage)
 {
   // Bind data to controller from LocalStorage
   $scope.data = $localStorage.$default({movies:[]});
-});
+}]);
