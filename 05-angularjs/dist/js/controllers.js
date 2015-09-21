@@ -3,7 +3,8 @@ var ctrls = angular.module('startupControllers', ['ngStorage']);
 
 // Movie Editor Controller
 ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$localStorage',
-  function ($scope, $routeParams, $window, $localStorage, $timeout)
+  '$timeout', 'LocalStorageService',
+  function ($scope, $routeParams, $window, $localStorage, $timeout, LocalStorageService )
 {
   // Get Action Parameters
   $scope.action = $routeParams.action;
@@ -12,19 +13,15 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$loca
   // Bind data to controller from LocalStorage
   $scope.data = $localStorage.$default({movies:[]});
 
-  // Check if action is view
-  if ($scope.action === 'view')
-  {
-    // Action to clicks
-    $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
-    $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
-  }
+  // Action to clicks, apply on View
+  $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
+  $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
 
   // Check if action is delete, it will automatically delete the item
-  else if ($scope.action === 'del')
+  if ($scope.action === 'del')
   {
     // Delete Item from Source
-    $scope.data.movies.splice($scope.movieId, 1);
+    LocalStorageService.DeleteMovie($scope.movieId);
     // Redirect to List
     $window.location.href = './';
   }
@@ -51,11 +48,7 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$loca
       if (state === true)
       {
         // Pass Transitory Item to data
-        $scope.data.movies[$scope.movieId].title = $scope.tItem.title;
-        $scope.data.movies[$scope.movieId].year = $scope.tItem.year;
-        $scope.data.movies[$scope.movieId].genre = $scope.tItem.genre;
-        $scope.data.movies[$scope.movieId].imgUrl = $scope.tItem.imgUrl;
-        $scope.data.movies[$scope.movieId].desc = $scope.tItem.desc;
+        LocalStorageService.UpdateMovie($scope.movieId, $scope.tItem);
 
         // Back To View, with a timeout of 200msec to finish saving
         $timeout(function(){
@@ -87,7 +80,7 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$loca
       if (state === true)
       {
         // Push item to Data
-        $scope.data.movies.push($scope.tItem);
+        LocalStorageService.CreateMovie($scope.tItem);
 
         // Go Back to List
         $window.location.href = './';
@@ -97,8 +90,8 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window', '$loca
 }]);
 
 // Movie List Controller
-ctrls.controller('MovieListCtrl', ['$scope', '$localStorage', function ($scope, $localStorage)
+ctrls.controller('MovieListCtrl', ['$scope', 'LocalStorageService', function ($scope, LocalStorageService)
 {
   // Bind data to controller from LocalStorage
-  $scope.data = $localStorage.$default({movies:[]});
+  $scope.movies = LocalStorageService.ListAllMovies();
 }]);
