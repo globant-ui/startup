@@ -1,16 +1,16 @@
 <!-- View Details -->
 <article class="box-image" ng-show="action == 'view'">
-  <img ng-src="{{data.movies[movieId].imgUrl}}" alt="{{data.movies[movieId].title}}" />
+  <img ng-src="{{movies[movieId].imgUrl}}" alt="{{movies[movieId].title}}" />
   <div class="bar">
     <input type="button" class="bar bar-2" ng-click="editClick()" value="Edit">
     <input type="button" class="bar bar-2" ng-click="delClick()" value="Delete">
   </div>
 </article>
 <article class="box-data" ng-show="action == 'view'">
-  <h2 class="title">{{data.movies[movieId].title}} </h2>
-  <p><em>Year: {{data.movies[movieId].year}}</em></p>
-  <p><em>Genre: {{data.movies[movieId].genre}}</em></p>
-  <span class="desc"><em>{{data.movies[movieId].desc}}</em></span>
+  <h2 class="title">{{movies[movieId].title}} </h2>
+  <p><em>Year: {{movies[movieId].year}}</em></p>
+  <p><em>Genre: {{movies[movieId].genre}}</em></p>
+  <span class="desc"><em>{{movies[movieId].desc}}</em></span>
 </article>
 <!-- Edit -->
 <article class="box-image" ng-show="action == 'edit'">
