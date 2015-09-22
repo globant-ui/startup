@@ -1,10 +1,11 @@
-var ctrls = angular.module('startupControllers', ['ngStorage']);
+'use strict';
+var app = angular.module('startupControllers', ['ngStorage', 'startupServices']);
 
 
 // Movie Editor Controller
-ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
-  '$timeout', 'LocalStorageService', 'MovieGenerator',
-  function ($scope, $routeParams, $window,  $timeout, LocalStorageService, MovieGenerator )
+app.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
+  '$timeout', 'LocalStorageService', 'MovieGeneratorService',
+  function ($scope, $routeParams, $window,  $timeout, LocalStorageService, MovieGeneratorService )
 {
   // Get Action and idParams
   $scope.action = $routeParams.action;
@@ -16,7 +17,7 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
   // We use a transitory item because don't want a realtime-binding and only want to save when user
   // press 'Save' and the content is valid!.
   $scope.tItem = (($scope.movieId !== undefined)&&($scope.movieId < LocalStorageService.ReadAllMovies().length)) ?
-  MovieGenerator.GenerateFromMovie(LocalStorageService.ReadMovie($scope.movieId)) : MovieGenerator.GenerateEmpty();
+    MovieGeneratorService.GenerateFromMovie(LocalStorageService.ReadMovie($scope.movieId)) : MovieGeneratorService.GenerateEmpty();
 
   // Action to clicks, apply on View
   $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
@@ -63,7 +64,7 @@ ctrls.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
 }]);
 
 // Movie List Controller
-ctrls.controller('MovieListCtrl', ['$scope', 'LocalStorageService', function ($scope, LocalStorageService)
+app.controller('MovieListCtrl', ['$scope', 'LocalStorageService', function ($scope, LocalStorageService)
 {
   // Bind data to controller from LocalStorage
   $scope.movies = LocalStorageService.ReadAllMovies();

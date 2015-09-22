@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/03-Node-npm-modules/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/04-backbone/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/05-angularjs/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/05-angularjs/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/06-html5-apis/bower_components" />
     </content>
     <orderEntry type="inheritedJdk" />
