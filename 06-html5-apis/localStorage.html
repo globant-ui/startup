@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Quicksand" />
     <!-- Custom Style -->
     <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="dist/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/grids.css" />
 
   </head>
   <body>
@@ -20,15 +20,27 @@
       <header>
         <h2 class="title">LocalStorage & IndexedDb!</h2>
       </header>
-      <article class="box">
-        <textarea placeholder="Insert Your data Here"></textarea>
-        <div class="bar">
-          <input type="radio" name="storage" value="localStorage">Local Storage
-          <input type="radio" name="storage" value="indexeddb">IndexedDb <br>
-          <input type="button" value="Save!">
-          <input type="button" value="Clear!">
-        </div>
-      </article>
+      <section class="box">
+        <article class="grid-2" >
+          <h2>LocalStorage</h2>
+          <textarea placeholder="Text here will target Local Storage"></textarea>
+          <div class="centered">
+            <input type="button" value="Save" />
+            <input type="button" value="Reset" />
+          </div>
+        </article>
+        <article class="grid-2">
+          <h2>indexedDB</h2>
+          <textarea placeholder="Text here will target IndexedDB"></textarea>
+          <div class="centered">
+            <input type="button" value="Save" />
+            <input type="button" value="Reset" />
+          </div>
+        </article>
+        <article class="grid centered">
+          <p>Echo</p>
+        </article>
+      </section>
     </section>
   </body>
 </html>
