@@ -22,27 +22,27 @@ Movie.prototype =
 var MovieObserver=(function()
 {
 	function MovieObserver(){
-	this.subscribers=[];
+	this.subscribers=[];	/* It should be private */
 	}
 
 MovieObserver.prototype=
 {
 	subscribe: function(subscriber)
 	{
-		this.subscribers.push(subscriber);
+		this.subscribers.push(subscriber); /* You subscribe to a Topic. That is not present here. */
 	},
 	publish: function(event,title)
 	{
 		var i=0;
 		while (i<this.subscribers.length)
 		{			
-			if (this.subscribers[i].hashmap['title'] == title)
-				this.subscribers[i].notify(event);
+			if (this.subscribers[i].hashmap['title'] == title) /* Why this validation? If I want to publish another attr? */
+				this.subscribers[i].notify(event); /* Notify is more related to an Observer pattern */
 			i++;
 		}
 	},
 	};
-return new MovieObserver();
+return new MovieObserver(); /* Why this return an instance? */
 })();
 
 
@@ -52,8 +52,8 @@ var Movie= (function()
 	//Constructor
 	function Movie()
 	{
-		this.hashmap= {};
-		this.hashmap.actors= [];
+		this.hashmap= {};				/* This is not private */
+		this.hashmap.actors= [];		/* This is not private and why don't use set('actors', ['a', 'b']) */
 		MovieObserver.subscribe(this);
 		addMixin(Movie,Social);
 	}
@@ -70,7 +70,7 @@ var Movie= (function()
 			MovieObserver.publish('stopped',this.hashmap['title']);
 		},
 
-		notify: function(event){
+		notify: function(event){	/* Notify is more related to an Observer pattern and could receive what it should log. */
 			if (event=='playing')
 			{
 				console.log('Playing '+ this.hashmap['title']);
@@ -91,7 +91,7 @@ var Movie= (function()
 
         push_actor: function(actor)
         {
-        	this.hashmap.actors.push(actor);
+        	this.hashmap.actors.push(actor); /* Why don't use set method? */
         },
 
         get_actors: function()
