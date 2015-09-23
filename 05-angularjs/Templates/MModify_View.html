@@ -1,0 +1,40 @@
+<form name="modifyMovie" class="form-horizontal" role="form" data-toggle="validator" >
+	<h1 class="text-center">Modify this Movie</h1>
+    <div ng-show="alert" class="alert alert-success animated sizealert fadeOutUp" role="alert">Well Done! Movie Modified</div>
+	<div class="container">
+	<div class="form-group">
+    	<label class="col-sm-5 control-label">Title</label>
+    	<div class="col-sm-3">
+    		<input type="text" class="form-control" ng-model="movie.title" required/>
+    	</div>
+    </div>
+    <div class="form-group">
+    	<label class="col-sm-5 control-label">Year</label>
+    	<div class="col-sm-3">
+    		<input type="number" min="1800" max="2015"  class="form-control"   ng-model="movie.year" required/>
+		</div>
+    </div>
+    <div class="form-group">
+		<label class="col-sm-5 control-label">Director</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control"  ng-model="movie.director" required/>
+		</div>
+    </div>	
+    <div class="form-group">
+		<label class="col-sm-5 control-label">Type</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control"  ng-model="movie.type" required/>
+		</div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-5 control-label">Description</label>
+        <div class="col-sm-3">
+            <textarea rows="4" cols="50" class="form-control"  ng-model="movie.description" required ></textarea>
+        </div>
+    </div>	
+    <div class="right"> 
+    	<input type="reset" class="btn btn-default" value="Reset"/>
+    	<button type="submit" ng-disabled="modifyMovie.$invalid || modifyMovie.$pending" class="btn btn-success" ng-click="ModifyMovie(movie)"/>Modify</button>
+    </div>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+<form>
+  <h1 class="text-center">List of Movies <button class="btn btn-success" ng-click="goToAdd()">Add a new Movie</button></h1>
+  <div ng-if="alert">
+    <div class="alert alert-success animated sizealert fadeOutUp" role="alert">Well Done! Movie Remove</div>
+  </div>
+  <div class="container">
+  <div class="row" ng-repeat="movie in movieList" >
+  <div class="col-xs-4 size">
+    <div class="thumbnail text-center">
+      <div class="caption">
+        <h3>{{movie.title}}</h3>
+        <p><a ng-click="goToDetails($index)" class="btn btn-primary" role="button">Movie Details</a> 
+        <a ng-click="goToModify($index)" class="btn btn-default" role="button">Modify</a>
+        <a ng-click="RemoveMovie($index)" class="btn btn-danger" role="button">Remove</a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</form>
+
