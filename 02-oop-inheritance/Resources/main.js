@@ -50,13 +50,13 @@ var MovieObserver = (function ()
         // Notify all subscribers
         for (var i in subscribers)
         {
-          subscribers[i].Notify(event, movieName);
+          subscribers[i].Notify(event, movieName); /* It doesn't seem to be a Pub/sub pattern. It seems to be an observer */
         }
       };
 
       // Add an Object that will be notified when
       // a event is triggered.
-      this.Subscribe = function (subscriber)
+      this.Subscribe = function (subscriber) /* When you subscribe, you do to a topic */
       {
         // Add a Subscriber on list of subscribers
         subscribers.push(subscriber);
@@ -89,7 +89,7 @@ var Movie = (function ()
   {
     // Initialize Hashmap Elements
     var hashMap = {};
-    hashMap.actors = [];
+    hashMap.actors = []; /* Why don't use e.g. myMovie.Set('actors', ['A', 'B']) */
 
     // Triggers for Playing and Stopped Events
     this.Play = function ()
@@ -106,12 +106,12 @@ var Movie = (function ()
     this.Notify = function (event, movieName)
     {
       // Check if event is for started
-      if (event === 'playing' && movieName === hashMap.title)
+      if (event === 'playing' && movieName === hashMap.title) /* Why compare this? It should show whatever it receives. */
       {
         // Check if property is initialized
-        if (typeof hashMap.title !== 'undefined')
+        if (typeof hashMap.title !== 'undefined')/* also if (hashMap.title) */
         {
-          console.log('Playing ' + hashMap.title + '...');
+          console.log('Playing ' + hashMap.title + '...'); /* The idea is show what it receives, movieName */
         }
         else
         {
@@ -120,11 +120,11 @@ var Movie = (function ()
       }
 
       // Check if event is for stopped
-      else if (event === 'stopped' && movieName === hashMap.title)
+      else if (event === 'stopped' && movieName === hashMap.title) /* Why compare this? It should show whatever it receives. */
       {
-        if (typeof hashMap.title !== 'undefined')
+        if (typeof hashMap.title !== 'undefined')/* also if (hashMap.title) */
         {
-          console.log('Stopped ' + hashMap.title);
+          console.log('Stopped ' + hashMap.title);/* The idea is show what it receives, movieName */
         }
         else
         {
@@ -137,7 +137,7 @@ var Movie = (function ()
     this.Get = function (indexKey)
     {
       // Check if property is initialized
-      if (typeof hashMap[indexKey] !== 'undefined')
+      if (typeof hashMap[indexKey] !== 'undefined')/* If it is not defined? */
       {
         return hashMap[indexKey];
       }
@@ -196,10 +196,10 @@ var DownloadableMovie = (function ()
     Movie.apply(this);
 
     // Add GetDownload
-    this.GetDownload = function ()
+    this.GetDownload = function ()/* If you call this method hashmap is not defined */
     {
       // Check if title exist
-      if (typeof hashMap.title !== 'undefined')
+      if (typeof hashMap.title !== 'undefined') 
       {
         console.log('Downloading ' + hashMap.title);
       }
@@ -258,7 +258,7 @@ var Actor = (function ()
     var name = '', age = '';
 
     // Constructor Overload for 2 Arguments
-    if (arguments.length === 2)
+    if (arguments.length === 2)/* It is not bad, but is not so usefull. See how to receive objects as arguments. */
     {
       name = arguments[0];
       age = arguments[1];
