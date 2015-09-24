@@ -1,4 +1,4 @@
-var app=angular.module('MoviesApp',['ngRoute','MoviesControllers']);
+var app=angular.module('MoviesApp',['ngRoute','MoviesControllers','MoviesServices']);
 
 app.config(["$routeProvider",function ($routeProvider) {
 	
@@ -27,10 +27,11 @@ app.config(["$routeProvider",function ($routeProvider) {
 
 }]);
 
-app.run(['$templateCache', '$http', function ($templateCache, $http)
+
+app.run(['$templateCache', function ($templateCache)
 {
-  $http.get('./Templates/MAdd_View.html', {cache: $templateCache});
-  $http.get('./Templates/MDetails_View.html', {cache: $templateCache});
-  $http.get('./Templates/MList_View.html', {cache: $templateCache});
-  $http.get('./Templates/MModify_View.html', {cache: $templateCache});
+  $templateCache.get('./Templates/MAdd_View.html');
+  $templateCache.get('./Templates/MDetails_View.html');
+  $templateCache.get('./Templates/MList_View.html');
+  $templateCache.get('./Templates/MModify_View.html');
 }]);

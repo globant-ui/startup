@@ -1,6 +1,8 @@
-var app=angular.module('MoviesControllers',[])
+var app=angular.module('MoviesControllers',['MoviesServices','ngStorage']);
 
-app.controller('MListController', ['$scope','$location','$routeParams','$timeout', function ($scope,$location,$routeParams,$timeout) {
+
+app.controller('MListController', ['$scope','$location','$timeout','LocalStorageService', function ($scope,$location,$timeout,LocalStorageService) {
+
 
 	$scope.goToDetails=function(index){
 		$location.path('/details/'+index);
@@ -15,87 +17,59 @@ app.controller('MListController', ['$scope','$location','$routeParams','$timeout
 	}
 
 	$scope.getList=function(){
-		var mlist = '{"movieList":['  ;
-		for(i=0; i<=localStorage.length-1; i++){
-			key = localStorage.key(i);
-			mlist=mlist+localStorage.getItem(key);
-			if (i!=localStorage.length-1)
-				mlist=mlist+',';
-		}
-		mlist=mlist+"]}";
-		$scope.movieList=(JSON.parse(mlist).movieList);
+		$scope.movieList=LocalStorageService.Return_MovieList();
 		$scope.alert=false;
 	}
 
 	$scope.RemoveMovie=function(index){
-		key = localStorage.key(index);
-		localStorage.removeItem(key);
-		$scope.movieList.splice(index,1);
+		$scope.movieList=LocalStorageService.Return_RemoveMovie(index);
 		$scope.alert=true;
-		$timeout(function(){
-		$scope.alert=false;
-		},500);
+		$timeout(function(){//Use this to display a message that the movie was eliminated
+			$scope.alert=false;
+			},500);
 	}
 
-	
 	$scope.getList();
 	
 }]);
 
-app.controller('MAddController', ['$scope','$location','$timeout',function ($scope,$location,$timeout){
+app.controller('MAddController', ['$scope','$location','$timeout','LocalStorageService',function ($scope,$location,$timeout,LocalStorageService){
 	
 	$scope.SaveMovie=function(movie){
-		
-		if (localStorage.length == 0){
-			localStorage.setItem("1",JSON.stringify(movie));
-		}
-		else{
-			var flag=0;
-			for (i=0; i<localStorage.length; i++){
-				key = localStorage.key(i);
-				mov=(JSON.parse(localStorage.getItem(key)));
-				if (mov.title == movie.title)
-				{
-					flag = 1;
-				}
-			}
-			if (flag == 1){
-				$scope.movieExists=true;
-				$timeout(function(){
-				$scope.movieExists=false;
-				},4000);
-			}
-			else
-			{
-				var index=localStorage.length-1;
-				var pos= parseInt(localStorage.key(index))+1;
-				localStorage.setItem(pos,JSON.stringify(movie));
+		var flag=LocalStorageService.Return_MovieExists(movie);//Verifies existing movie
+		if (flag==0){
+			$scope.movieList=LocalStorageService.Return_AddMovie(movie);
 				$scope.alert=true;
-				$timeout(function(){
-				$location.path('/')
-				},1500);
+				$timeout(function(){//Use this to display a message that the movie was added
+					$location.path('/')//Back to the list of movies
+					},1500);
+			}
+		else{
+				$scope.movieExists=true;
+				$timeout(function(){//Use this to display a message that the movie already exists
+					$scope.movieExists=false;
+					},4000);
 			}
 	}
-}
 }]);
 
-app.controller('MDetailsController',['$scope','$routeParams',function($scope,$routeParams){
+app.controller('MDetailsController',['$scope','$routeParams','LocalStorageService','$location',function($scope,$routeParams,LocalStorageService,$location){
 	
-	key = localStorage.key($routeParams.id);
-	$scope.movie=JSON.parse(localStorage.getItem(key));	
+	$scope.movie=LocalStorageService.Return_MovieDetails($routeParams.id);
+	$scope.goToList=function(){
+		$location.path('/');
+	}
 
 }]);
 
-app.controller('MModifyController',['$scope','$routeParams','$location','$timeout',function($scope,$routeParams,$location,$timeout){
+app.controller('MModifyController',['$scope','$routeParams','$location','$timeout','LocalStorageService',function($scope,$routeParams,$location,$timeout,LocalStorageService){
 
-	key = localStorage.key($routeParams.id);
-	$scope.movie=JSON.parse(localStorage.getItem(key));
+	$scope.movie=LocalStorageService.ShowMovie($routeParams.id);
 	$scope.ModifyMovie=function(movie){
-		localStorage.setItem(key,JSON.stringify(movie));
+		$scope.movie=LocalStorageService.Return_ModifyMovie($routeParams.id,movie);
 		$scope.alert=true;
-		$timeout(function(){
-		$location.path('/')
-		},1500);
+		$timeout(function(){//Use this to display a message that the movie was modified
+			$location.path('/')//Back to the list of movies
+			},1500);
 	}
 }]);
-
