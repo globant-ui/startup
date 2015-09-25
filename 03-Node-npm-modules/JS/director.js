@@ -1,9 +1,9 @@
 require('./movie.js');
 var Director= (function ()
 {
-	function Director()
+	function Director() /* Constructor is not handling arguments. What about the director name? */
 	{
-		this.hashmap={};
+		this.hashmap={};		/* This should be private. */
 		this.hashmap.quotes=[];
 	}
 
