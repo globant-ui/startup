@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Angular JS</title>
+  </head>
+  <body>
+
+    <div>
+        <div ng-controller="MainCtrl">
+            <button ng-click="addMovie(aname, adirector, ayear, agender)">Add <span>{{aname}}</span></button>
+            <button ng-click="pop()">Pop </button>
+            <ul>
+              <li ng-repeat="name in names track by $index">{{name}}</li>
+              
+            </ul>
+             <form id="movies form">
+      <ul>
+        <li>
+            <input type="text" ng-model="aname">
+        </li>
+        <li>
+            <input type="text" ng-model="adirector">
+        </li>
+        <li>
+            <input type="text" ng-model="ayear">
+        </li>
+        <li>
+          <input type="text" ng-model="agender">
+        </li>
+        </ul>
+      </form>
+
+        </div>
+    </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  </body>
+</html>
