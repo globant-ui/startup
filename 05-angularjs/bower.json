@@ -1,0 +1,19 @@
+{
+  "name": "05-angularjs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chino1504/startup",
+  "authors": [
+    "chino1504 <c.c.sanchez@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6"
+  }
+}
