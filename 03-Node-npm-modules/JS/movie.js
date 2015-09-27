@@ -4,7 +4,7 @@ var Movie= (function()
 	//Constructor
 	function Movie()
 	{
-		this.hashmap= {};
+		this.hashmap= {};             /* This should be private. */
 		this.hashmap.actors= [];
 		this.hashmap.directors=[];
 	}
@@ -20,12 +20,12 @@ var Movie= (function()
             this.hashmap[key] = value;
         },
 
-        push_director : function(director)
+        push_director : function(director) /* Why don't you use it? Remove it if you don't ues. */
         {
         	this.hashmap.directors.push(director);
         },
 
-        getDirector: function()
+        getDirector: function() /* Why don't you use it? Remove it if you don't ues. */
         {
         	return this.hashmap.directors;
         }
