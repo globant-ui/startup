@@ -1,6 +1,4 @@
-(function (){
-
-	describe('MovieListController Test',function()
+describe('MovieListController Test',function()
 	{
 		var scope,createController;
 
@@ -142,4 +140,3 @@
 
 		});
 	});
-}());
