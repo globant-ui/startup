@@ -1,110 +1,111 @@
-// This is the result of Browserify, dont review it, instead, review the following files:
-// index.js (Entry Point)
-// /Modules/director.js
-// /Modules/movie.js
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Require Movie Module
 require('./movie.js');
 // Director Module
-var Director = (function()
+var Director = (function ()
 {
-    // Director Constructor
-    function Director()
+  // Director Constructor
+  function Director()
+  {
+    this.hashmap = [];
+    this.hashmap.quotes = [];
+    if (arguments.length === 1)
     {
-        this.hashmap = [];
-        this.hashmap.quotes = [];
-        if (arguments.length === 1)
-        {
-            this.hashmap.name = arguments[0];
-        }
+      this.hashmap.name = arguments[0];
     }
+  }
 
-    // Director Prototype
-    Director.prototype =
+  // Director Prototype
+  Director.prototype =
+  {
+    /* Getter and Setter for HashMap */
+    get  : function (index)
     {
-        /* Getter and Setter for HashMap */
-        get: function(index)
-        {
-            return this.hashmap[index];
-        },
-        set: function(index, value)
-        {
-            this.hashmap[index] = value;
-        },
-        speak: function()
-        {
-            // Return a Random Quote from the Director
-            var rand = Math.floor(Math.random() * ( 1 + (this.hashmap.quotes.length - 1) ));
-            return this.hashmap.quotes[rand];
-        }
-    };
+      return this.hashmap[index];
+    },
+    set  : function (index, value)
+    {
+      this.hashmap[index] = value;
+    },
+    speak: function ()
+    {
+      // Return a Random Quote from the Director
+      var rand = Math.floor(Math.random() * ( 1 + (this.hashmap.quotes.length - 1) ));
+      return this.hashmap.quotes[rand];
+    }
+  };
 
-    return Director;
+  return Director;
 })();
 
 module.exports = Director;
 },{"./movie.js":2}],2:[function(require,module,exports){
 // Movie Module
-var Movie = (function()
+var Movie = (function ()
 {
-    // Movie Constructor
-    function Movie()
+  // Movie Constructor
+  function Movie()
+  {
+    this.hashmap = {};
+    this.hashmap.actors = [];
+  }
+
+  // Movie Prototype
+  Movie.prototype =
+  {
+    /* Getter and Setter */
+    get: function (indexKey)
     {
-        this.hashmap = {};
-        this.hashmap.actors = [];
+      if (typeof this.hashmap[indexKey] !== 'undefined')
+      {
+        return this.hashmap[indexKey];
+      }
+
+      else
+      {
+        return undefined;
+      }
+    },
+
+    set: function (indexKey, value)
+    {
+      this.hashmap[indexKey] = value;
+    },
+
+    /* Actor is a Jagged Array into HashMap */
+    pushActor: function (actor)
+    {
+      if (actor instanceof(Actor))
+      {
+        this.hashmap.actors.push(actor);
+      }
+    },
+
+    getActors: function ()
+    {
+      return this.hashmap.actors;
+    },
+
+    /* Director is a Jagged Array into HashMap */
+    getDirectors: function ()
+    {
+      return this.hashmap.directors;
+    },
+
+    pushDirector: function (director)
+    {
+      if (director instanceof(Director))
+      {
+        this.hashmap.actors.push(Director);
+      }
     }
 
-    // Movie Prototype
-    Movie.prototype =
-    {
-        /* Getter and Setter */
-        get: function (indexKey)
-        {
-            if (typeof this.hashmap[indexKey] !== 'undefined')
-            {
-                return this.hashmap[indexKey];
-            }
-            else
-            {
-                return undefined;
-            }
-        },
-        set: function(indexKey, value)
-        {
-            this.hashmap[indexKey] = value;
-        },
-
-        /* Actor is a Jagged Array into HashMap */
-        pushActor: function(actor)
-        {
-            if (actor instanceof(Actor))
-            {
-                this.hashmap.actors.push(actor);
-            }
-        },
-        getActors: function()
-        {
-            return this.hashmap.actors;
-        },
-
-        /* Director is a Jagged Array into HashMap */
-        getDirectors: function()
-        {
-            return this.hashmap.directors;
-        },
-        pushDirector: function(director)
-        {
-            if (director instanceof(Director))
-            {
-                this.hashmap.actors.push(Director);
-            }
-        }
-
-    };
+  };
 
 
-    return Movie;
+  return Movie;
 })();
+
 module.exports = Movie;
 },{}],3:[function(require,module,exports){
 var $ = require('jquery');
@@ -112,46 +113,46 @@ var Director = require('./Modules/director.js');
 var Movie = require('./Modules/movie.js');
 /**************************************/
 // Api Test, on DOM Ready
-$(document).ready(function()
+$(document).ready(function ()
 {
-    // Create Movie
-    var alien = new Movie();
-    // Set Title
-    alien.set('title', 'Alien');
+  // Create Movie
+  var alien = new Movie();
+  // Set Title
+  alien.set('title', 'Alien');
 
-    // Create Director
-    var ridleyScott = new Director('Ridley Scott');
-    ridleyScott.set('quotes', ['You still don\'t understand what you\'re' +
-        ' dealing with, do you? Perfect organism. Its structural perfection ' +
-        'is matched only by its hostility', 'I admire its purity. A survivor... ' +
-        'unclouded by conscience, remorse, or delusions of morality.',
-        'Life isn\'t black and white, it\'s a million gray areas, don\'t you find?',
-        'How can you look at the galaxy and not feel insignificant? ']);
+  // Create Director
+  var ridleyScott = new Director('Ridley Scott');
+  ridleyScott.set('quotes', ['You still don\'t understand what you\'re' +
+  ' dealing with, do you? Perfect organism. Its structural perfection ' +
+  'is matched only by its hostility', 'I admire its purity. A survivor... ' +
+  'unclouded by conscience, remorse, or delusions of morality.',
+    'Life isn\'t black and white, it\'s a million gray areas, don\'t you find?',
+    'How can you look at the galaxy and not feel insignificant? ']);
 
-    // Set director to Movie
-    alien.set('director', ridleyScott);
+  // Set director to Movie
+  alien.set('director', ridleyScott);
 
-    // Modify UI
-    $('#director').text(alien.get('director').get('name'));
-    $('#movie').text(alien.get('title'));
+  // Modify UI
+  $('#director').text(alien.get('director').get('name'));
+  $('#movie').text(alien.get('title'));
 
-    // Onclick Event
-    $('#getRandom').click(function()
+  // Onclick Event
+  $('#getRandom').click(function ()
+  {
+    // Assign Random Quote on Text
+    $('#randomQuote').text(alien.get('director').speak());
+
+    // Quickly Fade and disable button
+    $('#targetSection').fadeIn(600, function ()
     {
-        // Assign Random Quote on Text
-        $('#randomQuote').text(alien.get('director').speak());
-
-        // Quickly Fade and disable button
-        $('#targetSection').fadeIn(600, function()
-        {
-            $('#getRandom').prop('disabled', true);
-            // Fade out and enable button
-            $('#targetSection').fadeOut(4000, function()
-            {
-                $('#getRandom').prop('disabled', false);
-            });
-        });
+      $('#getRandom').prop('disabled', true);
+      // Fade out and enable button
+      $('#targetSection').fadeOut(4000, function ()
+      {
+        $('#getRandom').prop('disabled', false);
+      });
     });
+  });
 });
 
 },{"./Modules/director.js":1,"./Modules/movie.js":2,"jquery":4}],4:[function(require,module,exports){

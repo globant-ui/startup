@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas</title>
+
+  <!-- Meta Viewport to make compatible with mobile devices -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Including Normalize.css -->
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Quicksand" />
+  <!-- Custom Style -->
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="dist/css/grids.css" />
+  <!-- Custom Style for Canvas -->
+  <style type="text/css">
+    canvas
+    {
+      background-color: #ffffff;
+      width: 400px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+<section class="main">
+  <header>
+    <h2 class="title">Canvas!</h2>
+  </header>
+  <section class="box">
+    <article class="grid-2">
+      <h2>Canvas With Random Colors</h2>
+      <canvas id="randomColor" class="centered">
+        Your browser don't support canvas
+      </canvas>
+    </article>
+    <article class="grid-2">
+      <h2>Animated Canvas</h2>
+      <canvas id="animatedCanvas" class="centered">
+        Sorry, your browser don't support this really awesome animated box.
+      </canvas>
+    </article>
+    <article class="grid centered">
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="yellow" />
+        <!-- Eyes -->
+        <circle cx="30" cy="40" r="10" stroke="white" stroke-width="8" fill="black" />
+        <circle cx="60" cy="40" r="10" stroke="white" stroke-width="8" fill="black" />
+        <!-- A really simple mouth -->
+        <line x1="20" y1="60" x2="70" y2="60" style="stroke:black;stroke-width:2" />
+        Sorry, your browser does not support inline SVG. But i draw a really ugly face,
+        so you don't lost anything important.
+      </svg>
+    </article>
+  </section>
+</section>
+
+<!-- Load Scripts -->
+<script src="dist/js/canvas_compiled.js" type="text/javascript"></script>
+</body>
+</html>

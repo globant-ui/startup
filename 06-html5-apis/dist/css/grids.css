@@ -36,7 +36,29 @@
 
 .grid
 {
-  margin: 2%;
+  margin: 3%;
   display: block;
   width: 95%;
+}
+
+.grid > *
+{
+  margin: 0 auto;
+}
+
+.grid > h2
+{
+  font-family : 'Raleway', serif;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+/* Textarea style inside grid*/
+.grid > textarea
+{
+  display : block;
+  width: 80%;
+  height  : 150px;
+  resize: none;
+  margin-bottom: 2%;
 }

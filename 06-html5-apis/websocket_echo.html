@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>WebSocket Echo!</title>
+
+    <!-- Meta Viewport to make compatible with mobile devices -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Including Normalize.css -->
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"/>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Quicksand" />
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/grids.css" />
+
+  </head>
+  <body>
+    <section class="main">
+        <header>
+          <h2 class="title">WebSocket Echo!</h2>
+        </header>
+        <section class="box">
+          <article class="grid" >
+            <textarea id="webSocketBox" readonly></textarea>
+            <div class="centered">
+              <label for="response">Message:</label>
+              <input type="text" id="response">
+              <button id="sendBtn">Send</button>
+            </div>
+          </article>
+      </section>
+    </section>
+
+    <!-- Load Scripts -->
+    <script src="dist/js/websocket_compiled.js" type="text/javascript"></script>
+  </body>
+</html>
