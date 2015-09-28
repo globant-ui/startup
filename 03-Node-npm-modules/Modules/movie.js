@@ -4,7 +4,7 @@ var Movie = (function ()
   // Movie Constructor
   function Movie()
   {
-    this.hashmap = {};
+    this.hashmap = {};  /* This should be private. */
     this.hashmap.actors = [];
   }
 
@@ -31,7 +31,7 @@ var Movie = (function ()
     },
 
     /* Actor is a Jagged Array into HashMap */
-    pushActor: function (actor)
+    pushActor: function (actor) /* If it is not used, yuo should remove it. */
     {
       if (actor instanceof(Actor))
       {
@@ -39,18 +39,18 @@ var Movie = (function ()
       }
     },
 
-    getActors: function ()
+    getActors: function () /* If it is not used, yuo should remove it. */
     {
       return this.hashmap.actors;
     },
 
     /* Director is a Jagged Array into HashMap */
-    getDirectors: function ()
+    getDirectors: function () /* If it is not used, yuo should remove it. */
     {
       return this.hashmap.directors;
     },
 
-    pushDirector: function (director)
+    pushDirector: function (director) /* If it is not used, yuo should remove it. */
     {
       if (director instanceof(Director))
       {

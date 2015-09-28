@@ -20,10 +20,10 @@ $(document).ready(function ()
     'How can you look at the galaxy and not feel insignificant? ']);
 
   // Set director to Movie
-  alien.set('director', ridleyScott);
+  alien.set('director', ridleyScott); /* So... pushDirector()? */
 
   // Modify UI
-  $('#director').text(alien.get('director').get('name'));
+  $('#director').text(alien.get('director').get('name')); /* Nice chain methods. */
   $('#movie').text(alien.get('title'));
 
   // Onclick Event
@@ -35,9 +35,9 @@ $(document).ready(function ()
     // Quickly Fade and disable button
     $('#targetSection').fadeIn(600, function ()
     {
-      $('#getRandom').prop('disabled', true);
+      $('#getRandom').prop('disabled', true); // Store $('#getRandom') in a var. var r = $('#getRandom');
       // Fade out and enable button
-      $('#targetSection').fadeOut(4000, function ()
+      $('#targetSection').fadeOut(4000, function () // Store $('#targetSection') in a var. var r = $('#targetSection');
       {
         $('#getRandom').prop('disabled', false);
       });
