@@ -16,12 +16,13 @@ app.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
 
   // We use a transitory item because don't want a realtime-binding and only want to save when user
   // press 'Save' and the content is valid!.
+  // Use if statement. It is difficult to understand.
   $scope.tItem = (($scope.movieId !== undefined)&&($scope.movieId < LocalStorageService.ReadAllMovies().length)) ?
     MovieGeneratorService.GenerateFromMovie(LocalStorageService.ReadMovie($scope.movieId)) : MovieGeneratorService.GenerateEmpty();
 
   // Action to clicks, apply on View
-  $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };
-  $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };
+  $scope.editClick = function() { $window.location.href = './#/edit/' + $scope.movieId; };// <a> in the view, might be better
+  $scope.delClick = function() { $window.location.href = './#/del/' + $scope.movieId; };// <a> in the view, might be better
 
   // Update a Movie
   $scope.editItem = function (state)
@@ -33,7 +34,7 @@ app.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
       LocalStorageService.UpdateMovie($scope.movieId, $scope.tItem);
 
       // Back To View, with a timeout of 200msec to finish saving
-      $timeout(function(){
+      $timeout(function(){ //What is the purpose of this timeout?
         $window.location.href = './#/view/' + $scope.movieId;
       },200);
     }
@@ -54,7 +55,7 @@ app.controller('MovieEditorCtrl', ['$scope', '$routeParams', '$window',
   };
 
   // Check if action is delete, it will automatically delete the item
-  if ($scope.action === 'del')
+  if ($scope.action === 'del')//It has to be inside a function
   {
     // Delete Item from Source
     LocalStorageService.DeleteMovie($scope.movieId);

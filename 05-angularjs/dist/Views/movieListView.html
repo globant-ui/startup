@@ -8,12 +8,12 @@
         <th>  </th>
       </tr>
     </thead>
-    <tbody ng-repeat="movie in movies track by $index">
+    <tbody ng-repeat="movie in movies track by $index"><!-- Good using "track by" -->
       <tr>
         <td>{{movie.title}}</td>
         <td class="secondary">{{movie.year}}</td>
         <td class="secondary">{{movie.genre}}</td>
-        <td class="actions"><a href="{{'./#/view/' + $index}}">Details...</a></td>
+        <td class="actions"><a href="{{'./#/view/' + $index}}">Details...</a></td><!-- This is reloading the page. Don't use './' -->
       </tr>
     </tbody>
     <tfoot>
@@ -21,7 +21,7 @@
         <td></td>
         <td class="secondary"></td>
         <td class="secondary"></td>
-        <td class="actions"><a href="{{'./index.html#/add'}}">Add</a></td>
+        <td class="actions"><a href="{{'./index.html#/add'}}">Add</a></td><!-- Why don't just #/add? Curly braces are not necessary in this case -->
       </tr>
     </tfoot>
   </table>

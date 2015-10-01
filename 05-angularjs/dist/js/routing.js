@@ -27,7 +27,7 @@ app.config(['$routeProvider', function ($routeProvider)
 }]);
 
 // Preload Templates using templateCache
-app.run(['$templateCache', '$http', function ($templateCache, $http)
+app.run(['$templateCache', '$http', function ($templateCache, $http) //Nice
 {
   $http.get('dist/Views/movieListView.html', {cache: $templateCache});
   $http.get('dist/Views/movieDetailsView.html', {cache: $templateCache});

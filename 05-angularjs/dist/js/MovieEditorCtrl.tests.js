@@ -66,14 +66,14 @@
       expect(window.location.href).toEqual('./');
     });
 
-    it('Should edit an item', function ()
+    it('Should edit an item', function () //This test doesn't have sense. It doesn't check the app. 
     {
       var controller = createController();
       scope.movies = [TestMovie];
       // Edit TestMovies
       TestMovie.title = 'modified';
       // Act
-      scope.editClick(true);
+      scope.editClick(true); //Should it be editItem()?
       // Assert
       expect(scope.movies[0].title).toEqual('modified');
 
