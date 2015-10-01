@@ -2,8 +2,8 @@ var app = angular.module('MoviesServices',['ngStorage']);
 
 app.service('LocalStorageService',['$localStorage',function($localStorage)
 {
-	
-	this.Return_MovieList=function(){
+	//This doesn't use Angular $localStorage. It is using native localStorage.
+	this.Return_MovieList=function(){ //It is not good idea include "Return" in the function name.
 		var mlist='{"movieList":[';
 		for(i=0; i<=localStorage.length-1; i++){
 			key = localStorage.key(i);
@@ -15,7 +15,7 @@ app.service('LocalStorageService',['$localStorage',function($localStorage)
 		return movieList=(JSON.parse(mlist).movieList);
 	}
 
-	this.Return_RemoveMovie=function(index){
+	this.Return_RemoveMovie=function(index){ //Why remove return the list of movies.
 		key = localStorage.key(index);
 		localStorage.removeItem(key);
 		movieList.splice(index,1);
@@ -49,12 +49,12 @@ app.service('LocalStorageService',['$localStorage',function($localStorage)
 		localStorage.setItem(key,JSON.stringify(movie));
 	}
 
-	this.Return_MovieDetails=function(index){ 
+	this.Return_MovieDetails=function(index){ //It seems to be ShowMovie()
 		key = localStorage.key(index);
 		return movie=JSON.parse(localStorage.getItem(key));	
 	}
 
-	this.ShowMovie=function(index){
+	this.ShowMovie=function(index){ //It seems to be Return_MovieDetails()
 		key=localStorage.key(index);
 		return movie=JSON.parse(localStorage.getItem(key));	
 	}
