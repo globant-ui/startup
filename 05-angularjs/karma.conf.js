@@ -3,13 +3,14 @@ module.exports = function(config){
 
     basePath : './',
 
+    //Sorry for said that is was not right. It is ok! However, paths is no correct. 
     files : [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-route/angular-route.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/ngstorage/ngStorage.js',
-      'app/JS/controllers.js',
-      'app/JS/test.js'
+      'bower_components/angular/angular.js',            
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/ngstorage/ngStorage.js',
+      'JS/controllers.js',
+      'JS/test.js'
     ],
 
     autoWatch : true,

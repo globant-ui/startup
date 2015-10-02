@@ -30,6 +30,8 @@ app.config(["$routeProvider",function ($routeProvider) {
 
 app.run(['$templateCache', function ($templateCache)
 {
+	/* This doesn't work */
+	/* All templates should be loaded at the beggining of the app. */
   $templateCache.get('./Templates/MAdd_View.html');
   $templateCache.get('./Templates/MDetails_View.html');
   $templateCache.get('./Templates/MList_View.html');
