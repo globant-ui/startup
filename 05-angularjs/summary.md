@@ -6,3 +6,4 @@
 * Bad implementation of bootstrap.
 * Topic ask specifically for 2 controllers.
 * Add and modify could share the same html.
+* I could run the test after some modification. But they all fail.
