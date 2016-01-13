@@ -1,0 +1,68 @@
+html {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+header,
+footer {
+  height: 50px;
+  text-align: center;
+}
+
+nav, aside {
+  width: 15%;
+  height: inherit;
+  float: left;
+}
+
+section {
+  float: left;
+  width: 70%;
+}
+
+footer {
+  clear: both;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  height: 210px;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
+}
+
+.header,
+.footer,
+.sidebar {
+  background-color: #f0f
+}
+
+.navigation {
+  background-color: #00f
+}
+
+.oh-no-inline-styles {
+  background-color: #ccc !important;
+}
