@@ -3,18 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>My media</title>
   </head>
 
   <body>
-    <div class="container">
+    <section>
       <header>
         <h1>Multimedia content</h1>
       </header>
       <div class="content">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2_Oi5dKR3I4" allowfullscreen></iframe><br>
-        <img width="560" height="315" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google 2015 logo.svg">      
+        <h2>Audio</h2>
+        <audio controls>
+        <!-- source: http://www.nch.com.au/acm/formats.html -->
+          <source src="sample.gsm" type="audio/gsm">
+          <source src="sample.mp3" type="audio/mp3">
+          <source src="sample.ogg" type="audio/ogg">
+          <source src="sample.wav" type="audio/wav">
+          Your browser cannot play this audio file
+        </audio>
+        <h2>Video</h2>
+        <video controls>
+        <!-- source: http://techslides.com/sample-webm-ogg-and-mp4-video-files-for-html5 -->
+          <source src="small.mp4" type="video/mp4">
+          <source src="small.3gp" type="video/3gp">
+          <source src="small.flv" type="video/flv">
+          <source src="small.ogv" type="video/ogv">
+          <source src="small.webm" type="video/webm">
+          Your browser cannot display this video
+        </video>
+        <h2>Image</h2>
+        <img src="landscape.jpg" alt="Landscape">      
       </div>
-    </div>
+    </section>
   </body>
+
 </html>

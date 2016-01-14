@@ -1,0 +1,29 @@
+html {
+  font-family: sans-serif;
+  background-color: #CCC
+}
+
+section {
+	margin: 0 auto;
+  width: 500px;
+  border: 1px #888 solid;
+}
+
+th,
+td {
+  border: gray 1px solid;
+}
+
+header {
+  text-align: center;
+}
+
+img,
+audio,
+video {
+  width: 100%;
+}
+
+table {
+  margin: 0 auto;
+}
