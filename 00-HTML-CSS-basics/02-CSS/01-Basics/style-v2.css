@@ -1,0 +1,56 @@
+/* layout ********************/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 900px
+}
+
+header,
+footer {
+  height: 50px;
+  text-align: center;
+}
+
+nav,
+.content-wrapper,
+aside {
+  float: left;
+}
+
+article {
+  padding: 10px;
+}
+
+/* sizes *********************/
+nav,
+aside {
+  width: 15%;
+  height: 242px;
+}
+
+.content-wrapper {
+  width: 70%;
+}
+
+footer {
+  clear: left;
+}
+
+/* styles ********************/
+.container > header,
+.container > footer {
+  background-color: #CCCCCC;
+}
+
+nav,
+aside {
+  background-color: #AAAAAA;
+}
+
+.content-wrapper > header,
+.content-wrapper > footer {
+  background-color: #999999;
+}
