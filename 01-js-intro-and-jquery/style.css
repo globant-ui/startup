@@ -1,0 +1,57 @@
+/* layout */
+.content > article,
+.content > aside {
+	float: left;
+}
+
+.content {
+	width: 900px;
+	margin: 0 auto;
+}
+
+aside > article {
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
+}
+
+footer {
+	clear: left;
+}
+
+section {
+  text-align: center;
+}
+
+textarea,
+.hidden {
+	display: none;
+}
+
+/* sizes */
+.content > article {
+	width: 60%;
+}
+
+.content > aside {
+	width: 40%;
+}
+
+aside > article {
+	width: 100px;
+}
+
+/* styles */
+header {
+	background-color: #CCCCCC;
+}
+
+article {
+	background-color: #AAAAAA;
+}
+
+footer {
+	background-color: #888888;
+}
