@@ -1,24 +1,33 @@
 /* layout */
-.content > article,
-.content > aside {
-	float: left;
+.albums {
+  float: left;
+  height: 250px;
 }
 
-.content {
-	width: 900px;
-	margin: 0 auto;
+aside {
+  overflow-y: scroll;
 }
 
 aside > article {
-	overflow: hidden;
+    overflow: hidden;
 }
 
-img {
-	width: 100%;
+.content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.content > article,
+.content > aside {
+    float: left;
 }
 
 footer {
-	clear: left;
+    clear: left;
+}
+
+img {
+    width: 100%;
 }
 
 section {
@@ -27,31 +36,44 @@ section {
 
 textarea,
 .hidden {
-	display: none;
+    display: none;
 }
 
 /* sizes */
-.content > article {
-	width: 60%;
-}
-
-.content > aside {
-	width: 40%;
+aside {
+  max-height: 300px;
 }
 
 aside > article {
-	width: 100px;
+    width: 50%;
+}
+
+.content > article {
+    width: 60%;
+}
+
+.content > aside {
+    width: 40%;
 }
 
 /* styles */
-header {
-	background-color: #CCCCCC;
-}
-
-article {
-	background-color: #AAAAAA;
+.content > article {
+    background-color: #AAAAAA;
+    height: 300px;
 }
 
 footer {
-	background-color: #888888;
+    background-color: #888888;
+}
+
+header {
+    background-color: #CCCCCC;
+}
+
+h5,
+p,
+a {
+  font-size: 10px;
+  margin: 0;
+  text-align: left;
 }
