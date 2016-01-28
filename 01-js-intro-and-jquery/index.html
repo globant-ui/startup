@@ -6,25 +6,43 @@
     <title>Bootcamp</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header>
+    <header class="container">
       <h1>Topic 1</h1>
     </header>
-    <section>
-      <article>
-        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-      </article>
-    </section>
-    <footer>
-      <p>Footer</p>
+
+    <div id="main" class="container">
+      <div class="row clearfix">
+        <aside class="sidebar">
+          <p>Exercise: Search track on Spotify</p>
+        </aside>
+        <section>
+          <div class="input-box text-center">
+            <input id="search-input" type="text">
+            <button id="button">Search</button>
+          </div>
+          <div class="hidden">
+            <div id="error" class="text-center"></div>
+            <div id="no-results" class="text-center"></div>
+            <ul class="list">
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div><!-- end container -->
+    
+    <footer class="container">
+      <p class="small text-center">bootcamp - Globant - Summer 2016</p>
     </footer>
 
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>

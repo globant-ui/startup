@@ -1,0 +1,95 @@
+/* Layout
+   ========================================================================== */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font: 100%/1.5 "Open Sans", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 40rem) {
+  html { font-size: 112%; }
+}
+
+@media (min-width: 64rem) {
+  html { font-size: 120%; }
+}
+
+body {
+  background-color: #fff;
+  color: #555;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 53rem;
+  width: 90%;
+}
+
+#main {
+  position: relative;
+}
+
+.small {
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+header,
+footer {
+  background: #eee;
+  padding: .5rem;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  width: 30%;
+  background-color: #ddddff;
+  min-height: 100%;
+  padding: .5rem;
+}
+
+section {
+  float: right;
+  width: 70%;
+  min-height: 10rem;
+  padding: .5rem;
+}
+
+/*===================================*/
+
+
+.input-box {
+  
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: red;
+}
+
+/* Clearfix by Nicolas Gallagher
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
