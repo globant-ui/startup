@@ -1,0 +1,45 @@
+/*
+ 	BootCamp 2014 - Globant
+	Topic1:  JavaScript Intro and jQuery
+
+ 	Author: Juan Ojeda
+*/
+
+* {
+	text-align: center;
+}
+
+body{
+	background-color: #b0c4de;
+}
+
+.section1 {
+	display: none;
+	float: left;
+	position: relative;
+	left: 15%;
+	width: 25%;	
+	border: 5px groove #FFFABC;
+}
+
+.section2 {
+	float: right;
+	border: 5px groove #FFFABC;
+	height: 400px;
+	width: 50%;
+	overflow:scroll;
+	overflow-x: hidden;  
+}
+
+td {
+	padding: 4px;
+	border: 1px solid black;
+}
+
+tr:nth-child(even) {
+	background: #DDD
+}
+
+tr:nth-child(odd) {
+	background: #FFF
+}
