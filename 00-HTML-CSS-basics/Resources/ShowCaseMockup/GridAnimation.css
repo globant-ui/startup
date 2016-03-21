@@ -1,0 +1,48 @@
+/* Animation Container Rules */
+.animcontainer
+{
+  background-color: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  border-radius: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  z-index: 1000;
+
+  /* Animation delay for containers */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.animcontainer:hover
+{
+  opacity: 1
+}
+
+.animcontainer:hover .title
+{
+  margin-left: 0;
+}
+
+/* Title inside animation Rules */
+.animtitle
+{
+  color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+
+  /* Animation delay for Text */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+
+  /* Text on p */
+  padding: 5%;
+}

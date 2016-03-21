@@ -1,0 +1,55 @@
+/* Definitions for Tablets, PCs and Others */
+@media only screen and (min-width: 600px)
+{
+  label
+  {
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+    margin: 2px;
+  }
+  input
+  {
+    border: 2px solid gray;
+    width: 40%;
+    margin: 2px;
+  }
+  textarea
+  {
+    width: 56%;
+    height : 170px;
+    margin: 2px;
+  }
+}
+
+/* Definitions for SmartPhones */
+@media only screen and (max-width: 600px)
+{
+  label
+  {
+    text-align: right;
+    margin: 2px;
+  }
+
+  input
+  {
+    border: 2px solid gray;
+    width: 98%;
+    margin: 2px;
+  }
+  textarea
+  {
+    width: 98%;
+    height : 170px;
+    margin: 2px;
+  }
+}
+
+/* Angular Style on Form Validation */
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}

@@ -1,0 +1,60 @@
+<!-- View Details -->
+<article class="box-image" ng-show="action == 'view'"> <!-- It should be just one article -->
+  <img ng-src="{{movies[movieId].imgUrl}}" alt="{{movies[movieId].title}}" />
+  <div class="bar">
+    <input type="button" class="bar bar-2" ng-click="editClick()" value="Edit"><!-- <a> might be better -->
+    <input type="button" class="bar bar-2" ng-click="delClick()" value="Delete"><!-- <a> might be better -->
+  </div>
+</article>
+<article class="box-data" ng-show="action == 'view'">
+  <h2 class="title">{{movies[movieId].title}} </h2><!-- <header> is better in this case -->
+  <!-- Maybe a <ul>? -->
+  <p><em>Year: {{movies[movieId].year}}</em></p>
+  <p><em>Genre: {{movies[movieId].genre}}</em></p>
+  <span class="desc"><em>{{movies[movieId].desc}}</em></span>
+</article>
+<!-- Edit -->
+<article class="box-image" ng-show="action == 'edit'"><!-- It should be just one article -->
+  <img ng-src="{{tItem.imgUrl}}" alt="{{tItem.title}}" />
+  <div class="bar"><input type="submit" form="editForm" class="bar" ng-click="editItem(editForm.$valid)" value="Save"></div>
+</article>
+<article class="box-data" ng-show="action == 'edit'">
+  <form novalidate name="editForm" id="editForm" >
+    <label>Title:</label>
+    <input type="text" placeholder="Title" ng-model="tItem.title" required/><br>
+
+    <label>Year:</label>
+    <input type="number" min="1000" max="9999" placeholder="Year" ng-model="tItem.year" required><br>
+
+    <label>Genre:</label>
+    <input type="text" placeholder="Genre" ng-model="tItem.genre"   required><br>
+
+    <label>Img URL:</label>
+    <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="tItem.imgUrl"><br>
+
+    <textarea placeholder="Description" ng-model="tItem.desc"></textarea>
+  </form>
+</article>
+<!-- Add -->
+<article class="box-image" ng-show="action == 'add'"><!-- It should be just one article -->
+  <img ng-src="{{tItem.imgUrl}}" alt="{{tItem.title}}" />
+  <!-- Is <div> needed? -->
+  <div class="bar"><input type="submit" form="addForm" class="bar" ng-click="addItem(addForm.$valid)" value="Save"></div>
+</article>
+<article class="box-data" ng-show="action =='add'">
+  <form novalidate name="addForm" id="addForm" >
+    <label>Title:</label>
+    <input type="text" placeholder="Title" ng-model="tItem.title" required/><br>
+
+    <label>Year:</label>
+    <input type="number" min="1000" max="9999" placeholder="Year" ng-model="tItem.year" required><br>
+
+    <label>Genre:</label>
+    <input type="text" placeholder="Genre" ng-model="tItem.genre" required><br>
+
+    <label>Img URL:</label>
+    <input type="text" placeholder="Image Url (250x250 Recommended)" ng-model="tItem.imgUrl"><br>
+
+    <textarea placeholder="Description" ng-model="tItem.desc"></textarea>
+  </form>
+</article>

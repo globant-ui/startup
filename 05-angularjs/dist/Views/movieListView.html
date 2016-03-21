@@ -1,0 +1,28 @@
+<article class="box-centered">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="secondary">Year</th>
+        <th class="secondary">Genre</th>
+        <th>  </th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="movie in movies track by $index"><!-- Good using "track by" -->
+      <tr>
+        <td>{{movie.title}}</td>
+        <td class="secondary">{{movie.year}}</td>
+        <td class="secondary">{{movie.genre}}</td>
+        <td class="actions"><a href="{{'./#/view/' + $index}}">Details...</a></td><!-- This is reloading the page. Don't use './' -->
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td class="secondary"></td>
+        <td class="secondary"></td>
+        <td class="actions"><a href="{{'./index.html#/add'}}">Add</a></td><!-- Why don't just #/add? Curly braces are not necessary in this case -->
+      </tr>
+    </tfoot>
+  </table>
+</article>

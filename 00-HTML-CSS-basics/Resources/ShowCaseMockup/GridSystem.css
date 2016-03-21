@@ -1,0 +1,73 @@
+/* Global Rules */
+/* Make all box-sizing as border-box */
+*
+{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body
+{
+  padding: 10px 50px 200px;
+  background-color: black;
+}
+
+/* Text */
+h1
+{
+  color: white;
+}
+h1 em
+{
+  color: gray;
+  font-size: 16px;
+}
+
+/* Section */
+section
+{ 
+  clear: both;
+  background: white;
+  display: block;     
+  float: left;        /* Why section is floating? */
+  margin: 0 0 20px 0;
+  padding: 20px 0 20px 20px;
+}
+section:after
+{ /* Nice class, but it is not necessary. */
+  content: "";
+  display: table;
+  clear: both;
+}
+section:last-of-type
+{
+  padding-right: 20px;
+}
+
+/* Article */
+article
+{
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  height: auto;
+  position: relative;     /* Why the position is relative? */
+  float: left;
+  padding-right: 20px;
+  width: 33.33%;
+}
+
+/* Div W/ Class "module" */
+.module
+{
+  align-content: center;
+  padding: 20px;
+  background: #eee;
+  height: 100%;     /* It doesn't seem to be necessary */
+  width: 100%;      /* It doesn't seem to be necessary */
+}
+
+/* Img Rerizer */
+img
+{
+  max-width:100%;
+  max-height:100%;
+}
