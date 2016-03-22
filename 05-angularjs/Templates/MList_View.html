@@ -1,0 +1,25 @@
+<form><!-- Why a <form>? -->
+  <h1 class="text-center">List of Movies <button class="btn btn-success" ng-click="goToAdd()">Add a new Movie</button></h1>
+  <div ng-if="alert">
+    <div class="alert alert-success animated sizealert fadeOutUp" role="alert">Well Done! Movie Removed</div>
+  </div>
+  <div class="container">
+  <!-- It is a good practice always use "track by" for performance reason. -->
+  <div class="row" ng-repeat="movie in movieList" ><!-- <section> -->
+  <div class="col-xs-4 size"><!-- <article> --><!-- What?! If you wanted a 100% with, why did you use xs-4 -->
+    <div class="thumbnail text-center"><!-- Why thumbnail if you don't have an <img>? -->
+      <div class="caption">
+        <h3>{{movie.title}}</h3><!-- <header> -->
+        <p><!-- Is this a paragraph? -->
+          <!-- Why don't use href="{{'#/details/' + $index}}"-->
+          <a ng-click="goToDetails($index)" class="btn btn-primary" role="button">Movie Details</a> 
+          <a ng-click="goToModify($index)" class="btn btn-default" role="button">Modify</a>
+          <a ng-click="RemoveMovie($index)" class="btn btn-danger" role="button">Remove</a>
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</form>
+

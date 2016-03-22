@@ -1,0 +1,62 @@
+body{
+
+	background-color: #000000;
+	font-family:Tahoma;
+	font-size:14px;
+}
+
+.header{
+	font-size:46px;
+	width: 98%;				/* You are wasting 1% */
+	text-align: center;		/* Since it is in all classes, you could place it inside body selector */
+	margin:1%;				/* Since it is in all classes, you could place it inside body selector */
+	border-radius:10px;		/* Since it is in all classes, you could place it inside body selector */
+}
+
+.footer{
+	font-size:10px;
+	width: 98%;				/* You are wasting 1% */
+	text-align: center;
+	float:left;
+	margin:1%;	
+	border-radius:10px;
+}
+
+.content{
+	font-size:14px;
+	background-color: #898383;	
+	width: 50%;
+	float:left;
+	text-align: center;
+	margin:1%;
+	border-radius:10px;
+	
+}
+
+.navigation{
+	font-size:12px;
+	background-color: #2E2EFE;
+	width: 22%;
+	float:left;
+	text-align: center;
+	margin: 1%;
+	height:150px;
+	border-radius:10px;
+}
+
+.sidebar{
+	font-size:10px;
+	width: 22%;
+	text-align: center;
+	float:left;
+	margin:1%;
+	height:150px;		/* If the content of this section use more than 150px? */
+	border-radius:10px; 
+}
+/* You are wasting 3% between content + navigation + sidebar */
+
+
+
+.footer, .header, .sidebar{ /* Nice selector */
+background-color: #FF00FF;
+}

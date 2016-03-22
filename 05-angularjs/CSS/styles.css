@@ -1,0 +1,21 @@
+.text_center{
+	text-align: center;
+}
+
+.size{
+	width: 100%;
+}
+
+.size2{
+	width: 50%;
+}
+
+.right{
+	margin-left:60%;
+}
+
+.sizealert{
+	width: 50%;
+	margin-left:25%;
+	text-align: center;
+}

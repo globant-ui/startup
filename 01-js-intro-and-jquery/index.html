@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOPIC 1</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="Yamila Aramendia">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section>
+		<article class="albumnes"> </article>
+	</section>
+	<section class="container">	
+	 	<section><!-- This and next <header> belongs to the same topic. They shouldn't be separated. -->
+			<p id="txt_hide">Hello world</p><!-- This could be a <header> -->
+			<p id="response"></p>
+		</section>
+		<section>
+			<input type="text" id="txt_name" placeholder="Name">
+			<button id="bt_Accept">Accept</button>
+		</section>
+		<section>
+			<br><!-- You should use css instead of <br> -->
+			<p>Search on Spotify!</p><!-- This could be a <header> o <label> -->
+			<input type="text" id="txt_search" placeholder="Album">
+			<button class="center" id="bt_Search">Search</button>
+			<p class="center" id="txt_error"></p>
+		</section>
+	</section>
+	<!-- Good including this at the end -->
+<script src="jquery-2.1.4.js" type="text/javascript"></script>
+<script src="functions.js" type="text/javascript" ></script>
+</body>
+</html>
+

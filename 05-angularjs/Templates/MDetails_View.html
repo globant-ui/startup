@@ -1,0 +1,21 @@
+<form>
+<h1 class="text-center">Details Movie</h1>
+<div class="container text-center">
+<div class="row">
+  <div class="col-xs-4 size">
+    <div class="thumbnail">
+      <div class="caption">
+        <h2>{{movie.title}}</h2>
+        <span class="glyphicon glyphicon-calendar"></span><p>{{movie.year}}</p>
+        <span class="glyphicon glyphicon-film"></span><p>{{movie.type}}</p>
+        <span class="glyphicon glyphicon-user"></span><p>{{movie.director}}</p>
+        <span class="glyphicon glyphicon-pencil"></span><p>{{movie.description}}</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" ng-click=goToList()>
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Go to List
+    </button>
+    </div>
+  </div>
+</div>
+</div>
+</form>
