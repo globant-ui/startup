@@ -1,10 +1,29 @@
+<!DOCTYPE html>
 <!-- The Basics of HTML - Exercise 1.V -->
 
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>Ex 1.V - Multimedia</title>
     </head>
     <body>
-
+        <h2>IMAGEN</h2>
+        <br />
+        <img src="media/imagen.png" alt="rostro">
+        <br />
+        <h2>VIDEO</h2>
+        <br />
+        <video width="320" height="240" autoplay>
+            <source src="media/vid.mp4" type="video/mp4">
+            <source src="media/vid.webm" type="video/webm">
+            OH!! Change your browser.
+        </video>
+        <br />
+        <h2>AUDIO</h2>
+        <audio controls>
+            <source src="media/bell.mp3" type="audio/mpeg">
+            <source src="media/bell.wav" type="audio/wav">
+            Sorry! Your browser does not support the audio element.
+        </audio>
     </body>
 </html>
