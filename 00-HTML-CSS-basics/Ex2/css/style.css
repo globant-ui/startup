@@ -40,6 +40,10 @@ html {
   font-size: 12px;
 }
 
-[class$='r'] {
+[class$="r"] {
   background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+  background-color: blue;
 }
