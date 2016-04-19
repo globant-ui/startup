@@ -22,3 +22,20 @@ html {
 .text-centered {
   text-align: center;
 }
+
+.header {
+  font-size: 46px;
+}
+
+.footer,
+.sidebar {
+ font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
