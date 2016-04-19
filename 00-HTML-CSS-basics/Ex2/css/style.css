@@ -48,3 +48,7 @@ html {
 [class*="a"]:not([class$="r"]) {
   background-color: blue;
 }
+
+.oh-no-inline-styles {
+  background: green !important;
+}
