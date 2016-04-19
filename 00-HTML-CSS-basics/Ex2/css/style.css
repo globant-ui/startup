@@ -13,3 +13,8 @@ aside {
 nav {
   background-color: #95a5a6;
 }
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
