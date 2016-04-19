@@ -18,3 +18,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
+
+.text-centered {
+  text-align: center;
+}
