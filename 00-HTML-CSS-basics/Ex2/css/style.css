@@ -39,3 +39,7 @@ html {
 .navigation {
   font-size: 12px;
 }
+
+[class$='r'] {
+  background-color: magenta;
+}
