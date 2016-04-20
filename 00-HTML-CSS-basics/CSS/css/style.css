@@ -1,7 +1,7 @@
 *
 {
     font-size: 14px;
-    font-family: Courier New, serif;
+    font-family: "Courier New", serif;
 }
 
 .cont{
@@ -23,6 +23,8 @@
     width:90%;
     margin:0 5%;
 }
+
+/* Exercise 2.3 of CSS: Specificity*/
 
 .header{
     font-size:46px;
@@ -46,3 +48,36 @@
     font-size:12px;
     width:20%;
 }
+
+/*Topic 4 - If the class attribute finishes with r (example header, footer), the background must be magenta.*/
+[class$="r"]{
+    background: magenta;
+}
+
+/*Topic 5- If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.*/
+[class*="a"]:not([class$="r"]) {
+    background: blue;
+}
+
+/*Topic 6 - Answer: you may use the !important to win over the classes. Example:
+
+        CSS:
+            *
+            {
+                font-size: 14px !important;
+            }
+
+*/
+
+/*Topic 7 - Answer: with the !important attribute i can win over any style (it's include the inline-style). Example:
+
+        HTML:
+            <div  class="oh-no-inline-styles" style="background:red">
+                <p>Prueba y error</p>
+            </div>
+
+        CSS:
+            .oh-no-inline-styles{
+                   background: blue !important;
+              }
+*/
