@@ -4,15 +4,22 @@
     font-family: "Courier New", serif;
 }
 
+/* Deleting unnecessary space*/
 h1, h2, h3, h4, h5, h6, ul, li{
-    padding:0px;
-    margin:0px;
+    padding:0;
+    margin:0;
 }
 
-/*A div with some style for a better visualization*/
-#space {
+/* Link style */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Some style for a better visualization*/
+body {
     width:90%;
-    margin: 0 5%;
+    margin: 25px auto 25px auto;
 }
 
 /* Solution to problem with browser blank space in inline-block*/
@@ -21,6 +28,7 @@ h1, h2, h3, h4, h5, h6, ul, li{
     margin-right: 60px;
 }
 
+/* Normal wrap to the elements contained in .lyout */
 .lyout *{
     white-space:normal;
 }
@@ -29,6 +37,7 @@ h1, h2, h3, h4, h5, h6, ul, li{
     margin-right: 30px;
 }
 
+/* Default cont box*/
 .cont{
     background-color:#D0F0B9;
     padding: 20px;
@@ -36,16 +45,11 @@ h1, h2, h3, h4, h5, h6, ul, li{
     border-radius: 15px 15px 15px 15px;
 }
 
+/* Default sub-cont box (cont box contained in another cont box) */
 section .cont{
     background-color: #f0f0d2;
     white-space:normal;
     display: block;
-}
-
-/* Link style */
-a{
-    text-decoration: none;
-    color: white;
 }
 
 .cont-ib{
@@ -84,7 +88,6 @@ a{
 .content{
     font-size:14px;
     width:60%;
-   /* border: 15px solid white; /*Not a very ellegant sollution/*/
 }
 
 .navigation{
@@ -92,7 +95,7 @@ a{
     width:20%;
 }
 
-.header, .footer, .lyout,  section .cont, section h2{
+.header, .lyout,  section .cont, section h2{
     margin-bottom: 20px;
 }
 
