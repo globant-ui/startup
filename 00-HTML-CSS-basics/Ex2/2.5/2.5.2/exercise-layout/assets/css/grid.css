@@ -14,7 +14,13 @@
   width: 100%;
 }
 
-@media (min-width: 40rem) {
+.gallery .column.third {
+  width: 50%;
+  float: left;
+  padding-right: 1rem;
+}
+
+@media (min-width: 480px) {
   .column {
     float: left;
     padding-left: 1rem;
@@ -27,6 +33,7 @@
   .column.two-thirds { width: 66.67%; }
   .column.half { width: 50%; }
   .column.third { width: 33.33%; }
+  .gallery .column.third {width: 33.33%}
   .column.fourth { width: 25%; }
   .column.flow-opposite { float: right; }
 }
