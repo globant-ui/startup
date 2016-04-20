@@ -1,0 +1,48 @@
+*
+{
+    font-size: 14px;
+    font-family: Courier New, serif;
+}
+
+.cont{
+    background-color:#D0F0B9;
+}
+
+/*Change the display of a box to inline-block*/
+.cont-ib{
+    display:inline-block;
+}
+
+/*Center the block text*/
+.cont-center{
+    text-align:center;
+}
+
+/*A div with some style for a better visualization*/
+#space{
+    width:90%;
+    margin:0 5%;
+}
+
+.header{
+    font-size:46px;
+}
+
+.footer{
+    font-size:10px;
+}
+
+.sidebar{
+    font-size:10px;
+    width:20%;
+}
+
+.content{
+    font-size:14px;
+    width:50%;
+}
+
+.navigation{
+    font-size:12px;
+    width:20%;
+}
