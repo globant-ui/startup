@@ -1,0 +1,81 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+}
+
+.header,
+.footer,
+.content,
+.sidebar,
+.navigation,
+.article {
+  background-color: #666;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.header {
+  width: 98%;
+  min-height: 3em;
+  padding: 1.5em 0 1.5em 0;
+  margin: 1%;
+}
+
+.footer {
+  width: 98%;
+  height: auto;
+  min-height: 3em;
+  padding: 2% 0 2% 0;
+  clear: both;
+  margin: 1%;
+}
+
+.navigation {
+  width: 20%;
+  float: left;
+  height: auto;
+  min-height: 42em;
+  margin: 1% 2% 1% 1%;
+  padding: 20% 0%;
+}
+
+.sidebar {
+  width: 20%;
+  float: left;
+  height: auto;
+  min-height: 42em;
+  margin: 1% 1% 1% 2%;
+  padding: 20% 0%;
+}
+
+.content{
+  width: 50%;
+  height: auto;
+  min-height: 4em;
+  float: left;
+  margin: 1% 2% 1%;
+  padding-top: 1%;
+}
+
+.content .header,
+.content .article,
+.content .footer {
+  width: 97%;
+  min-height: 2em;
+  margin: 2% 1.5% 2% 1.5%;
+  background-color: #999;
+  height: auto;
+}
+
+.content .article {
+  padding: 20% 0%;
+}
