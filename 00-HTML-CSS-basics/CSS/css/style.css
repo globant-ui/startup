@@ -4,7 +4,7 @@
 }
 
 /* Deleting unnecessary space*/
-h1, h2, h3, h4, h5, h6, ul, li, p {
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {
     padding:0;
     margin:0;
 }
@@ -54,7 +54,7 @@ section .cont{
 .cont-ib{ /*It makers, a cont box, inline-block.*/
     display:inline-block;
     vertical-align:top;
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 30px;
 }
 
@@ -69,7 +69,10 @@ section .cont{
     text-align:center;
 }
 
-p,h1,h2,h3,li,ul,ol{font-size:1em;}
+/*Because I uses all this tags in my code, i use this little trick.
+I wanna whole the text content  having the same style
+of its div containers. */
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {font-size:1em;}
 
 /* --------------------------------*/
 /* Exercise 2.3 of CSS: Specificity*/

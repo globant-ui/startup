@@ -1,0 +1,218 @@
+/*  The Basics of CSS - Ex 2.6 - Responsive index - Media Queries
+NOTE: This file code change a lot from index.html. In index.html you can
+see the solution to Ex 2.1, 2.2, 2.3, 2.4, 2.5.1  of the Basics of CSS.
+Here you will only see the solution to ex 2.6.*/
+/* Small screens (default) */
+html {
+    font-size: 16px;
+    font-family: "Courier New", serif;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+    html { font-size: 18px; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+    html { font-size: 20px; }
+}
+
+/* Deleting unnecessary space*/
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+    padding:0;
+    margin:0;
+}
+
+/* Link style */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color:lightgray;
+}
+
+/*Some style for a better visualization*/
+body {
+    width:90%;
+    margin: 25px auto 25px auto;
+}
+
+/* Default cont box*/
+.cont{
+    background-color:#D0F0B9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/* Default sub-cont box (cont box contained in another cont box) */
+section .cont{
+    background-color: #f0f0d2;
+    white-space:normal;
+    display: block;
+}
+
+/*Just center the block text*/
+.cont-center {
+    text-align:center;
+}
+
+/*Because I uses all this tags in my code, i use this little trick.
+I wanna whole the text content  having the same style
+of its div containers. */
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {font-size:1em;}
+
+/* --------------------------------*/
+/* Exercise 2.3 of CSS: Specificity*/
+/* --------------------------------*/
+
+.header{
+    font-size:3rem;
+}
+
+.footer{
+    font-size:0.7rem;
+}
+
+.sidebar{
+    font-size:0.8rem;
+    display:none; /*Hide the sidebar*/
+    width:100%;
+}
+
+.content{
+    font-size:1rem;
+    width:100%;
+}
+
+.navigation{
+    font-size:1rem;
+    width:100%;
+    text-align:center;
+}
+
+.navigation ul li{
+    display:inline-block;
+    background-color:greenyellow;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.navigation ul li:hover{
+    background-color:mediumspringgreen;
+}
+
+.navigation, .footer .sidebar, .content, .header, .lyout,  section .cont, section h2{
+    margin-bottom: 20px;
+}
+
+/*--------------------------------*/
+/*Topic 4 - If the class attribute finishes with r (example header, footer), the background must be magenta.*/
+/* --------------------------------*/
+[class$="r"]{
+    background: magenta;
+}
+
+/* --------------------------------*/
+/*Topic 5- If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.*/
+/* --------------------------------*/
+[class*="a"]:not([class$="r"]) {
+    background: blue;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+
+    .navigation, .sidebar, .content{
+        margin-bottom: 0;
+    }
+
+    /* Solution to visual problem with browser blank space in inline-block*/
+    .lyout {
+        white-space: nowrap;
+        margin-right: 30px;
+    }
+
+    /* Normal wrap to the elements contained in .lyout */
+    .lyout *{
+        white-space:normal;
+    }
+
+    .content{ width:70%;}
+    .navigation{
+        width:30%;
+        text-align:left;
+        margin: 0px;
+        padding: 20px;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+
+    .navigation ul li:hover{
+         background-color:transparent;
+}
+    .navigation ul li{
+        display:block;
+        background-color:transparent;
+    }
+
+    .cont-ib{ /*It makers, a cont box, inline-block.*/
+        display:inline-block;
+        vertical-align:top;
+        margin-right: 20px;
+    }
+
+    .cont-ib ~ .cont-ib { /*Solution to visual problem with browser blank space in inline-block*/
+
+        margin-left: 0px;
+        vertical-align:top;
+
+    }
+
+    .sidebar{
+        display:none;
+        width:0;
+    }
+}
+
+@media (min-width: 60rem) {
+    .sidebar{ /*Show sidebar*/
+        display:inline-block;
+        width:20%;
+    }
+
+    .lyout {
+        white-space: nowrap;
+        margin-right: 60px;
+    }
+
+    /* Normal wrap to the elements contained in .lyout */
+    .lyout *{
+        white-space:normal;
+    }
+
+    .lyout section {margin-right: 30px; }
+    .content{ width:60%;}
+    .navigation{width:20%; }
+
+    .cont-ib{ /*It makers, a cont box, inline-block.*/
+        display:inline-block;
+        vertical-align:top;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+
+    .cont-ib ~ .cont-ib { /*Solution to visual problem with browser blank space in inline-block*/
+
+        margin-left: -10px;
+        vertical-align:top;
+    }
+
+    .lyout section {
+        margin-right: 30px;
+    }
+}
