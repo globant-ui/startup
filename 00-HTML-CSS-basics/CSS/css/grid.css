@@ -83,10 +83,6 @@ img{
     cursor:pointer;
 }
 
-img:hover{
-    filter:none;
-}
-
 .info{
     height: 100%;
     width: 100%;
