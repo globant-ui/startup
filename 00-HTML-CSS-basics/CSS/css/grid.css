@@ -1,0 +1,185 @@
+/* Small screens (default) */
+html {
+    margin: 2rem 0;
+    font-size: 100%;
+    font-family: "Calibri", serif;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+    html { font-size: 112%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+    html { font-size: 120%; }
+}
+
+/* Box-sizing it's now border-box*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* No more default style */
+h1, h2, h3, h4, h5, h6, ul, li, p, a{
+    text-decoration:none;
+    padding:0;
+    margin:0;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1rem;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+}
+
+a:hover{
+    color: gray;
+}
+
+.header [class*="col"]{
+    padding: 1em 2em;
+}
+
+/* It's the main container */
+.container {
+    margin: 0 auto;
+    max-width: 72rem;
+    width: 98%;
+    overflow: hidden;
+    /*border-style: dotted;*/
+}
+
+/*Just different heights separators*/
+.space1 {margin-bottom: 1em; }
+.space2 {margin-bottom: 2em; }
+.space3 {margin-bottom: 3em; }
+.space4 {margin-bottom: 4em; }
+.space5 {margin-bottom: 5em; }
+
+.grid{
+    text-align: center;
+}
+
+.justified{
+    text-align: justify;
+}
+
+img{
+    width:100%;
+    filter: url("../recourses/grayscale.svg#gayscale"); /*Firefox*/
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
+    cursor:pointer;
+}
+
+img:hover{
+    filter:none;
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s
+}
+
+.title{
+    padding: 1em;
+    color: darkslategray;
+    background-color: rgba(255,255,255,0.9)
+
+}
+
+.info:hover {
+    opacity: 1;
+    filter:none;
+}
+
+/*Style for all .col(N) */
+[class*="col"] {
+    /*border-style: solid;*/
+    /*padding-left: 0.8rem;
+    padding-right: 0.8rem;*/
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 0.3rem 0;
+    position: relative;
+}
+
+
+/* I select a very similar syntax to Bootstrap*/
+@media (min-width: 40rem) {
+    [class*="col"] {
+        float: left;
+        /*padding-left: 1rem;
+        padding-right: 1rem;*/
+    }
+
+    .col1 {width: 8.33%; } /* 1/12 width */
+    .col2 {width: 16.66%; } /* 1/6 width */
+    .col3 {width: 25%; } /* 1/4 width */
+    .col4 {width: 33.33%; } /* 1/3 width */
+    .col5 {width: 41.66%; } /* 5/12 width */
+    .col6 {width: 50%; } /* 1/2 width */
+    .col7 {width: 58.33%; } /* 7/12 width */
+    .col8 {width: 66.66%; } /* 2/3 width */
+    .col9 {width: 75%; } /* 3/4 width */
+    .col10 {width: 83.33%; } /* 5/6 width */
+    .col11 {width: 91.66%; } /* 11/12 width */
+    .col12 {width: 100%; } /* 1 width */
+
+    /*Image format*/
+    img{
+        width:95%;
+        height:12em;
+        /* max-width:100%;*/
+    }
+
+    h1, p{
+        font-size: 0.9rem;
+    }
+
+    .header [class*="col"]{
+        padding: 0 2em;
+    }
+
+}
+
+
+/*A clearfix trick*/
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
