@@ -1,0 +1,147 @@
+* {
+    font-size: 14px;
+    font-family: "Courier New", serif;
+}
+
+/* Deleting unnecessary space*/
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+    padding:0;
+    margin:0;
+}
+
+/* Link style */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Some style for a better visualization*/
+body {
+    width:90%;
+    margin: 25px auto 25px auto;
+}
+
+    /* Solution to visual problem with browser blank space in inline-block*/
+    .lyout {
+        white-space: nowrap;
+        margin-right: 60px;
+    }
+
+    /* Normal wrap to the elements contained in .lyout */
+    .lyout *{
+        white-space:normal;
+    }
+
+    .lyout section {
+        margin-right: 30px;
+    }
+
+/* Default cont box*/
+.cont{
+    background-color:#D0F0B9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/* Default sub-cont box (cont box contained in another cont box) */
+section .cont{
+    background-color: #f0f0d2;
+    white-space:normal;
+    display: block;
+}
+
+.cont-ib{ /*It makers, a cont box, inline-block.*/
+    display:inline-block;
+    vertical-align:top;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.cont-ib ~ .cont-ib { /*Solution to visual problem with browser blank space in inline-block*/
+
+    margin-left: -8px;
+    vertical-align:top;
+}
+
+/*Just center the block text*/
+.cont-center {
+    text-align:center;
+}
+
+/*Because I uses all this tags in my code, i use this little trick.
+I wanna whole the text content  having the same style
+of its div containers. */
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {font-size:1em;}
+
+/* --------------------------------*/
+/* Exercise 2.3 of CSS: Specificity*/
+/* --------------------------------*/
+
+.header{
+    font-size:46px;
+}
+
+.footer{
+    font-size:10px;
+}
+
+.sidebar{
+    font-size:10px;
+    width:20%;
+}
+
+.content{
+    font-size:14px;
+    width:60%;
+}
+
+.navigation{
+    font-size:12px;
+    width:20%;
+}
+
+.header, .lyout,  section .cont, section h2{
+    margin-bottom: 20px;
+}
+
+/*--------------------------------*/
+/*Topic 4 - If the class attribute finishes with r (example header, footer), the background must be magenta.*/
+/* --------------------------------*/
+[class$="r"]{
+    background: magenta;
+}
+
+/* --------------------------------*/
+/*Topic 5- If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.*/
+/* --------------------------------*/
+[class*="a"]:not([class$="r"]) {
+    background: blue;
+}
+
+/* --------------------------------*/
+/*Topic 6 - Answer: you may use the !important to win over the classes. Example:
+/* --------------------------------*/
+/*
+        CSS:
+            *
+            {
+                font-size: 14px !important;
+            }
+
+*/
+
+/* --------------------------------*/
+/*Topic 7 - Answer: with the !important attribute i can win over any style (it's include the inline-style). Example:
+/* --------------------------------*/
+/*
+        HTML:
+            <div  class="oh-no-inline-styles" style="background:red">
+                <p>Prueba y error</p>
+            </div>
+
+        CSS:
+            .oh-no-inline-styles{
+                   background: blue !important;
+              }
+*/
