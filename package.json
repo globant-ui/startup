@@ -1,0 +1,25 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "nada",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacodom/startup.git"
+  },
+  "author": "jacobo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jacodom/startup/issues"
+  },
+  "homepage": "https://github.com/Jacodom/startup#readme",
+  "devDependencies": {
+    "babel-cli": "^6.7.7",
+    "babelify": "^7.3.0"
+  },
+  "dependencies": {
+    "browserify": "^13.0.0"
+  }
+}
