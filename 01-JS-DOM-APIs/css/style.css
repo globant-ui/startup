@@ -1,0 +1,27 @@
+section, #buttons, #searchRepo {
+    text-align: center;
+    align-content: center;
+    width: 100%;
+}
+#paragraph{
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; 
+}
+#paragraph.fadein{
+    opacity: 1;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+#listOfRepos{
+    float:right;
+    margin-right: 25px;
+    
+}
+#matrixTable, #showTable{
+    text-align: center;
+    width: 100%;
+}
