@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Jacobo Andrés Dominguez"/>
+  <meta name="description" content="Exercise 1 | Doctypes and Metatags"/>
+  <meta name="keywords" content="Globant, Bootcamp, HTML5"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Form</title>
+</head>
+<body>
+  <header>
+    <h2>Sign up form</h2>
+  </header>
+  <form>
+    <label for="firstName">First name</label>
+    <br />
+    <input type="text" name="firstName" placeholder="Type your first name..." required="true"/>
+    <br /><br />
+    <label for="lastName">Last name</label>
+    <br />
+    <input type="text" name="lastName" placeholder="Type your last name..."/ required="true">
+    <br /><br />
+    <label for="email">Email</label>
+    <br />
+    <input type="email" placeholder="ie: hello@gmail.com"/ required="true">
+    <br /><br />
+    <label for="birthday">Birthday</label>
+    <br />
+    <input type="date" name="birthday" required="true"/>
+    <br /><br />
+    <label for="favouriteSport">Favourite Sport</label>
+    <br />
+    <select name="favouriteSport"  required="true">
+      <option>Football</option>
+      <option>Basketball</option>
+      <option>Golf</option>
+      <option>Surf</option>
+      <option>Tennis</option>
+    </select>
+    <br /><br />
+    <label for="userBio">Small Bio</label>
+    <br />
+    <textarea name="userBio" required="true" placeholder="Type a brief bio of yourserlf..." cols="80" rows="10"></textarea>
+    <br /><br />
+    <input type="submit" value="Submit!"/>
+    <input type="reset" value="Clean!" />
+  </form>
+</body>
+</html>
