@@ -50,6 +50,15 @@ class Logger {
   }
 }
 
+let social = {
+  share: function(friendName){
+    console.log(`${friendName} shares ${this.title}`);
+  },
+  like: function(friendName){
+    console.log(`${friendName} likes ${this.title}`);
+  }
+}
+
 let movie1 = new Movie("Batman inicia", "2005", 120);
 let logger = new Logger();
 let movie2 = new Movie("Spiderman 3", "2007", 150);
@@ -61,3 +70,8 @@ movie1.on("pause", logger.log);
 movie1.play();
 movie1.resume();
 movie1.pause();
+
+let batmanInicia = Object.assign(movie1, social);
+
+batmanInicia.share("Juancito Perez");
+batmanInicia.like("");
