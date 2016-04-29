@@ -1,0 +1,26 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.container-example .full{
+  background: lightblue;
+}
+
+.container-example .two-thirds {
+  background: magenta;
+}
+
+.container-example .third {
+  background: red;
+}
+
+.container-example .half {
+  background: coral;
+}
+
+.container-example .fourth {
+  background: blue;
+}
