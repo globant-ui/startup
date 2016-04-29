@@ -1,8 +1,8 @@
-import Movie from "/js/classes/Movie";
-import Actor from "/js/classes/Actor";
-import Logger from "/js/classes/Logger";
-import EventEmitter from "/js/classes/EventEmitter";
-import social from "/js/classes/social";
+import EventEmitter from "js/classes/EventEmitter";
+import Movie from "js/classes/Movie";
+import Actor from "js/classes/Actor";
+import Logger from "js/classes/Logger";
+import social from "js/classes/social";
 
 let movie1 = new Movie("Batman inicia", "2005", 120);
 let logger = new Logger();

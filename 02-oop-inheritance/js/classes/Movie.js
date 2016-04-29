@@ -1,3 +1,5 @@
+import EventEmitter from "js/classes/EventEmitter"
+
 class Movie extends EventEmitter{
   constructor(title, year, duration) {
     super()
