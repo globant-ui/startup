@@ -1,0 +1,54 @@
+header {
+  background-color: #e74c3c;
+}
+
+footer {
+  background-color: #f39c12;
+}
+
+aside {
+  background-color: #27ae60;
+}
+
+nav {
+  background-color: #95a5a6;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.footer,
+.sidebar {
+ font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+[class$="r"] {
+  background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+  background-color: blue;
+}
+
+.oh-no-inline-styles {
+  background: green !important;
+}
