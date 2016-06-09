@@ -1,0 +1,102 @@
+html
+.header {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:red;
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-align:center;
+    font-size: 46px;
+
+}
+.navigation {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:grey;
+    border-style: solid;
+    height: 700px;
+    width: 15%;
+    float:left;
+    text-align:center;
+    font-size: 12px;
+}
+.aside {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:grey;
+    border-style: solid;
+    height:700px;
+    width: 15%;
+    float:left;
+    text-align:center;
+    font-size: 10px;
+}
+.content {
+    display: inline;
+    border-style: solid;
+    border-radius: 15px;
+    position: static;
+    background-color:orange;
+    border-style: solid;
+    height: 700px;
+    width: 68%;
+    float:left;
+    text-align:center;
+    font-size: 14px;
+}
+.headerInside{
+    display: block;
+    background-color: brown;
+    border-radius: 15px;
+    width: 97%;
+    height: 100px;
+    float: left;
+    margin-top: 65px;
+    margin-left: 15px;
+    margin-right: 10px;
+    text-align:center;
+    margin: 10px;
+    font-size: 14px;
+}
+.article{
+    display: block;
+    background-color: brown;
+    border-radius: 15px;
+    width: 97%;
+    height: 350px;
+    float: left;
+    text-align:center;
+    margin: 10px;
+    font-size: 14px;
+
+}
+.footerInside{
+    display: block;
+    background-color: brown;
+    border-radius: 15px;
+    width: 97%;
+    height: 100px;
+    float: left;
+    text-align:center;
+    margin: 10px;
+    font-size: 14px;
+}
+.footer {
+    display: inline-block;
+    border-radius: 15px;
+    border-style: solid;
+    position: static;
+    background-color:red;
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-align:center;
+    font-size: 10px;
+}

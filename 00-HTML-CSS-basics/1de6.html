@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML Globant Exercise</title>
+	</head>
+	<body>
+		<header>
+			<h1>"Sign Up" Form</h1>
+		</header>
+		<form id="signup-form" method="post">
+			<ul>
+				<li><label for="firstName">First Name:</label> <input type="text" name="firstName" id="firstName" value="" required/></li>
+				<li><label for="lastName">Last Name:</label> <input type="text" name="lastName" id="lastName" value="" required/></li>
+				<li><label for="email">Email:</label> <input type="email" name="email" id="email" value="" required placeholder="Enter a valid email address"/> </li>
+				<li><label for="birthday">Birthday:<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">DD-MM-YYYY</abbr>)</span></label>
+				<input class="form-control" type="date" id="birthday" name="birthday"/></li> <!--Implements the WAI-ARIA Date Picker design pattern, because Validator ask me to use a polyfill because date is not supported in all browsers-->
+				<li><label for="location">Choose your favorite sport:</label>
+				<select name="favSport" id="favSport">
+    					<option value="">Select sport</option>
+    					<option value="football">Football</option>
+   						<option value="basketball">Basketball</option>
+    					<option value="tennis">Tennis</option>
+    					<option value="americanFootball">American Football</option>
+    					<option value="baseball">Baseball</option>
+    					<option value="iceHockey">Ice Hockey</option></select></li>
+				<li><label for="bio">Bio:</label>
+            			<textarea name="bio" id="bio" cols="25" rows="3"></textarea></li></ul>
+            	<input type="reset" value="Clear" />
+            	<input type="submit" value="Submit" />
+		</form>
+		<h5>Thanks for Sign Up</h5>
+		<footer>
+			<h3> <a href="../00-HTML-CSS-basics/index.html">Menu</a> </h3>
+		</footer>
+	</body>
+	</html>
