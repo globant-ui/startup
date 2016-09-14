@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="todo list, about me form">
+        <meta name="keywords" content="todo, list, form, bio">
+        <meta name="author" content="Guillermina Véscovo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Main page</title>
+    </head>
     <body>
         <header>
             <h1>My to-do list</h1>
             <h4><i>(At the moment of writing it)</i></h4>
         </header>
-        <div class="list">
+        <ul class="list">
             <li>Finish topic 00</li>
             <li>Prepare dinner</li>
             <li>Finish week 6 of Mongo102</li>
-        </div>
+        </ul>
         <br>
         <div class="form">
             <h3>Some random info</h3>
@@ -31,7 +39,7 @@
                     <input type="text" id="dob" name="dob">
                 </div>
                 <div>
-                    <label for="fav-sport">Favorite sport:</label>
+                    <label>Favorite sport:</label>
                     <select>
                         <option value="oil-wrestling">Oil wrestling</option>
                         <option value="bed-racing">Bed Racing</option>
@@ -45,7 +53,7 @@
                 </div>
                 <div class="button">
                     <button type="submit">Click me</button>
-                    <button input type="reset">I'd rather not</button>
+                    <button type="reset">I'd rather not</button>
                 </div>
             </form>
 
