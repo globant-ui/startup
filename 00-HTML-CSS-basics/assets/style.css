@@ -1,0 +1,12 @@
+html * {
+    font-size: 14px;
+    font-family: 'Arimo', sans-serif;
+}
+
+header, footer, aside, nav {
+    background-color: #9ab3e5;
+}
+
+header, footer {
+    text-align: center;
+}
