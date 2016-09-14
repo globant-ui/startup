@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="todo list, about me form">
@@ -11,7 +11,6 @@
     <body>
         <header>
             <h1>My to-do list</h1>
-            <h4><i>(At the moment of writing it)</i></h4>
         </header>
         <ul class="list">
             <li>Finish topic 00</li>
@@ -20,7 +19,7 @@
         </ul>
         <br>
         <div class="form">
-            <h3>Some random info</h3>
+            <h1>Some random info</h1>
             <form action="index.html" method="post">
                 <div>
                     <label for="first-name">First name:</label>
@@ -39,8 +38,8 @@
                     <input type="text" id="dob" name="dob">
                 </div>
                 <div>
-                    <label>Favorite sport:</label>
-                    <select>
+                    <label for="fav-sport">Favorite sport:</label>
+                    <select id="fav-sport">
                         <option value="oil-wrestling">Oil wrestling</option>
                         <option value="bed-racing">Bed Racing</option>
                         <option value="extreme-ironing">Extreme Ironing</option>
