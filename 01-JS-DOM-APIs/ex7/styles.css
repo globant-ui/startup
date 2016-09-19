@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+section.hidden-section {
+    opacity: 0;
+}
+
+div {
+    float: right;
+}
+section.shown {
+    display: block;
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+.wrapper {
+    text-align: center;
+}
+.my-button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+h2 {
+    font-size: 35px;
+}
+
+p.joke {
+    font-family: 'Dosis', sans-serif;
+    font-size: 30px
+}
