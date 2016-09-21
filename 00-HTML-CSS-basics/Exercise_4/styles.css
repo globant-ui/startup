@@ -1,9 +1,15 @@
-
-tr:nth-child(even) {
+.rows :nth-child(even) {
 	background-color: #f2f2f2;
-	}
+	text-align:center;
+}
+
+.rows :nth-child(odd) {
+	background-color: #f2f2f2;
+	text-align:center;
+}
 	
-.tabler{
+	
+.table {
 	width: 100%; 
 }
 

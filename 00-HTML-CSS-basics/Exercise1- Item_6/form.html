@@ -1,49 +1,52 @@
 <!doctype html>	
-
 <html>
     <head> 
-		<link type="text/css" rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles.css"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>
-	Form
-	</title>
-		
-	 </head>
+		<title>Form</title>
+	</head>
 
-
-
-    <body>
-	<form class="contact_form"  id="contact_form" >
+<body>
+	<form class="contactform">
 		<div>
 			<ul>
-				<li> 
-				<h2>Sing Up Form</h2> 
-				<span class="required_notification">* data required</span> 
+				<li class="contactformli"> 
+					<h2>Sing Up Form</h2> 
+					<span class="requirednotification">* data required</span> 
 				</li>	
-				<li> 
-				<label>Name</label> 
-				<input type="text" placeholder="Franco" required /> 
+				
+				<li class="contactformli"> 
+					<label>Name*</label> 
+					<input type="text" placeholder="Franco" class="inputs" required /> 
 				</li> 
-				<li> 
-				<label>Last Name</label> 
-				<input type="text" placeholder="Sili" required /> 
+				
+				<li class="contactformli"> 
+					<label>Last Name*</label> 
+					<input type="text" placeholder="Sili" class="inputs" required /> 
 				</li> 
-				<li> 
-				<label>Email</label> 
-				<input type="email" placeholder="fsili72@gmail.com" required /> 
+				
+				<li class="contactformli"> 
+					<label>Email*</label> 
+					<input type="email" placeholder="fsili72@gmail.com" class="inputs" required /> 
 				</li> 
-				<li> 
-				<label>Birthday</label> 
-				<input type="date" required />  
+				
+				<li class="contactformli"> 
+					<label>Birthday*</label> 
+					<input type="date" class="inputs" required />  
 				</li> 
-				<li> 
-				<label>Small bio</label> <textarea name="message" cols="40" rows="6" required></textarea> 
+				
+				<li class="contactformli"> 
+					<label>Small bio*</label>
+					<textarea name="message" class="inputs" cols="40" rows="6" required></textarea> 
 				</li> 
-				<li> <button class="submit" type="submit">Send</button> </li> 
-				<li> <button class="reset" type="submit">Clean</button> </li> 
 			</ul> 
-		</div> 
-	</form>
+		</div>
+			<div class="buttons">
+				<button class="button" type="submit">Send</button>
+				<button class="button" type="reset">Clean</button>
+			</div>
 	
-	</body>
+	</form>
+
+</body>
 </html>

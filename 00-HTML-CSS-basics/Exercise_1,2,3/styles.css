@@ -1,41 +1,20 @@
 .days {
-	margin-left: 70px;
+	margin-left: 42px;
 }
 
-hr.v{
-width: 1px;
-height: 500px;
-}
-
-td.daymonday{
-	
-	padding-left: 100px;
-	 font: oblique bold 100% cursive;
-	 color: #F8FDFD;
-}
-
-td.skills{
-	padding-left: 70px;
+.skills {
 	font: oblique bold 100% cursive;
-	color: #F8FDFD;
+	color: black;
+	text-align: center;
+	border-bottom: 2px solid #080808;
+	width:70px;
 }
 
-td.day{
-	
-	padding-left: 170px;
+.day {
+	width:80px;
+	text-align: center;
 	font: oblique bold 100% cursive;
-	color: #F8FDFD;
+	color: black;
+	border-bottom: 2px solid #080808;
 	}
 
-body{
-	 background-position: center center;
-	background: radial-gradient(ellipse, black, white);
-}
-
-th, td {
-    border-bottom: 2px solid #080808;
-}
-
-h3, h4{
-	text-align: center;
-}
