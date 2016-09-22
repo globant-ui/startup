@@ -12,20 +12,24 @@
 }
 
 @media only screen and (min-width:601px){
-.w3-third{width:33.33333%}
+	.w3-third {
+		width:33.33333%;
+	}
 }
 
 @media only screen and (min-width:993px){
-.w3-third{width:33.33333%}
+	.w3-third {
+		width:33.33333%;
+	}
 }
 
-html {
+.page {
     position: relative;
     min-height: 100%;
 }
 
-body {
-    margin: 0 0 100px;	/* bottom = footer height */
+.body {
+	margin: 0 0 100px;	/* bottom = footer height */
 	background-color: #B3B4D8;
 }
 
@@ -59,7 +63,7 @@ body {
 }
 
 .screen:hover {
-	opacity: 1
+	opacity: 1;
 }
 
 .one-third {
@@ -74,7 +78,7 @@ body {
 	float: left;
 }
 
-.title{
+.title {
 	color: #fff;
 	font-family: arial, helvetica, sans-serif;
 	font-weight: bold;

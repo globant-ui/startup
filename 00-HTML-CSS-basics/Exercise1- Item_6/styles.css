@@ -1,7 +1,7 @@
-body { 
+.body { 
 	font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 	background-image: url("imagen.jpg");
-	color: #F9F9F8 
+	color: #F9F9F8;
 } 
 
 .contact--form {
