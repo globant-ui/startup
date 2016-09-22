@@ -1,5 +1,4 @@
 .days {
-<<<<<<< HEAD
 	margin-left: 42px;
 }
 
@@ -19,43 +18,3 @@
 	border-bottom: 2px solid #080808;
 	}
 
-=======
-	margin-left: 70px;
-	text-align: center;
-}
-
-.v{
-	width: 1px;
-	height: 500px;
-}
-
-.daymonday{
-	padding-left: 100px;
-	 font: oblique bold 100% cursive;
-	 color: #F8FDFD;
-	 text-align: center;
-}
-
-.skills{
-	padding-left: 70px;
-	font: oblique bold 100% cursive;
-	color: #F8FDFD;
-	text-align: center;
-}
-
-.day{
-	padding-left: 170px;
-	font: oblique bold 100% cursive;
-	color: #F8FDFD;
-	text-align: center;
-	}
-
-body{
-	background-position: center center;
-	background: radial-gradient(ellipse, black, white);
-}
-
-th, td {
-    border-bottom: 2px solid #080808;
-}
->>>>>>> origin/00-HTML-CSS-basics

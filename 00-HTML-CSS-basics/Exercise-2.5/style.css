@@ -8,11 +8,7 @@
 
 .w3-third {
 	float:left;
-	width:100%
-}
-
-..w3-third {
-	width:99.99999%
+	width:99.99999%;
 }
 
 @media only screen and (min-width:601px){
@@ -34,7 +30,7 @@ body {
 }
 
 .foot {
-   float:left;
+	float:left;
     left: 0;
     bottom: 0;
     height: 100px;
@@ -63,24 +59,24 @@ body {
 }
 
 .screen:hover {
-  opacity: 1
+	opacity: 1
 }
 
 .one-third {
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-  width: -ms-calc(99% - 16px);
-  width: -moz-calc(99% - 16px);
-  width: -webkit-calc(99% - 16px);
-  width: calc(99% - 16px);
-  margin: 8px;
-  height: auto;
-  position: relative;
-  float: left;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+	width: -ms-calc(99% - 16px);
+	width: -moz-calc(99% - 16px);
+	width: -webkit-calc(99% - 16px);
+	width: calc(99% - 16px);
+	margin: 8px;
+	height: auto;
+	position: relative;
+	float: left;
 }
 
 .title{
 	color: #fff;
-  font-family: arial, helvetica, sans-serif;
-  font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
 }
 

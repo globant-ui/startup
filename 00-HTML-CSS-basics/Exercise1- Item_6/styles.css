@@ -4,17 +4,17 @@ body {
 	color: #F9F9F8 
 } 
 
-.contactform {
+.contact--form {
 	padding-left:80px;
 	position:relative;
 }
 
-.requirednotification {
+.required--notification {
 	color:red;
 	padding-left:100px;
 }
 
-.contactformli {
+.contact--form--li {
 	margin: 10px 10px 10px 10px;
 	
 }
