@@ -1,0 +1,20 @@
+.days {
+	margin-left: 42px;
+}
+
+.skills {
+	font: oblique bold 100% cursive;
+	color: black;
+	text-align: center;
+	border-bottom: 2px solid #080808;
+	width:70px;
+}
+
+.day {
+	width:80px;
+	text-align: center;
+	font: oblique bold 100% cursive;
+	color: black;
+	border-bottom: 2px solid #080808;
+}
+
