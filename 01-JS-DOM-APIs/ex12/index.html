@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Made in JS</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function createTable(matrix) {
+                let rows = matrix.length;
+                let body = document.querySelector("body");
+                let table = document.createElement("table");
+
+                for (var i = 0; i < rows; i++) {
+                    let tr = document.createElement("tr");
+                    table.appendChild(tr);
+                    for (var j = 0; j < matrix[i].length; j++){
+                        let td = document.createElement('td');
+                        td.appendChild(document.createTextNode(matrix[i][j]));
+                        tr.appendChild(td);
+                    }
+                }
+                body.appendChild(table);
+            }
+            const matrix = [["cowboys", "Daniel Craig"], ["bizarre latinos", "La casa de mi padre"],
+                            ["peer pressure", "Emma Stone"], ["stop motion", "rebelión en la granja"]];
+            createTable(matrix);
+        </script>
+    </body>
+</html>

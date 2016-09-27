@@ -1,0 +1,63 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html.oh-no-inline-styles {
+	background-color: #333 !important;
+	font-family: 'Arimo', sans-serif;
+	font-size: 14px;
+	padding: 0 5%;
+}
+
+.container {
+	margin: 0 auto;
+	min-width: 1000px;
+}
+
+header, footer, aside, nav, article, section {
+	background-color: #666;
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+}
+
+h1 {
+	color: #fff;
+}
+
+header, footer {
+	margin: 1.25em 0;
+	padding: 1.25em 0;
+}
+
+article {
+	padding: 60px 0;
+}
+
+nav, section, aside {
+	display: inline-block;
+	height: 325px;
+	padding: 1em 0;
+	vertical-align: top;
+	width: 47%;
+}
+
+nav, aside {
+	width: 25%;
+}
+
+section {
+	margin: 0 1%;
+	padding: 1em 1%;
+}
+
+section header, section article, section footer {
+	background-color: #999;
+	margin: 1em 0;
+}
+section header h2 {
+    font-size: 14px;
+    height: 1px;
+}
