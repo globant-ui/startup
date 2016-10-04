@@ -2,7 +2,7 @@ html,body {
 
    height: 100%;
    width: 100%;
-   font-family:Arial;
+   font-family:arial;
      font-size:14px;
 }
 
@@ -13,10 +13,10 @@ html,body {
    height:20%;
   width:97%;
 color:green;
-background-color: grey;
+background-color:magenta;
 border-radius: 25px;
  margin: 10px;
-  background-image:url("513694258.jpg");
+   font-size:46px;
 }
 
 
@@ -24,7 +24,7 @@ border-radius: 25px;
    height:20%;
   width:95%;
 color:pink;
-background-color:silver;
+background-color:magenta;
 border-radius: 25px;
 margin: 10px;
 float:left;
@@ -34,7 +34,7 @@ float:left;
    height:35%;
   width:95%;
 color:black;
-background-color: silver;
+background-color: blue;
 border-radius: 25px;
 margin: 10px;
 float:left;
@@ -45,21 +45,23 @@ float:left;
    height:20%;
   width:95%;
 color:white;
-background-color: silver;
+background-color: magenta;
 border-radius: 25px;
 margin: 10px;
 float:left;
+
+font-size:10px;
 }
 
 .nav { text-align:center;
    height:70%;
   width:23%;
 color:blue;
-background-color: grey;
+background-color: blue;
 border-radius: 25px;
 margin: 10px;
 float:left;
-  background-image:url("1.jpg");
+  font-size:12px;
 }
 
 .section { text-align:center;
@@ -70,17 +72,20 @@ background-color: grey;
 border-radius: 25px;
  margin: 10px;
  float:left;
+ font-size:14px;
 }
 
 .aside {  text-align:center;
    height:70%;
   width:23%;
 color:yellow;
-background-color: grey;
+background-color:blue;
 border-radius: 25px;
  margin: 10px;
  float:left;
-  background-image:url("2.jpg");
+font-size:12px;
+
+
 }
 
 .footer {
@@ -88,10 +93,10 @@ border-radius: 25px;
    height:9%;
   width:97%;
   color:brown;
-  background-color:grey;
+  background-color:magenta;
   border-radius:25px;
   margin: 10px;
   float:left;
-    background-image:url("3.jpg");
+     font-size:10px;
 
 }
