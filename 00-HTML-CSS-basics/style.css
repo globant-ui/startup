@@ -1,15 +1,14 @@
 *{
   color: green;
-   font-size: 20px;
+   font-size: 14px;
    line-height: 25px;
+   font: "courier New";
 }
 
 code {
-  background: #2db34a;
-  border-radius: 6px;
-  color: #fff;
+  color: black;
   display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Times New Roman", Terminal, "Courier New", Courier;
+  border-radius: 6px;
   padding: 24px 15px;
   text-align: center;
 }
@@ -22,6 +21,13 @@ aside,
   margin-bottom: 1%;
 }
 
+.div-header header{
+  background: #3498db;
+  border-radius: 6px;
+  padding: 24px 15px;
+  text-align: center;
+}
+
 header{
 
 }
@@ -31,6 +37,12 @@ header{
   margin-left: 3%;
   width: 17%;
 }
+
+.div-nav nav{
+  background: #d1404a;
+  border-radius: 6px;
+}
+
 nav {
 
 }
@@ -55,8 +67,18 @@ section {
 
 .div-aside{
   float: left;
+  hight: 100%;
   margin-right: 3%;
   width: 17%;
+}
+
+.div-aside aside{
+  background: #27ae60;
+  border-radius: 6px;
+}
+
+.div-aside{
+
 }
 
 aside{
@@ -67,6 +89,11 @@ aside{
   clear: both;
   margin-top: 1%;
   margin-bottom: 0;
+}
+
+.div-footer footer{
+  background: #b23f73;
+  border-radius: 6px;
 }
 
 footer {
