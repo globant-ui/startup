@@ -1,0 +1,57 @@
+
+<html>
+
+	<head>
+	</head>
+
+	<body>
+
+		<form id="contact-form" action="mailto:juan.almeida@globant.com" method="post">
+				<input type="hidden" name="redirect" value="http://www.opera.com" />
+				<ul>
+						<li>
+								<label for="nombre">Name:</label>
+								<input type="text" name="nombre" id="nombre" value="" required=""/>
+						</li>
+
+						<li>
+								<label for="mail">Email:</label>
+								<input type="text" name="mail" id="mail" value="" pattern="[a-z]{3}[0-9]{3}" required=""/>
+						</li>
+
+						<li>
+
+						<label for="fecha-nacimiento">Fecha de nacimiento:</label>
+						<input type="date" name="fecha-nacimiento" step="1" min="1900-01-01" max="2016-12-31" value="aaaa-mm-dd" required="">
+
+						</li>
+
+
+						<li>
+								<label for="comentarios">Comentario:</label>
+								<textarea name="comentarios" id="comentarios" cols="25" rows="3" required=""></textarea>
+						</li>
+
+						<li>
+							<label for="deporte">Deporte</label>
+					<select name="deporte" id="deporte" required="">
+							<option value="">Selecciones su deporte</option>
+							<option value="nyork">Futbol</option>
+							<option value="vancouver">Basket</option>
+							<option value="atlantis">Atletismo</option>
+							<option value="alpha">Boxeo</option>
+							<option value="blackpool">Rugby</option>
+					</select>
+				</li>
+
+		        <li>
+		            <input type="submit" value="Enviar" />
+		            <input type="reset" value="Limpiar" />
+		        </li>
+		    </ul>
+
+		</form>
+
+	</body>
+
+</html>

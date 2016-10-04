@@ -1,0 +1,62 @@
+h1{
+  color: red;
+  text-align: center;
+}
+
+section{
+
+}
+header{
+  width: 100%;
+  height: 5%;
+}
+
+.footer{
+  width: 100%;
+  height: 5%;
+  text-align: center;
+}
+
+
+.aa{
+height: 90%;
+
+}
+
+.left{
+float: left;
+width: 30%;
+height: 100%;
+background: green;
+}
+
+.right {
+  background: violet;
+width: 30%;
+height: 100%;
+float: left;
+}
+
+.center{
+  width: 40%;
+  height: 100%;
+  background: white;
+float: left;
+}
+
+.conteiner{
+  background:yellow;
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.article{
+  text-align: center;
+}
+
+.final{
+  background: red;
+  width: 100;
+  float: left;
+}
