@@ -2,7 +2,8 @@ html,body {
 
    height: 100%;
    width: 100%;
-
+   font-family:Arial;
+     font-size:14px;
 }
 
 
@@ -15,7 +16,7 @@ color:green;
 background-color: grey;
 border-radius: 25px;
  margin: 10px;
-
+  background-image:url("513694258.jpg");
 }
 
 
@@ -58,6 +59,7 @@ background-color: grey;
 border-radius: 25px;
 margin: 10px;
 float:left;
+  background-image:url("1.jpg");
 }
 
 .section { text-align:center;
@@ -78,6 +80,7 @@ background-color: grey;
 border-radius: 25px;
  margin: 10px;
  float:left;
+  background-image:url("2.jpg");
 }
 
 .footer {
@@ -89,5 +92,6 @@ border-radius: 25px;
   border-radius:25px;
   margin: 10px;
   float:left;
+    background-image:url("3.jpg");
 
 }
