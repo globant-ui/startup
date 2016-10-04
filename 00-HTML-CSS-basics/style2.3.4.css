@@ -10,10 +10,16 @@ h1{
 section{
 
 }
+article{
+  background-color: blue;
+}
+
 .header{
   width: 100%;
   height: 5%;
   text-align: center;
+  font-size: 46px;
+  background-color: magenta;
 }
 
 
@@ -21,33 +27,40 @@ section{
 .footer{
   width: 100%;
   height: 5%;
+  font-size: 10px;
+  background-color: magenta;
 }
 
 
-.menu{
+.content{
 height: 90%;
+width: 40%;
+font-size: 14px;
+float: left;
 
 }
 
-.left{
+.navegation{
 float: left;
 width: 30%;
 height: 100%;
-background: green;
+background: blue;
+font-size: 12px;
 }
 
-.right {
-  background: violet;
+.sidebar {
+background: violet;
 width: 30%;
 height: 100%;
 float: left;
+background-color: magenta;
 }
 
 .center{
-  width: 40%;
-  height: 100%;
-  background: white;
-float: left;
+height: 90%;
+width: 100%;
+background: white;
+background-color: magenta;
 }
 
 .conteiner{
@@ -55,12 +68,13 @@ float: left;
   height: 100%;
   width: 100%;
   float: left;
+  background-color: magenta;
 }
 
 
 .final{
-  background: red;
   width: 100;
   float: left;
   text-align: center;
+  font-size: 10px;
 }

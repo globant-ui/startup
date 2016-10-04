@@ -14,6 +14,7 @@ section{
   width: 100%;
   height: 5%;
   text-align: center;
+  font-size: 46px;
 }
 
 
@@ -21,40 +22,44 @@ section{
 .footer{
   width: 100%;
   height: 5%;
+  font-size: 10px;
 }
 
 
-.menu{
+.content{
 height: 90%;
+width: 40%;
+font-size: 14px;
+float: left;
 
 }
 
-.left{
+.navegation{
 float: left;
 width: 30%;
 height: 100%;
 background: green;
+font-size: 12px;
 }
 
-.right {
-  background: violet;
+.sidebar {
+background: violet;
 width: 30%;
 height: 100%;
 float: left;
 }
 
 .center{
-  width: 40%;
-  height: 100%;
-  background: white;
+height: 90%;
+background: white;
 float: left;
 }
 
 .conteiner{
-  background:yellow;
-  height: 100%;
-  width: 100%;
-  float: left;
+background:yellow;
+height: 100%;
+width: 100%;
+float: left;
 }
 
 
@@ -63,4 +68,5 @@ float: left;
   width: 100;
   float: left;
   text-align: center;
+  font-size: 10px;
 }
