@@ -1,0 +1,78 @@
+
+header {
+  background: #96FF83;
+  text-align: center;
+}
+
+footer {
+  background: #6BFF50;
+  text-align: center;
+}
+
+aside {
+  background: #BCF7B1;
+}
+
+nav {
+    background: #4EDC34;
+    display: block;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+*
+{
+/*
+  6. How could you add weight to the global font definition to win over the classes added by point 3?
+  You can use !important to add weight to the global font definition
+*/
+   font-size: 14px !important;
+   font-family: Verdana !important;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.header {
+  font-size: 46px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+[class$="r"] {
+ background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+ background-color: blue;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*
+7. Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to
+change the background to green without changing the inline style. How could you accomplish this?
+
+In the ”oh-no-inline-styles” class I add the line:
+  background-color: green !important;
+lagging:
+  .oh-no-inline-styles {
+    background-color: green !important;
+  }
+The !important will give priority to this.
+*/
