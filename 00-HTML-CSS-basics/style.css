@@ -1,0 +1,74 @@
+*{
+  color: green;
+   font-size: 20px;
+   line-height: 25px;
+}
+
+code {
+  background: #2db34a;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Times New Roman", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+section,
+nav,
+aside,
+
+.div-header{
+  margin-bottom: 1%;
+}
+
+header{
+
+}
+
+.div-nav{
+  float: left;
+  margin-left: 3%;
+  width: 17%;
+}
+nav {
+
+}
+
+.div-section {
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 50%;
+}
+
+.div-section header{
+  margin-bottom: 1%;
+}
+
+.div-section article{
+  margin-bottom: 1%
+}
+section {
+
+}
+
+.div-aside{
+  float: left;
+  margin-right: 3%;
+  width: 17%;
+}
+
+aside{
+
+}
+
+.div-footer{
+  clear: both;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+footer {
+
+}
