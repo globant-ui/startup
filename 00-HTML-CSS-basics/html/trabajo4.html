@@ -6,22 +6,22 @@
   </head>
   <body>
     <form>
-    First name: <input type="text" name="fname" id="fname" value=""  required="" /><br>
-    Last name: <input type="text" name="lname" id="lname" value="" required=""  /><br>
-    Email: <input type="email" name="email" required id="email" value="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" /><br>
-    Birthday: <input type="date"/><br>
-    Favourite sport:
-<select name="sport" id="sport">
-  <option value="">Select sport</option>
-  <option value="football">Football</option>
-  <option value="basquet">Basquet</option>
-  <option value="rugby">Rugby</option>
-  <option value="hockey">Hockey</option>
-</select><br>
-    Bio: <textarea name="bio" id="bio" cols="30" rows="4" placeholder="optional"></textarea><br>
-    <input type="submit" value="submit" />
-    <input type="reset" value="clear" />
-  </form>
-
+      <label for="LabelFname">First name:</label> <input type="text" name="fname" id="fname" value=""  required="" /><br>
+      <label for="LabelLname">Last name:</label> <input type="text" name="lname" id="lname" value="" required=""  /><br>
+      <label for="LabelEmail">Email:</label> <input type="email" name="email" required id="email" value="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" /><br>
+      <label for="LabelBirthday">Birthday:</label> <input type="date"/><br>
+      <label for="LabelFSport">Favourite Sport:</label>
+      <select name="sport" id="sport">
+        <option value="">Select sport</option>
+        <option value="football">Football</option>
+        <option value="basquet">Basquet</option>
+        <option value="rugby">Rugby</option>
+        <option value="hockey">Hockey</option>
+      </select>
+      <br>
+      <label for="LabelBio">Bio:</label> <textarea name="bio" id="bio" cols="30" rows="4" placeholder="optional"></textarea><br>
+      <input type="submit" value="submit" />
+      <input type="reset" value="clear" />
+    </form>
   </body>
 </html>
