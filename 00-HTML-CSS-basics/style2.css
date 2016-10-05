@@ -1,0 +1,45 @@
+html,body {
+    background-color: grey;
+    font-family: "Times New Roman", Georgia, Serif;
+    height: 100%;
+    width:100%;
+}
+.header {
+    background-color: yellow;
+    color: black;
+    float: left;
+    font-size: 46px;
+    height: 20%;
+    text-align: center;
+    width: 40%;
+}
+.content {
+    background-color: orange;
+    color: black;
+    float: left;
+    font-size: 26px;
+    height: 20%;
+    text-align: center;
+    width: 60%;
+}
+.photo {
+    box-shadow: 0 0 2px 0 #000;
+    float: left;
+    height: 80%;
+    position: relative;
+    width: 50%;
+}
+.screen {
+  	background-color: #000;
+    color: magenta;
+    font-size: 30px;
+  	height: 100%;
+    opacity: 0;
+  	position: absolute;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+}
+.screen:hover {
+    opacity: 0.8
+}
