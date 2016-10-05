@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>.:SignUp:.</title>
+ </head>
+ <body>
+   <div>
+      <form>
+        <h1>Please sign in</h1>
+        <label for="inputFirstname" >First name:</label>
+        <input name="first" id="first" required="">
+        <label for="inputLastname" >Last name:</label>
+        <input name="last" id="last" required="">
+        <div>
+        <label for="inputemail" >Email:</label>
+        <input name="email" id="mail"  required="" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <div>
+        <label for="inputBirthday" >Bithday:</label>
+        <input name="Birthday" type="date" required="">
+        <div>
+        <label for="inputSport" >Select your favourite Sport:</label>
+        <select>
+          <option value="basquet">Basquet</option>
+          <option value="tennis">Tennis</option>
+          <option value="futball">Futball</option>
+          <option value="Golf">Golf</option>
+          <option value="Others">Others</option>
+        </select>
+        <label for="inputtext" >Input a small bio</label>
+        <textarea rows="4" cols="50">
+        </textarea>
+        </div>
+        </div>
+        </div>
+        <button type="submit">Sign in</button>
+        <input type="reset" value="clear" />
+      </form>
+    </div>
+ </body>
