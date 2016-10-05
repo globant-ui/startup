@@ -1,80 +1,77 @@
-*{
+* {
   font-size: 14px;
   font-family: cursive;
 }
 
-h1{
+article {
+
+}
+
+h1 {
   color: red;
 }
 
 section{
 
 }
-article{
-  background-color: blue;
+
+.center {
+  background: white;
+  height: 90%;
+  width: 100%;
 }
 
-.header{
+.container {
+  background:yellow;
+  float: left;
+  height: 100%;
   width: 100%;
+}
+
+.content {
+  height: 90%;
+  font-size: 14px;
+  float: left;
+  width: 40%;
+}
+
+.final{
+  float: left;
+  font-size: 10px;
+  text-align: center;
+  width: 100;
+}
+
+.footer {
+  font-size: 10px;
+  height: 5%;
+  width: 100%;
+}
+
+.header {
+  font-size: 46px;
   height: 5%;
   text-align: center;
-  font-size: 46px;
-  background-color: magenta;
-}
-
-
-
-.footer{
   width: 100%;
-  height: 5%;
-  font-size: 10px;
-  background-color: magenta;
 }
 
-
-.content{
-height: 90%;
-width: 40%;
-font-size: 14px;
-float: left;
-
-}
-
-.navegation{
-float: left;
-width: 30%;
-height: 100%;
-background: blue;
-font-size: 12px;
+.navegation {
+  float: left;
+  font-size: 12px;
+  height: 100%;
+  width: 30%;
 }
 
 .sidebar {
-background: violet;
-width: 30%;
-height: 100%;
-float: left;
-background-color: magenta;
-}
-
-.center{
-height: 90%;
-width: 100%;
-background: white;
-background-color: magenta;
-}
-
-.conteiner{
-  background:yellow;
+  float: left;
   height: 100%;
-  width: 100%;
-  float: left;
-  background-color: magenta;
+  width: 30%;
 }
 
+[class$="r"]{
+background-color: magenta;
+}
 
-.final{
-  width: 100;
-  float: left;
-  text-align: center;
-  font-size: 10px;
+[class*="a"]:not([class$="r"]) {
+  background-color: blue;
 }
