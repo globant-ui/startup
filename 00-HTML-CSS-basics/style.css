@@ -1,6 +1,5 @@
 *{
   color: green;
-   font-size: 14px;
    line-height: 25px;
    font: "courier New";
 }
@@ -22,30 +21,25 @@ aside,
 }
 
 .div-header header{
-  background: #3498db;
   border-radius: 6px;
-  padding: 24px 15px;
+  height: 5%;
   text-align: center;
-}
-
-header{
-
 }
 
 .div-nav{
   float: left;
+  height: 225px;
+  background: blue;
   margin-left: 3%;
   width: 17%;
 }
 
 .div-nav nav{
-  background: #d1404a;
   border-radius: 6px;
+  padding: 24px 15px;
+  height: inherit;
 }
 
-nav {
-
-}
 
 .div-section {
   float: left;
@@ -61,41 +55,58 @@ nav {
 .div-section article{
   margin-bottom: 1%
 }
-section {
-
-}
 
 .div-aside{
   float: left;
-  hight: 100%;
+  height: 225px;
   margin-right: 3%;
   width: 17%;
 }
 
 .div-aside aside{
-  background: #27ae60;
   border-radius: 6px;
+  height: inherit;
 }
 
 .div-aside{
 
 }
 
-aside{
-
-}
-
 .div-footer{
   clear: both;
+  height: 5%;
   margin-top: 1%;
   margin-bottom: 0;
 }
 
 .div-footer footer{
-  background: #b23f73;
   border-radius: 6px;
 }
 
-footer {
+.header{
+  font-size: 46px;
+}
 
+.footer{
+  font-size: 10px;
+}
+
+.content{
+  font-size: 10px;
+}
+
+.navigation{
+  font-size: 12px;
+}
+
+.sidebar{
+  font-size: 10px;
+}
+
+[class$="r"]{
+  background: magenta;
+}
+
+[class*="a"] && ! [class$="r"]{
+  background: blue;
 }
