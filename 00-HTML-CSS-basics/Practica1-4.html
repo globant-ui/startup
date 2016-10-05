@@ -8,28 +8,34 @@
    <div>
       <form>
         <h1>Please sign in</h1>
-        <label for="inputFirstname" >First name:</label>
-        <input name="first" id="first" required="">
-        <label for="inputLastname" >Last name:</label>
-        <input name="last" id="last" required="">
+        <label for="inputFirstname" >First name:
+         <input name="first" id="inputfirst" required="">
+        </label>
+        <label for="inputLastname" >Last name:
+         <input name="last" id="inputlast" required="">
+        </label>
         <div>
-        <label for="inputemail" >Email:</label>
-        <input name="email" id="mail"  required="" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <label for="inputemail" >Email:
+         <input name="email" id="inputmail"  required="" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
         <div>
-        <label for="inputBirthday" >Bithday:</label>
-        <input name="Birthday" type="date" required="">
+        <label for="inputBirthday" >Bithday:
+         <input name="Birthday" id="inputbirthday" type="date" required="">
+        </label>
         <div>
-        <label for="inputSport" >Select your favourite Sport:</label>
+        <label for="inputSport" >Select your favourite Sport:
         <select>
-          <option value="basquet">Basquet</option>
-          <option value="tennis">Tennis</option>
-          <option value="futball">Futball</option>
-          <option value="Golf">Golf</option>
-          <option value="Others">Others</option>
+          <option value="basquet" id="basquet">Basquet</option>
+          <option value="tennis" id="tennis">Tennis</option>
+          <option value="futball" id="futball">Futball</option>
+          <option value="Golf" id="golf">Golf</option>
+          <option value="Others" id="others">Others</option>
         </select>
-        <label for="inputtext" >Input a small bio</label>
-        <textarea rows="4" cols="50">
+        </label>
+        <label for="inputtext" >Input a small bio:
+        <textarea rows="4" cols="50" id="textarea">
         </textarea>
+        </label>
         </div>
         </div>
         </div>
