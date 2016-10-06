@@ -1,0 +1,91 @@
+html,body {
+    background-color:#4F5151;
+    font-family: "Times New Roman", Georgia, Serif;
+    height: 100%;
+    width:100%;
+}
+.header {
+    border-radius: 15px;
+    color: white;
+    font-size: 46px;
+    height: 10%;
+    text-align: center;
+    width: 99%;
+}
+.navigation {
+    border-radius: 15px;
+    color:white;
+    float:left;
+    font-size: 12px;
+    height:50%;
+    margin: 10px;
+    text-align:center;
+    width:22%;
+}
+.content {
+    border-radius: 15px;
+    color:white;
+    float: left;
+    font-size: 14px;
+    height:50%;
+    margin: 10px;
+    text-align:center;
+    width:50%;
+}
+.content_header {
+    border-radius: 15px;
+    color:black;
+    float: left;
+    font-size: 14px;
+    height:20%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+}
+.content_article {
+    border-radius: 15px;
+    color:white;
+    float: left;
+    font-size: 14px;
+    height:30%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+}
+.content_footer {
+    border-radius: 15px;
+    color:black;
+    float: left;
+    font-size: 14px;
+    height:20%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+}
+.sidebar {
+    border-radius: 15px;
+    color:white;
+    float:left;
+    font-size: 10px;
+    height:50%;
+    margin: 10px;
+    text-align:center;
+    width:22%;
+}
+.footer {
+    border-radius: 15px;
+    color: white;
+    float: left;
+    font-size: 10px;
+    height: 10%;
+    text-align: center;
+    width: 99%;
+}
+
+*[class$="r"]{
+    background-color: magenta;
+}
+
+*[class*="a"]:not([class$="r"]) {
+    background-color: blue;
+}
