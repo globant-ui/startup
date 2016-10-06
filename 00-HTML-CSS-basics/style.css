@@ -1,4 +1,22 @@
-h1 {
-	color:orange;
+
+.header{
+	font-size: 46px;
 	text-align: center;
+	background-color: magenta;
+}
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+	text-align: center;
+}
+.content{
+	font-size: 14px;
+}
+.navigation{
+	font-size: 12px;
+	background-color: blue;
+}
+.sidebar{
+	font-size: 10px
+	background-color: magenta;
 }
