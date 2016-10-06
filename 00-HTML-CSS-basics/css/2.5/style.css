@@ -1,0 +1,19 @@
+.classx3 {
+  background-image:url("tiger.jpg");
+  opacity:1;
+  float: left;
+  width:296px;
+  height:170px;
+  margin:10px;
+  border-color:black;
+  border-style: solid;
+  border-width: 5px;
+ }
+.classx3:hover .text {
+  opacity:1;
+}
+.text{
+	opacity:0;
+  background-color:#F30303;
+  text-align: center;
+}
