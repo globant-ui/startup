@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" >
+    <meta charset="utf-8">
+    <title>first js</title>
+    <script type="text/javascript">
+        function show(){
+                    let obj = document.getElementById("hidden");
+                    if(obj.style.display == "block")
+                            obj.style.display = "none";
+                    else
+                            obj.style.display = "block";
+                          }
+      function joke(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "jokes.txt", false);
+        xhttp.send();
+        alert(xhttp.responseText);
+        }
+    </script>
+  </head>
+  <body onload="setTimeout(show, 2000);">
+
+    <section>
+      <p> This is random content</p>
+      And this too.
+      <br>
+    <p id="hidden">
+      Hello world!
+    </p>
+
+    <input type="button" value="show/hide" onclick="show();" />
+
+    </section>
+    <hr>
+    <input type="button" value="Joke" onclick="joke();"/>
+
+
+  </body>
+</html>
