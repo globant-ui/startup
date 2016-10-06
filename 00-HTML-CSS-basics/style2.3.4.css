@@ -1,0 +1,77 @@
+* {
+  font-size: 14px;
+  font-family: cursive;
+}
+
+article {
+
+}
+
+h1 {
+  color: red;
+}
+
+section{
+
+}
+
+.center {
+  background: white;
+  height: 90%;
+  width: 100%;
+}
+
+.container {
+  background:yellow;
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  height: 90%;
+  font-size: 14px;
+  float: left;
+  width: 40%;
+}
+
+.final{
+  float: left;
+  font-size: 10px;
+  text-align: center;
+  width: 100;
+}
+
+.footer {
+  font-size: 10px;
+  height: 5%;
+  width: 100%;
+}
+
+.header {
+  font-size: 46px;
+  height: 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.navegation {
+  float: left;
+  font-size: 12px;
+  height: 100%;
+  width: 30%;
+}
+
+.sidebar {
+  float: left;
+  height: 100%;
+  width: 30%;
+}
+
+[class$="r"]{
+background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+  background-color: blue;
+}
