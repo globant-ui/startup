@@ -1,63 +1,49 @@
-<div class="form">
-
-      <div class="tab-content">
-        <div id="signup">
-          <h1>Sign Up for Free</h1>
-
+<!doctype html>
+<html>
+<head>
+<title>Sing Up Form</title>
+<meta charset="UTF-8">
+<meta name="description" content="Free Sign Up Form">
+<meta name="author" content="Bruno Branca">
+<meta name="viewport" content="name=value,name=value">
+</head>
+<body>
           <form action="/" method="post">
 
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
+          <ul>
+            <li>  <label>First Name<span class="req">*</span></label>
+          <input type="text" required autocomplete="off" />
 
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/ pattern=
+          <li><label>Last Name<span class="req">*</span></label>
+              <input type="text" required autocomplete="off"/>
+          <li><label>Email Address<span class="req">*</span></label>
+            <input type="email" required autocomplete="off" pattern=
                [a-z]{3}[0-9]{3}>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Sport<span class="req">*</span>
-            </label>
+          <li><label>Sport<span class="req">*</span></label>
             <select>
               <option value="futbol">futbol</option>
               <option value="tenis">tenis</option>
               <option value="rugby">rugby</option>
               <option value="voley">voley</option>
             </select>
-          </div>
 
-          <div class="field-wrap">
-            <div class="field-wrap">
-              <label>
-                Birthday<span class="req">*</span>
-              </label>
+          <li><label>Birthday<span class="req">*</span></label>
               <input type="date" required autocomplete="off" />
-            </div>
+            </ul>
 
       <ul>
-        <div class="field-wrap">
-          <textarea name="comment" form="usrform">Enter text here...</textarea>
-        </div>
+
+          <p class="formfield">
+      <label for="textarea"></label>
+      <textarea id="textarea" rows="5">Textarea</textarea>
+  </p>
       </ul>
-          <button type="submit" class="button button-block"/>Submit</button>
-          <button type="reset" class="button button-block"/>Clear</button>
 
-          </div>
+          <button type="submit" class="button button-block">Submit</button>
+          <button type="reset" class="button button-block">Clear</button>
 
-</div>
+  </form>
+
+
+</body>
+</html>

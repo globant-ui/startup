@@ -1,0 +1,103 @@
+html,body {
+    background-color:#4f5151;
+    height: 100%;
+    width: 100%;
+  }
+
+
+.header {
+    border-radius: 25px;
+    color:green;
+    font-size:46px;
+    height:20%;
+    margin: 10px;
+    text-align:center;
+    width:97%;
+  }
+
+
+.sheader {
+    border-radius: 25px;
+    color:black;
+    float:left;
+    font-size:14px;
+    height:20%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+  }
+
+.sarticle {
+    border-radius: 25px;
+    color:black;
+    float:left;
+    font-size:14px;
+    height:35%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+  }
+
+.sfooter {
+    border-radius: 25px;
+    color:white;
+    float:left;
+    font-size:14px;
+    height:20%;
+    margin: 10px;
+    text-align:center;
+    width:95%;
+  }
+
+.nav {
+    border-radius: 25px;
+    color:white;
+    float:left;
+    font-size:12px;
+    height:70%;
+    margin: 10px;
+    text-align:center;
+    width:23%;
+  }
+
+.section {
+    background-color: grey;
+    border-radius: 25px;
+    color:red;
+    float:left;
+    font-size:14px;
+    height:70%;
+    margin: 10px;
+    text-align:center;
+    width:48%;
+  }
+
+.aside {
+    border-radius: 25px;
+    color:yellow;
+    float:left;
+    font-size:10px;
+    height:70%;
+    margin: 10px;
+    text-align:center;
+    width:23%;
+  }
+
+.footer {
+    border-radius:25px;
+    color:brown;
+    float:left;
+    font-size:10px;
+    height:9%;
+    margin: 10px;
+    text-align:center;
+    width:97%;
+  }
+
+*[class$="r"]{
+  background-color: magenta;
+}
+
+*[class*="a"]:not([class$="r"]){
+  background-color: blue;
+}
