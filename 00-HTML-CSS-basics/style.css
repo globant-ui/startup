@@ -1,0 +1,126 @@
+/*BEGIN*/
+html,body {
+	margin:0px;
+	height:100%;
+	font-size: 14px;
+	font-family: cursive;
+}
+p {
+	text-align: center;
+}
+.body {
+	background-color: black;;
+}
+.top-header-container {
+	/*background-color: magenta;*/
+	height: 5%;
+	margin: 1.858736059%;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-radius: 25px;
+}
+.top-header {
+	padding: 5px;
+}
+.leftside-nav-containers {
+  background-color: blue;
+	float: left;
+  margin: 1.858736059%;
+  width: 29.615861214%;
+	margin-top: 5%;
+	border-radius: 25px;
+	height: inherit;
+}
+.leftside-nav {
+	padding: 5px;
+}
+.middle-elements {
+	height: 72%;
+	width: 100%;
+	margin-top: 3%;
+}
+
+.middle-elements-containers {
+	background-color: gray;
+	float: left;
+  margin: 1.858736059%;
+  width: 29.615861214%;
+	margin-top: 5%;
+	border-radius: 25px;
+	height: inherit;
+}
+.middle-elements-section {
+  margin: 5px 5px 10px 5px;
+	padding: 5px;
+	height: 5%;
+}
+.middle-elements-header {
+	/*background-color: magenta;*/
+	margin: 5px 5px 15px 5px;
+	padding: 5px;
+	height: 20%;
+	border-radius: 25px;
+}
+.middle-elements-article {
+	background-color: lightgray;
+	margin: 5px 5px 15px 5px;
+	padding: 5px;
+	height: 35%;
+	border-radius: 25px;
+}
+.middle-elements-footer {
+	/*background-color: magenta;*/
+	margin: 5px 5px 15px 5px;
+	padding: 5px;
+	height: 20%;
+	border-radius: 25px;
+}
+.rightside-aside-container {
+	/*background-color: magenta;*/
+	float: left;
+  margin: 1.858736059%;
+  width: 29.615861214%;
+	margin-top: 5%;
+	border-radius: 25px;
+	height: inherit;
+}
+.rightside-aside {
+	padding: 5px;
+}
+.bottom-footer-container {
+	/*background-color: magenta;*/
+	margin: 1.858736059%;
+	height: 10%;
+	bottom: 0;
+  left: 0;
+	right: 0;
+	border-radius: 25px;
+}
+.bottom-footer {
+  padding: 5px;
+}
+/*Exercise 2.3*/
+.header{
+	font-size: 46px;
+}
+.navigation {
+	font-size: 12px;
+}
+.content {
+	font-size: 14px;
+}
+.footer {
+	font-size: 10px;
+}
+.sidebar {
+	font-size: 10px;
+}
+[class$="r"] {
+	background-color: magenta;
+}
+/*
+[class*="a"]:not([class$="r"]) {
+	background-color: blue;
+}
+*/
