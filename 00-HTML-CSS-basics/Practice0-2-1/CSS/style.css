@@ -1,0 +1,26 @@
+#header, #footer, #aside, #nave {
+   background-color: #696969;
+ }
+
+/* --------------------------------------------------------------------------*/
+
+* {
+  font-size: 14px;
+  font-family: cursive;
+  color: #F0FFFF
+}
+
+/*---------------------------------------------------------------------------*/
+
+#header, #footer {
+  text-align: center;
+}
+
+#section {
+  background-color: #A9A9A9;
+}
+/*---------------------------------------------------------------------------*/
+
+#headersection, #articlesection, #footersection{
+  background-color: #778899;
+}

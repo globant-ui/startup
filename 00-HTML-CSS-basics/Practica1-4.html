@@ -1,0 +1,46 @@
+<!Doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>.:SignUp:.</title>
+ </head>
+ <body>
+   <div>
+      <form>
+        <h1>Please sign in</h1>
+        <label for="inputFirstname" >First name:
+         <input name="first" id="inputfirst" required="">
+        </label>
+        <label for="inputLastname" >Last name:
+         <input name="last" id="inputlast" required="">
+        </label>
+        <div>
+        <label for="inputemail" >Email:
+         <input name="email" id="inputmail"  required="" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
+        <div>
+        <label for="inputBirthday" >Bithday:
+         <input name="Birthday" id="inputbirthday" type="date" required="">
+        </label>
+        <div>
+        <label for="inputSport" >Select your favourite Sport:
+        <select>
+          <option value="basquet" id="basquet">Basquet</option>
+          <option value="tennis" id="tennis">Tennis</option>
+          <option value="futball" id="football">Futball</option>
+          <option value="Golf" id="golf">Golf</option>
+          <option value="Others" id="others">Others</option>
+        </select>
+        </label>
+        <label for="inputtext" >Input a small bio:
+        <textarea rows="4" cols="50" id="textarea">
+        </textarea>
+        </label>
+        </div>
+        </div>
+        </div>
+        <button type="submit">Sign in</button>
+        <input type="reset" value="clear" />
+      </form>
+    </div>
+ </body>
