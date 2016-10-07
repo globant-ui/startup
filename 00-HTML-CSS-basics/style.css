@@ -1,0 +1,112 @@
+*{
+  color: green;
+   line-height: 25px;
+   font: "courier New";
+}
+
+code {
+  color: black;
+  display: block;
+  border-radius: 6px;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+section,
+nav,
+aside,
+
+.div-header{
+  margin-bottom: 1%;
+}
+
+.div-header header{
+  border-radius: 6px;
+  height: 5%;
+  text-align: center;
+}
+
+.div-nav{
+  float: left;
+  height: 175px;
+  margin-left: 3%;
+  width: 17%;
+}
+
+.div-nav nav{
+  border-radius: 6px;
+  padding: 24px 15px;
+  height: inherit;
+}
+
+
+.div-section {
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 50%;
+}
+
+.div-section header{
+  margin-bottom: 1%;
+}
+
+.div-section article{
+  margin-bottom: 1%
+}
+
+.div-aside{
+  float: left;
+  height: 175px;
+  margin-right: 3%;
+  width: 17%;
+}
+
+.div-aside aside{
+  border-radius: 6px;
+  padding: 24px 15px;
+  height: inherit;
+}
+
+.div-aside{
+
+}
+
+.div-footer{
+  clear: both;
+  height: 5%;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+.div-footer footer{
+  border-radius: 6px;
+}
+
+.header{
+  font-size: 46px;
+}
+
+.footer{
+  font-size: 10px;
+}
+
+.content{
+  font-size: 10px;
+}
+
+.navigation{
+  font-size: 12px;
+}
+
+.sidebar{
+  font-size: 10px;
+}
+
+[class$="r"]{
+  background: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+  background: blue;
+}

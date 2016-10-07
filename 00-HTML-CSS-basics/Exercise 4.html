@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise v</title>
+<meta charset="UTF-8">
+<meta name="description" content="Forms">
+<meta name="keywords" content="HTML,BOOTCAMP">
+<meta name="author" content="Octavio Bruzzesi">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<h1>Sign up</h1>
+
+<form>
+   First name:<br>
+   <input type="text" name="firstname" required><br>
+   Last name:<br>
+   <input type="text" name="lastname" required><br>
+   Birthday:<br>
+   <input type="date" name="birthday" required><br>
+   Email:<br>
+   <input type="email" name="email" required><br>
+   Favourite Sport:<br>
+   <input list="sports">
+   <datalist id="sports">
+      <option value="Volley">
+      <option value="Football">
+      <option value="Basketball">
+   </datalist><br>
+   Bio:<br>
+   <textarea name="bio" cols="30" rows="5"></textarea><br>
+   <input type="submit" value="Submit">
+   <input type="reset" value="Reset">
+</form>
+</body>
+</html>
