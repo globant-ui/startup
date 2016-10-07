@@ -7,22 +7,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
         <link rel="stylesheet" href="../00-HTML-CSS-basics/css/normalize.css">
         <link rel="stylesheet" href="../00-HTML-CSS-basics/css/main.css">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
-      <div class="container">
-        <h1>First content</h1>
-        <p>Initializing <br>
-        <h3>JS first</h3>
-        <div class="message">
-          <h3>Hello world
-        </div>
-      </div>
 
+    <body onload="messageFirst()">
+      <div class="container">
+        <section class="sec">
+          <h1>First content</h1>
+          <p>Initializing <br>
+          <h3>JS first</h3>
+          <!--<body onload="setTimeout(show, 2000);">-->
+          <p id="content"></p>
+          <p id="joke"></p>
+
+        </section>
+        <button class="button" onclick="eventRequest()">Click here</button>
+      </div>
     </body>
+
+    <script src="js/js.js">
+    </script>
+</html>
