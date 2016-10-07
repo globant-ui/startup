@@ -4,11 +4,17 @@
 [class$="r"]  {
 	background-color: magenta;
 }
+.content1{
+	display:block;
+	background-color: skyblue;
+	width: 8cm;
+}
 html{
 	font-family: arial;
 	font-size: 10px;
 }
 body{
+	background-color: black;
 	text-align: center;
 	padding-left: 10cm;
 	padding-right: 10cm;
