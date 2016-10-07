@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Topic 1">
+    <meta name="keywords" content="JavaScript">
+    <meta name="author" content="Germán Burgardt">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Topic 1</title>
+
+    <script type="text/javascript">
+
+      function inicializar(){
+        /* In the lines below the "hidden" class section is removed and add the class "normal" */
+        document.getElementById("changeclass").className +="hidden";
+        document.getElementById("changeclass").className = "normal";
+      }
+
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+           document.getElementById("demo").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "ajax_info.txt", true);
+        xhttp.send();
+      }
+
+    </script>
+
+  </head>
+
+  <body onload="inicializar()">
+    <section id="changeclass" class="hidden">
+      Hello world!
+    </section>
+
+    <div id="demo"><h2>Let AJAX change this text</h2></div>
+    <button type="button" onclick="loadDoc()">Change Content</button>
+  </body>
+
+</html>
