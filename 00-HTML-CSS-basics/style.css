@@ -1,22 +1,48 @@
-
+[class*="a"] {
+	background-color: blue;
+}
+[class$="r"]  {
+	background-color: magenta;
+}
+html{
+	font-family: arial;
+	font-size: 10px;
+}
+body{
+	text-align: center;
+	padding-left: 10cm;
+	padding-right: 10cm;
+}
 .header{
 	font-size: 46px;
-	text-align: center;
-	background-color: magenta;
-}
-.footer{
-	font-size: 10px;
-	background-color: magenta;
-	text-align: center;
-}
-.content{
-	font-size: 14px;
+    display: block;
 }
 .navigation{
 	font-size: 12px;
-	background-color: blue;
+	display: block;
+	display: inline-block;
+	float: left;
+	width: 4cm;
+}
+.content{
+	font-size: 14px;
+	display: block;
+	display: inline-block;
+	float: center;
+}
+.content1{
+	display: block;
 }
 .sidebar{
-	font-size: 10px
-	background-color: magenta;
+	font-size: 10px;
+	width: 4cm;
+	display: block;
+	display: inline-block;
+	float: right;
 }
+.footer{
+	font-size: 10px;
+	display: block;
+	clear: both;
+}
+
