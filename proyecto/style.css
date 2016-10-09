@@ -18,6 +18,8 @@
 	aside {
 		float: right;
 		width: 25%;
+		-moz-box-shadow: rgb(150,150,150) 5px 5px 10px;
+        -webkit-box-shadow: rgb(150,150,150) 5px 5px 10px;
 	}
 	nav {
 		color: red;
@@ -47,6 +49,21 @@
 		margin:10px;
 		text-align:center;
 		clear:both;
+		-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
+		-moz-box-shadow: rgb(150,150,150) 5px 5px 10px;
+        -webkit-box-shadow: rgb(150,150,150) 5px 5px 10px;
+        background: -webkit-linear-gradient(top, #0B3B2E, black);
+        background: -moz-linear-gradient(top, #0B3B2E, black);
+        -moz-transform: skew(-20deg);
+        -webkit-transform: skew(-20deg);
+	}
+	li{
+		color:yellow;
+		font-family: arial black;
+	}
+	a{
+		color:yellow;
+		font-family: arial black;
 	}
  
 	/* para 980px o menos */
