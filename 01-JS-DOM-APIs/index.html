@@ -4,17 +4,10 @@
     <link href="style.css" rel="stylesheet" type="text/css" >
     <meta charset="utf-8">
     <title>first js</title>
-    <script type="text/javascript">
-
-    function show(){
-                    let obj = document.getElementById("hidden");
-                    if(obj.style.display == "block")
-                            obj.style.display = "none";
-                    else
-                            obj.style.display = "block";
-                          }
+    <script src="code.js">
 
     </script>
+
   </head>
   <body onload="setTimeout(show, 4000);">
 
@@ -26,9 +19,23 @@
       Hello world!
     </section>
     <br><br>
-    <input type="button" value="show/hide" onclick="show();" />
+    <input type="button" value="change for a joke" id="buttonSection" onclick="eventRequest();" />
 
   </section>
 
+  <section>
+    <input type="button" value="Ajax" id="buttonSection" onclick="eventOnClick();" />
+  </section>
+
+  <hr> </hr>
+  <section>
+
+  <input type="button" value="Ex 9" id="buttonSection" onclick="eventRequest2();" />
+
+  </section>
+
+  <section id="hidden2">
+
+  </section>
   </body>
 </html>
