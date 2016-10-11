@@ -3,38 +3,53 @@
   <head>
     <link href="style.css" rel="stylesheet" type="text/css" >
     <meta charset="utf-8">
-    <title>first js</title>
+    <title>JS</title>
     <script type="text/javascript">
+      function eventRequest() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'http://api.icndb.com/jokes/random', true);
+        xhttp.onreadystatechange = function(event) {
+        let response = JSON.parse(event.target.response);
+        txt = response.value.joke;
+        if (xhttp.readyState === XMLHttpRequest.DONE) {
+          document.getElementById('jokeHidden').innerHTML = response.value.joke;
+          document.getElementById("buttonjoke").value="Another joke";
+                 }
+               }
+        xhttp.send();
+          }
+
         function show(){
                     let obj = document.getElementById("hidden");
-                    if(obj.style.display == "block")
+                    if(obj.style.display == "block"){
                             obj.style.display = "none";
-                    else
-                            obj.style.display = "block";
+                            document.getElementById("buttonShow").value= "Show";
                           }
-      function joke(){
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "jokes.txt", false);
-        xhttp.send();
-        alert(xhttp.responseText);
-        }
+                    else{
+                            obj.style.display = "block";
+                            document.getElementById("buttonShow").value= "Hide";
+                          }
+                        }
     </script>
   </head>
-  <body onload="setTimeout(show, 2000);">
+  <body onload="setTimeout(show, 1000);">
 
     <section>
       <p> This is random content</p>
       And this too.
       <br>
-    <p id="hidden">
+      <p id="hidden">
       Hello world!
-    </p>
+      </p>
 
-    <input type="button" value="show/hide" onclick="show();" />
-
+    <input type="button" id="buttonShow" value="Show" onclick="show();" />
     </section>
     <hr>
-    <input type="button" value="Joke" onclick="joke();"/>
+
+    <section id="jokeHidden">
+    </section>
+      <input type="button" value="Give me a joke" id="buttonjoke" onclick="eventRequest();"/>
+    <hr>
 
 
   </body>
