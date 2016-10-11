@@ -8,36 +8,36 @@
         <link rel="stylesheet" href="style.css">
         <title>JavaScritp</title>
 
-        <script type="text/javascript">
-
-                    function show(){
-                        let obj = document.getElementById("hidden");
-                        obj.style.visibility ="visible";
-                    }                
-
-
-                    function joke() {
-                      var xhttp = new XMLHttpRequest();
-                      xhttp.open('GET', 'http://api.icndb.com/jokes/random', true);
-                      xhttp.onreadystatechange = function(event) {
-                        var response = JSON.parse(event.target.response);
-                        document.getElementById('hidden').innerHTML = response.value.joke;
-                         if (xhttp.readyState === XMLHttpRequest.DONE) {
-                           if (xhttp.responseText.value) {
-                               document.getElementById("buttonJoke").innerHTML  = xhttp.responseText.value.joke;
-                           }
-                         }
-                     }
-                     xhttp.send();
-                          }
-        </script> 
-
+        <script type="text/javascript" src="script.js"> </script>
     </head>
     <body onload="setTimeout(show, 2000);">
+
         <div class="wrapper">
           <!--  <img src="C:\Users\juan.almeida\Downloads\branca.jpg" alt="photo" /> -->
-            <section id="hidden" style="visibility: hidden;">Hello world</section>
-            <button type="button" name="buttonJoke" onclick="joke();"> Press for a joke</button>
+            <section id="hidden" style="visibility: hidden;"><p> Hello world </p></section>
+
+            <!-- the program run but shoow me an error in the console -->
+            <button type="button" id="buttonSection" onclick="joke();" > Press for a joke</button>
+
+            <section>
+              <input type="button" value="Ajax" id="buttonSection" onclick="eventOnClick();" />
+            </section>
+          <hr />
         </div>
+
+
+        <div class="exercise9">
+          <br />
+          <section id="javashows">
+              Something to show
+          </section>
+
+          <!-- exercise 10 -->
+          <input type="text" name="Api">
+
+          <button type="button" id="buttonJava" onclick="javaShow()" > Press to see javascript text</button>
+
+        </div>
+
     </body>
 </html>
