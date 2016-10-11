@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+   <link href="normalize.css" rel="stylesheet">
+   <link href="exerciseJS.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8">
+   <title>Excercise 2</title>
+   <script type="text/javascript" src="exerciseJS.js"> </script>
+   <script type="text/javascript">
+     function eventFade()
+     {
+       document.getElementById("sectionHidden").style.display = "inline";
+     }
+   </script>
+</head>
+<body onload="setTimeout(eventFade, 1000);">
+  <section class="content">
+    <p>Random Content</p>
+  </section>
+  <br>
+  <section class="hiddenOne" id="sectionHidden">
+    <p>¡ Hello World !</p>
+  </section>
+  <br><br>
+  <button type="button" name="XMLHttpRequest" onclick="eventRequest()" class="buttons" id="buttonSection">XMLHttpRequest</button>
+  <br><br>
+  <button type="button" name="Ajax Calls" onclick="eventOnClick()" class="buttons" id="buttonSection">Ajax Calls</button>
+  <br><br>
+  <button type="button" name="Ajax Calls" onclick="secondEventOnClick()" class="buttons" id="buttonSection">Ajax Calls</button>
+</body>
+</html>

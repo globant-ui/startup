@@ -1,0 +1,18 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.hiddenOne {
+  display:  none;
+  text-align: center;
+}
+.content {
+  text-align: center;
+  font-family: monospace;
+  font-size: 26px;
+}
+.buttons {
+  width: 10%;
+  margin-left: 45%;
+  text-align: center;
+}
