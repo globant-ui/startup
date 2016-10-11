@@ -5,6 +5,10 @@
     padding: 10px;
 }
 
+#sec{
+  border: 3px solid blue;
+}
+
 #content {
 
 }
