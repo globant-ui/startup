@@ -7,50 +7,105 @@
     <script type="text/javascript">
       function eventRequest() {
         let xhttp = new XMLHttpRequest();
-        xhttp.open('GET', 'http://api.icndb.com/jokes/random', true);
+        var param = "q=JavaScript";
+        xhttp.open("GET", 'https://api.github.com/search/repositories', true);
         xhttp.onreadystatechange = function(event) {
         let response = JSON.parse(event.target.response);
-        txt = response.value.joke;
-        if (xhttp.readyState === XMLHttpRequest.DONE) {
-          document.getElementById('jokeHidden').innerHTML = response.value.joke;
+        txt = response.documentation_url;
+        if (xhttp.readyState === XMLHttpRequest.DONE)
+        {
+          document.getElementById("jokeHidden").innerHTML = response.documentation_url;
           document.getElementById("buttonjoke").value="Another joke";
-                 }
+                   }
                }
-        xhttp.send();
+        xhttp.send(param);
           }
 
-        function show(){
-                    let obj = document.getElementById("hidden");
-                    if(obj.style.display == "block"){
+      function show(){
+                      let obj = document.getElementById("hidden");
+                      if(obj.style.display == "block"){
                             obj.style.display = "none";
                             document.getElementById("buttonShow").value= "Show";
                           }
-                    else{
+                      else{
                             obj.style.display = "block";
                             document.getElementById("buttonShow").value= "Hide";
                           }
                         }
+
+      function eventOnClick(){
+              let config = {
+              url: "http://api.icndb.com/jokes/random"
+                  };
+
+                        let xhttp = new XMLHttpRequest();
+                        function resolve(xhttp) {
+
+                            let response = JSON.parse(event.target.response);
+
+                             document.getElementById("jokeHidden2").innerHTML = response.value.joke;
+
+                             if (xhttp.readyState == XMLHttpRequest.DONE) {
+                               if (xhttp.responseText.value) {
+                                 document.getElementById("button2").innerHTML  = xhttp.responseText.value.joke;
+                               }
+                             }
+                         }
+
+                         function reject() {
+                           document.getElementById("all").style.backgroundColor = "red";
+
+                         }
+
+                         eventRequestReusable2(config).then(resolve,reject);
+                        };
+
+                        function eventRequestReusable2(object, resolve, reject) {
+                         let promise = new Promise( function (resolve, reject) {
+                           let xhttp = new XMLHttpRequest();
+                           xhttp.open("GET", object.url , true);
+                           xhttp.send();
+                           xhttp.onload = function () {
+                             if (this.status === 200) {
+                               resolve(xhttp);
+                             } else {
+                               reject(this.statusText);
+                             }
+                           };
+                           xhttp.onerror = function () {
+                            reject(this.statusText);
+                           };
+                         });
+                         return promise;
+                        };
+
     </script>
   </head>
   <body onload="setTimeout(show, 1000);">
+    <section id="all">
+      <section>
+        <p> This is random content</p>
+        And this too.
+        <br>
+        <p id="hidden">
+          Hello world!
+        </p>
 
-    <section>
-      <p> This is random content</p>
-      And this too.
-      <br>
-      <p id="hidden">
-      Hello world!
-      </p>
+        <input type="button" id="buttonShow" value="Show" onclick="show();" />
+      </section>
+      <hr>
 
-    <input type="button" id="buttonShow" value="Show" onclick="show();" />
-    </section>
-    <hr>
+      <section id="jokeHidden">
+      </section>
+        <input type="button" value="Give me a joke" id="buttonjoke" onclick="eventRequest();"/>
+        <hr>
+        <section id="jokeHidden2">
+        </section>
+        <input type="button" value="Give me a joke with promise" id="button2" onclick="eventOnClick();"/>
+      <hr>
 
-    <section id="jokeHidden">
-    </section>
-      <input type="button" value="Give me a joke" id="buttonjoke" onclick="eventRequest();"/>
-    <hr>
 
+      </section>
 
   </body>
 </html>
