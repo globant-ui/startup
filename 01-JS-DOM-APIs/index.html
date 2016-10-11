@@ -7,11 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style1-1.css">
     <script src="1-1.js"></script>
+
   </head>
-  <body onload="setTimeout (asd,1000)">
+
+  <body onload="setTimeout (show,1000)">
+
     <section id="hidden">
       Hello world.
     </section>
-    <button type="button" onclick="qwer">Click</button>
+    <button type="button" id="buttonJoke"onclick="joke()">Joke</button>
+    <section id="sectionJoke">
+    </section>
+
+    <button type="button" id="buttonAjax"onclick="ajaxcall()">Config</button>
+    <section id="sectionAjax">
+    </section>
+
+    <hr></hr>
+    //doesnt work// 
+    <button type="button" id="buttonQSearch"onclick="Qsearch()">Q Search </button>
+    <section id="sectionQSearch">
+    </section>
   </body>
 </html>
