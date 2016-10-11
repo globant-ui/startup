@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<!-- the program run but shoow me an error in the console -->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,35 +12,32 @@
 
                     function show(){
                         let obj = document.getElementById("hidden");
-                        obj.style.display = "block";
-                    }
+                        obj.style.visibility ="visible";
+                    }                
+
 
                     function joke() {
-                      var xhttp;
-                      xhttp = new XMLHttpRequest();
-
-                      xhttp.addEventListener("load", reqListener);
-                      xhttp.open("GET", "http://api.icndb.com/jokes/random",true);
-                      xhttp.send(null);
-                      console.log(xhttp.responseText);
-                      /*
-                      xhttp.setRequestHeader("Content-type", "api.icndb.com/jokes/random");
-
-                      oReq.addEventListener("load", reqListener);
-                      oReq.open("GET", "http://www.example.org/example.txt");
-                      oReq.send();
-
-                      */
-                    }
-
-        </script>
+                      var xhttp = new XMLHttpRequest();
+                      xhttp.open('GET', 'http://api.icndb.com/jokes/random', true);
+                      xhttp.onreadystatechange = function(event) {
+                        var response = JSON.parse(event.target.response);
+                        document.getElementById('hidden').innerHTML = response.value.joke;
+                         if (xhttp.readyState === XMLHttpRequest.DONE) {
+                           if (xhttp.responseText.value) {
+                               document.getElementById("buttonJoke").innerHTML  = xhttp.responseText.value.joke;
+                           }
+                         }
+                     }
+                     xhttp.send();
+                          }
+        </script> 
 
     </head>
     <body onload="setTimeout(show, 2000);">
         <div class="wrapper">
           <!--  <img src="C:\Users\juan.almeida\Downloads\branca.jpg" alt="photo" /> -->
-            <section id="hidden">Hello world</section>
-            <button type="button" name="button" onclick="joke();"> Joda</button>
+            <section id="hidden" style="visibility: hidden;">Hello world</section>
+            <button type="button" name="buttonJoke" onclick="joke();"> Press for a joke</button>
         </div>
     </body>
 </html>

@@ -11,14 +11,10 @@ header, section, nav, aside, footer {
 
 #hidden {
     background-color: #FF9;
-    color: #000000;
-    display:none;
     font-size: 25px;
     font-family: Arial;
-    height: 200px;
-    position: absolute;
-    top: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
 
 h1 {
