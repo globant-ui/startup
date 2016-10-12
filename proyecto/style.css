@@ -3,7 +3,31 @@
 		margin:0px auto;
 		font-size:1em;
 	}
-	select{
+	#premieres{
+		padding: 10px;
+		padding-left: 10px;
+		width: 550px;
+		height: 250px;
+	}
+	#movi{
+		width: 125px;
+		height: 225px;
+		margin: 3px;
+		border-style: outset;
+		border-color: #64FE2E;
+	}
+	#textBox{
+		-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
+		background-color: black;
+		color: yellow;
+		font-family: arial;
+	}
+	label{
+		font-family: arial black;
+		font-size: 25px;
+		color: yellow;
+	}
+	select, #Button{
 		color:black;
 		font-family: arial black;
 		border-color:#0B3B2E; 
@@ -21,6 +45,8 @@
        background: -moz-linear-gradient(top, #0B3B2E, black);
 	}
 	section {
+		display: block;
+		padding: 10px;
 		float: left;
 		width: 70%;
 	}
@@ -39,6 +65,7 @@
 		list-style-type:none;
 		float:left;
 		padding:10px;
+		display: inline;
 	}
 	nav ul li {
 		float:left;
@@ -54,7 +81,8 @@
         -webkit-transform: skew(-20deg);
 	}
 	footer {
-		margin:10px;
+		display: block;
+		margin-top: 10px;
 		text-align:center;
 		clear:both;
 		-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
@@ -62,8 +90,6 @@
         -webkit-box-shadow: rgb(150,150,150) 5px 5px 10px;
         background: -webkit-linear-gradient(top, #0B3B2E, black);
         background: -moz-linear-gradient(top, #0B3B2E, black);
-        -moz-transform: skew(-20deg);
-        -webkit-transform: skew(-20deg);
 	}
 	li{
 		color:yellow;
