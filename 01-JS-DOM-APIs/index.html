@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body onload="fade();">
+    <div class="book">
+      <header>
+        <h1>Book title</h1>
+      </header>
+      <section class="chapter">
+        <h2>Chapter 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec aliquam metus. Curabitur auctor dolor a sem ultrices, a eleifend arcu cursus. Aliquam eu nisl massa. Phasellus finibus tincidunt varius. Sed varius sagittis quam non vulputate. Quisque hendrerit mauris purus, vitae sagittis eros blandit eu. Vivamus eu odio a lacus laoreet varius nec vitae mi. Fusce sit amet nisl non quam sodales efficitur et quis lectus. Aliquam ut pretium erat. Aliquam erat volutpat. Pellentesque accumsan, metus a ullamcorper blandit, tellus metus bibendum felis, sed aliquet elit magna ut arcu.</p>
+      </section>
+      <section class="chapter">
+        <h2>Chapter 2</h1>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      </section>
+      <button type="button" id="button-get-repositories">Get repositories</button>
+      <section class="hidden" id="fade-in">
+        <p id="status">Hello world</p>
+        <ul id="repositories-list"></ul>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

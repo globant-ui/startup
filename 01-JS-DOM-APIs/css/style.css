@@ -1,0 +1,27 @@
+/*--- BOX PROPERTIES ---*/
+button {
+  margin-left: 45%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#repositories-list {
+  margin-left: 70%;
+}
+
+/*--- BOX BORDERS ---*/
+
+
+/*--- BACKGROUND PROPERTIES ---*/
+
+
+/*--- TEXT PROPERTIES ---*/
+section {
+  text-align: center;
+}
+
+#repositories-list {
+  text-align: left;
+}
