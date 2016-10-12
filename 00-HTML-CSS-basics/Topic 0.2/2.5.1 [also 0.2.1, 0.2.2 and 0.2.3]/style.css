@@ -1,0 +1,149 @@
+/* Avanzando en la lectura del tópico descubrí que con las propiedades Float y Clear se puede hacer
+de una forma mucho mas eficiente y responsiva. No lo hago con esas propiedades porque a esta altura del
+topic aún no las habíamos dado.*/
+
+body {
+    background: #353333;
+}
+
+.bordeRedondo {
+
+  border-radius: 0.3em;
+  background: #7C7C7C;
+}
+
+.header1 {
+  background: #7C7C7C;
+  position: absolute;
+  left:0; top:0;
+  width: 418px;
+  height: 50px;
+  left: 7px;
+  top: 8px;
+  text-align: center;
+  border-radius: 0.3em;
+
+  font-size: 46px;
+}
+
+
+.navigation {
+  position: relative;
+  background: #7C7C7C;
+  width: 96;
+  height: 195;
+  top: 65px;
+  left: 9px;
+  text-align: center;
+  border-radius: 0.3em;
+
+  font-size: 12px;
+}
+
+.sidebar {
+  position: relative;
+  background: #7C7C7C;
+  width: 96;
+  height: 195;
+  top: -130px;
+  left: 329px;
+  text-align: center;
+  border-radius: 0.3em;
+
+  font-size: 10px;
+}
+
+.footer1 {
+  position: relative;
+  background: #7C7C7C;
+  width: 418px;
+  height: 40px;
+  top: -122px;
+  left: 9px;
+  text-align: center;
+  border-radius: 0.3em;
+
+  font-size: 10px;
+}
+
+
+.content {
+  position: relative;
+  background: #7C7C7C;
+  width: 195px;
+  height: 195px;
+  top: -365px;
+  left: 120px;
+  text-align: center;
+  border-radius: 0.3em;
+
+  font-size: 14px;
+}
+
+.header2 {
+  position: relative;
+  background: #9F9F9F;
+  width: 179px;
+  height: 32px;
+  top: 25px;
+  left: 8px;
+  text-align: center;
+  border-radius: 0.3em;
+}
+
+.article {
+  position: relative;
+  background: #9F9F9F;
+  width: 179px;
+  height: 85px;
+  top: 30px;
+  left: 8px;
+  text-align: center;
+  border-radius: 0.3em;
+}
+
+.footer2 {
+  position: relative;
+  background: #9F9F9F;
+  width: 179px;
+  height: 32px;
+  top: 35px;
+  left: 8px;
+  text-align: center;
+  border-radius: 0.3em;
+}
+
+
+/*
+  6. How could you add weight to the global font definition to win over the classes added by point 3?
+  You can use !important to add weight to the global font definition
+*/
+* {
+   font-size: 14px !important;
+   font-family: Verdana !important;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+[class$="r"] {
+ background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+ background-color: blue;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*
+7. Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to
+change the background to green without changing the inline style. How could you accomplish this?
+
+In the ”oh-no-inline-styles” class I add the line:
+  background-color: green !important;
+lagging:
+  .oh-no-inline-styles {
+    background-color: green !important;
+  }
+The !important will give priority to this.
+*/

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <!-- Character encodings  -->
+  <meta charset="utf-8"/>
+  <meta name="description" content="Topic0 - Using images, sounds, videos and forms">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Germán Burgardt">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Image, video, sound and form.
+  </title>
+</head>
+
+<body>
+    <img src="beatles.jpg" alt="The Beatles" width="550" height="400"> <br/>
+  <!--The <img> element is what is known as an empty tag; that is, it does not require an end tag (like </img>).
+  Alt contains text to be displayed if the image is not available for some reason. -->
+
+  <audio controls>
+    <source src="kalimba.mp3" type="audio/mpeg">
+  </audio><br/>
+
+  <video width="320" height="240" controls>
+    <source src="theBeatlesHeyJude.mp4" type="video/mp4">
+  </video><br/>
+
+  <form id="contact-form" action="script.php" method="post">
+    <input type="hidden" name="redirect" value="http://www.google.com" />
+      <ul>
+        <li>
+          <label for="first-name">First Name:</label>
+            <input type="text" name="first-name" id="first-name" value="" />
+          </li>
+          <li>
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name" id="last-name" value="" />
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="" required="" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+          </li>
+          <li>
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday" id="birthday" value="" />
+          </li>
+
+          <li>
+            <label for="sport">Sport:</label>
+            <select name="sport">
+              <option value="football">Football</option>
+              <option value="basketball">Basketball</option>
+              <option value="hockey">Hockey</option>
+              <option value="polo">Polo</option>
+              <option value="golf">Golf</option>
+              <option value="tennis">Tennis</option>
+            </select>
+          </li>
+
+          <li>
+            <label for="small-bio">Small Bio:</label>
+            <textarea name="small-bio" id="small-bio" cols="25" rows="3"></textarea>
+          </li>
+
+          <li>
+            <input type="submit" value="submit" />
+            <input type="reset" value="clear" />
+          </li>
+      </ul>
+  </form>
+
+</body>
+</html>
