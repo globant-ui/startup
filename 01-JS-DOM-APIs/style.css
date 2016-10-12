@@ -1,0 +1,31 @@
+header, section, nav, aside, footer {
+    display: block;
+}
+
+.wrapper {
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+}
+
+#hidden {
+    background-color: #FF9;
+    font-size: 25px;
+    font-family: Arial;
+    height: 300px;
+    width: 300px;
+}
+
+h1 {
+    color: #000000;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: Arial;
+    position: absolute;
+}
+
+.exercise9 {
+  color: ;
+  height: 400px;
+}

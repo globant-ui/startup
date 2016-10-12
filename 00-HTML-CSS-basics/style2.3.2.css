@@ -1,0 +1,72 @@
+*{
+  font-size: 14px;
+  font-family: cursive;
+}
+
+h1{
+  color: red;
+}
+
+section{
+
+}
+.header{
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-size: 46px;
+}
+
+
+
+.footer{
+  width: 100%;
+  height: 5%;
+  font-size: 10px;
+}
+
+
+.content{
+height: 90%;
+width: 40%;
+font-size: 14px;
+float: left;
+
+}
+
+.navegation{
+float: left;
+width: 30%;
+height: 100%;
+background: green;
+font-size: 12px;
+}
+
+.sidebar {
+background: violet;
+width: 30%;
+height: 100%;
+float: left;
+}
+
+.center{
+height: 90%;
+background: white;
+float: left;
+}
+
+.conteiner{
+background:yellow;
+height: 100%;
+width: 100%;
+float: left;
+}
+
+
+.final{
+  background: red;
+  width: 100;
+  float: left;
+  text-align: center;
+  font-size: 10px;
+}
