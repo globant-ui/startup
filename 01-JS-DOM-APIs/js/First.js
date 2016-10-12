@@ -1,71 +1,65 @@
 function messageFirst() {
   setTimeout(function () {
     document.getElementById("content").innerHTML = "Hello world";
-    //let a = document.getElementById("content");
-    // a.style.display
-    // return("Hello world");
   }, 2000);
-}
-function git(){
-  let config = {
-    url: 'https://api.github.com/search/repositories'
-  }
-  eventsRequest(config);
 }
 
 function buttonClick(){
   let config = {
     url: 'http://api.icndb.com/jokes/random'
   }
-  eventsRequest(config)
+  function resolve(xhttp) {
+    var response = JSON.parse(event.target.response);
+    document.getElementById('joke').innerHTML = response.value.joke;
+  }
+  function reject(){
+
+  }
+  eventRequest(config).then(resolve, reject);
 }
-function eventsRequest(config){
+
+function git(){
+  let searchField = document.getElementById("searchField").value;
+  console.log(searchField);
+  var config = {
+    url: 'https://api.github.com/search/repositories?q=' + searchField
+  }
+  console.log(config.url);
 
   function resolve(xhttp) {
-     var response = JSON.parse(event.target.response);
-     document.getElementById('joke').innerHTML = response.value.joke;
-    //  if (xhttp.readyState === XMLHttpRequest.DONE){
-    //    if (xhttp.responseText.value){
-    //          document.getElementById("buttonSection").innerHTML  = xhttp.responseText.value.joke;
-    //     }
-    //   }
-    }
-
-  function resolveA(xhttp) {
-     var response = JSON.parse(event.target.response);
-     console.log("resolvea");
-     document.getElementById('joke').innerHTML = response.errors[0].field;
+    console.log(xhttp.responseURL);
+    document.getElementById("list").innerHTML = "";
+    var response = JSON.parse(event.target.response);
+    for (var i = 0; i < response.items.length; i++){
+      var newLine = document.createElement("li");
+      var data = document.createTextNode(response.items[i].full_name);
+      newLine.appendChild(data);
+        document.getElementById('list').appendChild(newLine);
    }
+}
 
-   function reject() {
-     document.getElementById("sec").style.border = "3px solid red";
-   }
+  function reject() {
+    alert('Something went wrong !');
+    document.getElementById("sectionHidden").style.color = "red";
+  }
+  eventRequest(config).then(resolve,reject);
+}
 
-   api(config).then(resolve, resolveA, reject);
-
-};
-function api(object, resolve, resolveA, reject) {
-   return new Promise( function (resolve, resolveA, reject) {
-   let xhttp = new XMLHttpRequest();
-   xhttp.open('GET', object.url , true);
-   console.log(xhttp);
-   xhttp.send();
-   xhttp.onload = function () {
-     if (this.status == 200) {
-       resolve(xhttp);
-       console.log("aaa");
-     } else {
-       if(this.status == 422){
-         console.log("if");
-         resolveA(xhttp);
-       }
-       else{
-         reject(this.statusText);
+function eventRequest(object, resolve, reject) {
+  return new Promise( function (resolve, reject) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', object.url , true);
+    xhttp.send();
+    xhttp.onload = function () {
+      if (this.status == 200) {
+        resolve(xhttp);
+        } else {
+        reject();
       }
-     }
-   };
-   xhttp.onerror = function () {
-     reject(this.statusText);
-   };
+    }
+    xhttp.onerror = function () {
+      document.getElementById("sectionHidden").style.backgroundColor = "red";
+      reject();
+    }
   })
-};
+}

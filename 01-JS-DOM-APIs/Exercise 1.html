@@ -22,10 +22,13 @@
           <!--<body onload="setTimeout(show, 2000);">-->
           <p id="content"></p>
           <p id="joke"></p>
+          <ul id="list"></ul>
 
         </section>
         <button class="button" onclick="buttonClick()">Click here</button>
-        <button class="button" onclick="git()">Repositories</button>
+        <label for=searchField> Search in repositories </label><br>
+        <input type="text" id="searchField" name="searchField">
+        <button class="button" value="Submit" onclick="git()">Search</button>
       </div>
     </body>
 
