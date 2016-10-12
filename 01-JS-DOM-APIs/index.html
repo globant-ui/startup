@@ -13,14 +13,11 @@
 
   <section>
     <p> Something </p>
-
     <section id="hidden">
-
       Hello world!
     </section>
     <br><br>
     <input type="button" value="change for a joke" id="buttonSection" onclick="eventRequest();" />
-
   </section>
 
   <section>
@@ -28,14 +25,15 @@
   </section>
 
   <hr> </hr>
+
   <section>
-
-  <input type="button" value="Ex 9" id="buttonSection" onclick="eventRequest2();" />
-
+    <button class="button" onclick="connect()">Ex 9</button>
+    <ul id="list"></ul>
+    Add your url: <input type="text" class="label" id="inptext">
+    <button class="button" onclick="connect(inptext.value)">Send (Ex 10)</button>
+    <input type="button" value="Clear" onclick="removeAll()">
+    <ul id="list"></ul>
   </section>
 
-  <section id="hidden2">
-
-  </section>
-  </body>
+</body>
 </html>

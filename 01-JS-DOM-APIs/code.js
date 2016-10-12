@@ -20,7 +20,7 @@ function eventRequest() {
                        }
                       xhttp.send();
                     }
-
+/*Ejercicio 7*/
 function eventOnClick(){
   let config = {
     url: 'http://api.icndb.com/jokes/random'
@@ -48,15 +48,15 @@ function eventOnClick(){
   eventRequestReusable(config).then(resolve,reject);
 };
 
-function eventRequestReusable(object, resolve, reject) {
+function eventRequestReusable(object) {
   let promise = new Promise( function (resolve, reject) {
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", object.url , true);
+    xhttp.open("GET", object.url);
     xhttp.send();
     xhttp.onload = function () {
       if (this.status == 200) {
-        resolve(xhttp);
+        resolve(xhttp.response);
       } else {
         reject(this.statusText);
       }
@@ -69,19 +69,36 @@ function eventRequestReusable(object, resolve, reject) {
 };
 
 /*Ejercicio 9*/
-function eventRequest2() {
-                        let xhttp = new XMLHttpRequest();
-                          var param = "q='javascript'";
-                        xhttp.open("GET", "https://api.github.com/search/repositories", true);
-                        xhttp.onreadystatechange = function(event) {
-                          let response = JSON.parse(event.target.response);
-                          let urlgit = new XMLHttpRequest();
-                          document.getElementById("hidden2").innerHTML = response.documentation_url;
-                           if (xhttp.readyState === XMLHttpRequest.DONE) {
-                             if (xhttp.responseText) {
-                                 document.getElementById("buttonSection").innerHTML  = xhttp.responseText.documentation_url;
-                             }
-                           }
-                       }
-                      xhttp.send();
-                    }
+function load () {
+  console.log('load');
+  let changeElement = document.getElementById("changeclass");
+  changeElement.style.transition = "all 3s ease-in-out";
+  changeElement.style.opacity = 1;
+}
+
+function configAjax (methodHttp, url, asyncronic){
+  this.methodHttp = methodHttp;
+  this.url = url;
+  this.asyncronic = asyncronic;
+}
+
+function connect(inptext) {
+  let objconfig = new configAjax("GET", "https://api.github.com/search/repositories?q="+inptext, true);
+  eventRequestReusable(objconfig).then(function(response) {
+    resp = JSON.parse(response);
+    console.log(resp);
+    for (var key = 0; key < resp.items.length; key++){
+      var columnNode = document.createElement("li");
+      var textNode = document.createTextNode(resp.items[key].full_name);
+      columnNode.appendChild(textNode);
+      document.getElementById("list").appendChild(columnNode);
+    }
+    }, function(error) {
+
+      document.getElementById("changeclass").style.color = "red";
+  });
+}
+
+function removeAll(){
+    document.getElementById("list").innerHTML = "";
+}

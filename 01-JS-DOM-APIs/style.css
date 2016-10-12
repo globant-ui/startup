@@ -1,7 +1,13 @@
-section {text-align:center;
+section {
+  text-align:center;
 
 }
 
 #hidden {
   display:none;
+}
+
+li {
+  font-size: 15px;
+  text-align: left;
 }
