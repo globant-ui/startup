@@ -3,6 +3,8 @@
 <head>
 	<title>Movies</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <nav>
@@ -22,6 +24,51 @@
 <input type="button" id="Button" name="search" value="
 search">
 <input type="text" id="textBox" name="search" placeholder="Search Actor,Title,Description.">
+	<a href="#openModal" class="btTxt">ADD Film</a>
+<div id="openModal" class="modalDialogo"><div><a href="#close" title="cerrar" class="cerrar">X</a>
+<form class="contact_form" action="#" method="post">
+    <ul>
+        <li>
+             <h2>Add Data Film</h2>
+        </li>
+        <li>
+            <label for="name">Title:</label>
+            <input type="text"  required />
+        </li>
+        <li>
+            <label for="Date">Date:</label>
+            <input type="Date" name="Date"  required />
+        </li>
+        <li>
+            <label for="text">Category:</label>
+            <select>
+            	<option>Action</option>
+            	<option>Adventure</option>
+            	<option>Comedy</option>
+            	<option>Drama</option>
+            	<option>Terror</option>
+            	<option>Suspense</option>
+            </select>
+        </li>
+        <li>
+            <label for="Point">Point:</label><br>
+            <input type="radio" name="pto1">1<br>
+            <input type="radio" name="pto1">2<br>
+            <input type="radio" name="pto1">3<br>
+            <input type="radio" name="pto1">4<br>
+            <input type="radio" name="pto1">5<br>
+        </li>
+        <li>
+            <label for="textarea">Description:</label>
+            <textarea name="Mensaje" cols="40" rows="6" required ></textarea>
+        </li>
+        <li>
+         <button id="Button" class="submit" type="submit">Send</button>
+        </li>
+    </ul>
+</form>
+</div>
+</div>
  <div id="all" value="Todo">
     <img id="movi" src="image/benjamin.jpg" >
     <img id="movi" src="image/boy.jpg" >
@@ -38,10 +85,10 @@ search">
     <div id="Premieres" value="Premieres"></div>
 </section>
 <aside>
-	<img src="image/star.jpg" width="325px">
-	<img src="image/pepsi.jpg" width="325px">
-	<img src="image/coca.png" width="325px">
-	<img src="image/mcdonald.jpg" width="325px">
+	<img id="publicidad" src="image/star.jpg" >
+	<img id="publicidad" src="image/pepsi.jpg" >
+	<img id="publicidad" src="image/coca.png" >
+	<img id="publicidad" src="image/mcdonald.jpg">
 </aside>
 <footer>
 	<ul>

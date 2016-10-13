@@ -3,11 +3,15 @@
 		margin:0px auto;
 		font-size:1em;
 	}
+	#filmpremi{
+		width: 55%;
+		height: 55%;
+	}
 	#premieres{
-		padding: 10px;
-		padding-left: 10px;
-		width: 550px;
-		height: 250px;
+		display: inline-block;
+		padding: 20px;		
+		width: 60%;
+		height: 300px;
 	}
 	#movi{
 		width: 125px;
@@ -22,6 +26,16 @@
 		color: yellow;
 		font-family: arial;
 	}
+	#publicidad{
+		padding: 5px;
+		max-width: 90%;
+		max-width: 80%;
+		display: block;
+	}
+	body{
+		background-image: url("image/fondo.jpg");
+	}
+
 	label{
 		font-family: arial black;
 		font-size: 25px;
@@ -46,17 +60,18 @@
 	}
 	section {
 		display: block;
-		padding: 10px;
 		float: left;
 		width: 70%;
 	}
 	aside {
 		float: right;
+		display: block;
 		width: 25%;
 		-moz-box-shadow: rgb(150,150,150) 5px 5px 10px;
         -webkit-box-shadow: rgb(150,150,150) 5px 5px 10px;
 	}
 	nav {
+		display: block;
 		font-size: 25px;
 		font-family: arial black;
   		overflow: hidden;
@@ -82,7 +97,6 @@
 	}
 	footer {
 		display: block;
-		margin-top: 10px;
 		text-align:center;
 		clear:both;
 		-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
@@ -94,6 +108,9 @@
 	li{
 		color:yellow;
 		font-family: arial black;
+	}
+	nav li{
+		display: inline;
 	}
 	a{
 		color:yellow;
