@@ -22,7 +22,7 @@ xhttp.send();
 function eventRandomJoke(){
   let config = {
     url: 'http://api.icndb.com/jokes/random',
-    method: 'GET'
+    methodHttp: 'GET'
   };
 
   function resolve(xhttp) {
@@ -49,7 +49,7 @@ function eventRequestReusable(configurationObject, resolve, reject) {
   let promise = new Promise( function (resolve, reject) {
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open(configurationObject.method, configurationObject.url);
+    xhttp.open(configurationObject.methodHttp, configurationObject.url);
     xhttp.send();
     xhttp.onload = function () {
       if (this.status === 200) {
@@ -96,10 +96,10 @@ function connect(inptext) {
     }
     }, function(error) {
 
-      document.getElementById("changeclass").style.color = "red";
+    //document.getElementById("changeclass").style.color = "red";
   });
 }
 
 function removeAll(){
-    document.getElementById("list").innerHTML = "";
+    document.getElementById("list").innerHTML = "null";
 }
