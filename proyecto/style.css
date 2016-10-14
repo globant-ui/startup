@@ -121,7 +121,8 @@
         background: -moz-linear-gradient(top, #0B3B2E, black);
 	}
 	li{
-		color:yellow;
+		display: inline;
+		list-style-type: none;
 		font-family: arial black;
 	}
 	nav li{
