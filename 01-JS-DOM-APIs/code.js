@@ -1,32 +1,29 @@
 function show(){
-                let obj = document.getElementById("hidden");
-                if(obj.style.display == "block")
-                        obj.style.display = "none";
-                else
-                        obj.style.display = "block";
-                      }
+  let obj = document.getElementById("hidden");
+  if(obj.style.display === "block")
+      obj.style.display = "none";
+}
 
 function eventRequest() {
-                        let xhttp = new XMLHttpRequest();
-                        xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
-                        xhttp.onreadystatechange = function(event) {
-                          let response = JSON.parse(event.target.response);
-                          document.getElementById("hidden").innerHTML = response.value.joke;
-                           if (xhttp.readyState === XMLHttpRequest.DONE) {
-                             if (xhttp.responseText.value) {
-                                 document.getElementById("buttonSection").innerHTML  = xhttp.responseText.value.joke;
-                             }
-                           }
-                       }
-                      xhttp.send();
-                    }
-/*Ejercicio 7*/
-function eventOnClick(){
-  let config = {
-    url: 'http://api.icndb.com/jokes/random'
-  };
-
   let xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
+  xhttp.onreadystatechange = function(event) {
+  let response = JSON.parse(event.target.response);
+  document.getElementById("hidden").innerHTML = response.value.joke;
+  if (xhttp.readyState === XMLHttpRequest.DONE) {
+    if (xhttp.responseText.value) {
+      document.getElementById("buttonSection").innerHTML  = xhttp.responseText.value.joke;
+      }
+   }
+  }
+xhttp.send();
+}
+/*Ejercicio 7*/
+function eventRandomJoke(){
+  let config = {
+    url: 'http://api.icndb.com/jokes/random',
+    method: 'GET'
+  };
 
   function resolve(xhttp) {
 
@@ -48,14 +45,14 @@ function eventOnClick(){
   eventRequestReusable(config).then(resolve,reject);
 };
 
-function eventRequestReusable(object) {
+function eventRequestReusable(configurationObject, resolve, reject) {
   let promise = new Promise( function (resolve, reject) {
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", object.url);
+    xhttp.open(configurationObject.method, configurationObject.url);
     xhttp.send();
     xhttp.onload = function () {
-      if (this.status == 200) {
+      if (this.status === 200) {
         resolve(xhttp.response);
       } else {
         reject(this.statusText);
@@ -77,13 +74,17 @@ function load () {
 }
 
 function configAjax (methodHttp, url, asyncronic){
-  this.methodHttp = methodHttp;
-  this.url = url;
-  this.asyncronic = asyncronic;
+  var configObject = {};
+
+  configObject.methodHttp = methodHttp;
+  configObject.url = url;
+  configObject.asyncronic = asyncronic;
+
+  return configObject;
 }
 
 function connect(inptext) {
-  let objconfig = new configAjax("GET", "https://api.github.com/search/repositories?q="+inptext, true);
+  let objconfig = configAjax("GET", "https://api.github.com/search/repositories?q="+inptext, true);
   eventRequestReusable(objconfig).then(function(response) {
     resp = JSON.parse(response);
     console.log(resp);

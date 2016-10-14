@@ -1,10 +1,9 @@
 section {
   text-align:center;
-
 }
 
 #hidden {
-  display:none;
+  display:block;
 }
 
 li {

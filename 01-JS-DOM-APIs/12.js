@@ -1,12 +1,10 @@
-function Matrix(){
-   matrix = [
-     ['Bruno','Branca','Argentina'],
-     ['Juan','Perez','Colombia'],
-     ['John','Jackson','United States'],
-   ];
-   console.log(matrix[0][0]);
-   return matrix;
- }
+var movie = Object.create(null);
+Object.defineProperty(movie, 'Tittle', {
+  value: "Spacejam",
+  writable: true,
+  enumerable: true,
+  configurable: true
+});
 
  function importMatrixToDOM(matrix) {
    console.log(matrix);

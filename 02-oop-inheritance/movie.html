@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Movies</title>
+  <script type="text/javascript" src="movie.js"> </script>
+  </head>
+<body>
+<div class="container">
+
+ <input type="text" name="Tittle" id="mTittle" required>
+ <input type="number" name="Year" id="mYear" min="1900" max="2016" required>
+ <input type="time" name="Duration" id="mDuration" value="00:00" required>
+
+ <button type="button" onclick="createMovie(mTittle.value, mYear.value, mDuration.value)" >Submit</button>
+</div>
+</body>
+</html>
