@@ -1,56 +1,65 @@
-function messageFirst() {
+function messageFirst () {
   setTimeout(function () {
     document.getElementById("content").innerHTML = "Hello world";
   }, 2000);
-}
+};
 
-function buttonClick(){
+function buttonClick () {
   let config = {
-    url: 'http://api.icndb.com/jokes/random'
-  }
-  function resolve(xhttp) {
-    var response = JSON.parse(event.target.response);
+    url: 'http://api.icndb.com/jokes/random',
+    method: 'GET',
+    asy: true
+  };
+
+  function resolve () {
+    document.getElementById("sec").style.border = "3px solid blue";
+    let response = JSON.parse(event.target.response);
     document.getElementById('joke').innerHTML = response.value.joke;
-  }
-  function reject(){
+  };
 
-  }
-  eventRequest(config).then(resolve, reject);
-}
+  function reject () {
+    alert("An error has ocurred, please try again");
+    document.getElementById("sec").style.border = "3px solid red";
+  };
 
-function git(){
+  ajaxCall(config).then(resolve, reject);
+};
+
+function git () {
   let searchField = document.getElementById("searchField").value;
-  console.log(searchField);
-  var config = {
-    url: 'https://api.github.com/search/repositories?q=' + searchField
+  let config = {
+    url: 'https://api.github.com/search/repositories?q=' + searchField,
+    method: 'GET',
+    asy: true
+  };
+
+  function resolve (request) {
+    let list = document.getElementById("list");
+    let response = JSON.parse(request.response);
+    let newLine, data;
+    document.getElementById("sec").style.border = "3px solid blue";
+    list.innerHTML = "";
+    response.items.map(function (item) {
+     newLine = document.createElement("li");
+     data = document.createTextNode(item.full_name);
+     newLine.appendChild(data);
+     list.appendChild(newLine);
+   });
+ };
+
+  function reject () {
+    alert("An error has ocurred, please try again");
+    document.getElementById("sec").style.border = "3px solid red";
   }
-  console.log(config.url);
+  ajaxCall(config).then(resolve,reject);
+};
 
-  function resolve(xhttp) {
-    console.log(xhttp.responseURL);
-    document.getElementById("list").innerHTML = "";
-    var response = JSON.parse(event.target.response);
-    for (var i = 0; i < response.items.length; i++){
-      var newLine = document.createElement("li");
-      var data = document.createTextNode(response.items[i].full_name);
-      newLine.appendChild(data);
-        document.getElementById('list').appendChild(newLine);
-   }
-}
-
-  function reject() {
-    alert('Something went wrong !');
-    document.getElementById("sectionHidden").style.color = "red";
-  }
-  eventRequest(config).then(resolve,reject);
-}
-
-function eventRequest(object, resolve, reject) {
+function ajaxCall (urlConfig) {
   return new Promise( function (resolve, reject) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', object.url , true);
+    let xhttp = new XMLHttpRequest ();
+    xhttp.open(urlConfig.method, urlConfig.url , urlConfig.asy);
     xhttp.send();
-    xhttp.onload = function () {
+    xhttp.onload = function (event) {
       if (this.status == 200) {
         resolve(xhttp);
         } else {
@@ -61,5 +70,5 @@ function eventRequest(object, resolve, reject) {
       document.getElementById("sectionHidden").style.backgroundColor = "red";
       reject();
     }
-  })
+  });
 }
