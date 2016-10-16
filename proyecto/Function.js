@@ -18,29 +18,29 @@ function showPremieresMovie()
  	}
 function Filt()
 {
-	var sel=document.getElementById("Select").value;
+	var sel=document.getElementById('Select').value;
 	if(sel=="All")
 	{
-		document.getElementById('All').style.display=block;
-		document.getElementById('Popular').style.display=none;
-		document.getElementById('Premieres').style.display=none;
+		document.getElementById('All').style.display='block';
+		document.getElementById('Popular').style.display='none';
+		document.getElementById('Premieres').style.display='none';
 	}
 	else if(sel=="Popular")
 	{
-		document.getElementById('All').style.display=none;
-		document.getElementById('Popular').style.display=block;
-		document.getElementById('Premieres').style.display=none;
+		document.getElementById('All').style.display='none';
+		document.getElementById('Popular').style.display='block';
+		document.getElementById('Premieres').style.display='none';
 	}
 	else if(sel=="Premieres")
 	{
-		document.getElementById('All').style.display=none;
-		document.getElementById('Popular').style.display=none;
-		document.getElementById('Premieres').style.display=block;
+		document.getElementById('All').style.display='none';
+		document.getElementById('Popular').style.display='none';
+		document.getElementById('Premieres').style.display='block';
 	}
-	/*else
+	else
 	{
-		document.getElementById('All').style.display=block;
-		document.getElementById('Popular').style.display=none;
-		document.getElementById('Premieres').style.display=none;
-	}*/
+		document.getElementById('All').style.display='block';
+		document.getElementById('Popular').style.display='none';
+		document.getElementById('Premieres').style.display='none';
+	}
 }

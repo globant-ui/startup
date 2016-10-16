@@ -29,7 +29,7 @@
 </ul>	
 </nav>
 <section>
-<select id="Select">
+<select id="Select" onchange="Filt();">
 	<option  value="All">All</option>
 	<option  value="Popular">Popular</option>
     <option  value="Premieres">Premieres</option>
@@ -85,8 +85,8 @@ search">
 <div>
 <div>
     <div id="All" style="display: block;"><script type="text/javascript">showAllMovie()</script></div>
-    <div id="Popular" style="display: block;"><script type="text/javascript">showPopularMovie();</script></div>
-    <div id="Premieres" style="display: block;"><script type="text/javascript">showPremieresMovie();</script></div>
+    <div id="Popular" style="display: none;"><script type="text/javascript">showPopularMovie();</script></div>
+    <div id="Premieres" style="display: none;"><script type="text/javascript">showPremieresMovie();</script></div>
 </div>
 </div>
 </section>
