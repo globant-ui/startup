@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="javascript.js"> </script>
+    <meta charset="utf-8">
+    <title>JS</title>
+  </head>
+  <body style="background-color:#F5F5DC" onload="setTimeout(show, 1000);">
+    <div id="divall">
+      <section id="all">
+        <section>
+          <p> This is random content</p>
+          And this too.
+          <br/>
+          <p id="idHidden" class="hidden">
+            Hello world!
+          </p>
+          <input type="button" id="buttonShow" value="Show" onclick="show();" />
+        </section>
+        <hr/>
+        <section id="jokeHidden">
+        </section>
+        <input type="button" value="Give me a joke" id="buttonjoke" onclick="buttonJokeWithoutPromise();"/>
+        <hr/>
+        <section id="jokeHidden2">
+        </section>
+        <input type="button" value="Give me a joke with promise" id="button2" onclick="buttonJokeWithPromise();"/>
+        <hr/>
+        <ul id="list"></ul>
+        <label>Enter your parameters</label>
+        <input type="text"  id="repoText" placeholder="for example 'javascript'"/>
+        <input type="button" value="Lists" id="buttonGithub" onclick="githubRepo();"/>
+        <input type="button" value="Clear" onclick="clearList()">
+      </section>
+    </div>
+    <a href=matrix.html><input type="button" value="Go to the Matrix" ></a>
+  </body>
+</html>
