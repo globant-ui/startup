@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../00-HTML-CSS-basics/css/normalize.css">
+        <link rel="stylesheet" href="../00-HTML-CSS-basics/css/main.css">
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body onload="messageFirst()">
+      <div class="container">
+        <section class="sec" id="sec">
+          <h1>First content</h1>
+          <p>Initializing <br>
+          <h3>JS first</h3>
+          <!--<body onload="setTimeout(show, 2000);">-->
+          <p id="content"></p>
+          <p id="joke"></p>
+          <ul id="list"></ul>
+
+        </section>
+        <button class="button" onclick="buttonClick()">Click here</button>
+        <label for=searchField> Search in repositories </label><br>
+        <input type="text" id="searchField" name="searchField">
+        <button class="button" value="Submit" onclick="git()">Search</button>
+      </div>
+    </body>
+
+    <script src="js/First.js"></script>
+</html>
