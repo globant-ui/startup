@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" type="image/png" href="img/logo.png">
+		<title>Movies - AllMovies</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="movie, movies, premier, cinema">
+		<meta name="description" content="Here you can find the lastest premieres and the most valorated movies">
+		<meta name="author" content="Gonzalo Ardito">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- - -->
+
+        <div class="container">
+
+        	<header class="row clearfix">
+                <a href="Index.html" class="column col1"><img class="logo" alt="Logo" src="img/logo.png"></a>
+                <nav class="column col9">
+                    <ul class="inlineList">
+                        <li><a href="Index.html">Home</a></li>
+                        <li class="liHover"><a href="Movies.html">Movies</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li class="visibleL"><a href="#">About Us</a></li>
+                        <li class="visibleL"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        	<main class="row clearfix" id="ppalSection">
+    			<form action="" method="" class="clearfix" id="movies">
+                    <fieldset class="column col4">
+                        <span class="tab">
+                            <label for="all">All</label>
+                            <input type="radio" name="filters" id="all" hidden="hidden">
+                        </span>
+                        <span class="tab">
+                            <label for="popular">Popular</label>
+                            <input type="radio" name="filters" id="popular" hidden="hidden">
+                        </span>
+                        <span class="tab">
+                            <label for="recent">Recent</label>
+                            <input type="radio" name="filters" id="recent" hidden="hidden">
+                        </span>
+                    </fieldset>
+                    <fieldset class="column col4">
+                        <input type="text" name="txtSearch" id="txtSearch" placeholder="Title, author or description">
+                        <input type="button" name="search" id="search" value="Search">
+                    </fieldset>
+                    <fieldset class="column col2">
+                        <select name="category" id="category">
+                            <option selected="selected" value="1">Horror</option>
+                            <option value="2">Comedy</option>
+                            <option value="3">Action</option>
+                            <option value="4">Fiction</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="column col2">
+                        <a href="#openModal" class="button">New Movie</a>
+                    </fieldset>
+                </form>
+                <section class="row clearfix">
+                    <a href="Film.html">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+                    <a href="#">
+                        <figure class="column col2 figure">
+                            <img src="img/deadpool.png" class="mask clearfix">
+                            <figcaption>DeadPool</figcaption>
+                        </figure>
+                    </a>
+        	</main>
+            <div id="openModal" class="modalDialog">   
+                <a href="#close" title="Close" class="close">X</a>
+                <!-- -->
+                <div class="clearfix">
+                    <h4>New Movie</h4>
+                    <hr/>
+                    <form class="clearfix">
+                        <fieldset class="row clearfix">
+                            <div class="column col 12">
+                                <label for="title" class="column col3">Title:</label>
+                                <input type="text" name="title" id="title" placeholder="ej:(Deadpool)" class="column col8">
+                            </div>
+                            <div class="column col12">
+                                <label for="date" class="column col3">Release Date:</label>
+                                <input type="text" name="date" id="date" class="column col8" placeholder="ej:(25/12/2015)">
+                            </div>
+                            <div class="column col12">
+                                <label for="category" class="column col3">Category:</label>
+                                <select name="category" id="category" class="column col8">
+                                    <option selected="selected">--Select one--</option>
+                                    <option value="1">Horror</option>
+                                    <option value="2">Comedy</option>
+                                    <option value="3">Action</option>
+                                    <option value="14">Fiction</option>
+                                </select>
+                            </div>
+                            <div class="column col12">
+                                <label for="points" class="column col3">Points:</label>
+                                <select name="points" id="points" class="column col8">
+                                    <option value="0" selected="selected">0.0</option>
+                                    <option value="0.5">0.5</option>
+                                    <option value="1.0">1.0</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2.0">2.0</option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="3.0">3.0</option>
+                                    <option value="3.5">3.5</option>
+                                    <option value="4.0">4.0</option>
+                                    <option value="4.5">4.5</option>
+                                    <option value="5.0">5.0</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <div class="column flow-opposite">
+                            <input type="button" name="ok" value="Ok" id="ok">
+                        </div>
+                    </form>
+                </div>
+                <!-- -->
+            </div>
+        	<footer class="row clearfix">
+                <ul class="networks column col3">
+                    <li class="column col12"><strong>Follow Us At</strong></li>
+                    <li><a href="#"><span class="fa fa-facebook-square fb fa-2x blue"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter tw fa-2x skyblue"></span></a></li>
+                    <li><a href="#"><span class="fa fa-youtube yt fa-2x red"></span></a></li>
+                </ul>
+                <nav>
+                <ul class="inlineList column col9">
+                    <li class="visibleL"><a href="Index.html">Home</a></li>
+                    <li class="liHover visibleL"><a href="Movies.html">Movies</a></li>
+                    <li class="visibleL"><a href="#">Help</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </nav>
+                <p class="copyright column col3">Copyright @ 2016</p>
+            </footer>
+
+		</div>
+
+		<!-- - --> 
+        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <!-- - -->
+
+	</body>
+</html>

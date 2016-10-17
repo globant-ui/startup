@@ -1,0 +1,83 @@
+/* Small screens (default) */
+html { font-size: 100%; }
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  html { font-size: 112%; }
+
+  .column {
+    float: left;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .column.col12 { width: 100%; }
+  .column.col1 { width: 8.33%; }
+  .column.col2 { width: 16.66%; }
+  .column.col3 { width: 25%; }
+  .column.col4 { width: 33.33%; }
+  .column.col5 { width: 41.66%; }
+  .column.col6 { width: 50%; }
+  .column.col7 { width: 58.33%; }
+  .column.col8 { width: 66.66%; }
+  .column.col9 { width: 75%; }
+  .column.col10 { width: 83.33%; }
+  .column.col11 { width: 91.66%; }
+  .column.flow-opposite { float: right; } 
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  html { font-size: 120%; }
+
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.col12 { width: 100%; }
+  .column.col1 { width: 8.33%; }
+  .column.col2 { width: 16.66%; }
+  .column.col3 { width: 25%; }
+  .column.col4 { width: 33.33%; }
+  .column.col5 { width: 41.66%; }
+  .column.col6 { width: 50%; }
+  .column.col7 { width: 58.33%; }
+  .column.col8 { width: 66.66%; }
+  .column.col9 { width: 75%; }
+  .column.col10 { width: 83.33%; }
+  .column.col11 { width: 91.66%; }
+  .column.flow-opposite { float: right; } 
+}
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  margin: 0 auto;
+  /*max-width: 48rem;*/
+  width: 95%;
+}
+
+.row {
+	clear: both;
+}

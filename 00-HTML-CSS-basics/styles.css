@@ -1,0 +1,52 @@
+body>header{
+	background-color: #6A4;
+	text-align: center;
+}
+
+body>footer{
+	background-color: #c26;
+	text-align: center;
+}
+
+aside{
+	background-color: #085;
+}
+
+nav{
+	background-color: #ccc;
+}
+
+main{
+	font-family: sans-serif;
+}
+
+.header{
+	font-size: 46px;
+	background-color: magenta;
+}
+
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+	clear: both;
+}
+
+.content{
+	font-size: 14px;
+	float: left;
+	width: 50%;
+}
+
+.navigation{
+	font-size: 12px;
+	background-color: blue;
+	float: left;
+	width: 25%;
+}
+
+.sidebar{
+	font-size: 10px;
+	background-color: blue;
+	float: left;
+	width: 25%;
+}

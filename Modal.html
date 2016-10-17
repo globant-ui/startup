@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="icon" type="image/png" href="img/logo.png">
+		<title>Modal - AllMovies</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div>
+			<h4>New Movie</h4>
+			<hr/>
+			<form>
+			 	<fieldset class="row clearfix">
+			 		<div class="column col 12">
+			 			<label for="title" class="column col4">Title:</label>
+						<input type="text" name="title" id="title" placeholder="ej:(Deadpool)" class="column col8">
+					</div>
+					<div class="column col12">
+						<label for="date" class="column col4">Release Date:</label>
+						<input type="text" name="date" id="date" class="column col8">
+					</div>
+					<div class="column col12">
+						<label for="category" class="column col4">Category:</label>
+						<select name="category" id="category" class="column col8">
+							<option selected="selected">-- Select one option --</option>
+							<option value="1">Horror</option>
+							<option value="2">Comedy</option>
+							<option value="3">Action</option>
+							<option value="14">Fiction</option>
+						</select>
+					</div>
+					<div class="column col12">
+						<label for="points" class="column col4">Points:</label>
+						<select name="points" id="points" class="column col8">
+							<option value="0" selected="selected">0.0</option>
+							<option value="0.5">0.5</option>
+							<option value="1.0">1.0</option>
+							<option value="1.5">1.5</option>
+							<option value="2.0">2.0</option>
+							<option value="2.5">2.5</option>
+							<option value="3.0">3.0</option>
+							<option value="3.5">3.5</option>
+							<option value="4.0">4.0</option>
+							<option value="4.5">4.5</option>
+							<option value="5.0">5.0</option>
+						</select>
+					</div>
+				</fieldset>
+				<div class="column flow-opposite">
+					<input type="button" name="ok" value="Ok" id="ok">
+					<input type="button" name="cancel" value="Cancel" id="cancel">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

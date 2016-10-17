@@ -1,0 +1,311 @@
+.logo {
+	width: 25%;
+	height: auto;
+	float: left;
+	margin-right: 0.5rem;
+	padding: 0.5rem;
+}
+
+.trailer, .banner, .mask {
+	width: 100%;
+	height: auto;
+
+}
+
+.visibleL {
+	visibility: hidden;
+}
+
+.inlineList {
+	font-size: 110%;
+}
+
+@media (min-width: 40rem) { 
+	.logo {
+		width: 100%;
+		margin: 0.5rem 0 0 0;
+	}
+	.visibleL {
+		visibility: visible;
+	}
+}
+
+@media (min-width: 64rem) { 
+	.logo {
+		width: 100%;
+		margin: 0.5rem 0 0 0;;
+	}
+	.visibleL {
+		visibility: visible;
+	}
+}
+
+.trailer {
+	margin-top: 5rem;
+}
+
+.inlineList {
+	list-style: none; 
+}
+
+.fa.fa-star, .fa.fa-star-half {
+	color: yellow;
+}
+.inlineList li {
+	float : left;
+	margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.copyright {
+	float : right;
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+	font-size: 80%;	
+}
+
+.aside {
+	padding: 0;
+	float: left;
+}
+
+#aside {
+	float:right;
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+header{
+	background-color: #D05A00;
+	border-radius: 25px;
+	margin-bottom: 1rem;
+	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	border:1px solid rgba(0,0,0,1); 
+}
+
+
+#ppalSection {
+	border-radius: 25px;
+	background-color: #D05A00;
+	margin-bottom: 1rem;
+	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	border:1px solid rgba(0,0,0,1);
+}
+
+footer {
+	background-color: #D05A00;
+	border-radius: 25px;
+	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	border:1px solid rgba(0,0,0,1);	
+}
+
+.container {
+	/*background-color: #1E1E1E;*/
+	background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png);
+}
+
+body {
+	color: #FEFFF8;
+	/*background-color: #1E1E1E;*/
+	background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png);
+}
+
+nav a {
+	color: #FEFFF8;
+	text-decoration: none;
+
+}
+nav li {
+	padding: 0.3rem;
+	border-radius: 25px;
+}
+nav li:hover {
+	background-color: #29241E;
+}
+nav li:active {
+	background-color: #000;
+}
+
+.liHover {
+	background-color: #29241E;
+}
+
+.fullDesc {
+	padding: 0.3rem;
+	border-radius: 25px;
+	background-color: #29241E;
+	color: #D05A00;
+	text-decoration: none;
+}
+.fullDesc:hover {
+	color: #FEFFF8;
+}
+.fullDesc:active {
+	color: #FEFFF8;
+	background-color: #000;
+}
+
+.networks{
+	list-style: none;
+}
+.networks li {
+	float: left;
+	margin: 0.5rem;
+}
+
+.blue {
+	color: blue;
+}
+.skyblue {
+	color: skyblue;
+}
+.red {
+	color: red;
+}
+
+.article {
+	margin-bottom: 2rem;
+}
+
+input[type="text"], input[type="button"], select, .button {
+	padding: 0.25rem 0.75rem;
+	border-radius: 7.5px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	background-color: #1E1E1E;
+	color: #FEFFF8;
+	border-color: #000;
+}
+input[type="button"]:hover, .button:hover {
+	background-color: #000;
+}
+input[type="button"]:active, .button:active {
+	color: #fff;
+}
+
+.button {
+	text-decoration: none;
+}
+
+.tab {
+	padding: 0.25rem 0.5rem;
+	border-radius: 7.5px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+	background-color: #1E1E1E;
+	color: #FEFFF8;
+	border-color: #000;
+}
+.tab:hover {
+	background-color: #000;
+}
+
+#movies {
+	margin: 1rem 0;
+}
+
+h6 {
+	font-size: 100%;
+	margin: 2px;
+}
+.desc {
+	font-size: 75%;
+}
+.figure {
+	margin: 1rem 0;
+}
+.mask {
+	padding: 0;
+}
+
+figure {
+	width: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+figcaption {
+	position: absolute;
+	background: rgba(0,0,0,0.75); 
+    color: white; 
+    opacity: 0;
+	bottom: 0; 
+	left: 1rem;
+	right: 1rem;
+	text-align: center;
+	height: 35%;
+	padding-top: 15%;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+
+.trailerF {
+	width: 100%;
+	height: auto;
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
+
+.img {
+	padding: 1rem;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 350px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	/*background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);*/
+	background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	top: 0px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+.modalDialog input {
+	margin: 5px;
+}

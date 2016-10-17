@@ -1,0 +1,77 @@
+.img{
+	width: 100%;
+}
+
+figure{
+	margin: 0;
+}
+
+.par1{
+	margin: 1rem 1rem 0 1rem;
+}
+
+.par2{
+	margin: 1rem 1rem 3.5rem 1rem;
+
+}
+
+body{
+	font-family: sans-serif;
+	font-size: 90%;	
+}
+h3{
+	margin-left: 1rem;
+	font-size: 100%;
+}
+
+.gallery-grid img {
+  dth: 100%;
+  height: auto;
+  posi-leftti: relative;
+  float: left;
+}
+.gallery-grid a {
+  display: block;
+}
+
+.screen {
+	margin-left: 0.5rem;
+	width: 96%;
+	height: 33.33%;
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	border-radius: 0;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+.screen:hover {
+  opacity: 1
+}
+
+.title {
+  color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.screen:hover .title {
+  margin-left: 0;
+}
+
+.screen.fade-in .title {
+  margin-left: 0;
+}
+.screen.fade-in:hover {
+}
