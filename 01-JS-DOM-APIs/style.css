@@ -1,0 +1,20 @@
+section {
+  text-align:center;
+
+}
+
+.showhidden{
+  visibility: visible;
+}
+
+.hidden{
+  visibility:hidden;
+}
+
+.error404{
+  background-color: red;
+}
+
+.nonerror{
+  background-color: "";
+}
