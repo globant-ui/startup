@@ -1,5 +1,5 @@
 function showAllMovie()
-{for (var i = 1; i <= 10; i++) {
+{for (var i = 0; i <= 10; i++) {
            var poster =objetojson.Peliculas[i].poster;
         document.write("<li><a href=films/"+i+".html><img class=movi src="+ poster +" /></li><a>");}
     }
@@ -43,4 +43,25 @@ function Filt()
 		document.getElementById('Popular').style.display='none';
 		document.getElementById('Premieres').style.display='none';
 	}
+}
+function ShowArr(ids)
+{
+	for(var i = 0;i<=10;i++)
+	{
+		if(i==ids)
+		{
+		var Id = objetojson.Peliculas[i].id;
+		var Title= objetojson.Peliculas[i].title;
+		var year = objetojson.Peliculas[i].year;
+		var Release = objetojson.Peliculas[i].released;
+		var genere = objetojson.Peliculas[i].genre;
+		var director = objetojson.Peliculas[i].director;
+		var actors = objetojson.Peliculas[i].actors;
+		var plot = objetojson.Peliculas[i].plot;
+		var poster = objetojson.Peliculas[i].poster;
+		var rating= objetojson.Peliculas[i].rating;
+		document.write("<div><li> Nro "+(Id)+" <h1>"+Title+ "</h1> <li>Rating</li> "+rating+"</br></li><li><img class=movi src="+poster+" /></li><li><p>"+year+" </p></li><li><p>"+Release+"</p></li><li><h3>"+genere+"</h3></li><li><h2>"+director+"</h2></li><li><h3>"+actors+"</h3></li><li><article>"+plot+"</article></li></div></br>");
+	    }
+	}
+	
 }
