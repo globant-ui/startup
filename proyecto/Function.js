@@ -46,11 +46,7 @@ function Filt()
 }
 function ShowArr(ids)
 {
-<<<<<<< HEAD
-	for(var i = 0;i<=objetojson.Peliculas.le;i++)
-=======
 	for(var i = 0;i<=objetojson.Peliculas.length;i++)
->>>>>>> origin/master
 	{
 		if(i==ids)
 		{
@@ -69,7 +65,6 @@ function ShowArr(ids)
 	}
 	
 }
-<<<<<<< HEAD
 function showNLastMovie(ids)
 {
 	var j=1;
@@ -80,7 +75,4 @@ function showNLastMovie(ids)
         j++;
     }
 }
-=======
 
-
->>>>>>> origin/master
