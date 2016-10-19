@@ -1,5 +1,5 @@
 function showAllMovie()
-{for (var i = 0; i <= 10; i++) {
+{for (var i = 0; i <= objetojson.Peliculas.length; i++) {
            var poster =objetojson.Peliculas[i].poster;
         document.write("<li><a href=films/"+i+".html><img class=movi src="+ poster +" /></li><a>");}
     }
@@ -46,7 +46,7 @@ function Filt()
 }
 function ShowArr(ids)
 {
-	for(var i = 0;i<=10;i++)
+	for(var i = 0;i<=objetojson.Peliculas.le;i++)
 	{
 		if(i==ids)
 		{
@@ -64,4 +64,14 @@ function ShowArr(ids)
 	    }
 	}
 	
+}
+function showNLastMovie(ids)
+{
+	var j=1;
+	for (var i = objetojson.Peliculas.length-1; j <= ids; i--) 
+	{
+        var poster =objetojson.Peliculas[i].poster;
+        document.write("<li><a href=films/"+i+".html><img class=movi src="+ poster +" /></li><a>");
+        j++;
+    }
 }

@@ -42,6 +42,10 @@
 		color: yellow;
 		font-family: arial black;
 	}
+	div article{
+		width: 50%;
+		float: left;
+	}
     article{
     	display: block;
     	float:right;
