@@ -46,7 +46,11 @@ function Filt()
 }
 function ShowArr(ids)
 {
+<<<<<<< HEAD
 	for(var i = 0;i<=objetojson.Peliculas.le;i++)
+=======
+	for(var i = 0;i<=objetojson.Peliculas.length;i++)
+>>>>>>> origin/master
 	{
 		if(i==ids)
 		{
@@ -60,11 +64,12 @@ function ShowArr(ids)
 		var plot = objetojson.Peliculas[i].plot;
 		var poster = objetojson.Peliculas[i].poster;
 		var rating= objetojson.Peliculas[i].rating;
-		document.write("<div><li> Nro "+(Id)+" <h1>"+Title+ "</h1> <li>Rating</li> "+rating+"</br></li><li><img class=movi src="+poster+" /></li><li><p>"+year+" </p></li><li><p>"+Release+"</p></li><li><h3>"+genere+"</h3></li><li><h2>"+director+"</h2></li><li><h3>"+actors+"</h3></li><li><article>"+plot+"</article></li></div></br>");
+		document.write("<div><li> Nro "+(Id)+" <h1>"+Title+ "</h1> <li>Rating</li> "+rating+"</br></li><li><img class=movi src="+poster+" /></li><li><p>"+year+" </p></li><li><p>"+Release+"</p></li><li><h3>"+genere+"</h3></li><li><h2>"+director+"</h2></li><li><h3>"+actors+"</h3></li><li></div><div><article>"+plot+"</article></li></div></br>");
 	    }
 	}
 	
 }
+<<<<<<< HEAD
 function showNLastMovie(ids)
 {
 	var j=1;
@@ -75,3 +80,7 @@ function showNLastMovie(ids)
         j++;
     }
 }
+=======
+
+
+>>>>>>> origin/master

@@ -44,6 +44,10 @@
 	}
 	div article{
 		width: 50%;
+<<<<<<< HEAD
+=======
+		display: block;
+>>>>>>> origin/master
 		float: left;
 	}
     article{
