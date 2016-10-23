@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" >
+    <meta charset="utf-8">
+    <title>first js</title>
+    <script src="code.js">
+
+    </script>
+
+  </head>
+  <body onload="setTimeout(show, 4000);">
+
+  <section>
+    <p> Something </p>
+    <section id="hidden">
+      Hello world!
+    </section>
+    <br><br>
+    <input type="button" value="change for a joke" id="buttonSection" onclick="eventRequest();" />
+  </section>
+
+  <section>
+    <input type="button" value="Ajax" id="buttonSection" onclick="eventRandomJoke();" />
+  </section>
+
+  <hr> </hr>
+
+  <section>
+    <button class="button" onclick="connect()">Ex 9</button>
+    <ul id="list"></ul>
+    Add your url: <input type="text" class="label" id="inptext">
+    <button class="button" onclick="connect(inptext.value)">Send (Ex 10)</button>
+    <input type="button" value="Clear" onclick="removeAll()">
+    <ul id="list"></ul>
+  </section>
+
+</body>
+</html>

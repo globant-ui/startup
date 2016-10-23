@@ -1,0 +1,12 @@
+section {
+  text-align:center;
+}
+
+#hidden {
+  display:block;
+}
+
+li {
+  font-size: 15px;
+  text-align: left;
+}
