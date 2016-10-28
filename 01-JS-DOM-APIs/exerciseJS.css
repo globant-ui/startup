@@ -1,0 +1,36 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+  width: 10%;
+  margin-left: 45%;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  font-family: monospace;
+  font-size: 26px;
+}
+
+.dataTables {
+  width: 50%;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.hiddenOne {
+  display:  none;
+  text-align: center;
+}
+
+.listRightPositioned {
+  float: right;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  font-family: monospace;
+  text-align: justify;
+}

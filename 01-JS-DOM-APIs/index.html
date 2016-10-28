@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+   <link href="normalize.css" rel="stylesheet">
+   <link href="exerciseJS.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8">
+   <title>Excercise 2</title>
+   <script type="text/javascript" src="exerciseJS.js"> </script>
+   </head>
+<body onload="eventFade()">
+  <section class="content">
+    <p>Random Content</p>
+  </section>
+  <br>
+  <section class="hiddenOne" id="sectionHidden">
+    <p>¡ Hello World !</p>
+  </section>
+  <br><br>
+  <button type="button" name="XMLHttpRequest" onclick="eventRequest()" class="buttons" id="xMLHttpRequestButton">XMLHttpRequest</button>
+  <br><br>
+  <button type="button" name="Joke Ajax Call" onclick="handleJokeButtonClick()" class="buttons" id="jokeAjaxCallButton">Joke Ajax Call</button>
+  <br><br>
+  <button type="button" name="Repositories Ajax Call" onclick="handleRepositoriesButtonClick()" class="buttons" id="repositoriesAjaxCallButton">Repositories Ajax Call</button>
+  <br><br>
+  <input id="search" type="text" name="search Input" class="buttons" value="repositorie">
+  <br><br>
+  <button type="button" name="Repositories Ajax Call Modified" onclick="handleRepositoriesModifiedButtonClick(search)" class="buttons" id="repositoriesAjaxCallModifiedButton">Search</button>
+  <br><br>
+  <button type="button" name="Clear Button" onclick="reloadPage()" class="buttons" id="clearButton">Clear</button>
+  <br><br>
+  <ul class="listRightPositioned" id="repositoriesList"></ul>
+</body>
+</html>

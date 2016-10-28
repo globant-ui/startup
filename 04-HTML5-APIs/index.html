@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+   <link href="src/normalize.css" rel="stylesheet">
+   <link href="src/exerciseJS.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8">
+   <title>Excercise Topic 4</title>
+   <script type="text/javascript" src="js/javascript.js"></script>
+   </head>
+<body>
+  <textarea class="textAreaContent" rows="4" cols="50" id="textContent">
+    At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+  </textarea>
+  <div class="buttonsSection">
+    <button onclick="localStorageSave()" class="buttonSave" id="saveButtonLocal" type="button" name="button">Save</button>
+    <button onclick="indexedDBSave()" class="buttonSave" id="saveButtonDB" type="button" name="button">Save indexdb</button>
+    <button onclick="clearLocalStorage()" class="buttonClear" id="clearButtonLocal" type="button" name="button">Clear Local</button>
+    <button onclick="clearIndexedDB()" class="buttonClear" id="clearButtonDB" type="button" name="button">Clear DB</button>
+  </div>
+  <br> <br> <br>
+  <textarea class="textAreaContent" id="drop_zone">Drop files here</textarea>
+  <div class="webSocketArea">
+  <h2 class="webSocketTitle">WebSocket Test</h2>
+  <div id="output"></div>
+  </div>
+</body>
+</html>
