@@ -38,7 +38,7 @@
 		padding: 10px;
 	}
 	body{
-		background-image: url("image/fondo.jpg");
+		background-image: url("../image/fondo.jpg");
 		color: yellow;
 		font-family: arial black;
 	}
