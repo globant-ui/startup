@@ -63,7 +63,7 @@
 		font-size: 25px;
 		color: yellow;
 	}
-	select, #Button{
+	select, .Button{
 		color:black;
 		font-family: arial black;
 		border-color:#0B3B2E; 

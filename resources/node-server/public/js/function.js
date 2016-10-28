@@ -16,8 +16,6 @@ function printMovies(mov,id) {
     var max = 0;
     for (i = 0; i < moviesCant; i++) {
         var url = "DescFilm.html?id=" + mov[i].id;
-        //var texto = "Title"
-
         imagenes += "<li ><a href="+ url +"><img href=#openDesc class=movi src="+ mov[i].poster +" /><a></li>";
         max = max + 1;
     }
@@ -29,7 +27,7 @@ function SetRat(){
         printMovies(data,"Popular");}); 
 }
 function SetPop(){
-    $.get("http://localhost:8000/api/movies?order=year&limit=3", function(data){
+    $.get("http://localhost:8000/api/movies?order=released&limit=3", function(data){
         printMovies(data,"Premier");}); 
 }
 function searchMovie() {

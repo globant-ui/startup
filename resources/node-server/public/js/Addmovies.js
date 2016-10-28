@@ -1,7 +1,9 @@
 $(document).ready(function() {
-	addMovie();
     $("#submitMovie").click(function() {
-        registerMovie();
+        $("#openModal").hide(function(){
+            clean();
+        });
+       return registerMovie();
     });
 });
 function registerMovie() {
@@ -21,7 +23,7 @@ function registerMovie() {
         "director": $("#DirectorModal").val(),
         "actors": $("#ActorsModal").val(),
         "plot": $("#PlotModal").val(),
-        "poster": $("#poster").val(),
+        "poster": $("#PosterModal").val(),
         "rating": ratingRounded,
     };
 
@@ -31,7 +33,5 @@ function registerMovie() {
         dataType: 'json',
         data: movie,
     });
-
-
     return false;
 }
