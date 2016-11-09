@@ -37,6 +37,13 @@
 		height: 50%;
 		padding: 10px;
 	}
+	.Modal{
+    margin-top                   : 40%;
+    margin-left                 : 50%;
+    margin-right                : 50%;
+    background: -webkit-linear-gradient(top, #0B3B2E, yellow);
+    background: -moz-linear-gradient(top, #0B3B2E, yellow);
+	}
 	body{
 		background-image: url("../image/fondo.jpg");
 		color: yellow;
@@ -63,6 +70,7 @@
 		font-size: 25px;
 		color: yellow;
 	}
+
 	select, .Button{
 		color:black;
 		font-family: arial black;

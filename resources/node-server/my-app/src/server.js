@@ -6,6 +6,20 @@ var colors = require('colors');
 var port = 8000;
 var delay = 1000; // Explicit delay time in miliseconds for simulating real server time response.
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/api', function(req, res, next) {
+  // Handle the get for this route
+});
+
+app.post('/api', function(req, res, next) {
+ // Handle the post for this route
+});
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({'extended':true}));
 app.use(bodyParser.json());
