@@ -1,0 +1,11 @@
+/*--- BOX PROPERTIES ---*/
+
+/*--- BOX BORDERS ---*/
+table,
+th {
+  border: 1px solid black;
+}
+
+/*--- BACKGROUND PROPERTIES ---*/
+
+/*--- TEXT PROPERTIES ---*/

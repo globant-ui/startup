@@ -1,0 +1,124 @@
+/*--- box properties ---*/
+article {
+  margin: 2%;
+  height: auto;
+  min-height: 400px;
+}
+
+.footer,
+.header,
+.sidebar,
+.navigation,
+.content {
+  margin: 1%;
+}
+
+.content {
+  width: 50%;
+  min-height: 500px;
+	height: auto;
+  float: left;
+}
+
+.content-footer {
+  margin: 2%;
+  height: 20px;
+}
+
+.content-header {
+  margin: 2%;
+  height: 20px;
+}
+
+.footer {
+  height: 80px;
+  float: left;
+  width: 98%;
+}
+
+.header {
+	height: 80px;
+  float: left;
+  width: 98%;
+}
+
+.navigation {
+  width: 22%;
+	height: 500px;
+  float: left;
+}
+
+.sidebar {
+  width: 22%;
+	height: 500px;
+  float: left;
+}
+
+/*--- text properties ---*/
+* {
+  font-size: 14px;
+  font-family: Courier;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+footer,
+header {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
+}
+
+/*--- box borders ---*/
+.content,
+.footer,
+.header,
+.navigation,
+.sidebar {
+  border-radius: 0.5em;
+}
+
+/*--- background properties ---*/
+* {
+  background-color: #333333;
+}
+
+.header,
+.footer,
+.sidebar,
+.navigation,
+.content {
+  background-color: #666666;
+}
+
+.content-header {
+  background-color: #999999;
+}
+
+article {
+  background-color: #999999;
+}
+
+article > p {
+  background-color: #999999;
+}
+
+.content-footer {
+  background-color: #999999;
+}

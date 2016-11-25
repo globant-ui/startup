@@ -1,0 +1,9 @@
+.home-page {
+  text-align: center;
+}
+
+.points {
+  display: block;
+  font-size: 50px;
+  color: cyan;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onload="fade()">
+    <section class="content">
+      <div class="search">
+        <label for="keyword-repositories">Search repositories:
+          <input type="text" name="keyword-repositories" id="keyword-repositories">
+        </label>
+        <button type="button" id="button-get-repositories">Get repositories</button>
+        <span id="search-status"></span>
+      </div>
+      <div class="results">
+        <section class="hidden" id="fade-in">
+          <p id="status">Hello world</p>
+          <ul id="repositories-list"></ul>
+        </section>
+      </div>
+    </section>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+/*--- BOX PROPERTIES ---*/
+.hidden {
+  opacity: 0;
+}
+
+.results {
+  position: absolute;
+  left: 70%;
+  top: 10%;
+}
+
+.search {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+}
+
+#search-status {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -70px;
+}
+
+/*--- BOX BORDERS ---*/
+
+
+/*--- BACKGROUND PROPERTIES ---*/
+
+
+/*--- TEXT PROPERTIES ---*/
+#repositories-list {
+  text-align: left;
+}
+
+#search-status {
+  color: red;
+}
+
+section {
+  text-align: center;
+}
+
+/*--- TRANSITIONS ---*/
+.fade-in {
+  transition: all 3s ease-out;
+  opacity: 1;
+}
