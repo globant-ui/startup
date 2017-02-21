@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>My media</title>
+  </head>
+
+  <body>
+    <section>
+      <header>
+        <h1>Multimedia content</h1>
+      </header>
+      <div class="content">
+        <h2>Audio</h2>
+        <audio controls>
+        <!-- source: http://www.nch.com.au/acm/formats.html -->
+          <source src="sample.gsm" type="audio/gsm">
+          <source src="sample.mp3" type="audio/mp3">
+          <source src="sample.ogg" type="audio/ogg">
+          <source src="sample.wav" type="audio/wav">
+          Your browser cannot play this audio file
+        </audio>
+        <h2>Video</h2>
+        <video controls>
+        <!-- source: http://techslides.com/sample-webm-ogg-and-mp4-video-files-for-html5 -->
+          <source src="small.mp4" type="video/mp4">
+          <source src="small.3gp" type="video/3gp">
+          <source src="small.flv" type="video/flv">
+          <source src="small.ogv" type="video/ogv">
+          <source src="small.webm" type="video/webm">
+          Your browser cannot display this video
+        </video>
+        <h2>Image</h2>
+        <img src="landscape.jpg" alt="Landscape">      
+      </div>
+    </section>
+  </body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>My Signup form</title>
+  </head>
+
+  <body>
+    <section>
+      <header>
+        <h1>Signup Form</h1>
+      </header>      
+      <div class="content">
+        <form>
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" name="firstname" required>
+          <br><br>
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" name="lastname" required>
+          <br><br>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday" required>
+          <br><br>
+          <label for="favorite-sport">Favorite Sport</label>
+          <select id="favorite-sport">
+            <option value="0" label="-"></option>
+            <option value="1" label="Basketball">Basketball</option>
+            <option value="2" label="Football">Football</option>
+            <option value="3" label="Soccer">Soccer</option>
+            <option value="4" label="Tennis">Tennis</option>
+            <option value="5" label="Badminton">Badminton</option>
+          </select>
+          <br><br>
+          <label for="bio">Bio</label>
+          <textarea id="bio"></textarea>
+          <br><br>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+
+</html>
