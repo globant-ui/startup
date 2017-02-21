@@ -1,0 +1,9 @@
+<p ng-show="movies.length == 0">There are no movies here!</p>
+<ul>
+  <li ng-repeat="(id, movie) in movies track by $index">
+    <a href="#/info/{{id}}">{{movie.title}}</a>
+    [<a href="#/remove/{{id}}">remove</a>]
+    [<a href="#/edit/{{id}}">edit</a>]
+  </li>
+</ul>
+<a href="#/add">Add new movie</a>

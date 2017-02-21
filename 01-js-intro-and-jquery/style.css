@@ -1,0 +1,25 @@
+.hiddenhelloworld {
+  display: none;
+  width: 800px;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  height: 300px;
+  text-align: center;
+  font-family:Verdana,Helvetica;
+  font-size:20px;
+}
+.alias {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boton{
+        font-size:10px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:white;
+        background:#638cb5;
+        border:0px;
+        width:80px;
+        height:19px;
+       }

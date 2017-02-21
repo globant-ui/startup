@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="movieList">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Angular JS movie list</title>
+  </head>
+  <body ng-controller="AppCtrl">
+  <h1>My favorits movies list</h1>
+<table class="table table-striped">
+  <div ng-view> 
+      <!-- magia! -->
+    </div>
+    </table>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="scripts/app.js">
+  </script><script src="scripts/controllers.js"></script>
+</body>
+</html>
