@@ -1,0 +1,61 @@
+
+/*font styles*/
+/*----------*/
+
+@font-face {
+  font-family: 'MyFont';
+  src:url('../fonts/amatic/Amatic-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+ 
+}
+
+/*element selectors*/
+/*----------------*/
+html {
+  font-family: MyFont, Ubuntu, Arial, TimesNewRoman, sans-serif;
+}
+
+
+
+
+/*Class elements*/
+
+.header {
+
+  padding-top: 1rem;
+  font-size: 3.286rem;
+  background-color: grey !important; /*Point 6: override inline style*/
+}
+.footer {
+  font-size: 0.714rem; /*10px*/
+ 
+}
+.content {
+  font-size: 1rem; /*14px*/
+}
+.navigation {
+  font-size: 0.857rem; /*12px*/
+}
+.sidebar {
+  font-size: 0.714rem; /*10px*/
+}
+
+.text-alignment-center{
+   text-align: center;
+}
+
+/*Class selectors*/
+/*---------------*/
+
+
+/*class attribute that ends with 'r'* (already validated) */ 
+*[class$="r"] {
+  background-color: magenta;
+}
+
+/*class attribute containing 'a', which doesn't end with 'r' (already validated) */
+*[class*="a"]*:not([class$="r"]) {
+  background-color: blue;
+}
