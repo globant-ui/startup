@@ -1,0 +1,40 @@
+* {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.header,
+.footer {
+    text-align: center;
+}
+
+.header {
+    font-size: 46px;
+}
+
+.sidebar,
+.footer {
+    font-size: 10px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.navigation {
+    font-size: 12px;
+}
+
+[class$='r'] {
+    background-color: magenta;
+}
+
+[class*='a']:not([class$='r']) {
+    background-color:  blue;
+}
+
+.navigation,
+.content,
+.sidebar {
+    display: inline-block;
+}

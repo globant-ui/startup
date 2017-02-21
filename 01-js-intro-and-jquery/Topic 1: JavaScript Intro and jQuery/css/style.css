@@ -1,0 +1,16 @@
+.header,
+.section,
+.main{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.section {
+    background: darkcyan;
+    display: none;
+    min-height: 50px;
+}
+
+.header {
+    background: mediumaquamarine;
+}
