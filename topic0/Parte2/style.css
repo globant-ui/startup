@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+
+
+header.header-principal{	
+	display: inline-block;
+    height: 80px;
+    width: 98%;
+    background-color: grey;
+    color: white;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+h1.bigHeaderText {
+	line-height: 40px;
+	text-align: center;
+}
+
+div.contenedor {
+width: 100%;
+}
+
+nav{
+	line-height: 100px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+    height: 500px;
+    width: 250px;
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+section{
+	float: left;
+	text-align: center;
+	display: inline-block;
+    height: 500px;
+    width: 625px;
+    background-color: grey;
+    color: white;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+header{
+	display: inline-block;
+    height: 20px;
+    width: 90%;
+    background-color: grey;
+    color: white;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+article{
+	display: inline-block;
+    height: 20px;
+    width: 90%;
+    background-color: grey;
+    color: white;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+footer{
+	display: inline-block;
+    height: 20px;
+    width: 90%;
+    background-color: grey;
+    color: white;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+aside{
+	display: inline-block;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+    height: 500px;
+    width: 260px;
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+footer.footerDown{
+	display: inline-block;
+    height: 60px;
+    width: 98%;
+    background-color: grey;
+    color: white;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	line-height: 60px
+}
+
+div.textL{
+	display: inline-block;
+    width: 40%;
+    text-align: left;
+}
+
+div.textR{
+	display: inline-block;
+    width: 59%;
+    text-align: right;
+}

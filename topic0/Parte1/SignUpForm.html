@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Agustin Placenti">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+</head>
+ 
+<body>
+ <form action="/action_page.php">
+  <div class="container">
+  
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="Insert First Name" name="firstName" required>
+
+    <label><b>LastName</b></label>
+    <input type="text" placeholder="Insert LastName" name="lastName" required>
+
+    <p><label><b>E-mail</b></label>
+   <input type="email" placeholder="Insert Email" name="email" required></p>
+   
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+$( "#datepicker" ).datepicker();
+} );
+</script>
+
+<p><b>Date of Birth </b><input type="text" placeholder="Insert Birthday" id="datepicker" required></p>
+
+<p><label><b>Favourite Sport</b></label> <select>
+  <option value="ninguno">None</option>
+  <option value="futbol">Football</option>
+  <option value="tenis">Tennis</option>
+  <option value="basquet">Basquetball</option>
+  <option value="otro">Other</option>
+</select> </p>
+
+<label><b>Small Bio : </b></label><p> <textarea rows="4" cols="50" placeholder="Insert Short Bio" id="shortBio" required>
+</textarea> </p>
+
+    <div class="clearfix">
+      <button type="reset"  class="resetbtn">Reset</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+    
+  </div>
+</form>
+</body>
+</html>
