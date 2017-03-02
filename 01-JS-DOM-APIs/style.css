@@ -1,0 +1,60 @@
+html{
+	font-family:'Open Sans';
+	font-size:14px;
+}
+
+body{
+	max-width:1170px;
+	margin:0 auto;
+}
+.header{
+	font-size:46px;
+	background-color:#ddd;
+}
+
+.footer{
+	font-size:10px;
+	background-color:#ddd;
+}
+
+.navigation{
+	font-size:12px;
+	background-color:#333;
+}
+
+.sidebar{
+	font-size:10px;
+	background-color:#ddd;
+}
+
+header, footer, article, nav, aside, section{
+	float:left;
+	width:100%;
+	padding:15px;
+	box-sizing:border-box;
+}
+header, footer{
+	text-align:center;
+}
+section{
+	padding:0;
+}
+.rows>div { flex:1; }
+.row{
+	display: -ms-flex;
+	display: -webkit-flex; 
+	display: flex;
+	width:100%;
+}
+
+nav, aside{
+	width:20%;
+}
+
+section{
+	width:60%;
+}
+
+nav{
+	color:white;
+}

@@ -1,0 +1,46 @@
+html{
+	font-family:'Open Sans';
+	font-size:14px;
+}
+
+body{
+	max-width:1170px;
+	margin:0 auto;
+}
+
+
+img{
+	max-width:100%;
+}
+
+header p{
+	padding:15px;
+}
+.overlay{
+	position:relative;
+}
+.main{
+	position:relative;
+}
+.text-overlay{
+	position: absolute;
+	background-color: rgba(0,0,0,.8);
+	color: white;
+	white-space:nowrap;
+	display:none;
+	background-color: rgba(0,0,0,.5);
+	padding: 10px;
+	top:0;
+	min-height:20px;
+	width:100%;
+}
+
+.dog-article:hover .text-overlay{
+	display:block;
+}
+
+.dog-article{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}

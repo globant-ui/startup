@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <title>LAYOUT - CSS grid exercises</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="apple-touch-icon" href="apple-touch-icon.png">
+ <!-- Place favicon.ico in the root directory -->
+
+ <link href="normalize.css"  rel="stylesheet" >
+ <link href="style2.css" rel="stylesheet">
+ <link href="grid.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="column third">
+      <p><strong>Showcase</strong></p>
+    </div>
+    <div class="column two-thirds">
+     <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum id dui sit amet tincidunt. Nam diam quam, vulputate at eros in, tempus posuere velit. Quisque sit amet felis fringilla, varius lectus id, pulvinar urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ex sit amet neque pharetra bibendum sed quis dolor. Suspendisse mattis nulla id fringilla aliquam <br> <br> Vivamus porta ante sit amet velit tempor, nec maximus odio dignissim</p>
+   </div>
+ </header>
+
+ <section class="helloworld" id="showhide">
+   <h3>Hello world!</h3>
+ </section>
+ <button onclick="httpPromise()">Wanna hear a joke?</button>
+ <h3 id="joke"></h3>
+ <button onclick="getGit()">Git'er done</button>
+ <br>
+ <form class="searchform">
+   Search for a repository: <input type="text" id="textsearch" name="reposearch"><br>
+   <input type="button" value="CHEWIE, PUNCH IT" onClick="searchGit()">
+ </form>
+
+ <div class="repolist">
+   <ul id="repolist">
+   </ul>
+ </div>
+
+
+</script>
+<script type="text/javascript" src="functions.js"></script>
+</body>
+</html>
