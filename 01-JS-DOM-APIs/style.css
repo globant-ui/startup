@@ -1,0 +1,8 @@
+section {
+  text-align: center;
+}
+
+#oculto {
+	opacity: 0.2;
+	visibility:hidden;
+}

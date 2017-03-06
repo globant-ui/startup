@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="descripcion" content="Bootcamp 2017 Web UI">
+    <meta name="keywords" content="DOM, JS, Bootcamp, Globant, webUI, Topic-1">
+    <meta name="autor" content="Emmanuel de Arzave">
+    <link href="style.css" rel="stylesheet">
+    <title>Topic-1</title>
+  </head>
+
+  <body onload="fadeIn()">
+
+    <section id="oculto">Hello world</section>
+
+    <p id="icndbmessage">
+      <button type="button" onclick="makeRequest('GET', 'http://api.icndb.com/jokes/random', 'icndbmessage')">Get a icndb Response</button>
+    </p>
+
+    <script src="Scripts.js"></script>
+
+  </body>
+
+</html>
+
