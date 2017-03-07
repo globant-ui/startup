@@ -16,7 +16,16 @@
     <section id="oculto">Hello world</section>
 
     <p id="icndbmessage">
-      <button type="button" onclick="makeRequest('GET', 'http://api.icndb.com/jokes/random', 'icndbmessage')">Get a icndb Response</button>
+      <button type="button" onclick="readJokes()">Get a Joke</button>
+    </p>
+
+    <p> Search in a Repository
+      <input type="text" id="input">
+      <button class="button" onclick="searchinaRepository(input.value)">Search</button>
+    </p>
+
+    <p>
+      <ul id="lista"></ul>
     </p>
 
     <script src="Scripts.js"></script>
