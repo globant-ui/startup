@@ -1,0 +1,109 @@
+@CHARSET "ISO-8859-1";
+
+header.header-principal{    
+    display: inline-block;
+    height: 80px;
+    width: 98%;
+    background-color: #d8cd17;
+    color: blue;
+    line-height: 40px;
+    text-align: center;
+    margin: 10px;
+}
+
+div.title{
+    font-size: 30px;
+    margin: 40px 10px 10px 10px;
+}
+
+div.body{
+    font-size: 15px;
+    margin:10px
+}
+
+div.boxModel{
+    text-align:center;
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin-top: 40px; 
+    margin-left: 225px;
+    
+}
+
+h4.title-aside{
+    padding-top: 35px;
+    color: aqua;
+
+}
+
+article.article{
+    float: left;
+    text-align: center;
+    display: inline-block;
+    height: 800px;
+    width: 70%;
+    margin:10px;
+}
+
+aside.sidebar{
+    float: left;
+    text-align: center;
+    display: inline-block;
+    height: 800px;
+    width: 310px;
+    margin: 10px;
+    background: purple;
+}
+
+section.hiddenSection{
+    text-align: center;
+    display: inline-block;
+    height: 80px;
+    line-height: 40px;
+    width: 98%;
+    margin:10px;
+   
+}
+
+section.repoSection{
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+    width: 98%;
+   
+}
+
+div.op0{
+    opacity:0;
+}
+
+div.op1{
+   -webkit-transition: opacity 3s linear; /* Chrome y Safari */
+   -o-transition: opacity 3s linear; /* Opera */
+   -moz-transition: opacity 3s linear; /* Mozilla Firefox */
+   -ms-transition: opacity 3s linear; /* Internet Explorer */
+   opacity:1;
+}
+
+div.normal{
+    
+}
+
+button.centralButton{
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    line-height: 20px;
+    width: 20%;
+    margin:10px;
+}
+
+input.repoText{
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    line-height: 15px;
+}
+
