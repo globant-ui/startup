@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Random Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles.css" rel="stylesheet">
+    <script type = "text/javascript" src="Scripts.js"></script>    
+    
+</head>
+<body>
+
+    <header class="header-principal">
+    <h1>Random Content Page</h1>
+    </header>
+    
+    <article class="article">
+        <div class="title"> ¿Qué es ISIS? </div>
+        <div class="body">ISIS surge de la sigla en inglés de Estado Islámico de Irak y al-Sham, también conocido como Estado Islámico de Irak y el Levante (esta última es una región que incluye Israel, Líbano y Siria). Lo que ahora se conoce como "Estado Islámico" a secas (EI) empezó como "Al-Qaeda en Irak" y actualmente controla parte de Irak y Siria, en lo que ellos llaman un "califato". ISIS o Estado Islámico es a la vez un grupo terrorista y un estado de facto que gobierna parte de ambos países. </div>
+        <div class="title"> ¿Cómo surge ISIS? </div>
+        <div class="body"> Abu Musab al-Zarqawi fundó el grupo terrorista en 1999 como "Jama'at al-Tawhid wal-Jihad" o "La Organización del Monoteísmo y la Jihad" (Guerra Santa). Desde 2003 fueron parte de la resistencia a la invasión estadounidense en Irak. En 2004 juraron lealtad a Osama Bin Laden y pasaron a llamarse "Al-Qaeda en Irak". A lo largo de los años se fusionaron con otras organizaciones y cambiaron varias veces de nombre. En este punto hay que aclarar que el grupo no es lo mismo que Al-Qaeda, sino que fueron aliados durante un tiempo y usaron su nombre. De hecho, en febrero de 2014, Al-Qaeda cortó todos sus vinculos con ISIS, ya que no aprobaba su brutalidad y su intransigencia. </div>
+        
+        <div class="boxModel">
+            <h2>Demonstrating the Box Model</h2>
+            <p>El nombre completo del califa de Estado Islámico es Ibrahim ibn Awwad ibn Ibrahim ibn Ali ibn Muhammad al-Badri al-Samarrai. También se lo conoce como Abu Bakr al-Baghdadi y se hace llamar "Califa Ibrahim</p>
+        </div>
+    </article>
+    
+    <aside class="sidebar" id="sidebar">
+        <h4 class="title-aside">sidebar</h4>
+    </aside>
+
+    <section class="hiddenSection" >
+        <div class ="op0" id="hideText"> Hello World </div>
+        <div id="jokeContent"> </div>
+    </section>
+    
+    <center>
+      <button type="button" class ="centralButton" onclick="renderJokes()">Random Joke</button> 
+    </center>
+    
+    <center>
+      <form action="/action_page.php">
+        <button type="button" type="submit" class ="centralButton" onclick="getRepoNames()">Get Repo's</button>   
+        <input type="text" placeholder="Insert Repo Name" id="repoParameter" class="repoText" required>
+      </form>
+    </center>
+    
+    <section class="repoSection" >
+        <ul id ="repoNamesList"> </ul> 
+    </section>
+    
+    <center>
+      <button type="button" class="centralButton" id ="matrixButton" onclick="makeMatrix()">View Repo Table</button>
+    </center>
+    
+</body>
+</html>
