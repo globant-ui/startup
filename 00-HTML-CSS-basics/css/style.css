@@ -1,0 +1,17 @@
+.section-list{ 
+	text-align: center;
+}
+
+.section-hide {
+	text-align: center;
+	animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
