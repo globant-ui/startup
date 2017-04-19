@@ -2,12 +2,14 @@
 	text-align: center;
 }
 
+/*centers the field and adds a 2secs animation*/
 .section-hide {
 	text-align: center;
 	animation: fadein 2s;
 }
 
-@keyframes fadein {
+/*this defines what the animation does*/
+@keyframes fadein { 
     from {
         opacity:0;
     }
