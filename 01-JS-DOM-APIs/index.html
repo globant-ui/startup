@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.section{
+text-align: center;
+vertical-align: middle;
+line-height: 90px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+function loadXMLDoc(url,config) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      str = this.responseText;
+      var json = JSON.parse(str);
+      document.getElementById("demo").innerHTML = json["value"]["joke"];
+    }else if(this.status != 200)
+    {
+      document.getElementById("demo").style.color = "red"
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+$(function(){  
+  $("#hidden").fadeIn('slow');
+});
+</script>
+	<title>Lesson 1</title>
+</head>
+<body>
+
+	<section id="hidden" style="display: none;">Hello World!</section>
+  <section id="demo"></section>
+	<button onclick="loadXMLDoc('http://api.icndb.com/jokes/random')">Click here!</button>
+</body>
+</html>
