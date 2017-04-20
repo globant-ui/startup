@@ -10,15 +10,18 @@ line-height: 90px;
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
-function loadXMLDoc(url,config) {
+function loadXMLDoc(url) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       str = this.responseText;
       var json = JSON.parse(str);
       document.getElementById("demo").innerHTML = json["value"]["joke"];
-    }else if(this.status != 200)
+    }else if(this.status == 404)
     {
+      console.log(this.readyState);
+      console.log(this.status);
+
       document.getElementById("demo").style.color = "red"
     }
   };
