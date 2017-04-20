@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Topic 00</title> 
+  <meta name="description" content="Exercises">
+  <meta name="author" content="Martin Aranda">
+</head>
+
+<body>
+	<header class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Introducing media</h2> <!-- fifth exercise done. seriously? -->
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="row">
+			<article class="col-md-4">
+				<img src="image_0.png" alt="Logo html" />
+			</article>
+			<article class="col-md-4">
+				<video src="video_1.mp4" width="320" height="240" alt="video about a shooter videogame" controls></video>
+			</article>
+			<article class="col-md-4">
+				<audio autoplay>
+					<source src="carefree.mp3" type="audio/mpeg">
+				</audio>
+			</article>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<h1>Sign up</h1>   <!-- Form set and ready to go! sixth exercise completed -->
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<form method="POST" id="signup">
+						<div class="form-group">
+							<label for="first name">first name</label>
+							<input type="text" name="first name" class="form-control" id="first name" placeholder="first name" autocomplete="off" required="on">
+						</div>
+						<div class="form-group">
+							<label for="last name">last name</label>
+							<input type="text" name="last name" class="form-control" id="last name" placeholder="last name" autocomplete="off" required="on">
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="text" name="email" class="form-control" id="email" placeholder="email" autocomplete="off" required="on">
+						</div>
+						<div class="form-group">
+							<label for="birthday">birthday</label>
+							<input type="birthday" name="birthday" class="form-control" id="birthday" placeholder="birthday" autocomplete="off" required="on">
+						</div> 
+						<div class="form-group">
+							<label for="favourite sport">favourite sport</label>
+							<select>
+							  <option value="soccer">soccer</option>
+							  <option value="football">football</option>
+							  <option value="basket">basket</option>
+							  <option value="surf">surf</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<textarea rows="6" cols="30" placeholder="Tell us about yourself."></textarea>
+						</div>
+						<button type="submit" class="btn btn-success" value="submit" name="submit">Submit</button>
+						<button class="btn btn-success" value="clear" name="clear" onclick="document.getElementById('signup').reset();">clear</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>  <!-- we're done with the basics. Nothing to see here! -->
+</html>
