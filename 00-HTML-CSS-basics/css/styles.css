@@ -1,0 +1,84 @@
+/*  Selectors and properties done! Keep it going.  */
+
+
+html * {					/*  changing to global font weight. exercise 6 by the way. */
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+header {
+	background-color: #fafad2;
+	text-align: center;
+}
+
+nav {
+	background-color: #9acd32;
+  	left: 0px;
+  	float: left;
+  	width: 200px;
+  	height: 500px;
+}
+
+section {
+	float: left;
+	margin: auto;
+    width: 600px;
+    text-align: center;
+}
+
+aside {
+	float: right;
+	background-color: #9acd32;
+	width: 200px;
+  	height: 500px;
+}
+
+footer {
+	background-color: #fafad2;
+	text-align: center;
+	position: fixed;
+  	bottom: 0;
+  	left: 0;
+  	height: 70px;
+  	background-color: white;
+  	width: 100%;
+}
+
+h5 {         /* 2.5 LAYOUT // mess with this tag for a quick and similar view of initial layout asked. */
+	height: 150px;
+	width: 600px;
+}
+
+/* Specificity! Now we're geting in to it.  */
+
+.header{
+	font-size: 46px !important; /* one way to override. Not good comments about it. */
+}
+
+.footer{
+	font-size: 10px; /* this ones are overriding by presedence. */
+}
+
+.content{
+	font-size: 14px;
+}
+
+.navigation{
+	font-size: 12px;
+}
+
+.sidebar{
+	font-size: 10px;
+}
+
+[class*="a"] {
+		background-color: blue;      /* You can find the exercise 5 here. 
+									Cause if not, your color may disappear  */
+}
+
+[class$="r"] {
+	background-color: #ff00ff; /*  exercise 4 done! magenta is on! */
+}
+
