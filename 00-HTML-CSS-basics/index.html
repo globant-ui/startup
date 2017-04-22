@@ -6,14 +6,43 @@
         <title></title>
     </head>
     <body>
-        <header class="header"></header>
-        <nav class="navigation"></nav>
-        <section class="content">
-        	<header class="header">...</header>
-        	<article>...</article>
-        	<footer class="footer">...</footer>
-        </section>
-        <aside class="sidebar">…</aside>
-        <footer class="footer">…</footer>
+        <div id="header">
+            <header class="header"></header>
+            <p>HEADER</p>
+        </div>
+        <table>
+        <tr>
+          <td>
+            <div id="nav">
+                <nav class="navigation">
+                    <p>NAV</p>
+                </nav>
+            </div>
+          </td>
+          <td>
+            <div id="section">
+                <section class="content">SECTION
+                    <div>
+                        <header class="header">HEADER</header>
+                    </div>
+                    <div>
+                        <article>ARTICLE</article>
+                    </div>
+                    <div>
+                        <footer class="footer">FOOTER</footer>
+                    </div>
+                </section>
+            </div>
+          </td>
+          <td>
+            <div id="aside">
+                <aside class="sidebar">ASIDE</aside>
+            </div> 
+           </td>
+        </tr>
+        </table>
+        <div id="footer">
+            <footer class="footer">FOOTER</footer>
+        </div>
     </body>
 </html>

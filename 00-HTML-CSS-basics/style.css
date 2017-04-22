@@ -11,14 +11,14 @@
 }
 .navigation{
 	font-size: 12px;
-	background-color: blue;
+	background: blue;
 }
 .sidebar{
 	font-size: 10px;
 	background-color: #ff00ff;
 }
 body{
-	font-size: 100px; !important;
+	font-size: 100px !important;
 }
 .oh-no-inline-styles{
 	background: green;
