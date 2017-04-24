@@ -1,0 +1,128 @@
+
+html{
+	font-size: 14px;
+	font-family: serif;
+}
+/*SECTION*/
+.content{
+	width: 650px;
+	background-color: grey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	float: left;
+}
+
+.content .header{
+	height: 40px;
+	padding-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;	
+	padding-bottom: 10px;
+
+}
+.content .article{
+	background-color: yellow;
+	text-align: center;
+	height: 125px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+	border-radius: 20px;
+}
+.content .footer{
+	margin-top: 10px;
+	height: 45px;
+	padding-top: 15px;
+	border-radius: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+/*END SECTION*/
+header{
+	background-color: red; 
+}
+.header {
+	font-size: 46px;
+	text-align: center;
+	font-size: 40px;
+	width: auto;
+	height: 60px;
+	padding: 25px;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+footer{
+	background-color: blue;
+	text-align: center;
+}
+.footer {
+	height: 50px;
+	font-size: 10px;
+	padding-top: 25px;
+	border-radius: 20px;
+	margin-top: 10px;
+	clear: left;
+}
+.footer p{
+	display: none; /* This is because I just want to see the design of the elements*/
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px; 
+}
+nav{
+	background-color: orange;
+}
+.navigation {
+	font-size: 12px;
+	text-align: center;
+	width: 275px;
+	height: 375px;
+	padding: 25px;
+	margin-right: 10px;
+	border-radius: 20px;
+	float: left;
+}
+aside{
+	background-color: green;
+}
+.sidebar {
+	font-size: 10px;
+	text-align: center;
+	background-color: green;
+	width: 275px;
+	height: 375px;
+	padding: 25px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border-radius: 20px;
+	float: left;
+}
+
+[class$="r"]{
+	background-color: magenta;
+}
+
+
+/*2.3 Point 7*/
+p[style] {
+	background-color: green !important;
+}
+
+/*
+.header[style]{
+	font-size: 60px !important; but this, override the inline style declaration. Im going to left the other one(inline style)
+}*/
+
+[class*='a']:not([class$='r']):not([class$='e']){
+	background-color: blue;
+}
+
+/*To make the content responsive */
+@media all and (max-width:800px){
+	.content{
+		width: 100%;
+	}
+}
+
