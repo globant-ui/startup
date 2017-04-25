@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Topic 0-1v</title>
+</head>
+<style> 
+#interaction-elements {
+    width: 1000px;
+    height: 300px;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around; 
+    display: flex;
+    justify-content: space-around;
+}
+
+#interaction-elements div {
+    width: 200px;
+    height: 200px;
+}
+</style>
+<body>
+	<div id="interaction-elements">
+	  <div>
+	  	<h3>Bird with Hat!</h3>
+			<img src="bird.jpg" alt="Bird" style="width: 150px;height: 150px">
+	  </div>
+	  <div>
+	  	<h3>Video!</h3>
+			<video width="320" height="240" controls>
+				<source src="video.mp4" type="video/mp4">
+			</video>
+	  </div>
+	  <div>
+	  	<h3>Sound!</h3>
+	  	<br>
+		<audio controls>
+			<source src="horse.ogg" type="audio/ogg">
+		</audio>
+	  </div>
+	</div>
+
+	<form id="sign-up" name="sign-up-form">
+		<h4>Sign Up!</h4>
+		First Name: <input type="text" name="firstName" placeholder="First Name">
+		<br>
+		Last Name: <input type="text" name="lastName" placeholder="Last Name">
+		<br>
+		Email: <input type="email" name="email" placeholder="E-mail">
+		<br>
+		Birthday: <input type="date" name="birthday" placeholder="Birthday">
+		<br>
+		Favorite Sport: 
+		<select id="sports">
+			<option id="football">Football</option>
+			<option id="basketball">Basketball</option>
+			<option id="tennis">Tennis</option>
+			<option id="golf">Golf</option>
+			<option id="rugby">Rugby</option>
+		</select>
+		<br>
+		Small bio:
+		<br>
+		<textarea>
+		</textarea>
+		<br>
+		<button type="submit" value="Submit">Submit</button>
+		<button type="reset" value="Reset">Clear</button>
+	</form>
+</body>
+</html>

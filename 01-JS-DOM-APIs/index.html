@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>First Topic</title>
+
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+		div {
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+    </style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<header>
+	<div class="container">
+		<section>
+			<div class="row">
+				<h1>First Topic</h1>
+			</div>
+		</section>
+	</div>
+</header>
+	<div class="container">
+		<section>
+			<div class="row">
+				<div ng-app="myApp" ng-controler="myCtrl">
+
+						<input type="text" ng-model="firstName" placeholder="First Name" class="form-control">
+						<br>
+						<h4>Your Name : <strong>{{firstName}}</strong></h4>
+				</div>
+
+				<button class="form-control" onmouseover="changeText(this)">
+							Drag mouse over me to say hello to universe</button>
+			</div>
+		</section>
+		<section style="display: none;">
+			<div class="row">
+				Hello World!
+			</div>
+		</section>
+		<br>
+		<section>
+			<div class="row">
+				<button  class="form-control btn-xs" onclick="randomJokes()" id="buttonSection">
+						Click me! 
+				</button>
+				<p id="joke"></p>
+				<!-- Below this comment is the code which I have doubts -->
+				<p id="error" style="display: none; color: red;">There was an error!</p>
+			</div>
+		</section>
+		<br>
+		<!-- <section>
+			<div class="row">
+				<button class="form-control" onclick="repositories()">
+						Repositories
+				</button>
+				<p id="git"></p>
+			</div>
+		</section> -->
+	</div>
+ 
+
+
+<!-- Function to write something somewhere at the same 
+		time that you are writting in a input text -->
+<script>	
+	angular.module('myApp',[]).controller('myCtrl', function($scope){
+	$scope.firstName = "Facundo";
+	});
+</script>
+<!-- Function to change the text of a button when you drag the mouse over him -->
+<script>
+	function changeText(id){
+		id.innerHTML = "Hello Universe!";
+	}
+</script>
+<!-- Function to set specific content to the button when is clicked. Exercise 6-->
+ <script>
+	function loadXMLDoc() {
+	  let xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	      document.getElementById("changedButton").innerHTML =
+	      		this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
+	  xhttp.send();
+	}
+</script>
+<!-- Reusable function to perform AJAX calls. Exercise 7-->
+<script>
+	function randomJokes(){
+		let error = document.getElementById("error"); 
+ 	 	let config = {  								//the config object
+     		url: 'http://api.icndb.com/jokes/random'
+  		};
+    function resolve(xhttp) {
+   	   error.style.display = "none";
+   	   let response = JSON.parse(event.target.response);
+       document.getElementById('joke').innerHTML = response.value.joke;
+       if (xhttp.readyState === XMLHttpRequest.DONE){
+           if (xhttp.responseText.value){
+               document.getElementById("buttonSection").innerHTML = 
+               		xhttp.responseText.value.joke;
+            }
+        }
+    };
+    function reject() { 
+   	   error.style.display = "block"; //This is for the Exercise 8.
+    };
+    eventRequestReusable(config).then(resolve,reject); //Here is where the configuration object is entered
+  
+    };
+    function eventRequestReusable(object, resolve, reject) { //Here is it the reusable function 
+   return new Promise( function (resolve, reject) {          //The promise return
+	   let xhttp = new XMLHttpRequest();
+	   xhttp.open('GET', object.url , true);
+	   xhttp.send();
+	   xhttp.onload = function () {
+	     if (this.status == 200) {
+	       resolve(xhttp);
+	     } else {
+	       reject(this.statusText);
+	     }
+	    };
+	   xhttp.onerror = function () {
+	     reject(this.statusText);
+	   };
+   })
+  };
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
