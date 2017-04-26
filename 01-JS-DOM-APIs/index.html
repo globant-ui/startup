@@ -11,6 +11,36 @@ xhr.onreadystatechange = function() {
 xhr.open('GET', 'http://api.icndb.com/jokes/random', true);
 xhr.send(null);}
 </script>
+<script>function ls(){
+var promesa = new Promise(function(resolve,reject){
+    var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://api.icndb.co', true);
+xhr.send(null);
+if (XMLHttpRequest.status === 200 && response.status === 'OK') {
+         var aceptada = true;
+      } else {
+         var aceptada = false;
+      }
+    
+    if(aceptada == true){
+        resolve("Funciono");
+    }else{
+        reject("Da error");
+    }
+});
+promesa.then(function(successData){
+    // Imprime : "Enviar este valor"
+    console.info(successData);
+}).catch(function(errData){
+    // Imprime : "Enviar este error"
+    console.error(errData);
+})};
+</script>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -35,7 +65,7 @@ xhr.send(null);}
 		<section id="hide" class="hide">
 		Hello World!
 		</section>
-		<button id="btn" class="btn" onclick="mi()">Apretame</button>
+		<button id="btn" class="btn" onclick="ls()">Apretame</button>
 	    <header class="header-art">
 	      Header
 	    </header>
