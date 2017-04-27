@@ -41,6 +41,9 @@ function showJoke(str){
   let json = JSON.parse(str);
   document.getElementById("joke").innerHTML = json["value"]["joke"];
 }
+function showApi(str){
+  document.getElementById("api").innerHTML = str;
+}
 $(function(){  
   $("#hidden").fadeIn('slow');
 });
@@ -52,7 +55,7 @@ $(function(){
 	<section id="hidden" style="display: none;">Hello World!</section>
 	<button onclick="loadXMLDoc('http://api.icndb.com/jokes/random').then(    
   function (value) {
-    document.getElementById("api").innerHTML = value;
+    showJoke(value);
   },function (reason) {        
   console.error('Something went wrong', reason);});">Click here to laugh!</button>
   <section id="joke"></section>
