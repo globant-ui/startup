@@ -3,42 +3,67 @@
 	<title>Lesson 2</title>
 <script type="text/javascript">
 
-class Movie extends EventEmitter{
-    constructor(title, year, duration){
-	    this._title = title;
-	    this.year = year;
-	    this.duration = duration;
-	}
-
-    play(){
-    	console.log("play method movie class");
-    }
-    pause(){
-    	console.log("pause method movie class");	
-    }
-    resume(){
-    	console.log("resume method movie class");
-    }
-}
 class EventEmitter{
 
+    constructor(){
+        this.events = {}
+    }
+
     on(key, cb){
-    	console.log("on method ee class");
-        if(e == 'play')
-            this.play()
+     	if (this.events[key]){
+            this.events[key].push(cb)
+        }else{
+            this.events[key] = [cb]
+        }
     }
     emit(key){
-    	console.log("emit method ee class");
+    	if(this.events[key]){
+            this.events[key].forEach(cb => {
+                cb(key)
+            })
+        }
     }   
     off(key){
-    	console.log("off method ee class");
+    	if (this.events[key]){
+            delete this.events[key]    
+        }
+    }
+}
+
+class Movie extends EventEmitter{
+
+    constructor(title, year, duration){
+        super();
+        this._title = title;
+        this.year = year;
+        this.duration = duration;
+    }
+
+    play(){
+        this.emit("play");
+    }
+    pause(){
+        this.emit("pause");  
+    }
+    resume(){
+        this.emit("pause");
+    }
+}
+
+class Logger{
+    log(text){
+        console.log("The "+text+" event has been emitted")
     }
 }
 
 
-let movie1 = new movie("terminator","50:25",1995);
-movie1.play();
-console.log(movie1._title);
+
+let terminator = new Movie("terminator",90,1995);
+let logger = new Logger();
+terminator.on('play', logger.log);
+terminator.play();
+terminator.off('play');
+terminator.play();
 </script>
 </head>
 <body>
