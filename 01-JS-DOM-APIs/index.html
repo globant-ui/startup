@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.section{
+text-align: center;
+vertical-align: middle;
+line-height: 90px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+
+var config = {
+  url:'',
+  parameter:'',
+  containerId:''
+};
+
+function loadXMLDoc(url) { 
+  return new Promise(
+    function(resolve,reject){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          resolve(this.response);
+        }
+        else{
+          //reject(new Error(this.statusText));
+        }
+      }
+      xhttp.onerror = function () {
+        reject(new Error('XMLHttpRequest Error: '+this.statusText));            
+        };
+        console.log(url);
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    });
+}
+function showJoke(str){
+  let json = JSON.parse(str);
+  document.getElementById("joke").innerHTML = json["value"]["joke"];
+}
+function showApi(str){
+  document.getElementById("api").innerHTML = str;
+}
+$(function(){  
+  $("#hidden").fadeIn('slow');
+});
+</script>
+	<title>Lesson 1</title>
+</head>
+<body>
+
+	<section id="hidden" style="display: none;">Hello World!</section>
+	<button onclick="loadXMLDoc('http://api.icndb.com/jokes/random').then(    
+  function (value) {
+    showJoke(value);
+  },function (reason) {        
+  console.error('Something went wrong', reason);});">Click here to laugh!</button>
+  <section id="joke"></section>
+  <hr>
+  <input type="text" id="q" required="true"> 
+  <button onclick="loadXMLDoc('https://api.github.com/search/repositories?q=java').then(    
+  function (value) {
+    showApi(value);
+  },function (reason) {        
+  console.error('Something went wrong', reason);});">Click here to search!</button>
+  <section id="api"></section>
+</body>
+</html>

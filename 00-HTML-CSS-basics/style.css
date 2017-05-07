@@ -1,0 +1,25 @@
+.header{
+	font-size: 46px;
+	background-color: #ff00ff;
+}
+.footer{
+	font-size: 10px;
+	background-color: #ff00ff;
+}
+.content{
+	font-size: 14px;
+}
+.navigation{
+	font-size: 12px;
+	background: blue;
+}
+.sidebar{
+	font-size: 10px;
+	background-color: #ff00ff;
+}
+body{
+	font-size: 100px !important;
+}
+.oh-no-inline-styles{
+	background: green;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Bootcamp UI">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="viewport" content="width=device-width">
+</head>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=date] , input[type=email], input[type=hidden], input[type=textarea]   {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.clearbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #0040FF;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<h2>Login Form</h2>
+
+<form action="/action_page.php">
+  
+  <div class="container">
+    <label><b>First name</b></label>
+    <input type="text" placeholder="Enter First name" name="fname" required>
+
+    <label><b>Last name</b></label>
+    <input type="text" placeholder="Enter Last name" name="lname" required>
+
+    <label><b>Email</b></label>
+    <input type="email" placeholder="Enter email" name="email" required>
+
+    <label><b>Birthdate</b></label>
+    <input type="date" placeholder="Enter Birthdate" name="Birthdate" required>
+
+    <label><b>Favourite sport</b></label>
+    <input type="hidden" name="Favouritesport" list="Favouritesport">
+    <select>
+      <option value="Tennis">Tennis</option>
+      <option value="Soccer">Soccer</option>
+      <option value="Golf">Golf</option>
+      <option value="Basketball">Basketball</option>
+    </select>
+
+    <br><br><label><b>Give us a personal description</b></label>
+    <input type="textarea" placeholder="Who are you?" name="description" required>
+        
+    <button type="submit">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <button type="button" class="clearbtn">Clear</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
