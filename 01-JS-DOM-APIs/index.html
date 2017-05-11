@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+<script>
+function mi(){
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://api.icndb.com/jokes/random', true);
+xhr.send(null);}
+</script>
+<script>function ls(){
+var promesa = new Promise(function(resolve,reject){
+    var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://api.icndb.co', true);
+xhr.send(null);
+if (XMLHttpRequest.status === 200 && response.status === 'OK') {
+         var aceptada = true;
+      } else {
+         var aceptada = false;
+      }
+    
+    if(aceptada == true){
+        resolve("Funciono");
+    }else{
+        reject("Da error");
+    }
+});
+promesa.then(function(successData){
+    // Imprime : "Enviar este valor"
+    console.info(successData);
+}).catch(function(errData){
+    // Imprime : "Enviar este error"
+    console.error(errData);
+})};
+</script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Topic 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css"/>
+    </head>
+	<body>
+	  <header class="header"  >
+	    Header
+	  </header>
+	  <nav class="navigation" >
+        Navigation
+	  </nav>
+	  <aside class="sidebar" >
+	    Sidebar
+	  </aside>
+	  <div id="box" class="container" > <!-- Start Box Model-->
+	  <section class="content" >
+	    Content
+		<section id="hide" class="hide">
+		Hello World!
+		</section>
+		<button id="btn" class="btn" onclick="ls()">Apretame</button>
+	    <header class="header-art">
+	      Header
+	    </header>
+	    <article class="article" >
+	      Article
+	    </article>
+	    <footer class="footer-art" >
+	   Footer
+	    </footer>
+  	  </section>
+	  <div><!-- End Box Model-->
+	  <footer class="footer">
+	   	  </footer>
+		 <script>
+getClass = function(hide){
+/*Buscar en todos los elementos (selector *)*/
+var cl = document.getElementsByTagName("*");
+/*Bucle para recorrer todos los elementos en buscar de la clase*/
+for(i = 0; i < cl.length; i++) {
+/*Si la clase es encontrada modificar el tamaño de fuente*/
+if (cl[i].className == hide) {
+cl[i].style.visibility = 'visible';
+}
+}
+}
+/*Hay que utilizar window.onload para que funcione*/
+window.onload = function(){
+getClass("hide");
+}
+</script>
+
+    </body>
+</html>

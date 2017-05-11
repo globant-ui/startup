@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+ <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Topic 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<body>
+			  <script> 
+class movie{ //extends Emitter{
+
+  constructor(title, year, duration){
+   this.title = title;
+   this.year = year;
+   this.duration = duration;
+  }
+  play(){
+   let playVideo = document.getElementById("FastAndFurious");
+   playVideo.load();
+   playVideo.play();
+  }
+  pause(){
+   let pauseVideo = document.getElementById("FastAndFurious");
+   pauseVideo.pause();
+  }
+  resume(){
+   let resumeVideo = document.getElementById("FastAndFurious");
+   resumeVideo.play();
+  }
+ }
+
+ let FastAndFurious = new movie("Fast and Furious 8", "2017", "03:44");
+ let Transformers = new movie("Transformers - The dark side of the moon", "2013", "02:38");
+ let Terminator = new movie("Terminator III", "2010", "03:15");
+ console.log(FastAndFurious);
+ console.log(Transformers);
+ console.log(Terminator);
+
+ class Emitter{
+
+  constructor(){
+   this.events = {};
+  }
+  on(event, cb){
+   if(this.events[event] === undefined)
+    this.events[event] = [];
+   this.events[event].push(cb);
+  }
+  emit(eventName, data) {
+    let event = this.events[eventName];
+    if( event ) {
+       event.forEach(fn => {
+           fn.call(null, data);
+      });
+   }
+  }
+  off(event, cb){
+   
+  }
+
+ }
+ function playVideo(esto){
+  let video = document.getElementById("FastAndFurious");
+  video.play();
+  if(esto.value=="Resume")
+  {
+	esto.value="Play";
+  }
+ }
+let myEventEmitter = new Emitter();
+
+ myEventEmitter.on('Play Event', playVideo);
+let firstEventButton = document.getElementById("firstEvent");
+
+ firstEventButton.addEventListener('click', function(){
+  myEventEmitter.emit('Play Event');
+ },false);
+</script>
+
+<script>
+function pauseVideo(este){
+let FirstButton = document.getElementById("firstEvent");
+ let video = document.getElementById("FastAndFurious");
+ video.pause();
+ firstEvent.value="Resume"
+ }
+ let mysecondEventEmitter = new Emitter();
+ myEventEmitter.on('Pause Video', pauseVideo);
+ 
+let secondEventButton = document.getElementById("secondEvent");
+
+ secondEventButton.addEventListener('click', function(){
+  mysecondEventEmitter.emit('Pause Event','pause');
+ },false);
+</script>
+	  <header class="header"  >
+	    Header
+	  </header>
+	  <nav class="navigation" >
+        Navigation
+	  </nav>
+	  <aside class="sidebar" >
+	    Sidebar
+	  </aside>
+	  <div id="box" class="container" >
+	  <section class="content" >
+	    Content
+		<section>
+		<div id="bye=">
+		<video id="FastAndFurious" src="small.mp4">
+</video>
+<input type="button" id="firstEvent" onclick="playVideo(this);" value="Play" ></input>
+<input type="button" id="secondEvent" onclick="pauseVideo();" value="Pause"></input>
+		</section>
+	    <header class="header-art">
+	      Header
+	    </header>
+	    <article class="article">
+	      Article
+	    </article>
+	    <footer class="footer-art" >
+	   Footer
+	    </footer>
+  	  </section>
+	  <div>
+	  <footer class="footer">
+	   	  </footer>
+
+		  </body>
+		  </html>
+		  
