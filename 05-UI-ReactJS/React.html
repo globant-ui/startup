@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Topic 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+		<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+		<script src="https://unpkg.com/react-addons-update/react-addons-update.js"></script>
+		<script>
+			class movie
+			{
+				constructor(title, year, duration)
+				{
+					this.title = title;
+					this.year = year;
+					this.duration = duration;
+				}
+				play()
+				{
+					let playVideo = document.getElementById("FastAndFurious");
+					playVideo.play();
+				}
+				pause()
+				{
+					let pauseVideo = document.getElementById("FastAndFurious");
+					pauseVideo.pause();
+				}
+				resume()
+				{
+					let resumeVideo = document.getElementById("FastAndFurious");
+					resumeVideo.play();
+				}
+			}
+			let FastAndFurious = new movie("Fast and Furious 8", "2017", "03:44");
+			let Transformers = new movie("Transformers - The dark side of the moon", "2013", "02:38");
+			let Terminator = new movie("Terminator III", "2010", "03:15");
+			console.log(FastAndFurious);
+			console.log(Transformers);
+			console.log(Terminator);
+			class Emitter
+			{
+				constructor()
+				{
+					this.events = {};
+				}
+				on(event, cb)
+				{
+					if(this.events[event] === undefined)
+					{
+						this.events[event] = [];
+						this.events[event].push(cb);
+					}
+				}
+			emit(eventName, data)
+			{
+				let event = this.events[eventName];
+				if( event ) 
+				{
+					event.forEach
+					(fn => {
+					fn.call(null, data);
+					});
+				}
+			}
+			off(event)
+			{
+				if(this.event[event])
+				{
+					delete this.event[event];
+				}
+			}
+			}
+			
+			function playVideo(esto)
+			{
+				let video = document.getElementById("FastAndFurious");
+				video.play();
+				if(esto.value=="Resume")
+				{
+					esto.value="Play";
+				}
+			}
+			let myEventEmitter = new Emitter();
+			myEventEmitter.on('Play Event', playVideo);
+			let firstEventButton = document.getElementById("firstEvent");
+			firstEventButton.addEventListener('click', 
+			function(){
+			myEventEmitter.emit('Play Event');
+			},true);
+			function pauseVideo(este)
+			{
+				let FirstButton = document.getElementById("firstEvent");
+				let video = document.getElementById("FastAndFurious");
+				video.pause();
+				firstEvent.value="Resume"
+			}
+			let mysecondEventEmitter = new Emitter(); 	
+			let secondEventButton = document.getElementById("secondEvent");
+			secondEventButton.addEventListener('click', 
+			function()
+			{
+			mysecondEventEmitter.emit('Pause Event','pause');
+			},true);
+			
+			class Logger
+			{
+				log(text){
+				console.log("The "+text+"  event has been emitted");
+			 }
+			}
+			let movie1 = new movie("terminator","50:25",1995);
+			movie1.play();
+			console.log(movie.title);
+			let terminator = new Movie("terminator",90,1995);
+			let logger = new Logger();
+			terminator.on('play', logger.log);
+			terminator.play();
+			terminator.off('play');
+			terminator.play();
+		</script>
+	<!--Begin 1-->	
+		<script type="text/babel"> 
+		class ElementoLista extends React.Component {
+			render() {
+			return (
+			<ul>
+				<li>Title:{this.props.title}   Duration:{this.props.duration}   Year:{this.props.year} </li>
+			</ul>
+				)
+			}
+		}
+		class NameForm extends React.Component {
+		constructor(props) 
+		{
+			super(props);
+			this.state = {title: '',
+			duration: '',
+			year: '',
+			listaNombres : []},
+			this.handleTitleChange = this.handleTitleChange.bind(this),
+			this.handleDurationChange = this.handleDurationChange.bind(this),
+			this.handleYearChange = this.handleYearChange.bind(this),
+			this.handleSubmit = this.handleSubmit.bind(this),
+			this.deleteMovie=this.deleteMovie.bind(this);
+		} 
+		
+		handleTitleChange(event) 
+		{
+		var title=this.setState({title: event.target.value});
+		}
+ 
+		handleDurationChange(event) 
+		{
+			var duration=this.setState({duration: event.target.value});
+		}
+		
+		handleYearChange(event) 
+		{
+			var year=this.setState({year: event.target.value});
+		}
+
+		handleSubmit(event) 
+		{
+			event.preventDefault();
+			let movies= new movie();
+			movies.title=this.state.title;
+			movies.duration=this.state.duration;
+			movies.year=this.state.year;
+			console.log(movies);
+			this.state.listaNombres.push(movies)
+			this.setState
+			({
+				title: '',
+				duration:'',
+				year:'',
+				listaNombres: this.state.listaNombres
+			})
+			console.log(this.state.listaNombres);
+		}
+		
+		deleteMovie(index) 
+		{
+			this.state.listaNombres.splice(index,1)
+			this.setState
+			({
+				listaNombres: this.state.listaNombres
+			})    
+		}
+
+render() {
+return (
+		<div>
+		<div>
+			<form onSubmit={this.handleSubmit}>
+				<input type="text" id="title" placeholder="Movie Title" value={this.state.title} onChange={this.handleTitleChange}/> 
+				<input type="text" id="duration" placeholder="Duration" value={this.state.duration} onChange={this.handleDurationChange}/> 
+				<input type="text" id="year" placeholder="Year" value={this.state.year}  onChange={this.handleYearChange}/>
+				<input type="Submit" value="Submit" />
+			</form>
+		</div>
+		<div>          
+			<ul>
+				{this.state.listaNombres.map((movie, number) => {
+				return (
+				<div>
+					<ElementoLista key={number} title={movie.title} duration={movie.duration} year={movie.year} />
+					<button className="NameForm" onClick={this.deleteMovie}>Delete</button> 
+					<button id="edit">Edit</button>
+				</div>
+				)
+            })}
+          </ul>          
+</div>
+</div>
+		);
+		}
+}
+ReactDOM.render(
+<NameForm />,
+document.getElementById('root')
+);
+</script><!--End 1-->
+<script>
+
+</script>
+</head>
+	<body>
+	  <header class="header"  >
+	  </header>
+	  <nav class="navigation" >
+	  </nav>
+	  <aside class="sidebar" >
+	  </aside>
+	  <div id="box" class="container" >
+	  <section class="content" >
+		<section>
+		<video id="FastAndFurious" src="small.mp4"/>
+		<input type="button" id="firstEvent" onclick="playVideo(this);" value="Play" ></input>
+		<input type="button" id="secondEvent" onclick="pauseVideo();" value="Pause"></input>
+		</section>
+	    <header class="header-art">
+		<div id="root">
+		</div>
+	    </header>
+	    <article class="article">
+	    </article>
+	    <footer class="footer-art" >
+	    </footer>
+  	  </section>
+	  <footer class="footer">
+	   	  </footer>
+	</body>
+</html>
+		  
