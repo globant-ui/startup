@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse">
+  <div>
+		<h1>Spotisearch</h1>
+		<p>Search your favorite songs over spotify. Just enter an artist's name in the following search box and enjoy!</p>
+    <form class="panel panel-primary" role="search">
+      <div class="input-group add-on">
+      	<input class="form-control" placeholder="artista" ng-model ="busqueda" name="buscar" id="buscar" type="text">
+      	<div class="input-group-btn">
+          <button class="btn btn-default" ng-click="getResults()"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div>
+  <ul ng-repeat="artist in artists" class="media-list">
+  	<li class="list-group-item"><a ng-href="#!/artist/{{artist.id}}">{{artist.name}}</a></li>
+    <img class="media-object" ng-src="{{artist.images[0].url}}" />
+  </ul>
+</div>
+
+
+<div ui-view></div>

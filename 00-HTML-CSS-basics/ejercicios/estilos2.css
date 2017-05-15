@@ -1,0 +1,123 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width: 960px;
+	margin: auto;
+}
+
+header{
+	height: 250px;
+	font-family: arial;
+}
+
+header h1{
+	float: left;
+	text-align: center;
+	width: 50px;
+	padding:20px; 
+	margin-top:25px;
+	height: 50px;
+}
+
+header p{
+	float: right;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	width: 500px;
+}
+
+.cosa{
+	position: relative;
+	margin: 10px;
+	float: left;
+}
+
+.img{
+	height: 175px;
+	width: 275px;
+	display: block;
+	opacity: 1;
+	transition: 0.3s ease;
+}
+
+.txt{
+	opacity: 0;
+	height: 175px;
+	width: 275px; 
+	position: absolute;
+	background-color: black;
+	font-size: 25px;
+	top: 0%;
+	color: white;
+	transition: 0.3s ease;
+}
+
+.cosa:hover .img{
+	opacity: 0,3;
+}
+
+.cosa:hover .txt{
+	opacity: 0.5;
+}
+
+@media all and (max-width: 600px){
+
+	body{
+		width: 100%;
+	}
+	header{
+		width: 100%;
+	}
+
+	header h1{
+	text-align: center;
+	padding:0px 0px 0px 20px; 
+	margin-top:0px;
+	display: block;
+	}
+
+	header p{
+	padding-top: 0px;
+	text-align: left;
+	display: block;
+	font-size: 14px;
+	}
+
+	.cosa{
+	display: block;
+	position: relative;
+	margin: 0;
+	}
+
+	.img{
+	height: 25%;
+	width: 35%;	
+	display: block;
+	opacity: 1;
+	transition: 0.3s ease;
+	}
+
+	.txt{
+	height: 100%;
+	width: 35%;		
+	opacity: 0; 
+	position: absolute;
+	background-color: black;
+	font-size: 14px;
+	top: 0%;
+	color: white;
+	transition: 0.3s ease;
+	}
+
+	.cosa:hover .img{
+	opacity: 0,3;
+	}
+
+	.cosa:hover .txt{
+	opacity: 0.5;
+	}
+}

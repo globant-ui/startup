@@ -1,0 +1,7 @@
+<button ui-sref="home">Home</button>
+<div>
+  <ul ng-repeat="album in albums" class="media-list">
+  	<li class="list-group-item"><a ng-href="#!/album/{{album.id}}">{{album.name}}</a></li>
+    <img class="media-object" ng-src="{{album.images[0].url}}" />
+  </ul>
+</div>

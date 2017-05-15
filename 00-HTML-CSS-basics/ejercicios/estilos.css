@@ -1,0 +1,107 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body{
+	width: 960px;
+	margin: auto;
+	background-color: black;
+	font-size: 14px;
+	font-family: verdana;
+}
+
+#cabeza{
+	height: 130px;
+	border-radius: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+main{
+	height: 300px;
+	margin-top: 10px;
+}
+
+#caja{
+	width: 230px;
+	height: 300px;
+	background-color: grey;
+	float: left;
+	border-radius: 20px;
+}
+/*en este caso siempre es mejor usar clases pero el ejercicio
+no me permite hacerlo hasta mas adelante*/
+
+/*ademas se podria poner varias de las cosas ya escritas en clases
+pero repito que el ejercicio parece no buscar eso. Por eso no inclui
+el css señalado por id en las clases de abajo*/
+#caja2{
+	width: 230px;
+	height: 300px;
+	float: left;
+	border-radius: 20px;
+}
+
+#seccion{
+	width: 460px;
+	height: 300px;
+	margin: 0px 20px 0px 20px;
+	background-color: grey;
+	float: left;
+	border-radius: 20px;
+}
+ #pie{
+ 	height: 30px;
+ 	border-radius: 20px;
+ 	background-color: #d9d9d9;
+ 	margin: 10px;
+ 	border-radius: 20px;
+ 	text-align: center;
+ }
+
+ #pie2{
+ 	height: 30px;
+ 	border-radius: 20px;
+ 	margin: 10px;
+ 	border-radius: 20px;
+ 	text-align: center;
+ }
+
+ #cabe2{
+ 	background-color: #d9d9d9;
+ 	height: 40px;
+ 	margin: 20px 10px 10px 10px;
+ 	border-radius: 20px;
+ }
+
+ #articulo{
+ 	height: 180px;
+ 	border-radius: 20px;
+ 	background-color: #d9d9d9;
+ 	margin: 0px 10px 0px 10px;
+ }
+
+ .header{
+ 	font-size: 46px;
+ 	background-color: magenta;
+ }
+
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+}
+
+.content{
+	font-size: 14px;
+}
+
+.navigation{
+	font-size: 12px;
+}
+
+.sidebar{
+	font-size: 10px;
+	background-color: magenta;
+}

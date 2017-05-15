@@ -1,0 +1,8 @@
+<div class="conteiner">
+  <ul ng-repeat="track in tracks" class="media-list">
+  	<li class="list-group-item">{{track.name}}</a></li>
+    <audio controls>
+  	<source ng-src="{{track.preview_url}}">
+  	Your browser does not support the audio tag.
+	</audio>
+</div>

@@ -1,0 +1,43 @@
+section {
+   text-align: center;
+   display:block;
+}
+
+table {
+    width: 200px;
+    margin: 0px 0px 0px 15px;
+    table-layout: fixed;
+    vertical-align: middle;
+    text-align: left;
+}
+
+button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 2px;
+}
+
+.botonbusqueda{
+    margin-top: 10px;
+}
+
+.caja {
+    width: 60%;
+    float: right;
+}
+
+.buscar {
+    text-align:left;
+}
+
+body > div > div:nth-child(1) > section > p{
+    background-color: grey;
+    font-weight: bold;
+}
+
+label{
+    background-color: grey;
+    padding: 5px 10px 10px 5px;
+}
