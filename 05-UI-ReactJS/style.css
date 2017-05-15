@@ -1,0 +1,48 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+input, button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  border: solid 1px #ccc;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+input[type="submit"], button {
+  background-color: #ccc;
+  color: #fff;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+  color: #242424;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.wrapper {display: block; padding-left: 0; overflow: hidden; padding: 20px 0;}
+.wrapper > div {display: block; width: 100%; padding-left: 0; background-color: rgba(0,0,0,0.08); padding: 15px 0; padding-top: 8px;}
+.wrapper > div:nth-child(2n) {background-color: rgba(0,0,0,0.02);}
+.wrapper span {padding: 8px 0; display: inline-block;}
+
+.wrapper .item > div {
+  position: relative;
+  display: block; vertical-align: middle;
+  padding: 0 15px;
+  border-bottom: solid 1px rgba(0,0,0,.05);
+}
+
+.wrapper .item > div:last-child {
+  border-bottom: none;
+  padding-top: 15px
+}
+
