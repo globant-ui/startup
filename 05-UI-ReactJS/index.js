@@ -43,7 +43,7 @@ let movies = (typeof localStorage["Movies"] != "undefined") ? JSON.parse(localSt
 				)
 			}
 		}
-		class NameForm extends React.Component {
+		class Layout extends React.Component {
 		constructor(props) 
 		{
 			super(props);
@@ -142,6 +142,6 @@ function update() {
   }
   movies = rows;
   localStorage.setItem("Movies", JSON.stringify(movies));
-  ReactDOM.render(<NameForm rows={rows} />, document.getElementById("root"));
+  ReactDOM.render(<Layout rows={rows} />, document.getElementById("root"));
 }
 update();
