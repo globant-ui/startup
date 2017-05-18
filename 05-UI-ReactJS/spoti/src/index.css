@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.spoti {
+	background-color: black;
+	color: #fff;
+	
+}
+
+ul li {
+  display: inline-block;
+  
+}
+
+ul li a {
+  color: #fff;
+  width: 25px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: 25px;
+}
+
+ul li a:hover {
+  background: #9ACD32;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+.imagen {
+	max-height: 130px;
+	max-width: 150px;
+}
+
+.link:hover {
+	text-decoration: none;
+}
