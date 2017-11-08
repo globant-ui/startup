@@ -9,7 +9,7 @@ export default class SecMov extends React.Component {
       search: ''
     }
 
-     this.addGenres = this.addGenres.bind(this);
+    this.addGenres = this.addGenres.bind(this);
     this.onClickAll = this.onClickAll.bind(this);
     this.onClickPopular = this.onClickPopular.bind(this);
     this.onClickRecent = this.onClickRecent.bind(this);

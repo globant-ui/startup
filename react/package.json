@@ -1,0 +1,18 @@
+{
+  "name": "Danilo",
+  "version": "1.0",
+  "main": "index.js",
+  "license": "-",
+  "description": "my app react",
+  "repository": "bitbucket",
+  "author": "Danilo",
+  "private": null,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
