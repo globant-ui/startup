@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+<body>
+
+	<h1>Please fill the form:</h1>
+
+	<form>
+		First name: <input type="text" name="name" placeholder="Example: Tom" required></br>
+		<hr>
+		Last name: <input type="text" name="last-name" placeholder="Example: Cat" required></br>
+		<hr>
+		Email: <input type="email" name="email" placeholder="Example: tomCat@hogwarts.com" size="30" required></br>
+		<hr>
+		Birthday: <input type="date" name="birthday" pattern="\d{1,2}/\d{1,2}/\d{4}"> (Format: dd/mm/yyyy)</br> 
+		<!-- I think with only html I can't do more verifications than this. The pattern is for firefox that has 
+		no support for the type date yet.-->
+		<hr>
+		Favourite Sport: 
+		<select>
+			<option value="tennis">Tennis</option>
+			<option value="rugby">Rugby</option>
+			<option value="chess">Chess</option>
+			<option value="programming">Programming</option>
+		</select></br>
+		<hr>
+		Tell us a bit more about you:</br>
+		<textarea rows="6" cols="70" placeholder="Start here"></textarea></br>
+		<input type="submit" name="submit" value="Submit"> | <button type="reset">Clear Form</button>
+	</form>
+
+</body>
+</html>
