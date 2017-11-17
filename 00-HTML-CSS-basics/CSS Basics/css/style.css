@@ -1,0 +1,84 @@
+*
+{
+	/*font-size: 14px;*/
+	font-family: "Arial";
+}
+
+body
+{
+	background-color: #A4A4A4;
+}
+
+header, nav, aside, footer
+{
+	background-color: #00FF80;
+}
+
+header, footer
+{
+	text-align: center;
+}
+
+.header, .footer
+{
+	background-color: magenta;	/*SI EL NOMBRE DE LA CLASE TERMINA CON 'R', EL FONDO DEBE SER DE COLOR MAGENTA ¿COMO SE HARIA ESO?*/
+}
+
+.navigation, .sidebar
+{
+	background-color: blue;		/*SI EL NOMBRE DE LA CLASE CONTIENE UNA 'A', EL FONDO DEBE SER DE COLOR AZUL ¿COMO SE HARIA ESO?*/
+	color: white;
+}
+
+.header
+{
+	font-size: 46px;
+	border: thick solid black;
+	margin: 15px;
+}
+
+h1
+{
+	display: inline;
+}
+
+.main
+{
+	margin: 15px;
+}
+
+.footer
+{
+	font-size: 10px;
+}
+
+.content
+{
+	font-size: 14px; /*SI ESTA EN font-size EN EL SELECTOR UNIVERSAL, SE IGNORA ESTA LINEA ¿PORQUE?*/
+	display: inline-block;
+	/*position: absolute;*/ /*¿PORQUE SE ROMPE EL DISEÑO SI AGREGO ESTO ACA? AL SE inline-block SIN LOS MARGENES DEBERIA APARECER JUSTO AL LADO DE NAV BAR*/
+	height: 200px;
+	width: 900px;
+	margin-left: 210px;
+	/*background-color: orange;*/
+}
+
+.navigation
+{
+	font-size: 12px;
+	display: inline-block;
+	position: absolute;
+	height: 200px;
+	width: 200px;
+}
+
+.sidebar
+{
+	font-size: 10px;
+	display: inline-block;
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	margin-left: 10px;
+}
+
