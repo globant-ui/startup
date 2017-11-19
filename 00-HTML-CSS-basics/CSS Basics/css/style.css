@@ -1,0 +1,26 @@
+/* 1. Add background to the header, footer, aside and nav. 
+2. Add a global font definition (at html element) with a value of 14px, using a font-family you like. 
+3. Center the header and footer text.*/
+
+html {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+header {
+	background-color: #0190b6;
+	text-align: center;
+}
+
+nav {
+	background-color: #37ad7e;
+}
+
+aside {
+	background-color: #84cc33;
+}
+
+footer {
+	background-color: #e13d14;
+	text-align: center;
+}
