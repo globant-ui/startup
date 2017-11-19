@@ -3,20 +3,68 @@ html {
 	font-family: sans-serif;
 }
 
+.header{
+	font-size: 46px;
+}
+
 header {
 	background-color: #0190b6;
 	text-align: center;
+}
+
+.content{
+	font-size: 14px; /*It's the same as in html but just in case...*/
+}
+
+
+.navigation{
+	font-size: 12px;
 }
 
 nav {
 	background-color: #37ad7e;
 }
 
+.sidebar{
+	font-size: 10px;
+}
+
 aside {
 	background-color: #84cc33;
+}
+
+.footer{
+		font-size: 10px;
 }
 
 footer {
 	background-color: #e13d14;
 	text-align: center;
 }
+
+[class$="r"]{
+	background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+	background-color: blue;
+}
+
+/* --- Questions ---
+
+	-> How could you add weight to the global font definition to win over the classes added by point 3?
+
+		One way posible is to add an id="html" and next to the "html" selector add the #html id. The
+		disadvantage would be that you would have to add and id to every single element to be affected.
+		Besides, it does not go along the idea of "id". An id should be use to identify one and only 
+		one element.
+		I can't think of anything else.
+
+	-> Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need 
+		 to change the background to green without changing the inline style. How could you accomplish this?
+
+		I read that there is a sentence: "!important;" that overrides everything and gives more importante 
+		to the property where is located. I don't know if it's a good practice, I have a feeling that it isn't.
+		
+
+*/
