@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<header>
@@ -19,30 +20,30 @@
 		</p>
 	</header>
 	<section class="container">
-		<div class="baires">
-			<div>Obelisk - Buenos Aires, Argentina</div>
+		<div id="baires" onmouseover=mostrarInfo1() onmouseout=quitarInfo1()>
+			<div><h2>Obelisk - Buenos Aires, Argentina</h2></div>
 			<img src="baires.jpg">
 		</div>
-		<div class="london">
-			<div>London Eye and Big Ben - London, England</div>	
+		<div id="london" onmouseover=mostrarInfo2() onmouseout=quitarInfo2()>
+			<div><h2>London Eye and Big Ben - London, England</h2></div>
 			<img src="london.jpg">
 		</div>
-		<div class="mexico">
-			<div>Monument of Independence, Mexico D.F, Mexico</div>	
+		<div id="mexico" onmouseover=mostrarInfo3() onmouseout=quitarInfo3()>
+			<div><h2>Monument of Independence, Mexico D.F, Mexico</h2></div>
 			<img src="mexico.jpg">
 		</div>
-		<div class="newyork">
-			<div>Brooklyn Bridge, New York, United States</div>
+		<div id="newyork" onmouseover=mostrarInfo4() onmouseout=quitarInfo4()>
+			<div><h2>Brooklyn Bridge, New York, United States</h2></div>
 			<img src="newyork.jpg">
 		</div>
-		<div class="paris">
-			<div>Eiffel Tower, Paris, France</div>
+		<div id="paris" onmouseover=mostrarInfo5() onmouseout=quitarInfo5()>
+			<div><h2>Eiffel Tower, Paris, France</h2></div>
 			<img src="paris.jpg">
 		</div>
-		<div class="rome">
-			<div>Colisuem, Rome, Italy</div>
+		<div id="rome" onmouseover=mostrarInfo6() onmouseout=quitarInfo6()>
+			<div><h2>Colisuem, Rome, Italy</h2></div>
 			<img src="rome.jpg">
-		</div>		
+		</div>	
 	</section>
 </body>
 </html>
