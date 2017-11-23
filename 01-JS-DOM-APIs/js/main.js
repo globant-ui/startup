@@ -18,8 +18,8 @@ function random_joke() {
   })
 }
 
-// Alternative with HXMLHttpRequest
-/*function random_joke2() {
+// Alternative with XMLHttpRequest
+function random_joke2() {
   let url = "http://api.icndb.com/jokes/random";
   var myRequest = new XMLHttpRequest();
 
@@ -34,41 +34,46 @@ function random_joke() {
 
   myRequest.open('GET', url);
   myRequest.send();
-}*/
+}
 
 // Exercise 7 -- Still testing | Does not work.
 
-function random_joke2() {
+function random_joke3() {
   let joke = document.getElementById('joke');
-  const url = "http://api.icndb.com/jokes/random";
-  get_http(url)
-  .then(function(value) {
-    let json = JSON.parse(value);
-    joke.innerHTML = json.value.joke;
+
+  /* Now we create a config object, just as an example.*/
+  let config = {
+    url: "http://api.icndb.com/jokes/random"
+  }
+
+  /*Then we just delegate the responsability to the promise */
+  get_http(config) //Get a promise
+  .then(function (value) {
+    joke.innerHTML = JSON.parse(value).value.joke;
   },
   function (reason) {
-    console.error('Something went wrong', reason);
+    console.error('Something went wrong!!!', reason);
   });
 }
 
-function get_http(url) {
+function get_http(config) {
   return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
+    request.open('GET', config.url);
+    request.send(); 
     request.onreadystatechange = function () {
-      if (this.status === 200) {
+      if (this.status === 200 && this.readyState === 4) {
+        console.log("BEFORE:" + this.responseText);
         resolve(this.responseText);
-      } else {
+      } else if(this.status == 400) {
         reject(new Error(this.statusText));
       }
-    }
+    };
 
     request.onerror = function () {
       reject(new Error(
         'XMLHttpRequest Error: '+this.statusText));
-    };
-
-    request.open('GET', url);
-    request.send();    
+    };   
   });
 }
 
