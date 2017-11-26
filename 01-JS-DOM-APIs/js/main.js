@@ -1,6 +1,10 @@
 window.onload = function() {
   var section = document.getElementById('hidden');
   section.style.opacity = "1";
+
+  // Events - Listeners
+  document.getElementById('joke_button').addEventListener("click", random_joke3, false);
+  document.getElementById('repo_button').addEventListener("click", get_repositories, false);
 }
 
 function random_joke() {
@@ -18,7 +22,7 @@ function random_joke() {
   })
 }
 
-// Alternative with XMLHttpRequest
+// Exercise 6 -- Alternative with XMLHttpRequest
 function random_joke2() {
   let url = "http://api.icndb.com/jokes/random";
   var myRequest = new XMLHttpRequest();
@@ -36,7 +40,7 @@ function random_joke2() {
   myRequest.send();
 }
 
-// Exercise 7 -- Still testing | Does not work.
+// Exercise 7
 
 function random_joke3() {
   let joke = document.getElementById('joke');
@@ -45,14 +49,14 @@ function random_joke3() {
   let config = {
     url: "http://api.icndb.com/jokes/random"
   }
-
   /*Then we just delegate the responsability to the promise */
   get_http(config) //Get a promise
   .then(function (value) {
     joke.innerHTML = JSON.parse(value).value.joke;
   },
   function (reason) {
-    console.error('Something went wrong!!!', reason);
+    joke.style.backgroundColor = "red";
+    joke.innerHTML = "Something went wrong!!!";
   });
 }
 
@@ -63,17 +67,60 @@ function get_http(config) {
     request.send(); 
     request.onreadystatechange = function () {
       if (this.status === 200 && this.readyState === 4) {
-        console.log("BEFORE:" + this.responseText);
         resolve(this.responseText);
-      } else if(this.status == 400) {
+      } else if(this.status == 400 || this.status == 500) {
         reject(new Error(this.statusText));
       }
     };
 
     request.onerror = function () {
       reject(new Error(
-        'XMLHttpRequest Error: '+this.statusText));
+        'XMLHttpRequest Error: ' + this.statusText));
     };   
   });
 }
 
+// Exercise 9 
+function get_repositories(){
+  let config = {
+    url: "https://api.github.com/search/repositories?q='JavaScript'"
+  }
+
+  get_http(config)
+  .then(function(value) {
+    generate_list(value);
+  }),
+  function(reason) {
+    alert("There was a problem!");
+  }
+}
+
+function generate_list(response) {
+
+  document.getElementById("repositories").innerHTML = ""; // Empty the div before filling it again.
+  var items = JSON.parse(response).items;
+
+  items.forEach(function(item) {
+    create_list_item(item);
+  });
+}
+
+function create_list_item(item) {
+  let paragraph = document.createElement("P");                  
+  let text = document.createTextNode(item.full_name);
+  paragraph.appendChild(text);                                       
+  document.getElementById("repositories").appendChild(paragraph); 
+  var ul = document.createElement("UL");
+  paragraph.appendChild(ul);
+  
+  for(let property in item){
+    create_ul_elements(property, item[property], ul);
+  }
+}
+
+function create_ul_elements(property, value, father) {
+  let list_item = document.createElement("LI");                  
+  let text = document.createTextNode(property + ": " + value);
+  list_item.appendChild(text);                                         
+  father.appendChild(list_item); 
+}

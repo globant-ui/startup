@@ -16,3 +16,8 @@ section {
 	opacity: 0;
   transition: opacity 3s;
 }
+
+#repositories {
+  display: inline-block;
+  background-color: #ccc;
+}
