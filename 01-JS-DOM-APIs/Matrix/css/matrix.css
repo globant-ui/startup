@@ -1,0 +1,31 @@
+h1 {
+	text-align: center;
+}
+
+body {
+	background-color: #e6e6e6;
+}
+
+input{
+	margin-left: 10px;
+}
+
+#position {
+	margin: 10px;
+}
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin: 10px;
+	width: 1200px;
+}
+
+table td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+table td:hover {
+	background: yellow;
+}
