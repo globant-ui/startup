@@ -5,11 +5,11 @@ function fade() {
 }
 
 function getJoke() {
-	var xhr = createCORSRequest("GET", "http://api.icndb.com/jokes/random");
-	if(!xhr) {
-		alert("CORS not supported by the browser");
-	}
-	makeCORSRequest(xhr);
+	config = {
+		method: "GET",
+		url: "http://api.icndb.com/jokes/random"
+	};
+	ajaxCall(config);
 }
 
 function showInfo(xhr) {

@@ -1,8 +1,8 @@
-function createCORSRequest(method, url) {
+function ajaxCall(config) {
 	var xhr = new XMLHttpRequest();
 	if("withCredentials" in xhr) {
 		//CHROME, MOZILLA, OPERA AND SAFARI CASE
-		xhr.open(method, url, true);
+		xhr.open(config.method, config.url, true);
 	}
 	else if(typeof XDomainRequest != "undefined") {
 	 	//IE CASE
@@ -11,18 +11,14 @@ function createCORSRequest(method, url) {
 	}
 	else {
 		//CORS ISNT SUPPORTED
-		xhr = null;
+		alert("CORS not supported by the browser");
+		return;
 	}
-	return xhr;
-}
-
-function makeCORSRequest(xhr) {
+	xhr.send();
 	xhr.onload = function () {
-		//if(xhr.readyState == 4 && xhr.status == 200)
 		showInfo(xhr);
 	}
 	xhr.onerror = function () {
 		alert("Sorry, there was an error making the request");
 	}
-	xhr.send();
 }
