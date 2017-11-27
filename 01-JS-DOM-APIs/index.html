@@ -21,12 +21,17 @@
 		<p>Hello World!</p>
 	</section>
 
-  <center><button id="joke_button">Click me to laugh!</button></center>
+  <center><button id="joke-button">Click me to laugh!</button></center>
   <hr>
-  <center><button id="repo_button">Fetch repositories</button></center>
+  <center><button id="repo-button">Fetch JS repositories</button></center>
 
   <aside>
-    <p>Repositories: </p>
+    <p>Repositories: 
+      <form id="repo-search">
+        <input type="text" id="searchParameter" name="searchParameter">
+        <input type="submit" name="search" value="Search">
+      </form>
+    </p>
     <div id="repositories"></div>
   </aside>
 

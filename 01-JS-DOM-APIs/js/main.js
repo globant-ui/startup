@@ -3,8 +3,9 @@ window.onload = function() {
   section.style.opacity = "1";
 
   // Events - Listeners
-  document.getElementById('joke_button').addEventListener("click", random_joke3, false);
-  document.getElementById('repo_button').addEventListener("click", get_repositories, false);
+  document.getElementById('joke-button').addEventListener("click", random_joke3, false);
+  document.getElementById('repo-button').addEventListener("click", search_repositories, false);
+  document.getElementById('repo-search').addEventListener("submit", search_repositories2, false);
 }
 
 function random_joke() {
@@ -80,11 +81,16 @@ function get_http(config) {
   });
 }
 
-// Exercise 9 
-function get_repositories(){
+// Exercise 9
+function search_repositories(){
   let config = {
     url: "https://api.github.com/search/repositories?q='JavaScript'"
   }
+
+  get_repositories(config);
+}
+
+function get_repositories(config){
 
   get_http(config)
   .then(function(value) {
@@ -123,4 +129,14 @@ function create_ul_elements(property, value, father) {
   let text = document.createTextNode(property + ": " + value);
   list_item.appendChild(text);                                         
   father.appendChild(list_item); 
+}
+
+// Exercise 10
+function search_repositories2(form){
+  form.preventDefault();
+  let input = document.getElementById("searchParameter").value;
+  let config = {
+    url: "https://api.github.com/search/repositories?q='" + input + "'"
+  }
+  get_repositories(config);
 }
