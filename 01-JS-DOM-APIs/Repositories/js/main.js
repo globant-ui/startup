@@ -4,9 +4,11 @@ function search() {
 		alert("Write something");
 		return;
 	}
-	var url = "https://api.github.com/search/repositories" + "?q=" + word.value;
-	var xhr = createCORSRequest("GET", url);
-	makeCORSRequest(xhr);
+	var config = {
+		method: "GET",
+		url: "https://api.github.com/search/repositories" + "?q=" + word.value
+	};
+	ajaxCall(config);
 }
 
 function showInfo(xhr) {
