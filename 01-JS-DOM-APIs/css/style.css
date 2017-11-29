@@ -21,3 +21,16 @@ section {
   display: inline-block;
   background-color: #ccc;
 }
+
+table {
+  border: 1px dashed;
+  text-align: center;
+}
+
+tr:first-child {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
