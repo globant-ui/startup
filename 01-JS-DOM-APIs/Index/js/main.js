@@ -9,17 +9,22 @@ function getJoke() {
 		method: "GET",
 		url: "http://api.icndb.com/jokes/random"
 	};
-	ajaxCall(config);
-}
 
-function showInfo(xhr) {
-	var joke = document.getElementById('sectionJoke');
-	if (joke.hasChildNodes()) {
-		joke.removeChild(joke.firstChild);
-	}
-	var element = document.createElement("p");
-	var objectJoke = JSON.parse(xhr.responseText);
-	var content = document.createTextNode(objectJoke.value.joke);
-	element.appendChild(content);
-	document.getElementById('sectionJoke').appendChild(element);
+	let prom = ajaxCall(config);
+
+	prom.then(function(txt) {
+		var joke = document.getElementById('sectionJoke');
+		if (joke.hasChildNodes()) {
+			joke.removeChild(joke.firstChild);
+		}
+		var element = document.createElement("p");
+		var objectJoke = JSON.parse(txt);
+		var content = document.createTextNode(objectJoke.value.joke);
+		element.appendChild(content);
+		document.getElementById('sectionJoke').appendChild(element);
+	});
+
+	prom.catch (function () {
+		alert("Sorry, there was an error making the request");
+	});
 }
