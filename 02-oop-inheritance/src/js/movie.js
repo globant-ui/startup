@@ -7,7 +7,7 @@ class Movie extends EventEmitter {
     this.name = name;
     this.year = year;
     this.duration = duration;
-    this.cast = [];
+    this.casts = [];
   }
 
   play() {
@@ -28,15 +28,16 @@ class Movie extends EventEmitter {
   }
 
   addCast(cast) {
+    console.log(typeof(cast));
+    /*
     if(cast.length != null){
-      for(let i = 0; i < cast.length; i++){
-        this.cast.push(cast[i]);
-      }
+      this.casts.push(cast);
     }
     else {
       this.cast.push(cast);
-    }
+    }*/
   }
+  
 }
 
 export default Movie;

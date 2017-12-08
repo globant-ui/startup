@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="js/movies-controller.js"></script>
+</head>
+<body>
+
+  <div ng-controller="MoviesCtrl">
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Year</th>
+        <th>Details</th>
+        <th>Acción</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="movie in movies">
+          <td>{{ movie.name }}</td>
+          <td>{{ movie.director }}</td>
+          <td>{{ movie.year }}</td>
+          <td><a ng-click="showDetails($index)" href="{{movie.id}}">More</a></td>
+          <td><button ng-click="deleteMovie($index)">Delete</button></td>
+        </tr>
+        <tr>
+          <td><input ng-model="addName" type="text" name="name"></td>
+          <td><input ng-model="addDirector" type="text" name="director"></td>
+          <td><input ng-model="addYear" type="text" name="year"></td>
+          <td><button ng-click="addMovie()">Add</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
