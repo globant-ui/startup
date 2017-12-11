@@ -26,11 +26,13 @@
 	<hr>
 	<ul style="list-style: none">
 		<li ng-repeat="movie in movieList">
-			<p style="display: inline-block";>{{movie.title}}</p>
-			<a id="details" href="#" ng-click="details(movie)"> datails</a>
-			<a id="edit" href="#" ng-click="editMovie(movie)"> edit</a>
-			<a id="remove" href="#" ng-click="removeMovie(movie.title)"> remove</a>
+			<input type="text" readonly="" value={{movie.title}} style="width: 300px;">
+			<input ng-show="showDetails" type="text" readonly="" value={{movie.year}} style="width: 40px;">
+			<input ng-show="showDetails" type="text" readonly="" value={{movie.duration}}min style="width: 50px;">
+			<a ng-hide="editMode" id="edit" href="#" ng-click="editMovie(movie)"> edit</a>
+			<a ng-hide="editMode" id="remove" href="#" ng-click="removeMovie(movie.title)"> remove</a>
 		</li>
 	</ul>
+	<button ng-click="details()">View More Details</button>
 </body>
 </html>
