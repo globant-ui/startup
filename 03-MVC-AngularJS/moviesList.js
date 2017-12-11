@@ -14,6 +14,7 @@ function MoviesListController($scope, $element, $attrs) {
   };
 
   ctrl.deleteMovie = function(movie) {
+    console.log("LLEGUE");
     var idx = ctrl.list.indexOf(movie);
     if (idx >= 0) {
       ctrl.list.splice(idx, 1);
@@ -25,8 +26,6 @@ function MoviesListController($scope, $element, $attrs) {
     movie_id++;
     const movie = { id: movie_id, name: $scope.addName, director: $scope.addDirector, year: $scope.addYear };
     ctrl.list.push(movie);
-    console.log(movie);
-    console.log(ctrl.list);
   };
 }
 
@@ -36,5 +35,7 @@ app.controller('MoviesListController', ['$scope', MoviesListController]);
 
 app.component('moviesList', {
   templateUrl: 'moviesList.html',
-  controller: MoviesListController
+  bindings: {
+    movies: '='
+  }
 });
