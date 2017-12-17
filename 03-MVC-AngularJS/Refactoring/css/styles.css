@@ -1,0 +1,67 @@
+body {
+	background-color: #e6e6e6;
+}
+
+h1 {
+	text-align: center;
+	background-color: #2E9AFE;
+	border: 3px solid black;
+}
+
+ul {
+	list-style: none;
+}
+
+#titleText {
+	width: 300px;
+	background-color: #e6e6e6;
+}
+
+#mainForm {
+	background-color: #FF8000;
+	width: 300px;
+	border: 6px double black;
+	padding: 5px;
+	margin-left: 40px;
+}
+
+#formMovies {
+	float: left;
+}
+
+textarea {
+	resize: none;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+#btnSubmit {
+	background: none;
+}
+
+/*DETAILS VIEW STYLES*/
+#detailsZone {
+	width: 60%;
+	float: left;
+	margin-left: 15px;
+}
+
+#detailsHeader {
+	background-color: #BA1E1E;
+	border: 6px double black;
+	padding: 5px;
+	text-align: center;
+}
+
+table {
+	border: 2px solid black;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table td {
+	border: 2px solid black;
+}
