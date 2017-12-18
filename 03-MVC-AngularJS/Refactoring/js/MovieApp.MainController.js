@@ -17,6 +17,7 @@ function MainController ($scope, $location, AddEditRemoveService) {
 	$scope.editMovie = function (movieToEdit) {
 		$scope.newMovie = movieToEdit;
 		$scope.editMode = true;
+		$location.url("/");
 	};
 	$scope.finishEdit = function () {
 		$scope.newMovie = {};
@@ -24,6 +25,7 @@ function MainController ($scope, $location, AddEditRemoveService) {
 	};
 	$scope.removeMovie = function (movieToRemove) {
 		$scope.movieList = AddEditRemoveService.remove(movieToRemove);
+		$location.url("/");
 	};
 	$scope.detailsMovie = function (movieToShow) {
 		$location.url("/details"+movieToShow.id);

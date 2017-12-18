@@ -24,14 +24,18 @@
 
 	<div ng-controller="MainController" id="formMovies">
 		<form ng-submit="addMovie()" id="mainForm">
-			<label for="title">Title</label>
-			<input ng-model="newMovie.title" type=text required="" id="title"><br><br>
-			<label for="duration">Duration (in minutes)</label>
-			<input ng-model="newMovie.duration" type=number min=1 max=300 required="" id="duration"><br><br>
-			<label for="year">Year</label>
-			<input ng-model="newMovie.year" type=number min=1950 max=2030 required="" id="year"><br><br>
-			<label for="genre">Genre</label>
-			<input ng-model="newMovie.genre" type=text required="" id="genre"><br><br>
+			<label for="title">Title*</label>
+			<input ng-model="newMovie.title" type=text required="" id="title">
+			<br><br>
+			<label for="duration">Duration (in minutes)*</label>
+			<input ng-model="newMovie.duration" type=number min=1 max=300 required="" id="duration">
+			<br><br>
+			<label for="year">Year*</label>
+			<input ng-model="newMovie.year" type=number min=1950 max=2030 required="" id="year">
+			<br><br>
+			<label for="genre">Genre*</label>
+			<input ng-model="newMovie.genre" type=text required="" id="genre">
+			<br><br>
 			<label for=clasification>Clasification</label>
 			<select ng-model="newMovie.clasification" id="clasification">
 				<option value="G">G</option>
@@ -40,14 +44,18 @@
 				<option value="18A">18A</option>
 				<option value="R">R</option>
 				<option value="A">A</option>
-			</select><br><br>
-			<label for="director">Directed By</label>
-			<input ng-model="newMovie.director" type="text" required=""><br><br>
-			<textarea ng-model="newMovie.description" placeholder="Write a brief description of the movie here..." cols=39 rows=6></textarea><br><br>
-			<button ng-hide="editMode" type="submit" id="btnSubmit"><img src="png/add.png" alt="add" title="Add this movie to the list"></button>
-			<img ng-click="clearAll()" ng-hide="editMode" src="png/clear.png" alt="clear" title="Clear the list">
-			<!--<img ng-click="saveList()" ng-hide="editMode" src="png/save.png" alt="save" title="Save the list">-->
-			<img ng-click="finishEdit()" ng-show="editMode" src="png/finish.png" alt="finish" title="Finish edit">
+			</select>
+			<br><br>
+			<label for="director">Directed By*</label>
+			<input ng-model="newMovie.director" type="text" required="">
+			<br><br>
+			<textarea ng-model="newMovie.description" placeholder="Write a brief description of the movie here..." cols=39 rows=6></textarea>
+			<br><br>
+			<button ng-hide="editMode" type="submit" class="formButtons"><img src="png/add.png" alt="add" title="Add this movie to the list"></button>
+			<button ng-hide="editMode" type="reset" class="formButtons"><img ng-click="clearAll()" src="png/clear.png" alt="clear" title="Clear the list"></button>
+			<button ng-show="editMode" type="reset" class="formButtons"><img ng-click="finishEdit()" src="png/finish.png" alt="finish" title="Finish edit"></button>
+			<br><br>
+			<label>*Obligatory Fields</label>
 		</form>
 		<ul>
 			<li ng-repeat="movie in movieList">

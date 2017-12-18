@@ -37,13 +37,13 @@ img:hover {
 	cursor: pointer;
 }
 
-#btnSubmit {
+.formButtons {
 	background: none;
 }
 
 /*DETAILS VIEW STYLES*/
 #detailsZone {
-	width: 60%;
+	width: 900px;
 	float: left;
 	margin-left: 15px;
 }
