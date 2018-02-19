@@ -1,0 +1,69 @@
+body
+{
+	background-color: #848484;
+}
+
+/* 										HEADER STYLES									*/
+h1
+{
+	display: inline-block;
+	margin-left: 1%;
+	width: 30%;
+	position: absolute;
+}
+
+p
+{
+	display: inline-block;
+	margin-left: 31%;
+	width: 50%;
+}
+
+/*									CONTEINER STYLES  								*/
+.container
+{
+	margin-top: 50px;
+}
+
+div
+{
+	width: 30%;
+	height: 300px;
+	padding: 1%;
+	float: left;
+
+}
+
+img
+{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.hovered div
+{
+	position: absolute;
+	padding: 0%;
+	visibility: hidden;
+}
+
+.hovered:hover img
+{
+	opacity: 0.2;
+	transition: opacity 0.3s;
+}
+
+.hovered:hover div
+{
+	visibility: visible;
+}
+
+h2
+{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	margin-top: 40px;
+}

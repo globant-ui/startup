@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="MovieApp">
+
+<head>
+	<title>Movie List</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+	<script src="js/MovieApp.js"></script>
+	<script src="js/MovieApp.AddEditRemoveService.js"></script>
+	<script src="js/MovieApp.Routing.js"></script>
+	<script src="js/MovieApp.MainController.js"></script>
+	<script src="js/MovieApp.DetailsController.js"></script>
+	<script src="js/Movies.json"></script>
+	
+
+	<link rel="shortcut icon" type="image/x-icon" href="favico.ico">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+	<h1>MOVIE LIST</h1>
+
+	<div ng-controller="MainController" id="formMovies">
+		<form ng-submit="addMovie()" id="mainForm">
+			<label for="title">Title*</label>
+			<input ng-model="newMovie.title" type=text required="" id="title">
+			<br><br>
+			<label for="duration">Duration (in minutes)*</label>
+			<input ng-model="newMovie.duration" type=number min=1 max=300 required="" id="duration">
+			<br><br>
+			<label for="year">Year*</label>
+			<input ng-model="newMovie.year" type=number min=1950 max=2030 required="" id="year">
+			<br><br>
+			<label for="genre">Genre*</label>
+			<input ng-model="newMovie.genre" type=text required="" id="genre">
+			<br><br>
+			<label for=clasification>Clasification</label>
+			<select ng-model="newMovie.clasification" id="clasification">
+				<option value="G">G</option>
+				<option value="PG">PG</option>
+				<option value="14A">14A</option>
+				<option value="18A">18A</option>
+				<option value="R">R</option>
+				<option value="A">A</option>
+			</select>
+			<br><br>
+			<label for="director">Directed By*</label>
+			<input ng-model="newMovie.director" type="text" required="">
+			<br><br>
+			<textarea ng-model="newMovie.description" placeholder="Write a brief description of the movie here..." cols=39 rows=6></textarea>
+			<br><br>
+			<button ng-hide="editMode" type="submit" class="formButtons"><img src="png/add.png" alt="add" title="Add this movie to the list"></button>
+			<button ng-hide="editMode" type="reset" class="formButtons"><img ng-click="clearAll()" src="png/clear.png" alt="clear" title="Clear the list"></button>
+			<button ng-show="editMode" type="reset" class="formButtons"><img ng-click="finishEdit()" src="png/finish.png" alt="finish" title="Finish edit"></button>
+			<br><br>
+			<label>*Obligatory Fields</label>
+		</form>
+		<ul>
+			<li ng-repeat="movie in movieList">
+				<input type="text" value={{movie.title}} id="titleText" readonly="">
+				<img ng-click="detailsMovie(movie)" ng-hide="editMode" src="png/details.png" alt="details" title="Show the details of this movie">
+				<img ng-click="editMovie(movie)" ng-hide="editMode" src="png/edit.png" alt="edit" title="Edit this movie">
+				<img ng-click="removeMovie(movie)" ng-hide="editMode" src="png/remove.png" alt="remove" title="Remove this Movie">
+			</li>
+		</ul>
+	</div>
+
+	<div ng-view id="detailsZone"></div>
+
+</body>
+</html>
