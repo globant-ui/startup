@@ -1,0 +1,529 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { 
+    font-size: 100%; 
+}
+
+@media only screen and (min-width: 20px) and (max-width: 299px) {
+
+    .same {
+        width: 50px;
+        height: 50px;
+    }
+
+    .forSp {
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        opacity: 0;
+        z-index: 1000;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+    }
+
+    .forSp:hover {
+        opacity: 1;
+    }
+
+    .position {
+        position: relative;
+    }
+
+    .info {
+        color: #fff;
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+        margin-left: -30px;
+    }
+
+    .forSp.fade-in .info {
+        margin-left: 0;
+    }
+
+    .forSp:hover .info {
+        margin-left: 0;
+    }
+
+    .lastOne {
+        background-color: #9b2020;
+    }
+
+    .expenses {
+        background-color: #7a7a82;
+    }
+
+    .formC {
+        background-color: #95af90;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #bf8383;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #876666;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    p, h2 {
+        text-align: center;
+    }
+
+    .forAnother {
+        background-color: #ad9696;
+    }
+
+    .special {
+        width: 270px;
+        height: 270px;
+        display: block;
+        margin: auto;
+    }
+
+    .lastOne {
+        background-color: #9b2020;
+    }
+
+    .expenses {
+        background-color: #7a7a82;
+    }
+
+    .formC {
+        background-color: #95af90;
+    }
+    
+}
+
+@media only screen and (min-width: 401px){
+
+    img { 
+        width: 330px;
+        height: 320px;
+        border: 1px solid black;
+      }
+   
+
+    .forSp {
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        opacity: 0;
+        z-index: 1000;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+    }
+
+    .forSp:hover {
+        opacity: 1;
+    }
+
+    .position {
+        position: relative;
+    }
+
+    .info {
+        color: #fff;
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+        margin-left: -30px;
+    }
+
+    .forSp.fade-in .info {
+        margin-left: 0;
+    }
+
+    .forSp:hover .info {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 347px){
+
+    img { 
+        width: 270px;
+        height: 270px;
+        border: 1px solid black;
+      }
+    .forSp {
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        opacity: 0;
+        z-index: 1000;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+    }
+
+    .forSp:hover {
+        opacity: 1;
+    }
+
+    .position {
+        position: relative;
+    }
+
+    .info {
+        color: #fff;
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+        margin-left: -30px;
+    }
+
+    .forSp.fade-in .info {
+        margin-left: 0;
+    }
+
+    .forSp:hover .info {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 348px) and (max-width: 400px){
+
+    img { 
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+
+    .forSp {
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        opacity: 0;
+        z-index: 1000;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+    }
+
+    .forSp:hover {
+        opacity: 1;
+    }
+
+    .position {
+        position: relative;
+    }
+
+    .info {
+        color: #fff;
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+        margin-left: -30px;
+    }
+
+    .forSp.fade-in .info {
+        margin-left: 0;
+    }
+
+    .forSp:hover .info {
+        margin-left: 0;
+    }
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  html { font-size: 112%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  html { font-size: 120%; }
+}
+
+@media (min-width: 40rem) {
+  section { padding: 4rem 0; }
+}
+
+
+@media (min-width: 40rem) {
+  h1 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  
+
+  [class*="col"] {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col"] {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 800px){
+    .same {
+        width: 170px;
+        height: 170px;
+        border: 1px solid black;
+    }
+
+}
+
+@media only screen and (min-width: 801px) and (max-width: 900px){
+    .same {
+        width: 240px;
+        height: 240px;
+        border: 1px solid black;
+    }
+
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1000px){
+    .same {
+        width: 270px;
+        height: 270px;
+        border: 1px solid black;
+    }
+
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px){
+    .same {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+    }
+
+}
+
+@media only screen and (min-width: 1301px) {
+    .same {
+        width: 360px;
+        height: 320px;
+        border: 1px solid black;
+    }
+}
+
+
+
+
+.column { 
+    margin-bottom: 1.5rem; 
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width : 1200px; 
+}
+
+
+
+.column.third {
+    width: 33.3%;
+}
+
+.column.two-thirds { 
+    width: 66.7%; 
+}
+
+.column.full { 
+    width: 100%;
+}
+
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #bf8383;
+}
+
+tr:nth-child(odd) {
+    background-color: #876666;
+}
+
+
+article {
+    display: inline;
+}
+
+h1, h2, p {
+    text-align: center;
+
+}
+
+
+ol {
+    margin:0;
+    padding:0;
+    text-align: center; 
+    list-style-position: inside;
+}
+ol  li {
+     padding: 2px 5px;              
+}
+
+.forSp {
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+
+.forSp:hover {
+    opacity: 1;
+}
+
+.position {
+    position: relative;
+}
+
+
+.info {
+    color: #fff;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+    margin-left: -30px;
+}
+
+.forSp.fade-in .info {
+    margin-left: 0;
+}
+
+.forSp:hover .info {
+    margin-left: 0;
+}
+
+body .container section 
+.column.third article audio {
+    border: none;
+}
+
+.formC {
+    background-color: #95af90;
+}
+
+.expenses {
+    background-color: #7a7a82;
+}
+
+.lastOne {
+    background-color: #9b2020;
+}
+
+.forAnother {
+    background-color: #ad9696;
+}
