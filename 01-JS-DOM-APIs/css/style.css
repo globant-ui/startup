@@ -67,6 +67,8 @@ ul {
     list-style: none;
     width: 60%;
     margin-left: 20%;
+    overflow-y: scroll;
+    height:500px;
 }
 
 .forAvatars {
@@ -81,4 +83,9 @@ ul {
 
 input {
     width: 30%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
