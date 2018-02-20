@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/myScript.js" async></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS Basics</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column full">
+                <header>
+                    <h1>Let's do a few things with JS.</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column half">
+                <section>
+                    <h2>Non-hidden section.</h2>
+                    <button  id="btn-joke">Get a Joke</button>
+                    <p id="writable"></p>
+                    <h3 hidden id="error">There was en error, try again latter.</h3>
+                </section>
+                <section>
+                    <h2>Yet another section.</h2>
+                    <form>
+                        <label for="input-repo">
+                            <span>Search Github's repos:</span>
+                        </label>
+                        <input type="text" id="input-repo" required>
+                        <button id="btn-search">Search</button>
+                    </form>
+                </section>
+            </div>
+            <div class="column half">
+                <section hidden class="fade">
+                    <h2>Hello World!</h2>
+                    <button id="btn-repos">Bring it</button>
+                    <ul id="repos">
+                        
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
