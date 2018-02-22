@@ -4,6 +4,39 @@
     box-sizing: border-box;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 710px) {
+    nav,
+    section,
+    aside {
+        display: block;
+        width: 100%;
+        margin: 20px 0 20px 0;
+        clear: both;
+    }
+
+    header.header h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 711px) {
+    nav.navigation,
+    aside {
+        display: block;
+        width: 25%;
+    }
+
+    section {
+        float: left;
+        width: calc(50% - 100px);
+        margin: 0 50px 50px 50px;
+    }
+
+    .header h1{
+        font-size: 46px;
+    }
+}
+
 html {
     font-family: 'Metrophobic', Arial, serif; font-weight: 400;
     font-size: 14px;
@@ -40,16 +73,6 @@ h1 {
     margin: 0;
 }
 
-nav,
-aside {
-    width: 25%;
-}
-
-section {
-    float: left;
-    width: calc(50% - 100px);
-    margin: 0 50px 50px 50px;
-}
 
 section header,
 section article,
@@ -92,10 +115,6 @@ nav li:first-child {
 
 footer {
     clear: both;
-}
-
-.header h1{
-    font-size: 46px;
 }
 
 .footer h2 {

@@ -2,6 +2,43 @@
 {
     box-sizing: border-box;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 930px) {
+   nav,
+   section,
+   aside {
+        display: block;
+        width: 100%;
+        margin: 20px 0 20px 0;
+        clear: both;
+   }
+
+   footer {
+        margin-top: 20px;
+        clear: both;
+   }
+}
+
+@media only screen and (min-width: 931px) {
+    nav,
+    section,
+    aside {
+        display: inline-block;
+        width: 23%;
+        margin-top: 5%;
+    }
+
+    section {
+        width: 50%;
+        margin: 5% 2% 5% 2%;
+    }
+
+    footer {
+        clear: both;
+    }
+
+}
+
 header, nav, section,
 aside, footer
 {
@@ -10,16 +47,6 @@ aside, footer
     padding: 50px;
 }
 
-nav, section, aside{
-    display: inline-block;
-    width: 20%;
-    margin-top: 5%;
-}
-
-section {
-    width: 50%;
-    margin: 5% 3% 3% 3%;
-}
 
 nav ul
 {
