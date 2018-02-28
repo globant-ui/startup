@@ -1,0 +1,63 @@
+*{
+  box-sizing: border-box;
+}
+
+section {
+    background-color: rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#repoList{
+  max-width: 800px;
+  display:block;
+  background-color: lightgray;
+  text-align: center;
+
+}
+
+#section1{
+  visibility: hidden;
+}
+
+#joke{
+  text-align: center;
+  background-color: rgba(0,0,0,0.2);
+}
+p{
+  text-align: center;
+}
+
+button{
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+input{
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+}
+
+section footer{
+  background-color: white;
+  font-family:sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table, td{
+  border: 1px solid black;
+  background-color:lightgray;
+  color: black;
+  table-layout: fixed;
+  width: 100px;
+  text-align: center;
+}
