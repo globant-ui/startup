@@ -6,7 +6,7 @@ function alertMessage(){
   alert("This is an alert!");
 }
 
-function GetProm(set){
+function GetProm(set){    //Open set request
 
   return new Promise(function(succeed,fail){
 
@@ -71,4 +71,53 @@ function getRepos(){
 		document.getElementById("repoList").style.background = "red";
 		document.getElementById("repoList").innerHTML = error;
 	});
+}
+
+function Matrix(){
+
+	var i,j;
+	var matrix = new Array(5);
+
+	for (i=0;i<matrix.length;i++){
+    matrix[i] = new Array(5);
+  }
+
+    for (i = 0; i<matrix.length; i++)
+    {
+      for (j = 0; j<matrix[i].length; j++)
+      {
+            matrix[i][j] = Math.round(Math.random() * 500);
+      }
+      console.log(matrix);
+    //  debugger;
+    }
+
+	return matrix;
+}
+
+
+function Table(matrix){
+
+    var body = document.getElementsByTagName("body")[0];
+
+    var table= document.createElement("table");
+    var tblBody= document.createElement("tbody");
+    for(var i = 0; i < matrix.length; i++)
+    {
+      var row = document.createElement("tr");
+
+      for(var j=0 ; j < matrix.length ; j++){
+        var cell= document.createElement("td");
+        var cellCont = document.createTextNode(matrix[i][j]);
+        cell.appendChild(cellCont);
+        row.appendChild(cell);
+      }
+
+      tblBody.appendChild(row);
+    }
+
+    table.appendChild(tblBody);
+    body.appendChild(table);
+    table.setAttribute("border", "3");
+    table.style.margin="0 auto";
 }

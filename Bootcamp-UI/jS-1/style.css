@@ -15,6 +15,7 @@ section {
   display:block;
   background-color: lightgray;
   text-align: center;
+
 }
 
 #section1{
@@ -49,5 +50,14 @@ section footer{
   font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+table, td{
+  border: 1px solid black;
+  background-color:lightgray;
+  color: black;
+  table-layout: fixed;
+  width: 100px;
   text-align: center;
 }
