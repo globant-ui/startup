@@ -1,0 +1,351 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+html{
+  font-size: 14px;
+  font-family: helvetica, monospace, arial, sans-serif;
+  height: 100%;
+  padding: 10px;
+  /* Decided to overwrite colors defined on previous exercises in order
+  to make more explicit element's layout */
+  background: white !important;
+  overflow-y: auto;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  /* Decided to overwrite colors defined on previous exercises in order
+  to make more explicit element's layout */
+  background: #424242;
+}
+
+/* Changed after reading Globant's CSS style guide */
+header,
+footer,
+aside,
+nav {
+  background-color: #757575;
+}
+
+/* Changed after reading Globant's CSS style guide */
+header,
+footer {
+  text-align: center;
+}
+
+/* ul and li were only as a test (and because I didn't like previous nav design) */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 1em 0;
+  line-height: 2.5em;
+  text-indent: 0.5em;
+  text-align: left;
+  margin-bottom: 5px;
+  border-bottom: thin groove white;
+  border-radius: 0;
+}
+
+li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.header {
+  display: table;
+  font-size: 16px;
+  width: 100%;
+  height: calc((100% - 30px) * 0.15);
+  padding-top: 0;
+  margin: auto auto 15px;
+  border: inherit;
+}
+
+.footer {
+  display: table;
+  font-size: 10px;
+  width: 100%;
+  height: calc((100% - 30px) * 0.10);
+  margin: 0 auto;
+  clear: both;
+  border: inherit;
+}
+
+/* Changed after reading Globant's CSS style guide */
+.sidebar,
+.content,
+.navigation {
+  height: calc((100% - 30px) * 0.75);
+  padding: 15px;
+  margin: auto auto 15px;
+}
+
+.content {
+  font-size: 14px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  width: calc((100% - 30px) * 0.55);
+  float: left;
+  /* Decided to overwrite colors defined on previous exercise in order
+  to make more explicit element's layout */
+  background: #BDBDBD;
+}
+
+.navigation {
+  font-size: 12px;
+  margin-right: 7.5px;
+  width: calc((100% - 30px) * 0.225);
+  overflow-y: auto;
+  float: left;
+}
+
+.sidebar {
+  position: relative;
+  font-size: 10px;
+  margin-left: 7.5px;
+  width: calc((100% - 30px) * 0.225);
+  line-height: 100%;
+  float: right;
+  overflow-y: auto;
+}
+
+/* Changed after reading Globant's CSS style guide */
+.content header,
+.content footer {
+  display: table;
+  width: 100%;
+}
+
+.content header {
+  height: calc((100% - 30px) * .15);
+}
+
+.content footer {
+  height: calc((100% - 30px) * .10);
+}
+
+
+.content article {
+  height: calc((100% - 30px) * .75);
+  padding: 0 2.5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+}
+
+/*[class] has same specifity but it's applied over classes defined on point 03
+because last read property is applied when specifity is the same*/
+[class] {
+  font-weight: bold;
+}
+
+
+/* 07 --> Although it is not a good practice !important can be used.
+If you see HTML an inline style has been specified for h1 in main header
+--> background: red
+by using !important this inline style is overriden */
+[class$="r"] {
+  background: magenta !important;
+}
+
+[class*="a"]:not([class$="r"]) {
+  background: blue;
+}
+
+.sidebar h3 {
+  text-decoration: underline;
+}
+
+.sidebar p:not(.sidebar_display_pane p) {
+  text-align: justify;
+}
+
+/* Changed after reading Globant's CSS style guide */
+header h1,
+header h2,
+footer p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Media modifications in order to be mobile responsive */
+@media only screen and (max-width: 800px){
+
+  * {
+    border-radius: 10px;
+  }
+
+  body {
+    padding: 7.5px;
+  }
+
+  ul {
+    /* This is a way to center. Setting parents position relative and
+    childs position to absolute, then top, right, bottom, left to 0 and margin to
+    auto */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: table;
+    height: calc(100% - 10px);
+    vertical-align: middle;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  li {
+    display: table-cell;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    padding: 0 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    border-left: none;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  .navigation {
+    position: relative;
+    display: block;
+    height: calc((100% - 22.5px) * .1);
+    width: 100%;
+    padding: 2.5px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0 0 7.5px 0;
+  }
+
+
+  .header {
+    margin-bottom: 7.5px;
+    height: calc((100% - 22.5px) * .15);
+  }
+
+  /* Changed after reading Globant's CSS style guide */
+  .sidebar,
+  .content {
+    height: calc((100% - 22.5px) * 0.65);
+    padding: 7.5px;
+  }
+
+
+  .content {
+    width: calc((100% - 7.5px) * .775);
+    margin: 0 3.75px 7.5px 0;
+  }
+
+
+  .sidebar {
+    width: calc((100% - 7.5px) * .225);
+    margin: 0 0 7.5px 3.75px;
+    padding: 10px;
+  }
+
+  .footer {
+    height: calc((100% - 22.5px) * .1);
+  }
+
+  .content header {
+    height: calc((100% - 15px) * .15);
+  }
+
+  .content article {
+    padding: 0 10px;
+    height: calc((100% - 15px) * .75);
+    font-size: .75em;
+    margin: 7.5px 0;
+  }
+
+  .content footer {
+    height: calc((100% - 15px) * .10);
+  }
+
+  .sidebar p {
+    padding-right: 5px;
+    height: 70%;
+    overflow-y: auto;
+    text-align: left;
+    border-radius: 0;
+  }
+
+
+
+}
+
+
+@media only screen and (max-width: 639px){
+  body {
+    height: auto;
+  }
+
+  .navigation {
+    height: 2rem;
+  }
+
+  .content, .sidebar {
+    height: auto;
+  }
+
+  .content {
+    width:100%;
+  }
+
+  .sidebar {
+    float: none;
+    margin: 0 0 7.5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .footer {
+    height: 2rem;
+  }
+
+  .sidebar p {
+    height: auto;
+    font-weight: thin;
+    font-size: 10px;
+  }
+
+  .content header {
+    height: auto;
+  }
+
+  .content article {
+    height: auto;
+  }
+
+  .content footer {
+    height: auto;
+  }
+
+}

@@ -1,0 +1,369 @@
+/* General */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+html {
+  font-family: fantasy, monospace, helvetica, arial, sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+/* HTML components design */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  font-size: 14px;
+  padding-left: 2em;
+}
+
+footer {
+  display: table;
+  text-align: center;
+  height: 15vh;
+}
+
+footer {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer p a {
+  font-weight: bold;
+}
+
+
+/* Page container */
+.container{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Column layoyt (img area). It was required over columns and rows because
+mock-up follows a vertical filling pattern.*/
+.column-layout {
+  width: 100%;
+  /* This ensures a equitative distribution of the images. Requires testing with
+  very tall imgages */
+  height: calc(auto / 3);
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-columna-gap: 2em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 2em;
+  column-count: 3;
+  column-gap: 2em;
+}
+
+/* link-group contains img, links and popup menu with description and external link */
+.link-group{
+  position: relative;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.link-img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+
+.img-popup {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: #FFFFFFDD;
+  margin: 0 auto;
+  padding: 1em 1.5em 0.5em;
+  opacity: 0;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.img-popup-desc {
+  position: relative;
+  display: block;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+}
+
+.img-popup-domain {
+  position: relative;
+  display: block;
+  line-height: 1em;
+  width: 90%;
+  padding: 0;
+  margin: .5em 0 .5em;
+  height: auto;
+  color: #757575;
+}
+
+
+.link-group:hover .link-img{
+  filter: none;
+  cursor: pointer;
+}
+
+.link-group:hover .img-popup,
+.link-img:active .img-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img-popup .img-popup-desc:hover {
+  text-decoration: underline;
+}
+
+.img-popup .img-popup-domain:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Fixed-nav class implements the side button with fixed position */
+.fixed-nav {
+  display: table;
+  position: fixed;
+  text-align: center;
+  top: 40vh;
+  z-index: 1;
+  right: 0;
+  height: 20vh;
+  width: 3em;
+  background-color: black;
+  color: white;
+}
+
+.nav-content {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+/* Design of columns and rows */
+.row {
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  /* Is this spacing between rows? --> Investigate*/
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  padding: 1em 1em 0;
+}
+
+.column.full {
+  width: 100%;
+}
+
+.column.half {
+  width: 50%;
+}
+
+.column.third{
+  width: 33.33%;
+}
+
+.column.fourth {
+  width: 25%;
+}
+
+.column.fifth {
+  width: 20%;
+}
+
+.column.sixth {
+  width: 16.67;
+}
+
+.colum.flow_opposite {
+  float: right;
+}
+
+/* Vertical background lines decorate page and can be used as a pattern to
+verify the column design */
+.vertical-line {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #61616133;
+}
+
+.line-01 {
+  left: 16.67%;
+}
+
+.line-02 {
+  left: 33.33%;
+}
+
+.line-03 {
+  left: 50.00%;
+}
+
+.line-04 {
+  left: 66.67%;
+}
+
+.line-05 {
+  left: 83.33%;
+}
+
+/* Media modifications in order to be mobile responsive */
+@media only screen and (max-width: 720px){
+  .column-layout {
+      width: 100%;
+      overflow-y: visible;
+      height: calc(auto / 2);
+      padding: 1em;
+      -moz-column-count: 2;
+      -moz-columna-gap: 2em;
+      -webkit-column-count: 2;
+      -webkit-columna-gap: 2em;
+      column-count: 2;
+      column-gap: 2em;
+  }
+
+  .line-01 {
+    left: 25%;
+  }
+
+  .line-02 {
+    display: none;
+  }
+  .line-03 {
+    left: 50%;
+  }
+
+  .line-04 {
+    display: none;
+  }
+
+  .line-05 {
+    left: 75%;
+  }
+
+  .column.full {
+    width: 100%;
+  }
+
+  .column.half {
+    width: 100%;
+  }
+
+  .column.third {
+    width: 50%;
+  }
+
+  .column.fourth {
+    width: 37.5%;
+  }
+
+  .column.fifth {
+    width: 25%;
+  }
+
+  .column.sixth {
+    width: 12.5;
+  }
+
+  /* Disables image link. The user can access the image link throug the
+  spanned menu */
+  .link-img {
+    pointer-events: none;
+    cursor: default;
+  }
+
+}
+
+
+@media only screen and (max-width: 480px){
+  .column-layout {
+      width: 100%;
+      overflow-y: visible;
+      height: auto;
+      padding: 1em;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+  }
+
+  .line-01 {
+    display: none;
+  }
+
+  .line-02 {
+    display: none;
+  }
+
+  .line-04 {
+    display: none;
+  }
+
+  .line-05 {
+    display: none;
+  }
+
+
+  .column.full {
+    width: 100%;
+  }
+
+  .column.half {
+    width: 100%;
+  }
+
+  .column.third {
+    width: 100%;
+  }
+
+  .column.fourth {
+    width: 75%;
+  }
+
+  .column.fifth {
+    width: 60%;
+  }
+
+  .column.sixth {
+    width: 50;
+  }
+
+  /* Disables image link. The user can access the image link throug the
+  spanned menu */
+  .link-img {
+    pointer-events: none;
+    cursor: default;
+  }
+}
