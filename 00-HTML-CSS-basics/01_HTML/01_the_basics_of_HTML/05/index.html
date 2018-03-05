@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Language added to increase accesibility score -->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- Added after checking HTML Boilerplate doc -> compatibility with IE explorer -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Exercise 05</title>
+    <!-- Added after checking HTML Boilerplate doc -> Description-->
+    <meta name="description" content="Globant bootcamp-ui HTML01.ex_05">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Added to increase accesibility developer tools best-practices score -->
+    <link rel="manifest" href="site.webmanifest">
+    
+  </head>
+
+  <body>
+
+    <header>
+      <h1>My web music player</h1>
+    </header>
+
+    <section>
+      <header>
+        <!-- Style was added to HTML document because it wasn't exercise idea to link a css stylesheet -->
+        <!-- alt text was modified to meet accesibility requeriments -->
+        <img src="media/lpda.jpg" alt="Logo - Las pastillas del abuelo" height="75" width="75" style="max-width:100%; float:left;">
+        <h2>Las pastillas del abuelo</h2>
+
+      </header>
+
+      <!-- Article structure added after reading "WHAT DOES IT ALL MEAN?" -->
+      <article style="clear:left">
+        <br><br>
+        <header>
+          <h3>Me juego el corazón</h3>
+        </header>
+
+        <h4>Audio (live):</h4>
+        <!-- Style was added to HTML document because it wasn't exercise idea to link a css stylesheet -->
+        <audio controls style="max-width:100%;">
+          <!-- src and type attributes removed from audio and added in a source tag due to W3C validation warining -->
+          <source src="media/lpda_me_juego_el_corazon.mp3" type="audio/mp3">
+        </audio>
+
+        <h4>Video (live):</h4>
+        <!-- Style was added to HTML document because it wasn't exercise idea to link a css stylesheet -->
+        <video controls style="max-width:100%;">
+          <source src="media/lpda_me_juego_el_corazon.mp4" type="video/mp4">
+          Your browser does not support html5 video.
+        </video>
+
+      </article>
+
+    </section>
+
+  </body>
+
+  <!-- W3c validation: Document checking completed. No errors or warnings to show. -->
+
+</html>

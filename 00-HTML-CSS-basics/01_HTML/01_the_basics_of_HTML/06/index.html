@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Language added to increase accesibility score -->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- Added after checking HTML Boilerplate doc -> compatibility with IE explorer -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Exercise 06</title>
+    <!-- Added after checking HTML Boilerplate doc -> Description-->
+    <meta name="description" content="Globant bootcamp-ui HTML01.ex_06">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Added to increase accesibility developer tools best-practices score -->
+    <link rel="manifest" href="site.webmanifest">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Sign form test</h1>
+    </header>
+
+    <section role="main">
+
+      <header>
+        <h2>Sign up</h2>
+      </header>
+
+      <form action="index.html" method="post">
+
+        <!-- Added labels for all non labelled inputs in order to increase accesibility score -->
+        <label for="first_name_input">First name: </label>
+        <input id="first_name_input" type="text" name="first_name" placeholder="First name" required>
+        <br><br>
+
+        <label for="last_name_input">Last name: </label>
+        <input id="last_name_input" type="text" name="last_name" placeholder="Last name" required>
+        <br><br>
+
+        <label for="email_input">e-mail: </label>
+        <input id="email_input" type="email" name="email" placeholder="e-mail" required>
+        <br><br>
+
+        <label for="birthday_date_picker">Birthday: </label>
+        <input id="birthday_date_picker" type="date" name="birthday" required>
+        <br><br>
+
+        <label for="sport_selector">Favourite sport: </label>
+        <select id="sport_selector" name="fav_sport_selector">
+          <option value="football">Football</option>
+          <option value="tennis">Tennis</option>
+          <option value="voleyball">Voleyball</option>
+          <option value="handball">Handball</option>
+          <option value="baseball">Baseball</option>
+          <option value="basketball">Basketball</option>
+          <option value="rugby">Rugby</option>
+        </select>
+        <br><br>
+
+        <label for="bio_textarea">Short biography: </label>
+        <textarea id="bio_textarea" name="bio" rows="8" cols="40" placeholder="Short biography (optional)"></textarea>
+        <br><br>
+
+        <button type="submit" name="submit_button">Send!</button>
+        <button type="reset" name="reset_button">Clear form</button>
+      </form>
+
+    </section>
+
+  </body>
+
+  <!-- W3C validation (warning):  The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. -->
+
+</html>
