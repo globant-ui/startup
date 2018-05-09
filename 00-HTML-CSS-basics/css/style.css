@@ -1,0 +1,15 @@
+*{
+	font-size: 14px;
+	font-family: "lato";
+}
+.top-header,
+.bottom-footer,
+.aside-left,
+.side-navigation{
+	background-color: #28a745;
+}
+
+.top-header,
+.bottom-footer{
+	text-align: center;
+}
