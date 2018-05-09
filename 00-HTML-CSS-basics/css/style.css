@@ -1,15 +1,22 @@
 *{
+	font-weight: bold;
+}
+.header{
+	font-size: 46px;
+	background-color: magenta;
+}
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+}
+.content{
 	font-size: 14px;
-	font-family: "lato";
 }
-.top-header,
-.bottom-footer,
-.aside-left,
-.side-navigation{
-	background-color: #28a745;
+.navigation{
+	font-size: 12px;
+	background-color: blue;
 }
-
-.top-header,
-.bottom-footer{
-	text-align: center;
+.sidebar{
+	font-size: 10px;
+	background-color: magenta;
 }
