@@ -1,51 +1,51 @@
-*{
+* {
 	font-size: 14px;
 	font-family: "lato", "serif";
 	padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.container-title{
+.container-title {
 	font-size: 20px;
 	display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.top-header{
+.top-header {
 	padding-left: 10px;
 	margin:20px;
 	width: 30%;
 }
-.header-article{
+.header-article {
 	margin: 20px;
 	width: 60%;
 }
-@media (min-width: 1151px){
+@media (min-width: 1151px) {
 p {
   font-size: 1.1rem;
 }
-strong{
+strong {
   font-size: 1.2rem;
 }
-h2{
+h2 {
 	font-size: 1.5rem;
 }
 }
-@media all and (max-width: 1150px) and (min-width: 789px){
+@media all and (max-width: 1150px) and (min-width: 789px) {
 p {
   font-size: 0.8rem;
   line-height: 0.8rem;
 }
-strong{
+strong {
   font-size: 0.9rem;
 }
-h2{
+h2 {
   font-size: 1rem;
 }
 }
 
-@media (min-width: 789px){
-.imagen{
+@media (min-width: 789px) {
+.imagen {
  display: block;
   width: 100%;
   height: auto;
@@ -54,7 +54,7 @@ h2{
   position: relative;
   width: 31.3333%;
 }
-.items-grid-group1{
+.items-grid-group1 {
 	box-sizing: content-box;
 	margin: 30px;
 	display: -webkit-box;
@@ -93,7 +93,7 @@ h2{
 }
 }
 @media all and (max-width: 788px) and (min-width: 498px){
-.imagen{
+.imagen {
  display: block;
   width: 100%;
   height: auto;
@@ -105,7 +105,7 @@ h2{
   margin: 10px;
 
 }
-.items-grid-group1{
+.items-grid-group1 {
   box-sizing: content-box;
   margin: 30px;
   display: -webkit-box;
@@ -146,15 +146,15 @@ p {
   font-size: 0.75rem;
   line-height: 0.9rem;
 }
-strong{
+strong {
   font-size: 0.75rem;
 }
-h2{
+h2 {
   font-size: 0.87rem;
 }
 }
 @media (max-width: 497px){
-.imagen{
+.imagen {
  display: block;
   width: 100%;
   height: auto;
@@ -165,7 +165,7 @@ h2{
   float: left;
   margin: 10px;
 }
-.items-grid-group1{
+.items-grid-group1 {
   box-sizing: content-box;
   margin: 30px;
   display: -webkit-box;
@@ -205,13 +205,13 @@ p {
   font-size: 0.75rem;
   line-height: 0.9rem;
 }
-strong{
+strong {
   font-size: 0.75rem;
 }
-h2{
+h2 {
   font-size: 0.87rem;
 }
-h1{
+h1 {
   font-size: 1.5rem;
 }
 }

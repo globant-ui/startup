@@ -1,8 +1,8 @@
-*{
+* {
 	font-size: 14px;
 	font-family: "lato", "serif";
 }
-.top-container{
+.top-container {
 	box-sizing: content-box;
 	margin: 10px;
 	display: -webkit-box;
@@ -16,7 +16,7 @@
 	padding-top: 30px; 
 	padding-bottom: 30px;
 }
-.center-container{
+.center-container {
 	box-sizing: content-box;
 	margin: 10px;
 	display: -webkit-box;
@@ -28,7 +28,7 @@
 	text-align: center;
 	border-radius: 15px;
 }
-.bottom-container{
+.bottom-container {
 	box-sizing: content-box;
 	margin: 10px;
 	display: -webkit-box;
@@ -44,7 +44,7 @@
 	padding-top: 30px; 
 	padding-bottom: 30px;
 }
-.side-navigation{
+.side-navigation {
 	background-color: #939393;
 	padding-top: 168px; 
 	padding-bottom: 168px;
@@ -53,13 +53,13 @@
 	margin-right: 10px;
 	border-radius: 15px;
 }
-.center-section{
+.center-section {
 	background-color: #666666;
 	color: white;
 	width: 60%;
 	border-radius: 15px;
 }
-.aside-left{
+.aside-left {
 	background-color: #939393;
 	padding-top: 168px; 
 	padding-bottom: 168px;
@@ -68,7 +68,7 @@
 	margin-left: 10px;
 	border-radius: 15px;
 }
-.section-header{
+.section-header {
 	background-color: #999999;
 	color: white;
 	margin: 10px;
@@ -76,7 +76,7 @@
 	padding-bottom: 15px;
 	border-radius: 15px;
 }
-.section-article{
+.section-article {
 	background-color: #999999;
 	padding-top: 65px; 
 	padding-bottom: 65px;
@@ -84,7 +84,7 @@
 	margin: 10px;
 	border-radius: 15px;
 }
-.section-footer{
+.section-footer {
 	background-color: #999999;
 	padding-top: 15px; 
 	padding-bottom: 15px;
@@ -92,13 +92,13 @@
 	margin: 10px;
 	border-radius: 15px;
 }
-.bottom-footer{
+.bottom-footer {
 	color:white;
 	align-items: center;
 	text-align: center;
 	border-radius: 15px;
 }
-.container{
+.container {
 	background-color: #333333;
 	padding-top: 10px;
 	padding-bottom: 10px;

@@ -1,10 +1,10 @@
- Pregunta:
+Question:
 
 Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to change the background to green without changing the inline style. How could you accomplish this?
 
-Respuesta:
+Answer:
 
-Agregaria el siguiente codigo a la hoja de estilos:
+I will add the next code:
 
 .oh-no-inline-styles{
   background-color: green !important;
