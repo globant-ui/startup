@@ -1,0 +1,88 @@
+REACT: CON REACT SE PUEDEN CREAR NUEVOS TAG PERSONALIZADOS,
+LOS TAG LLEVAN MAYUSCULA AL INICIO.<Curso />.
+js6:------transpilar-->js5
+la mayor parte de js6 se puede traducir a js5.
+para esto se puede usar Babel y Traceur.
+
+herramienta webpack que invoca directamente a babel para hacer la transformacion de js6 a js5.
+cosas que aprender de js6:
+*NO HAY MAS VAR AHORA SE USA LET Y CONST
+CONST ES UNA VARIABLE QUE SE CARGA UNA VEZ Y NO CAMBIA NUNCA
+LET ES LO MAS PARECIDO A UN VAR . 
+LET SOLO EXISTE DENTRO DE SU BLOQUE.
+POR EJEMPLO DENTRO DE UN IF.
+*OBJETOS Y CLASES:
+SINTAXIS LET OOO = {PROC(..){}
+                    OTRP(..){}}
+LET P ={X,Y,Z}ESTO ES LO MISMO QUE P={X:X,Y:Y,Z:z}
+
+*DEFINIR FUNCION EJ
+FUNCTION HUGO (X=7,Y,Z=4){....}
+*FUNCIONES FLECHA
+LET PACO=(H,K)==>{ALGO QUNEE USA H,K}
+
+LET LUIS=(X)=>2*X;
+DADO X RETORNO 2POR X
+
+MODULOS.
+ARCHIVO CON EXTENCION JS QUE TIENE
+FUNCTION
+CLASS
+CONST
+PERO LA DIFERENCIA
+ES QUE AL FINAL TIENE UNA EXPORT 
+EXPORTA LAS COSAS Y NO PUEDEN VERSE EN LA PAGINA.
+SOLO SE USA LO QUE SE EXPORTO.
+EN OTRO LUGAR DEL CODIGO SE PONE IMPORT CALCULO FORM DONALD.
+
+Y TAMBIEN SE PUEDE DENTRO DE ESE ARCHIVO PODES USAR IMPORT PARA TRAER DE OTROS ARCHIVOS.
+
+CLASES
+CLASS LAPIZ EXTENDS ARTICULO{
+TIENEN CONSTRUCTOR
+CONSTRUCTOR (...){
+SUPER.,,,,(...) INVOCA LA CLAS DE ARRIBA.
+}
+}
+LEER OPERADOR SPREAD ...
+DESTRUCTURING 
+
+REACT HERRAMIENTA CUYO OBJETIVO ES DEFINIR VISTAS.
+BIBLEOTECAS HECHA
+REDUX
+FLUX
+MOBX
+no es para usar ahora.
+
+<componente propiedades>
+<puede  tener mas propiedades dentro>
+<componente>
+
+definicion decomponetes
+class AltaPelicula extends React.component{
+render(){
+let result igual {
+<div>hola<span><datospelicula><><>
+}
+return
+}
+}
+tiene que haber siempre un render.
+las propiedades se manejan por red only
+alta pelicula 
+tendria
+dentro
+los componentes
+nombre
+genero
+etc
+y un boton
+a cada uno le pongo un valor inicial
+cada elemento le ponemos un evento 
+cuando cambia le manda el callback al padre
+y cuando el padre ve eso lo guarda en su estado
+cuado va al genero le manda el calback por que cambi
+y cuando cambia elgenero lo manda al padre y lo sube al state.
+cuando le da click
+hace el calback y lo sube en ese momento ese contenedor tiene que ir a actualizar la lista
+para agregarla a la lista.

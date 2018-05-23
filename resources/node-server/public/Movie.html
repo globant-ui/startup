@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript"
+     src="js/Addmovies.js"></script>
+</head>
+<header></header>
+<body>
+<nav>
+<ul>
+        <a href="index.html"><li>Home</li> </a>
+        <a href="Movie.html"><li>Movies</li></a>
+        <a href="AboutUs.html"><li>About Us</li></a>
+        <a href="Contact.html"><li>Contact</li></a>
+</ul>   
+</nav>
+<section>
+<select id="Select">
+    <option  value="All">All</option>
+    <option  value="Popular">Popular</option>
+    <option  value="Premieres">Premieres</option>
+</select>
+<input type="text" id="SearchBox" name="search" value="" placeholder="Search Actor,Title,Description.">
+<select id="SelectGen">
+    <option value="Adventure">Adventure</option>
+    <option value="Animation">Animation</option>
+    <option value="Biography">Biography</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Crime">Crime</option>
+    <option value="Drama">Drama</option>
+    <option value="Romance">Romance</option>
+    <option value="Sci-Fi">Sci-Fi</option>
+    <option value="War">War</option>
+</select>   
+    <a href="#openModal" class="btTxt">ADD Film</a>
+<div id="openModal" class="modalDialogo"><div><a href="#close" title="cerrar" class="cerrar">X</a>
+<form class="contact_form" action="#" method="post">
+    <ul>
+        <li>
+             <h2>Add Data Film</h2>
+        </li>
+        <li>
+            <label for="name" >Title:</label>
+            <input type="text" id="TitleModal"  required /><br />
+        </li>
+        <li>
+            <label for="name">Director:</label>
+            <input type="text" id="DirectorModal"  required /><br />
+        </li>
+        <li>
+            <label for="name">Actors:</label>
+            <input type="text" id="ActorsModal" required /><br />
+        </li>
+        <li>
+            <label for="Date">Relased Date:</label><br>
+            <input disabled="" type="Date" name="Date" id="RelasedModal" /><br />
+        </li>
+        <li>
+            <label for="text"><br>Category:</label>
+            <select id="CategoryModal"><br />
+                <option value="Adventure">Adventure</option>
+                <option value="Animation">Animation</option>
+                <option value="Biography">Biography</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="War">War</option>
+            </select><br>
+        </li>
+        <li>
+            <label for="Point">Rating:</label><br>
+            <select disabled="" id="PointModal"><br />
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select><br>
+        </li>
+        <li>
+            <label for="textarea">Description:</label><br />
+            <textarea name="Mensaje" cols="40" rows="6" id="PlotModal" ></textarea><br />
+        </li>
+        <li>
+            <label for="name">Poster:</label>
+            <input type="url" id="PosterModal"  required /><br><br><br>
+        </li>
+        <li>
+       <button  id="submitMovie" class="Button" type="submit">Send</button>
+        </li>
+    </ul>
+</form>
+</div>
+</div>
+</div>
+<div id="showFilm">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<aside>
+    <img id="publicidad" src="image/star.jpg" >
+    <img id="publicidad" src="image/pepsi.jpg" >
+    <img id="publicidad" src="image/coca.png" >
+    <img id="publicidad" src="image/mcdonald.jpg">
+</aside>
+<footer>
+    <ul>
+    <li><a href="https://www.facebook.com/danilopinheyro" >https://www.facebook.com/danilopinheyro</a></li>
+    <li>Numero de Contacto +598999222</li>
+    <li>Direccion : Mangaleao tro 1122</li>
+    <li>&copyDanoBS</li>
+    </ul>
+</footer>
+</body>
+</html>

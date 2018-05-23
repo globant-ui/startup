@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movies</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+    <script type="text/javascript" src="function.js"></script>
+    <script type="text/javascript" src="movies.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+<ul>
+		<a href="index.html"><li>Home</li> </a>
+		<a href="Movie.html"><li>Movies</li></a>
+		<a href="AboutUs.html"><li>About Us</li></a>
+		<a href="Contact.html"><li>Contact</li></a>
+</ul>	
+</nav>
+<section>
+<select id="Select" onchange="Filt();">
+	<option  value="All">All</option>
+	<option  value="Popular">Popular</option>
+    <option  value="Premieres">Premieres</option>
+</select>
+<input type="button" id="Button" name="search" value="
+search" >
+<input type="text" id="textBox" name="search" placeholder="Search Actor,Title,Description.">
+	<a href="#openModal" class="btTxt">ADD Film</a>
+<div id="openModal" class="modalDialogo"><div><a href="#close" title="cerrar" class="cerrar">X</a>
+<form class="contact_form" action="#" method="post">
+    <ul>
+        <li>
+             <h2>Add Data Film</h2>
+        </li>
+        <li>
+            <label for="name">Title:</label>
+            <input type="text" id="Title1"  required /><br>
+        </li>
+        <li>
+            <label for="image" id="image"> Add Url img</label>
+            <input type="text" name="urlimg" id="urlimg">
+        </li>
+        <li>
+            <label for="actor" id="actor"> Add actors</label>
+            <input type="text" name="actor" id="actor">
+        </li>
+        <li>
+            <label for="Director" id="Director"> Add Director</label>
+            <input type="text" name="Director" id="Director">
+        </li>
+        <li>
+            <label for="Date">Date:</label><br>
+            <input type="Date" name="Date" id="Date"  required /><br>
+        </li>
+        <li>
+            <label for="Release">Release:</label><br>
+            <input type="Date" name="Release" id="Release"  required /><br>
+        </li>
+        <li>
+            <label for="text">Category:</label>
+            <select id="Category">
+            	<option value="Action">Action</option>
+            	<option value="Adventure">Adventure</option>
+            	<option value="Comedy">Comedy</option>
+            	<option value="Drama">Drama</option>
+            	<option value="Terror">Terror</option>
+            	<option value="Suspense">Suspense</option>
+            </select><br>
+        </li>
+        <li>
+            <label for="Point" >Point:</label><br>
+            <input type="radio" name="pto1" id="pto" value="1">1
+            <input type="radio" name="pto1" id="pto" value="2">2
+            <input type="radio" name="pto1" id="pto" value="3">3
+            <input type="radio" name="pto1" id="pto" value="4">4
+            <input type="radio" name="pto1" id="pto" value="5">5<br>
+        </li>
+        <li>
+            <label for="textarea">Description:</label>
+            <textarea name="Mensaje" cols="40" rows="6" required id="mens"></textarea>
+        </li>
+        <li>
+         <button id="Button" class="submit" type="submit">Send</button>
+        </li>
+    </ul>
+</form>
+</div>
+</div>
+<div>
+<div>
+    <div id="All" style="display: block;"><script type="text/javascript">showAllMovie()</script></div>
+    <div id="Popular" style="display: none;"><script type="text/javascript">showPopularMovie();</script></div>
+    <div id="Premieres" style="display: none;"><script type="text/javascript">showPremieresMovie();</script></div>
+</div>
+</div>
+</section>
+<aside>
+	<img id="publicidad" src="image/star.jpg" >
+	<img id="publicidad" src="image/pepsi.jpg" >
+	<img id="publicidad" src="image/coca.png" >
+	<img id="publicidad" src="image/mcdonald.jpg">
+</aside>
+<footer>
+	<ul>
+	<li><a href="https://www.facebook.com/danilopinheyro" >https://www.facebook.com/danilopinheyro</a></li>
+	<li>Numero de Contacto +598999222</li>
+	<li>Direccion : Mangaleao tro 1122</li>
+	<li>&copyDanoBS</li>
+	</ul>
+</footer>
+</body>
+</html>

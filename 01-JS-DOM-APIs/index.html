@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practico 1 js & jquery</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+            $(document).ready(function(){
+                    
+                $("#section1").fadeIn(3000, function(){
+                    $(".alias").focus()
+                });
+                                    
+                var req = $.ajax({
+                    url: 'http://bootcamp.aws.af.cm/welcome/yourname', 
+                    dataType: 'html'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <header>
+                
+            </header>
+            <section>
+                <div hidden="hidden" id="section1">
+                   <h1> Hello World</h1>
+                </div>
+                <input type="text" name="text" class="alias">
+                <input type="button" name="btn1" id=btn1 value="Button">
+                <div id="section2"></div>
+            </section>
+        </div>
+    </body>
+</html>

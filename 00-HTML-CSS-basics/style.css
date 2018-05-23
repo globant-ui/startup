@@ -1,0 +1,54 @@
+[class*="a"] {
+	background-color: blue;
+}
+[class$="r"]  {
+	background-color: magenta;
+}
+.content1{
+	display:block;
+	background-color: skyblue;
+	width: 8cm;
+}
+html{
+	font-family: arial;
+	font-size: 10px;
+}
+body{
+	background-color: black;
+	text-align: center;
+	padding-left: 10cm;
+	padding-right: 10cm;
+}
+.header{
+	font-size: 46px;
+    display: block;
+}
+.navigation{
+	font-size: 12px;
+	display: block;
+	display: inline-block;
+	float: left;
+	width: 4cm;
+}
+.content{
+	font-size: 14px;
+	display: block;
+	display: inline-block;
+	float: center;
+}
+.content1{
+	display: block;
+}
+.sidebar{
+	font-size: 10px;
+	width: 4cm;
+	display: block;
+	display: inline-block;
+	float: right;
+}
+.footer{
+	font-size: 10px;
+	display: block;
+	clear: both;
+}
+

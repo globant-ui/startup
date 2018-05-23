@@ -1,0 +1,445 @@
+[1021/145956:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75117020 of 36 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(155)] could not read debug directory from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x773cc000 of 5888 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\chrome.exe
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x772f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\ntdll.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\KERNELBASE.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77050000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\kernel32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\msvcrt.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75760000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\RPCRT4.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77470000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\sechost.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ADVAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73080000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_elf.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74570000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\VERSION.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76db0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USP10.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75b40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\LPK.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\GDI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USER32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73920000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINMM.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75260000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\profapi.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x753e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USERENV.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74560000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fd80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\webio.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fdd0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x66300000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSCTF.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77440000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77290000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHLWAPI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75be0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHELL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\PSAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x72890000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x740d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77180000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\COMDLG32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x758e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ole32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77490000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\OLEAUT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76b60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\NSI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73200000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75580000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WS2_32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75250000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSASN1.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x752b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\CRYPT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x754a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINTRUST.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x750e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\Secur32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\chrome.exe
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x772f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\ntdll.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\KERNELBASE.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77050000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\kernel32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\msvcrt.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75760000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\RPCRT4.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77470000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\sechost.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ADVAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73080000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_elf.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74570000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\VERSION.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76db0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USP10.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75b40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\LPK.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\GDI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USER32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73920000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINMM.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75260000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\profapi.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x753e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USERENV.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74560000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fd80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\webio.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fdd0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x66300000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSCTF.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77440000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77290000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHLWAPI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75be0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHELL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\PSAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x72890000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x740d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77180000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\COMDLG32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x758e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ole32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77490000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\OLEAUT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76b60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\NSI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73200000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75580000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WS2_32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75250000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSASN1.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x752b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\CRYPT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x754a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINTRUST.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x750e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\Secur32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\chrome.exe
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x772f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\ntdll.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\KERNELBASE.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77050000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\kernel32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\msvcrt.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75760000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\RPCRT4.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77470000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\sechost.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ADVAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73080000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_elf.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74570000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\VERSION.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76db0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USP10.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75b40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\LPK.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\GDI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USER32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73920000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINMM.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75260000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\profapi.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x753e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USERENV.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74560000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fd80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\webio.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fdd0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x66300000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSCTF.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77440000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77290000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHLWAPI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75be0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHELL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\PSAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x72890000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x740d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77180000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\COMDLG32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x758e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ole32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77490000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\OLEAUT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76b60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\NSI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73200000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75580000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WS2_32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75250000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSASN1.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x752b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\CRYPT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x754a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINTRUST.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x750e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\Secur32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\chrome.exe
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x772f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\ntdll.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\KERNELBASE.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77050000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\kernel32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\msvcrt.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75760000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\RPCRT4.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77470000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\sechost.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ADVAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73080000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_elf.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74570000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\VERSION.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76db0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USP10.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75b40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\LPK.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\GDI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USER32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73920000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINMM.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75260000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\profapi.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x753e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USERENV.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74560000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fd80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\webio.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fdd0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x66300000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSCTF.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77440000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77290000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHLWAPI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75be0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHELL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\PSAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x72890000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x740d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77180000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\COMDLG32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x758e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ole32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77490000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\OLEAUT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76b60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\NSI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73200000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75580000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WS2_32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75250000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSASN1.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x752b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\CRYPT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x754a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINTRUST.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x750e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\Secur32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x1280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\chrome.exe
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x772f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\ntdll.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\KERNELBASE.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77050000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\kernel32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\msvcrt.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75760000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\RPCRT4.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77470000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\SYSTEM32\sechost.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ADVAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73080000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_elf.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74570000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\VERSION.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76db0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USP10.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75b40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\LPK.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75a40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\GDI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USER32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73920000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINMM.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75260000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\profapi.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x753e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\USERENV.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x74560000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fd80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\webio.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6fdd0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x66300000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSCTF.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77440000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77290000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHLWAPI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75be0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SHELL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77530000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\PSAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x72890000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x740d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77180000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\COMDLG32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x758e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\ole32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x77490000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\OLEAUT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x76b60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\NSI.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73200000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x73280000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75580000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WS2_32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75250000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\MSASN1.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x752b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\CRYPT32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x754a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\WINTRUST.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x750e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\Secur32.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\SSPICLI.DLL
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0xf1e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files\Google\Chrome\Application\53.0.2785.143\chrome_child.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x61830000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\dwrite.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x75170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Windows\system32\cryptbase.dll
+[1021/145957:ERROR:process_reader_win.cc(233)] ReadMemory at 0x317000 of 36864 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1021/145957:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
+[1021/145957:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose.  (0xc000010a)
+[1023/173834:ERROR:process_reader_win.cc(233)] ReadMemory at 0x2a7000 of 36864 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[1023/173834:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
+[1023/173834:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose.  (0xc000010a)
