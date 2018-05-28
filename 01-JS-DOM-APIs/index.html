@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My page</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/App.js"></script>
+    </head>
+    <body>
+        <section id="hidden">
+            <h2>Hello Word</h2>
+        </section>
+
+        <button value="See" onclick="see();">Click here</button>
+        <button value="See" onclick="addSection();">Add section</button>
+
+        <section id="info">
+        </section>
+
+        <button onclick="requestDate();">Get date</button>
+        <section id="requestDate">
+        </section>
+
+        <button onclick="requestRepo();">Request repositories</button>
+        <aside id="repositories">
+            <ul id="list">
+            </ul>
+        </aside>
+
+        <form>
+            <input type="text" id="text_search" onkeyup="search();" placeholder="Search">
+
+            <select id="id_texts">
+                <option value="">Select</option>
+                <option value="google">Google</option>
+                <option value="bing">Bing</option>
+                <option value="yahoo">Yahoo</option>
+            </select>
+        </form>
+
+        <button onclick="convertToTable();">See table</button>
+        <table id="table">
+        </table>
+    </body>
+</html>

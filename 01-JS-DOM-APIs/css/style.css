@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+}
+
+button {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+
+section#hidden {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    opacity: 0;
+    animation: hidden 3s;
+}
+
+@keyframes hidden {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+section#info {
+    text-align: center;
+}
+
+aside {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    margin: 5px;
+}
