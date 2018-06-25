@@ -1,0 +1,12 @@
+
+.container {
+      display: grid; /*generates a block-level grid */
+      grid-template-columns: 25% 50% 25%; /*set the column and row sizes*/
+      grid-template-rows: 300px 150px;
+    }
+
+.item {
+      background: lightblue;
+      padding: 10px;
+      border: 1px solid black;
+    }
