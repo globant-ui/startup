@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html>
+    <body>
+        <header>
+            <h1>Sign up</h1>
+        </header>
+        <form>
+            First name: <input type="text" name="firstname"required><br>
+            Last name: <input type="text" name="lastname"required><br>
+            E-mail: <input type="email" name="email" required> <br>
+            Birthday: <input type="date" name="Birthday" required><br>
+            Favorite sport: <input list="Sports" name="sport"><br>
+            <datalist id="Sports">
+                <option value="Football"></option>
+                <option value="Basketaball"></option>
+                <option value="Handball"></option>
+                <option value="Rugby"></option>
+                <option value="Tenis"></option>
+                <option value="Volleyball"></option>
+                <option value="Baseball"></option>
+            </datalist>
+            Bio: <br>
+            <textarea name="Bio" id="" cols="30" rows="10">Write something aout you</textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset"> Reset</button>
+        </form>
+    </body>
+</html>
