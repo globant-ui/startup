@@ -1,0 +1,72 @@
+
+
+* { 						 /* The * will target all elements on the page. */
+	box-sizing: border-box; /*Include padding and border in the element's total width and height*/
+	text-align: center;
+	font-weight: bold;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.header {
+	margin: auto; /*To horizontally center a block element*/
+	width: 100%;
+	height: 50px;
+	font-size: 46px;
+	margin: 5px;
+}
+
+.content{
+	width: 50%;
+	height: 500px;
+	font-size: 14px;
+	float:left;
+	margin: 5px;
+}
+
+.content .header {
+	height: 25%;
+	margin: 3px;
+}
+
+.content .footer{
+	height: 24%;
+	margin: 3px;
+}
+
+.content article{
+	height: 50%;
+	margin: 3px;
+}
+
+.navigation{
+	font-size: 12px !important;
+	width: 25%;
+	height: 500px;
+	float: left;
+}
+
+.sidebar{
+	font-size: 10px;
+	width: 24%;
+	height: 500px;
+	float: right;
+}
+
+.footer{
+	width: 100%;
+	height: 100px;
+	display: flex; /*flex	Displays an element as a block-level flex container*/
+}
+
+/*Select all elements with an attribute value that contains specific characters anywhere [attribute*="value"]*/
+
+[class*="a"],:not([class$="r"]) {
+	background-color: blue;
+}
+
+/* Select all elements with an attribute value that ends with specific characters [attribute$="value"]*/
+
+[class$="r"] {
+	background-color: magenta;
+}

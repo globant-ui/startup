@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Sign up form, html practice">
+  	<meta name="keywords" content="signup,form,html">
+  	<meta name="author" content="Tomas F. Carrion">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign up form</title>
+</head>
+<body>
+	<h1>Complete the following sign up form...</h1>
+	<p>The (*) fields are required</p>
+	<form>
+		*First name: <br> 
+  			<input type="text" name="firstName" required> <br>
+  		
+  		*Last name: <br> 
+  			<input type="text" name="lastName" required> <br>
+
+  		*Email: <br>
+  			<input type="Email" name="email" required> <br>
+
+  		*Birthday: <br> 
+  			<input type="date" name="date" required> <br>
+
+  		Select your favorite sport:  <br>
+  			<select name = "sport"  required>
+  				<option value="">Select</option>
+			 	<option value="Football">Football</option>
+			  	<option value="basketball">Basketball </option>
+			  	<option value="tennis">Tennis </option>
+			  	<option value="Baseball">Baseball</option>
+			</select> <br>
+  		
+  		Little bio: <br> 
+	  		<textarea name="message" rows="5" cols="20">Tell us a bit about yourself...</textarea> <br>
+  		<br>
+  		<input type="submit" value="Submit"><input type="reset">
+	</form>
+</body>
+</html>
