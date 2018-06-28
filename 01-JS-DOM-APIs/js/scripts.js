@@ -16,10 +16,9 @@ const callData = (data) => {
       } else {
         reject("Error")
       }
-
     }
-
   });
+
   return promise;
 };
 
@@ -31,13 +30,15 @@ const showMe = (method, url, bool) => {
   }
   callData(data)
     .then((response) => {
-      if (response) {
-        let joke = response.value.joke
-        console.log(response);
-        document.getElementById("show").innerHTML = joke
-      }
-    })
-    .catch((error) => {
-      console.error(error);
+      console.log(response);
+      let text;
+      let repositories = response.items
+      text = "<ul class='repositories-list' >";
+      repositories.forEach((repository) => {
+        text += `
+            <li>${repository.full_name}</li>
+           `;
+      })
+      document.getElementById("show").innerHTML = text;
     })
 }

@@ -50,3 +50,16 @@ section {
   .is-paused {
     animation-play-state: paused;
   }
+  .repositories-list {
+      float: right;
+      font-size: 20px;
+  }
+  
+  @media screen and (max-width:800px) {
+      .repositories-list {
+          float: none;
+          font-size: 15px;
+          list-style-type: none;
+          padding: 0px !important;
+      }
+  }
