@@ -33,12 +33,30 @@ const showMe = (method, url, bool) => {
       console.log(response);
       let text;
       let repositories = response.items
-      text = "<ul class='repositories-list' >";
+      text = "<input type='text' name='search' id='searchInput' onkeyup='srch()' placeholder='Search a repository...'><br><ul id='list' class='repositories-list' >";
       repositories.forEach((repository) => {
         text += `
-            <li>${repository.full_name}</li>
+            <li><a href="#">${repository.full_name}</a></li>
            `;
       })
       document.getElementById("show").innerHTML = text;
     })
+    document.getElementById("btn").style.display = "none";
+}
+
+ const srch = () => {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("list");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+
+      }
+  }
 }
