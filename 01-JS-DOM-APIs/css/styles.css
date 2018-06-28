@@ -59,6 +59,9 @@ section {
     text-decoration: none;
     color: black;
   }
+  table th tr td {
+    border: 1px solid black !important;
+  }
   
   @media screen and (max-width:800px) {
       .repositories-list {

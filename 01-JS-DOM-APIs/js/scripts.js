@@ -43,29 +43,33 @@ const showMe = (method, url, bool) => {
 }
 
 
-  const generateTable = () => {
-    let body = document.getElementsByTagName("body")[0];
+var matriz = new Array(3);
+const matrizCreate = () => {
+  var table = document.createElement("table");
 
-    let table = document.createElement("table");
-    let tblBody = document.createElement("tbody");
-
-    for (let i = 0; i < 2; i++) {
-      let row = document.createElement("tr");
-
-      for (let j = 0; j < 2; j++) {
-        let cell = document.createElement("td");
-        let textCell = document.createTextNode("cell on row " + i + ", column " + j);
-        cell.appendChild(textCell);
-        row.appendChild(cell);
-      }
-
-      tblBody.appendChild(row);
-    }
-
-    table.appendChild(tblBody);
-    body.appendChild(table);
-    table.setAttribute("border", "2");
+  let index = 1;
+  for (i = 0; i < 3; i++) {
+    matriz[i] = new Array(3);
   }
+  for (i = 0; i < 3; i++) {
+    for (e = 0; e < 3; e++) {
+      matriz[i][e] = index;
+      index++
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    let tr = document.createElement("tr")
+    for (e = 0; e < 3; e++) {
+      let td = document.createElement("td");
+      let data = document.createTextNode(matriz[i][e]);
+      td.appendChild(data);
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+  document.body.appendChild(table);
+}
+matrizCreate();
 
 const srch = () => {
   var input, filter, ul, li, a, i;
