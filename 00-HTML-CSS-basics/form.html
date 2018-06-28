@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign up</title>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">Sign up</h1>
+  </div>
+  <div class="content">
+    <div class="signup-form">
+      <form>
+        <div>
+          <label>First name: </label>
+          <input type="text" name="name" id="firstName" required>
+        </div>
+        <br>
+        <div>
+          <label>Last name: </label>
+          <input type="text" name="lastname" id="lastName" required>
+        </div>
+        <br>
+        <div>
+          <label>E-Mail: </label>
+          <input type="email" name="email" id="e-mail" required>
+        </div>
+        <br>
+        <div>
+          <label>Birthday: </label>
+          <input type="date" name="birth" id="birthDay">
+        </div>
+        <br>
+        <div>
+          <label>Sport: </label>
+          <select name="sports" id="favoriteSport">
+            <option selected disabled>Select your favorite sport</option>
+            <option>Soccer</option>
+            <option>Basketball</option>
+            <option>Golf</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <textarea name="bio" id="userBio" cols="30" rows="10" placeholder="Write a small bio of you"></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

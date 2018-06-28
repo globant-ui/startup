@@ -1,0 +1,73 @@
+/* GRID SYSTEM */
+
+.container {
+    margin: 0 auto;
+    max-width: 48rem;
+    width: 90%;
+}
+.column.full { 
+    width: 100%; 
+}
+.column.two-thirds {
+    width: 66.7%; 
+}
+.column.half {
+    width: 50%; 
+}
+.column.third { 
+    width: 33.3%; 
+}
+.column.fourth { 
+    width: 25%; 
+}
+.column.flow-opposite { 
+    float: right; 
+}
+
+/* END GRID SYSTEM */
+
+/* STYLES */
+.header h1 {
+    text-align: center;
+}
+section {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in 1 forwards;
+  }
+  
+  .is-paused {
+    animation-play-state: paused;
+  }
+  .repositories-list {
+      float: right;
+      font-size: 20px;
+      padding-right: 20px;
+  }
+  .repositories-list a {
+    text-decoration: none;
+    color: black;
+  }
+  table th tr td {
+    border: 1px solid black !important;
+  }
+  
+  @media screen and (max-width:800px) {
+      .repositories-list {
+          float: none;
+          font-size: 15px;
+          list-style-type: none;
+          padding: 0px !important;
+      }
+  }
