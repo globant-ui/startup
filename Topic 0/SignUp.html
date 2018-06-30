@@ -1,0 +1,62 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Leandro Vilches">
+        <meta name="keywords" content="Form, SignUp,Submit">
+        <meta name="description" content="just a short form for users to complete">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <header align="center">Sign Up</header>
+        <table border="1">
+          <caption>Personal Information<caption>
+          <form method="post">
+            <tr>
+                <td>First Name:<input type="text" name="Name" required maxlength="50" size="60"></td>
+            </tr>
+            <tr>
+              <td>Last Name:<input type="text" name="LastN" required maxlength="50" size="60"></td>
+            </tr>
+            <tr>
+              <td>E-mail:<input type="email" name="mail" requiered size="60"></td>
+            </tr>
+            <tr>
+                <td>Birthday:<input type="date" name="BDay" requiered></td>
+            </tr>
+              <tr>
+              <td>
+                Favourite Sport(s):
+                <select name="sports" size="5" multiple>
+                      <option disabled selected>----Select----</option>
+                      <option value="Football">Football</option>
+                      <option value="Basketball">Basketball</option>
+                      <option value="Volleball">Volleyball</option>
+                      <option value="Handball">Handball</option>
+                      <option value="Hockey">Hockey</option>
+                      <option value="Tennis">Tennis</option>
+                </select>
+              </td>
+              </tr>
+              <tr>
+                <td>
+                    About me:<textarea name="Bio" placeholder="Write Something!" cols="60" rows="5"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <table>
+                  <tr>
+                    <td>
+                        <input name="OK" type="submit" value="Submit"/>
+                    </td>
+                    <td>
+                        <input name="Reset" type="reset" value="Restore"/>
+                    </td>
+                  </tr>
+                </table>
+              </tr>
+          </form>
+        </table>
+        </body>
+    </html>
