@@ -1,0 +1,13 @@
+#hidden {
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body{
+  font-family: Verdana;
+}
+
+.section{
+  text-align: center;
+}
