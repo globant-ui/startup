@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import MovieCreator from './components/MovieCreator';
+import MovieList from './components/MovieList';
 import './App.css';
-
-
-
 
 class App extends Component {
   constructor(){
@@ -25,6 +23,7 @@ class App extends Component {
     return(
       <div>
         <MovieCreator onUpdate = {this.onUpdate}/>
+        <MovieList movies = {this.state.movies}/>
       </div>
     )
   }
