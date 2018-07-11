@@ -8,16 +8,16 @@
 }
 
 .btn-primary {
-  color: #FF7F11;
-  border-color: #FF7F11;
+  color: #1C5D99;
+  border-color: #E63B2E;
   background-color: transparent;
 }
 
 input {
   width: 80%;
   border: none;
-  border-top: 2px solid #FF7F11;
-  border-bottom: 2px solid #FF7F11;
+  border-top: 2px solid #E63B2E;
+  border-bottom: 2px solid #E63B2E;
   margin-right: 10px;
   padding: 5px;
   line-height: 17px;
@@ -26,6 +26,6 @@ input {
 input:focus {
   outline: none;
   border: none;
-  border-top: 2px solid #FF7F11;
-  border-bottom: 2px solid #FF7F11;
+  border-top: 2px solid #EF827A;
+  border-bottom: 2px solid #EF827A;
 }
