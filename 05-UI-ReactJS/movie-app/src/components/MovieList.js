@@ -9,10 +9,11 @@ export default class MovieList extends Component {
       rows.push(
         <MovieRow
           movie={movie}
-          key={movie.tittle}
-          onEdit = {this.props.onEdit} />
+          key={rows.length}
+          onEdit={this.props.onEdit}
+          onDelete={this.props.onDelete} />
       );
-     
+
     });
 
     return (
@@ -29,3 +30,4 @@ export default class MovieList extends Component {
     );
   }
 }
+
