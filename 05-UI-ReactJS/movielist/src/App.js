@@ -11,9 +11,9 @@ class App extends Component {  /*note: child doesn't chage props, only change st
 
     this.state = {
       movies: [
-        {id: 0 , text: "Pulp Fiction"},
-        {id: 1 , text: "Iron Man"},
-        {id: 2 , text: "The Shining"},
+        {id: 0 , name: "Pulp Fiction"},
+        {id: 1 , name: "Iron Man"},
+        {id: 2 , name: "The Shining"},
       ],
       nextId: 3
     }
@@ -25,11 +25,20 @@ class App extends Component {  /*note: child doesn't chage props, only change st
 
   addMovie(movieName){
     console.log("New movie Added: ", movieName);
+    let movies = this.state.movies.slice();
+    movies.push({id: this.state.nextId, name: movieName});
+    this.setState({
+      movies: movies,
+      nextId: ++this.state.nextId
+    });
 
   }
 
   removeMovie(id){
-    console.console.log("A movie has been removed: ", id);
+    console.log("A movie has been removed: ", id);
+    this.setState({
+      movies: this.state.movies.filter((movie, index) => movie.id !== id)
+    })
   }
 
   render() {

@@ -16,7 +16,7 @@ class MovieItem extends Component {
         <button className = "removeMovie" onClick={(e)=>this.removeMovie(this.props.id)}>
           X
         </button>
-        {this.props.movie.text}
+        {this.props.movie.name}
       </div>
     )
   }
