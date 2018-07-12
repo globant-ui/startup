@@ -16,7 +16,7 @@ class MovieItem extends Component {
   }
 
   handleEditing(event){
-    this.setState({ editing: true})
+    this.setState({editing: 'true'})
   }
 
 
@@ -30,20 +30,17 @@ class MovieItem extends Component {
       editStyle.display = 'none';
     }
     return (
-      <div className = "movieWrapper" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
-        <label>
-            {this.props.movie.name}
-        </label>
+      <div className = "movieWrapper" style={viewStyle}>
 
         <button className = "removeMovie" onClick={(e)=>this.removeMovie(this.props.id)}>
           X
         </button>
+        <label>
+            {this.props.movie.name}
+        </label>
 
-        <input type="text"
-                style={editStyle}
-                value={this.props.movie.name}
-                onChange={this.handleChange}
-        />
+
+
 
 
       </div>
@@ -51,4 +48,4 @@ class MovieItem extends Component {
   }
 }
 
-export default MovieItem
+export default MovieItem;

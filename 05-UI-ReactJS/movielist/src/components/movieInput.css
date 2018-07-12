@@ -25,20 +25,21 @@
 
 
 input {
-  width: 80%;
+  width: 25%;
   border: none;
-  border-top: 2px solid #E63B2E;
-  border-bottom: 2px solid #E63B2E;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   margin-right: 10px;
   padding: 5px;
   line-height: 17px;
+  box-shadow: 1px 3px 10px rgba(0,0,0,.15);
 }
 
 input:focus {
   outline: none;
   border: none;
-  border-top: 2px solid #EF827A;
-  border-bottom: 2px solid #EF827A;
+  border-top: 2px solid #3369FF;
+  border-bottom: 2px solid #6A91FF;
 }
 
 .btn:active {

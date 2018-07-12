@@ -40,7 +40,7 @@ class MovieInput extends Component{
             onChange={this.handleChange}
         />
         <button className="btn btn-primary" onClick={()=> this.addMovie(this.state.value)}>
-          Submit
+          Add
         </button>
 
       </div>

@@ -10,6 +10,7 @@ class App extends Component {  /*note: child doesn't chage props, only change st
     super(props);
 
     this.state = {
+      editing: false,
       movies: [
         {id: 0 , name: "Pulp Fiction"},
         {id: 1 , name: "Iron Man"},
@@ -20,6 +21,7 @@ class App extends Component {  /*note: child doesn't chage props, only change st
 
     this.addMovie = this.addMovie.bind(this);
     this.removeMovie = this.removeMovie.bind(this);
+
     // this.editMovie = this.editMovie.bind(this);
   }
 
@@ -41,15 +43,17 @@ class App extends Component {  /*note: child doesn't chage props, only change st
     })
   }
 
-  
+
+
   render() {
     return (
       <div className="App">
+        <Header />
+        <MovieInput movieName="" addMovie={this.addMovie}/>
         <div className="movies-wrapper">
-            <Header />
-            <MovieInput movieName="" addMovie={this.addMovie}/>
             <ul>
               {
+
                 this.state.movies.map((movie) => {
                   return <MovieItem
                             movie={movie}
