@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from './components/header'
-import MovieInput from './components/movieInput'
+import Header from './components/header';
+import MovieInput from './components/movieInput';
+import MovieItem from './components/movieItem';
 
 class App extends Component {  /*note: child doesn't chage props, only change state. (state are internal to the component, props are external) */
   constructor(props){
@@ -37,6 +38,18 @@ class App extends Component {  /*note: child doesn't chage props, only change st
         <div className="movies-wrapper">
             <Header />
             <MovieInput movieName="" addMovie={this.addMovie}/>
+            <ul>
+              {
+                this.state.movies.map((movie) => {
+                  return <MovieItem
+                            movie={movie}
+                            key={movie.id}
+                            id={movie.id}
+                            removeMovie ={this.removeMovie}
+                          />
+                })
+              }
+            </ul>
         </div>
       </div>
     );

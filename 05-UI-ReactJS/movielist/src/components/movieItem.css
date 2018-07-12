@@ -1,0 +1,21 @@
+.movieWrapper{
+  border-bottom: 1px solid black;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.removeMovie{
+  display:inline-block;
+  outline:none;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  border: none;
+  padding: 8px;
+  outline:none;
+  color: #1C5D99;
+  color:#FFFFFF;
+  background-color: red;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
