@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.listButton {
+  background-color: DodgerBlue; 
+  border: none; 
+  color: white; 
+  font-size: 10%; 
+  cursor: pointer; 
+  height: 100%;
+}
+
+.listButton:hover {
+  background-color: RoyalBlue;
+}
