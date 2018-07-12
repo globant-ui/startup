@@ -1,16 +1,5 @@
 import React, { Component } from 'react';
-
-class MovieRow extends Component {
-  render() {
-    return (
-      <tr>
-        <td>{this.props.movie.tittle}</td>
-        <td>{this.props.movie.year}</td>
-        <td>{this.props.movie.duration}</td>
-      </tr>
-    );
-  }
-}
+import MovieRow from './MovieRow';
 
 export default class MovieList extends Component {
   render() {
@@ -20,7 +9,8 @@ export default class MovieList extends Component {
       rows.push(
         <MovieRow
           movie={movie}
-          key={movie.tittle} />
+          key={movie.tittle}
+          onEdit = {this.props.onEdit} />
       );
      
     });
