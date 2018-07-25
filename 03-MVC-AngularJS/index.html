@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="moviesList.js"></script>
+  <script type="text/javascript" src="movieDetail.js"></script>
+  <script type="text/javascript" src="editableField.js"></script>
+</head>
+<body ng-app="movieApp">
+
+  <div ng-controller="MoviesListController as ctrl">
+    <h1>Add your movie:</h1>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Year</th>
+      </thead>
+      <tbody>   
+        <tr>   
+          <td><input ng-model="addName" type="text" name="name"></td>
+          <td><input ng-model="addDirector" type="text" name="director"></td>
+          <td><input ng-model="addYear" type="text" name="year"></td>
+          <td><button ng-click="addMovie()">Add Movie</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <movies-list movies='ctrl.list'></movies-list>
+  </div>
+</body>
+</html>

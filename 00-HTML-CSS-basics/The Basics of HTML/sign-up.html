@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Practice">
+	<meta name="keywords" content="HTML, Globant, Bootcamp">
+	<meta name="author" content="Lucas Ávila">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up</title>
+</head>
+<body>
+
+	<h1>Please fill the form:</h1>
+
+	<form>
+    <div>
+      First name: <input type="text" name="name" placeholder="Example: Tom" required>
+    </div>
+    <hr>
+    <div>
+      Last name: <input type="text" name="last-name" placeholder="Example: Cat" required>
+    </div> 
+    <hr>
+    <div>
+      Email: <input type="email" name="email" placeholder="Example: tomCat@hogwarts.com" size="30" required>
+    </div> 
+    <hr>
+    <div>
+    Birthday: <input type="date" name="birthday" pattern="\d{1,2}/\d{1,2}/\d{4}"> (Format: dd/mm/yyyy)
+		</div>
+    <!-- I think with only html I can't do more verifications than this. The pattern is for firefox that has 
+			no support for the type date yet.
+    -->
+    <hr>
+    <div>
+    Favourite Sport: 
+    <select>
+      <option value="tennis">Tennis</option>
+      <option value="rugby">Rugby</option>
+      <option value="chess">Chess</option>
+      <option value="programming">Programming</option>
+    </select>
+    </div>
+    <hr>
+    <div>
+    Tell us a bit more about you:
+    <textarea rows="6" cols="70" placeholder="Start here"></textarea>
+    </div>
+    <input type="submit" name="submit" value="Submit"> | <button type="reset">Clear Form</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+html {
+	font-size: 14px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit
+}
+
+.grid {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	height: 500px;
+}
+
+.header {
+	display: block;
+	font-size: 46px;
+}
+
+header {
+	background-color: #0190b6;
+	text-align: center;
+	border: .1em solid;
+	border-radius: 1em;
+	margin: .5em .5em;
+}
+
+.content {
+	width: 50%;
+	height: 100%;
+	background-color: #e6e6d6;
+	margin: 0 10em;
+	font-size: 14px; /*It's the same as in html but just in case...*/
+	border: .1em solid;
+	border-radius: 1em;
+}
+
+
+.navigation {
+	display: inline-block;
+	font-size: 12px;
+	border: .1em solid;
+	border-radius: .5em;
+}
+
+nav {
+	width: 10%;
+	background-color: #37ad7e;
+}
+
+.sidebar {
+	display: inline-block;
+	font-size: 10px;
+	border: .1em solid;
+	border-radius: .5em;
+}
+
+aside {
+	background-color: #84cc33;
+}
+
+.footer {
+	font-size: 10px;
+}
+
+footer {
+	background-color: #e13d14;
+	text-align: center;
+	border: .1em solid;
+	border-radius: 1em;
+	margin: .5em .5em;
+}
+
+article {
+	border: .1em solid;
+	border-radius: 1em;
+	margin: .5em .5em;
+}
+
+[class$="r"] {
+	background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+	background-color: blue;
+}
+
+/* --- Questions ---
+
+	-> How could you add weight to the global font definition to win over the classes added by point 3?
+
+		One way posible is to add an id="html" and next to the "html" selector add the #html id. The
+		disadvantage would be that you would have to add and id to every single element to be affected.
+		Besides, it does not go along the idea of "id". An id should be use to identify one and only 
+		one element.
+		I can't think of anything else.
+
+	-> Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need 
+		 to change the background to green without changing the inline style. How could you accomplish this?
+
+		I read that there is a sentence: "!important;" that overrides everything and gives more importante 
+		to the property where is located. I don't know if it's a good practice, I have a feeling that it isn't.
+
+
+*/

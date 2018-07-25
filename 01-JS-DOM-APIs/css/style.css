@@ -1,0 +1,36 @@
+html {
+	font-size: 14px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit
+}
+
+section {
+	text-align: center;
+}
+
+#hidden {
+	opacity: 0;
+  transition: opacity 3s;
+}
+
+#repositories {
+  display: inline-block;
+  background-color: #ccc;
+}
+
+table {
+  border: 1px dashed;
+  text-align: center;
+}
+
+tr:first-child {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
