@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Javascript exercise 1</title>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="header">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, culpa.
+        </header>
+        <nav id="nav" class="nav">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </nav>
+        <section id="section" class="section">
+            <p id="hello" >Hello world!</p> 
+            <input type="button" onclick="getResponse()" value="Get">
+        </section>
+        <footer id="footer" class="footer">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, similique!
+        </footer>
+    </div> 
+    <script>
+        function getResponse(){
+
+            const element = document.getElementById("hello");
+            const req = new XMLHttpRequest();
+            req.open("GET", "http://api.icndb.com/jokes/random" ,0);
+            req.send(null);
+            if (req.status == 200){
+                let objeto = JSON.parse(req.responseText);
+                element.innerHTML = formatData(objeto);
+            }
+        }
+
+        //string
+        function formatData(object)
+        {
+            let finalText ="";
+            finalText += object.value.id + " " + object.value.joke;
+            return finalText;
+        }
+    </script>
+</body>
+</html>

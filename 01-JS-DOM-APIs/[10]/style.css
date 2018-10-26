@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+   text-align: center;
+}
+
+.header {
+    margin: 10px;
+}
+
+.nav {
+    margin: 10px;
+}
+.section {
+    /*visibility: hidden;*/
+    margin: 10px;
+    /*opacity: 0.1;*/
+}
+
+.footer {
+    margin: 10px;
+}

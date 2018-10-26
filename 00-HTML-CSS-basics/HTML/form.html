@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Exercise V </title>
+</head>
+<body>
+	<header> 
+		<h1> Contact Form </h1>
+	</header>
+	<div role="main" id="main-content">
+		<form id="cform">
+  		<fieldset>
+  			<legend>Personal Information</legend>
+	  		<label for="fname">First name:</label>
+	  		<input type="text" id="fname" name="fname" placeholder="your first name" required>
+	  		<label for="lname">Last name:</label>
+	  		<input type="text" id="lname" name="lname" placeholder="your last name" required>
+	  		<label for="email">Email:</label>
+	  		<input type="Email" id="email" name="email" placeholder="example@example.com" required>
+	  		<label for="bday">Birthday:</label>
+	  		<input type="date" id="bday" name="bday" min="1900-01-01" max="2018-06-22" required>
+	  		<label for="fsport">Favourite Sport</label>
+	  		<select form="cform" id="fsport" name="fsport">
+				  <option value="football" selected>football</option>
+				  <option value="tennis">tennis</option>
+				  <option value="basketball">basketball</option>
+				  <option value="baseball">baseball</option>
+				</select><br>
+				<label for="bio">Bio:</label><br>
+				<textarea form="cform" id="bio" name="bio" rows="4" cols="50" placeholder="about you" required>
+				</textarea><br>
+	  		<input type="reset" value="Reset">
+	  		<input type="submit" value="Submit">
+  		</fieldset>
+		</form>
+	</div>
+</body>
+</html>

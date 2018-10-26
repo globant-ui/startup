@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Javascript exercise 10</title>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="header">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, culpa.
+        </header>
+        <nav id="nav" class="nav">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </nav>
+        <section id="section" class="section">
+            <p id="hello" >Hello world!</p> 
+            <input type="text" name="" id="serchText" placeholder="e.x javascript">
+            <input type="button" onclick="makeUrl(config)" value="Buscar Repos">
+            <li id="list">
+                
+            </li>
+            
+        </section>
+        <footer id="footer" class="footer">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, similique!
+        </footer>
+    </div> 
+    <script>
+    
+        let config  = {
+                url:'',
+                method: 'GET',
+                mode: 'cors',
+                redirect: 'follow',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+        };
+
+
+        function makeUrl(config)
+        {
+            let urls = 'https://api.github.com/search/repositories?q='
+            let buscar = document.getElementById('serchText').value;
+            let finish = urls + buscar;
+            config.url = finish;
+            getAjaxGit(config);         
+        }
+
+        function getAjaxGit(config)
+        {
+            let ul = document.getElementById("list");
+            let li = document.createElement("li");
+            
+            fetch(config.url)
+                .then(response => response.json())
+                .then((json) => {
+                    let items = json.items;
+                    let contentUl = document.getElementById('list');
+                    if(items)
+                    {
+                        for(let {full_name, html_url} of items) {
+                            let newLi = document.createElement("li");
+                            let newLink = document.createElement("a");
+                            newLink.href = html_url;
+                            newLink.title = full_name;
+                            newLink.innerHTML = full_name;
+                            newLi.appendChild(newLink);
+
+                            contentUl.appendChild(newLi);
+                        };
+                    }
+                    else{
+                        contentUl.innerHTML = "no match";
+                    }
+                })
+                .catch(error => {
+                    section.innerHTML = error;
+                    section.style.background = "red";   
+                });
+        }
+    </script>
+</body>
+</html>
+
+
+
+      

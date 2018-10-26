@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Javascript exercise 1</title>
+</head>
+<body onload="showContent()">
+    <div class="container">
+        <header id="header" class="header">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, culpa.
+        </header>
+        <nav id="nav" class="nav">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </nav>
+        <section id="section" class="section">
+            Hello world!
+        </section>
+        <footer id="footer" class="footer">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, similique!
+        </footer>
+    </div> 
+    <script>
+        function showContent()
+        {
+            const section = document.getElementById("section");
+            section.style.visibility = "visible";
+            document.getElementById("section").style.opacity=1;
+            document.getElementById('section').style.WebkitTransition = 'opacity 3s';
+        }
+    </script>
+</body>
+</html>

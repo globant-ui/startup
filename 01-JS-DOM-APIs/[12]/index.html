@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Javascript exercise 12</title>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="header">
+            Header
+        </header>
+        <nav id="nav" class="nav">
+            Nav 
+        </nav>
+        <section id="section" class="section">
+            <input type="button" onclick="printMatrix()" value="New table">
+        </section>
+        <footer id="footer" class="footer">
+            footer
+        </footer>
+    </div> 
+
+    <script>
+        
+        // bibliography: https://developer.mozilla.org/es/docs/Web/API/Document/createElement
+
+        function newMatrix(matrix)
+        {
+            let table = document.createElement("table");
+            let tblBody = document.createElement("tbody");
+            
+            for (let i = 0; i < matrix.length; i++) {
+                let rows = document.createElement("tr");
+                
+                for (let j = 0; j < matrix[i].length; j++) {
+                    let cell = document.createElement("td");
+                    let cellText = document.createTextNode(matrix[i][j]);
+                    cell.appendChild(cellText);
+                    rows.appendChild(cell);
+                }
+                
+                tblBody.appendChild(rows);
+            }
+            
+            table.appendChild(tblBody);
+            table.setAttribute("border", "2");
+            
+            return table;
+        } 
+        
+        // It's a small test for the function. newMatrix() works for any size.
+
+        function printMatrix()
+        {
+            let i = 0;
+            let j = 0;
+            let matrix = [];
+            matrix[0] = [];
+            matrix[1] = [];
+            matrix[0][0] = 0;
+            matrix[0][1] = 1;
+            matrix[1][0] = 2;
+            matrix[1][1] = 3;
+
+            const table = newMatrix(matrix);
+            document.body.appendChild(table);
+        }
+
+    </script>
+</body>
+</html>

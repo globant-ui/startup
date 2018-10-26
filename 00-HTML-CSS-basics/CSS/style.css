@@ -1,0 +1,125 @@
+* {
+  color: white;
+}
+
+body {
+	
+}
+
+.container {
+	width: 800px;
+	height: 510px;
+	background: #333333;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 6px;
+	border: 10px solid transparent;
+}
+
+.header {
+	text-align: center;
+	font-size: 46px;
+	background: #666666;
+	border-radius: 6px;
+	display: block;
+	padding: 20px;
+}
+
+.nav {
+	text-align: center;
+	font-size: 12px;
+	background: #666666;
+	border-radius: 6px;
+	float: left;
+	height: 340px;
+	width: 150px;
+	margin-top: 15px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.content {
+	text-align: center;
+	font-size: 14px;
+	background: #666666;
+	border-radius: 6px;	
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 15px;
+	height: 340px;
+	width: 470px;
+	padding-top: 10px;
+}
+
+.content .hsection {
+	background: #999999;
+	border-radius: 6px;
+	text-align: center;	
+	padding: 10px;
+	margin: 10px;
+}
+
+.content .asection {
+	background: #999999;
+	border-radius: 6px;
+	text-align: center;	
+	margin: 10px;
+	padding: 83px;
+}
+
+.content .fsection {
+	background: #999999;
+	border-radius: 6px;
+	text-align: center;	
+	padding: 10px;
+	margin: 10px;
+}
+
+.sidebar {
+	text-align: center;
+	font-size: 10px;
+	background: #666666;
+	border-radius: 6px;
+	float: right;
+	height: 340px;
+	width: 150px;
+	margin-top: 15px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.footer {
+	clear: both;
+	text-align: center;
+	font-size: 10px;
+	background: #666666;
+	border-radius: 6px;
+	display: block;
+	margin-top: 15px;
+	padding: 12px;
+}
+
+
+/*
+If the class attribute finishes with r (example header, footer), the background must be magenta.
+If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.
+[class$='r']{
+	background-color: #FF00FF !important;
+}
+
+[class*='a']{
+	background-color: #0000FF;
+}
+
+*/
+
+/* example with inline vs !important
+
+
+Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” 
+and you need to change the background
+ to green without changing the inline style. How could you accomplish this?
+ 
+footer.footer[style] {
+	background: yellow !important;
+}*/
