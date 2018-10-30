@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h3>Sign Up</h3>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+           <label>First Name: <input type="text" name="fname" required></label><br>
+           <label>Last Name: <input type="text" name="lname" required></label><br>
+           <label>Email: <input type="email" name="email" required></label><br>
+           <label>Birthday: <input type="date" name="birthday"></label><br>
+            <label>Favourite Sport: <select name="sport" >
+                <option value="football">Football</option>
+                <option value="rugby">Rugby</option>
+                <option value="hockey">Hockey</option>
+                <option value="basket">Basket</option>
+                <option value="softball">Softball</option>
+                <option value="boxing">Boxing</option>
+            </select></label>
+            <p>Your bio: </p>
+            <textarea name="bio" cols="50" rows="10"></textarea>
+        </fieldset>
+        <input type="submit" value="sumbit">
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>
