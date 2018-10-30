@@ -41,3 +41,11 @@
 *{
     font-weight: bold;
 }
+
+/*---Ejercicio 2.3-7
+al no poder modificar el codigo, para que no se pise el cambio al momento que carga el html 
+se debe utilizar la siguiente linea de codigo:
+    .oh-no-inline-styles {
+     background-color: green!important;
+    }
+---*/
