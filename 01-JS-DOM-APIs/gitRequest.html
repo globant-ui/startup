@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Lista de repositorios sobre JavaScript en GitHub</h3>
+    </div>
+    <ul id="repo_list">
+
+    </ul>
+    <script>
+
+    $(document).ready(function() 
+    {
+
+    var repos = "https://api.github.com/search/repositories";
+        
+            $("button").on("click", function()
+            {
+                $.getJSON(repos, function(json) 
+                    {
+                        $("#repo_list").html("<h2>\""+json.value.joke+"\"</h2>");
+                    });
+            });
+    });
+
+    </script>
+</body>
+</html>
