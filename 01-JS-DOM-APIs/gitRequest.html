@@ -10,23 +10,27 @@
     <div>
         <h3>Lista de repositorios sobre JavaScript en GitHub</h3>
     </div>
+    <button id="button">Cargar Repositorios</button>
     <ul id="repo_list">
 
     </ul>
     <script>
 
-    $(document).ready(function() 
-    {
+    $(document).ready(function(){
 
-    var repos = "https://api.github.com/search/repositories";
-        
-            $("button").on("click", function()
-            {
-                $.getJSON(repos, function(json) 
-                    {
-                        $("#repo_list").html("<h2>\""+json.value.joke+"\"</h2>");
-                    });
-            });
+    const Url= 'https://api.github.com/search/repositories';
+    $("button").click(function(){
+        $.ajax({
+            url: Url,
+            type:"GET",
+            success:function(result){
+                        console.log(result);
+            },
+            error:function(error){
+                console.log(`Error ${error}`)
+            }
+        });
+        });
     });
 
     </script>
