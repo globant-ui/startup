@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <div>
         <h3>Lista de repositorios sobre JavaScript en GitHub</h3>
@@ -14,19 +16,19 @@
     <ul id="repo_list">
 
     </ul>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
+        $(document).ready(function () {
 
-    $(document).ready(function(){
-
-    const Url= 'https://api.github.com/search/repositories';
-    $("button").click(function(){
+            const Url = 'https://api.github.com/search/repositories';
+            $("button").click(function () {
         $.ajax({
             url: Url,
-            type:"GET",
-            success:function(result){
+                    type: "GET",
+                    success: function (result) {
                         console.log(result);
             },
-            error:function(error){
+                    error: function (error) {
                 console.log(`Error ${error}`)
             }
         });
@@ -35,4 +37,5 @@
 
     </script>
 </body>
+
 </html>
