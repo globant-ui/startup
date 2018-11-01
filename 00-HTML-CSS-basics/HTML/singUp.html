@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SingUp!</title>
+</head>
+<body>
+
+	<form action="singUp.html" method="post" target="_self">
+
+		<label for="firstName">Firstname: </label> <input type="text" name="firstName" id="firstName" required> <br>
+
+		<label for="lastName">Last Name: </label> <input type="text" name="lastName" id="lastName" required> <br>
+
+		<label for="eMail">E-mail: </label> <input type="email" name="eMail" id="eMail" required> <br>
+
+		<label for="birthday">Birthday: </label> <input type="date" name="birthday" id="birthday"> <br>
+
+		<label for="favoriteSport">Favorite Sport: </label>
+		<select name="favoriteSport" id="favoriteSport">
+			<option value="box">Box</option>
+			<option value="football">Football</option>
+			<option value="tenis">Tenis</option>
+			<option value="other">Other</option>
+		</select> <br>
+
+		<label for="bio">Bio: </label><br>
+		<textarea rows="5" cols="50" name="bio" id="bio"></textarea> <br>
+
+		<input type="submit" name="send" value="Send">
+		<input type="reset" name="clear" value="Clear">
+
+	</form>
+
+</body>
+</html>

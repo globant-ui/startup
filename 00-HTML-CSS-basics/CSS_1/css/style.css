@@ -1,0 +1,89 @@
+html, body{
+	margin: 0;
+ 	height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+*{
+	font-size: 14px;
+	font-family: Verdana;
+	font-weight: bold !important; /* answer 6*/
+}
+header{
+	background-color: red;
+	text-align: center;
+}
+footer{
+	background-color: blue;
+	text-align: center;
+}
+aside{
+	background-color: yellow;
+}
+nav{
+	background-color: green;
+}
+section{
+	background-color: orange;
+}
+
+.header{
+	font-size: 46px;
+	display: block;
+	height: 10%;
+
+}
+.footer{
+	font-size: 10px;
+	display: block;
+	width: 100%;
+	min-height: 5%;
+}
+.content{
+	font-size: 14px;
+	width: 50%;
+	min-height: 85%;
+	float: left;
+	padding: 2%;
+	position: relative;
+}
+.navigation{
+	font-size: 12px;
+	width: 20%;
+	min-height: 85%;
+	display: inline-block;
+	float:left;
+} 
+.sidebar{
+	font-size: 10px;
+	width: 30%;
+	min-height: 85%;
+	float:right;
+}
+.clear{
+	clear: both;
+}
+
+[class$="r"]{
+	background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+	background-color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation, .sidebar {
+        width: 100%;
+        min-height: 5%;
+    }
+    .content{
+    	width: 100%;
+    }
+}
