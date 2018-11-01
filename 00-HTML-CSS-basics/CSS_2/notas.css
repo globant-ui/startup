@@ -1,0 +1,201 @@
+/*
+Notas recordatorias grid
+*/
+
+/* Min-width Media Queries */
+/* Small screens (default) */
+html { font-size: 100%; }
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  html { font-size: 112%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  html { font-size: 120%; }
+}
+
+
+
+/*
+Not All Browsers are Created Equal
+Browsers will render your CSS differently. 
+To avoid this, it’s a good idea to use a modern alternative to a reset like Normalize.css,
+ which will render elements more consistently cross-browser.
+ Remember to include it as-is before your stylesheet.
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/grid.css">
+*/
+
+/*
+Add the Viewport Meta Tag
+Place in the <head> of your HTML. 
+This enables use of media queries for cross-device layouts.
+<meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+/*CSS Box Model
+It’s important to understand the basics, like how elements are generated and behave in the browser, before diving into responsive web design. 
+The CSS Box Model consists of four distinct parts.
+
+content
+Content
+The content of the box, where text and images appear.
+
+padding
+Padding
+Clears an area around the content.
+
+border
+Border
+A border that goes around the padding.
+
+margin
+Margin
+Clears an area around the border.
+*/
+
+/*
+Use box-sizing: border-box
+Place at the top of your CSS file. The * will target all elements on the page.
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+Your Choice
+What was once a bug is now a widely used CSS property. It basically means you can choose whether or not to include borders and padding in the width of your content.
+
+Without Box Model
+Without box-sizing: border-box
+Margin, borders and padding are drawn outside the set width of your content.
+
+With Box Model
+With box-sizing: border-box
+Borders and padding are drawn inside the set width of your content. The margin is drawn outside.
+*/
+
+/*
+Create a Container
+A container holds all elements and controls the page’s maximum width. Using a container will make designing for responsive easier!
+
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  width: 90%;
+}
+<div class="container">
+  <!-- Your Content -->
+</div>
+
+*/
+
+/*
+Create a Column
+With mobile first, columns are block level (takes up the full width available) by default. No additional styles needed!
+
+<div class="container">
+  <div class="column">
+    <!-- Your Content -->
+  </div>
+</div>
+*/
+
+
+
+/*
+
+Create Column Sizes
+On larger screens, columns gain float: left in order to stack content horizontally. 
+Columns now use padding for gutters, so you no longer need to worry about removing margins.
+
+.column .half
+.column .half
+<div class="container">
+  <div class="row clearfix">
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+  </div>
+</div>
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }  
+}
+
+*/
+
+/*
+Create Rows
+Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise known as clearing issues. Rows are cleared using the popular clearfix, which was created by Nicolas Gallagher.
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+  </div>
+  
+  <div class="row clearfix">
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+  </div>
+</div>
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.column .half
+.column .half
+.column .half
+.column .half
+Flow Opposite
+Add the class .flow-opposite to columns where you want content to display first on mobile but appear on the right on larger screens.
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="column half flow-opposite">
+      <!-- Your Content -->
+    </div>
+    <div class="column half">
+      <!-- Your Content -->
+    </div>
+  </div>
+</div>
+@media (min-width: 40rem) {
+  .column.flow-opposite { float: right; }
+}
+
+*/
