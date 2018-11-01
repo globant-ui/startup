@@ -22,7 +22,10 @@ document.getElementById("btn").addEventListener("click", function ()
     xmlhttp.open("GET", url + parameter, true);
     xmlhttp.send();
   });
-/*
+/* 
+
+-------->I had made the process of deleting the items in the list more complex.<-------
+
 document.getElementById("reset").addEventListener("click", function (){
 
   let xmlhttp = new XMLHttpRequest();
@@ -45,6 +48,10 @@ document.getElementById("reset").addEventListener("click", function (){
   xmlhttp.send();
 
 });
+*/
+
+/*
+-------->This is the most practical solution to implement<-------
 */
 document.getElementById("reset").addEventListener("click", function (){
 var myList = document.getElementById('repo_list');
