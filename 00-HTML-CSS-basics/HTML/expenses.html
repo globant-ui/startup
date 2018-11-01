@@ -10,16 +10,25 @@
 td, th {
     border: 1px solid red;
 }
+thead {color:green;}
+tbody {color:blue;}
 </style>
 <body>
-    <h1>Ejemplo Tabla</h1><br><br>
     <table >
+        <thead>
+           <h2>Ejemplo Tabla</h2> 
+        </thead>
+        <thead>
         <tr>
-            <th>\</th>
+            <th>Gasto\cuota</th>
             <th>cuota 1</th>
             <th>cuota 2</th>
             <th>cuota 3</th>
         </tr>
+        </thead>
+        <tbody>
+            
+       
         <tr>
             <td>gasto 1</td>
             <td>$ 100</td>
@@ -32,6 +41,7 @@ td, th {
             <td>$ 120</td>
             <td>$ 120</td>
         </tr>
+        </tbody>
     </table>
 </body>
 </html>
