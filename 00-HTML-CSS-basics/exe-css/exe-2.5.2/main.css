@@ -87,9 +87,8 @@ body{
 /* Large screens (1024px) */
 @media (min-width: 1024px){ 
   #hdr h3{
-    float: left;
+    
     display: inline;
-    width: 25%;
     font-size: 2em;
   }
   #hdr p {
