@@ -16,7 +16,7 @@ function loadTable(){
         var th = document.createElement('th');
         var node = document.createTextNode(element);
         th.appendChild(node);
-        tr.append(th);
+        tr.appendChild(th); // I HAD A TIPING ERROR HERE IN THE PREVIOUS COMMIT
     });
 
     thead.appendChild(tr);
