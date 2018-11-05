@@ -8,9 +8,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
@@ -59,20 +56,21 @@
       <p class="hidden-text p-font"></p> 
   </section>
   <br>
-  <section>
+  <section class="joke-container">
     <h3 class="tittle-font">You can get a joke for free</h3>
-    <button class="joke p-font" >Get a Joke</button><br><br><br>
+    <button class="joke p-font" >Get a Joke</button><br><br>
+    <p class="joke-text p-font"></p>
   </section>
   <br>
   <div class="user-info">
-    <div class="user-search clearfix">
+    <div class="user-search">
       <h3 class="tittle-font">Search the repositories of a GitHub user</h3>
 
       <label class="tittle-font">Enter the user: <input type="text" id="git"></label>
       
       <button onclick="get_repositorie()" class="p-font">Search</button>
     </div>
-    <div class="user-container clearfix">
+    <div class="user-container">
     
       <div class="user-list p-font"></div>
     

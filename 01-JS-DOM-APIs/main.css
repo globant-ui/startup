@@ -18,8 +18,7 @@
 body {
     background-color: rgba(129, 64, 115, 0.411);
     margin: 0 auto;
-    max-width: 90%;
-    width: 100%;
+    width: 90%;
     text-align: center;
 }
 
@@ -74,10 +73,12 @@ body {
 }
 
 .user-container{
-    width: 50%;
+    width: 100%;
     font-weight: bold;
-    text-align: left;
+    text-align: right;
     float: right;
+    padding-right: 5px;
+    font-size: 1.2em;
 }
 
 .user-search {
@@ -86,14 +87,12 @@ body {
     text-align: center;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.joke-text {
+    font-size: 2em;
 }
 
 
 ul {
-    list-style-type:square;
+    list-style-type:none;
     padding: 0%;
 }
