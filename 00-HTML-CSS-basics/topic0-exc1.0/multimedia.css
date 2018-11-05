@@ -1,0 +1,10 @@
+img{
+  /* Redimensiono la imagen */
+    width:85px;
+    height:85px;
+   }
+
+div {
+  /* Centro todas las etiquetas div */
+    text-align: center;
+}
