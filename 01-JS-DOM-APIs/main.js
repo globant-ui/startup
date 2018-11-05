@@ -11,6 +11,7 @@ let btn =  document.getElementsByClassName("joke")[0];
 //add a event to the button
 btn.addEventListener("click",get_joke);
 
+
 //With a XMLhttprequest get a inforamtion in text form from "http://api.icndb.com/jokes/random"   
 function get_joke(){
     let xhttp = new XMLHttpRequest();
@@ -24,7 +25,6 @@ function get_joke(){
     xhttp.send();
 }
 
-//document.getElementById("git").addEventListener("click",get_repositorie);
 
 function get_repositorie(){
     let xhr = new XMLHttpRequest();

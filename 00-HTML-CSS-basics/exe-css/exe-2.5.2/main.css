@@ -1,0 +1,128 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+img {
+    width: 100%;
+}
+
+body{
+    background-color: #C7C8C7;
+    
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 65rem;
+    width: 100%;
+}
+
+.column {
+    position: relative;
+    overflow: hidden;
+}
+
+
+#hdr h3{
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em; 
+
+}
+
+#hdr p {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+.text-cell {
+    position: absolute;
+    bottom: 0%;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 98.5%;
+    height: 50%;
+    transform: translateY(100%); 
+    transition: all 0.7s ease-in-out;
+    text-align: center;
+
+}
+
+.column:hover .text-cell {
+    transform: translateY(0%);
+}
+
+
+
+
+/* Medium screens (640px) */
+@media (min-width: 640px) { 
+  
+#hdr h3{
+    display: inline-block;
+}
+#hdr p {
+    display: inline-block;
+    font-size: 2em;
+}
+  .column {
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  
+  .column.full { width: 100%; }
+  
+  .column.half { width: 50%; }
+  
+  .column.flow-opposite { float: right; }  
+}
+
+
+/* Large screens (1024px) */
+@media (min-width: 1024px){ 
+  #hdr h3{
+    float: left;
+    display: inline;
+    width: 25%;
+    font-size: 2em;
+  }
+  #hdr p {
+      width: 75%;
+      float: right;
+      font-size: 1.2em;
+  }
+  .column {
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  
+  .column.third { width: 33.3%; }
+  
+  .img8 {
+      position: relative;
+      left: 33%;
+      transform: translateY(-105%);
+  }
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
