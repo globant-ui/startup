@@ -44,7 +44,7 @@ section, .user-info{
 
 .hidden-text{
     font-weight: bold;
-    font-size: 4em;
+    font-size: 6em;
     margin: 0%;
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s; /* Safari 4.0 - 8.0 */

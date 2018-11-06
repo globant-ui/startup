@@ -21,8 +21,8 @@ function reusable_fun (mtd, url, asyn) {
         xhttp.onreadystatechange = () => {
             if(xhttp.readyState == 4 && xhttp.status == 200){
                 resolve(xhttp.responseText); 
-            } else {
-                reject;
+            } else if (xhttp.status > 399){
+                reject(xhttp.status);   
             }
         };
         xhttp.send();
@@ -37,10 +37,10 @@ function show_joke(){
         let myData = JSON.parse(txt); //passes from text form to json form
         let jkc = document.getElementsByClassName("joke-text")[0];
         jkc.innerText = myData.value.joke + "";
-    }).catch(() => {
+    }).catch((_status) => {
         let err = document.getElementsByClassName("joke-container")[0];
         err.style.backgroundColor = "red";
-        document.getElementsByClassName("joke-text")[0].innerHTML = "ERROR";
+        document.getElementsByClassName("joke-text")[0].innerHTML = _status;
         err.style.animation = "fadeIn 2s";
     });
 }
