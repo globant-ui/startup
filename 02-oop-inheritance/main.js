@@ -11,12 +11,6 @@ let moreActors = {
     chris:new Actor('chris evans',37),
     scarlett:new Actor('scarlett johansson', 33),
 }
-avengers.addCast(moreActors);
-avengers.addCast(robert);
-avengers.on('play',logger.log);
-avengers.off('play');
-avengers.play();
-console.log(avengers.actors)
 
 let social = {
     share: function(friendName){
@@ -27,3 +21,12 @@ let social = {
     },
 };
 
+//examples
+avengers.addCast(moreActors);
+avengers.addCast(robert);
+avengers.on('play',logger.log);
+avengers.off('play');
+avengers.play();
+console.log(avengers.actors);
+let iroman = new Movie("ironman",2008,126);
+iroman.share('lucas saldias');
