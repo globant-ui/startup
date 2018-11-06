@@ -1,7 +1,7 @@
-import Movie from "/Users/lucassaldias/Lucas_Saldias_rosario-web-ui-bootcamp-11-2018.-/02-oop-inheritance/movie.js";
-import Actor from "/Users/lucassaldias/Lucas_Saldias_rosario-web-ui-bootcamp-11-2018.-/02-oop-inheritance/actor.js";
-import EventEmitter from "/Users/lucassaldias/Lucas_Saldias_rosario-web-ui-bootcamp-11-2018.-/02-oop-inheritance/eventemitter.js";
-import Logger from "/Users/lucassaldias/Lucas_Saldias_rosario-web-ui-bootcamp-11-2018.-/02-oop-inheritance/logger.js";
+import {Movie} from "./movie.js";
+import Actor from "./actor.js";
+import EventEmitter from "./eventemitter.js";
+import Logger from "./logger.js";
 
 
 let avengers = new Movie("avengers I",2012,183);
