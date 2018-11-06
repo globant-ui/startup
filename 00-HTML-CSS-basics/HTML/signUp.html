@@ -21,17 +21,22 @@
     </style>
 <body>
     <form action="">
-        <h3>Nombre</h3>
-        <input type="text">
-        <h3>apellido</h3>
-        <input type="text">
-        <h3>email</h3>
-        <input type="email">
-        <h3>Fecha de Nacimiento</h3>
-        <input type="date"> <br><br>
-        <h2>Deporte Favorito</h2>
+        <h2>personal information</h2>
+        <input type="text" id="firstname">
+        <label for="firstname">first name</label><br>
+
+        <input type="text" id="lastname">
+        <label for="lastname">last name</label><br>
+
+        <input type="email" id="email">
+        <label for="email">email</label><br>
+
+        <input type="date" id="birthday">
+        <label for="birthday">birthday</label><br>
+
+        <h2>favorite sport</h2>
        
-        <select name="Deporte" id="">
+        <select name="sport" id="">
 
             <option value="futbol">Futbol</option>
             <option value="basquet">Basquet</option>
@@ -44,7 +49,7 @@
         <textarea name="Bio" id="" cols="30" rows="10"></textarea><br><br>
         
         <input type="submit" value="Submit">
-        <input type="reset">
+        <input type="reset" value="Reset">
     </form>
 </body>
 </html>
