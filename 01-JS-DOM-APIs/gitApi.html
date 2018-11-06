@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
 </head>
 
 <body>
     <div>
-        <h3>Lista de repositorios sobre JavaScript en GitHub</h3>
+        <h1>Repositories List</h1>
     </div>
-    <ul name="repo_list" scr=""id="repo_list"></ul>
+    
+    <div style="float: left; text-align:left">
+        <h3>input the serch parameter</h3>
+        <input id="q" class="q" type="text" placeholder="i.e. JavaScript">
+        <br>
+        <button type="button" name="search" id="btn" style="margin:6%; margin-top:8%">search</button>
+        <br>
+        <button type="button" name="reset" id="reset" style="margin:6%">reset</button>
+        
+    </div>
+    <div style="float: right;position:absolute;left:50%;top:0%"><ul name="repo_list" scr="" id="repo_list" style="margin-right:50%"></ul></div>
+    
+    
 </body>
-<button type="button" name="button" id="btn">Button</button>
-
 <script src="gitScript.js" type="text/javascript"></script>
+
 </html>
