@@ -1,51 +1,26 @@
-class EventEmitter {
-    //methods
-    constructor() {
+class EventEmitter{
+
+    constructor(){
         this.events = {}
     }
-    on(envetName, callBack) {
-        if (this.event[eventName].push(callback)) {} else {
-            this.events[envetName] = [callback]
+
+    on(eventName, callback){
+         if (this.events[eventName]){
+            this.events[eventName].push(callback)
+        }else{
+            this.events[eventName] = [callback]
         }
     }
-    emit(eventname) {
-        if (this.event[eventName]) {
-            this.events[key].forEach(callBack => {
-                callBack(eventName)
-            });
+    emit(eventName){
+        if(this.events[eventName]){
+            this.events[eventName].forEach(callback => {
+                callback(eventName)
+            })
         }
-    }
-    off(eventName, callBack) {
-        if (this.events[eventName]) {
-            delete this.events[eventName]
+    }   
+    off(eventName){
+        if (this.events[eventName]){
+            delete this.events[eventName]    
         }
     }
 }
-class Movie extends EventEmitter {
-
-    constructor(name, year, duration) {
-        super();
-        this.name = name;
-        this.year = year;
-        this.duration = duration;
-    }
-    play() {
-        this.emit("play")
-
-    }
-    pause() {
-        this.emit("pause")
-    }
-    resume() {
-        this.emit("resume")
-    }
-    addCast(cast) {
-
-    }
-}
-
-const movie1 = new Movie('terminator I', 1985, 60);
-const movie2 = new Movie('terminator II', 1991, 68)
-
-console.log(movie1.play());
-console.log(movie2.play());
