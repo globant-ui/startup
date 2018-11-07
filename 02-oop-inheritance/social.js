@@ -1,3 +1,4 @@
+/*
 let social = {
     share: function(fn){
         console.log("Share "+this._title+" with "+fn);
@@ -6,3 +7,5 @@ let social = {
         console.log(fn+" like "+this._title);
     },
 };
+
+*/

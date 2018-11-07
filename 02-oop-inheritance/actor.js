@@ -1,3 +1,4 @@
+/* 
 export default class Actor {
     //methods
     constructor(name,age){
@@ -6,3 +7,5 @@ export default class Actor {
     
     }
 }
+
+*/

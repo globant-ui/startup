@@ -1,3 +1,4 @@
+/*
 class EventEmitter{
 
     constructor(){
@@ -24,3 +25,5 @@ class EventEmitter{
         }
     }
 }
+
+*/

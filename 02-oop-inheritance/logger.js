@@ -1,3 +1,4 @@
+/*
 export default class Logger{
     constructor(){
     }
@@ -6,3 +7,4 @@ export default class Logger{
 
     }
 }
+*/

@@ -1,3 +1,5 @@
+/*
+
 export default class Movie extends EventEmitter{
 
     constructor(name,year,duration){
@@ -6,7 +8,6 @@ export default class Movie extends EventEmitter{
         this.duration = duration;
     }
     play(){
-        return `Playing movie...${this.name}`
     
     }
     pause(){
@@ -20,8 +21,4 @@ export default class Movie extends EventEmitter{
     }
 }
 
-const movie1 = new Movie('terminator I',1985,60);
-const movie2 = new Movie('terminator II',1991,68)
-
-console.log(movie1.play()); 
-console.log(movie2.play()); 
+*/
