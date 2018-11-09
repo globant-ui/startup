@@ -25,18 +25,14 @@ export class MovieListComponent implements OnInit {
   }
   openEdit(movie: Movies) {
     this.editShow = true;
-    movie.title = this.editedMovie.title;
-    movie.year = this.editedMovie.year;
-    movie.duration = this.editedMovie.duration;
-
+    this.editedMovie = movie;
   }
-  confirmEdit() {
+  confirmEdit(movie: Movies) {
     this.editShow = false;
-
   }
   delete(movie: Movies) {
-    this.movieList = this.movieList.filter(x => x !== this.selectedMovie);
-    this.selectedMovie = new Movies();
+    this.movieList = this.movieList.filter(x => x !== movie);
+    movie = new Movies();
   }
 
   ngOnInit() {

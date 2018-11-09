@@ -16,11 +16,12 @@
   <div class="card-body p-2">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="">Edit Panel</span>
+        <span class="input-group-text" id="">Edit Movie nº</span>
+        <span class="input-group-text" id="">{{editedMovie.id}}</span>
         <input type="text" [(ngModel)]="editedMovie.title"        placeholder="title"       class="form-control ml-5 mr-3">
         <input type="text" [(ngModel)]="editedMovie.year"         placeholder="year"        class="form-control mx-3">
         <input type="text" [(ngModel)]="editedMovie.duration"     placeholder="duration"    class="form-control mx-3">
-        <button class="btn btn-success px-5 ml-5" (click)="confirmEdit()" >Confirm</button>
+        <button class="btn btn-success px-5 ml-4" (click)="confirmEdit()" >Confirm</button>
 
       </div>
     </div>
@@ -49,7 +50,7 @@
           <td>{{movie.title}}</td>
           <td>{{movie.year}}</td>
           <td>{{movie.duration}}</td>
-          <button class="btn btn-primary m-1%" (click)="openEdit(movie)" [class.Active]="movie == selectedMovie">Edit</button>
+          <button class="btn btn-primary m-1%" (click)="openEdit(movie)" >Edit</button>
           <button class="btn btn-danger m-1%" (click)="delete(movie)">Delete</button>
         </tr>
       </tbody>
