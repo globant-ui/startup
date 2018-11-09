@@ -1,0 +1,21 @@
+* {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+header {
+    margin: 5% 11px 12px 13px;
+    font-size: 42px;
+}
+
+div {
+    margin: 13px 250px 13px 250px;
+    box-align: center;
+    padding: 2%;
+}
+
+.repositories {
+    font-size: 18px;
+    border-style: double;
+    /* visibility: hidden; */
+}

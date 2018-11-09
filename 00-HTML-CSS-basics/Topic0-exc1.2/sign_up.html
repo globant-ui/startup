@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Etchegaray Gonzalo" />
+    <meta name="description" content="Sign up form" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./sign_up.css" type="text/css" />
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header>Sign Up</header>
+    <form>
+
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" required="required" placeholder="Gonzalo">
+        </div>
+
+        <div>
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" required="required" placeholder="Etchegaray">
+        </div>
+        <div>
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" required="required">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" required="required" placeholder="example@gmail.com">
+        </div>
+        <div>
+            <label>Select your favorite sport</label>
+            <select name="sport" required="required">
+                <option value="">None</option>
+                <option value="football">Football</option>
+                <option value="volley">Volley</option>
+                <option value="swimming">Swimming</option>
+                <option value="basketball">Basketball</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea id="bio" placeholder="Who are you?" required="required"></textarea>
+        </div>
+        <div class="button">
+            <button type="submit">Send message</button>
+        </div>
+        <div class="button">
+            <button type="reset">Reset form</button>
+        </div>
+    </form>
+</body>
+
+</html>

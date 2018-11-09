@@ -1,0 +1,36 @@
+header {
+    margin: 0 auto;
+    width: 400px;
+}
+
+form {
+    /* Centro el formulario */
+    margin: 0 auto;
+    width: 400px;
+    /* Agrego un borde al formulario */
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+
+form div+div {
+    /* Agrego un espacio entre cada caja. */
+    margin-top: 1em;
+}
+
+label {
+    /* Alineo las etiquetas label */
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+.button {
+    /* Posiciono los botones */
+    padding-left: 80px;
+    /* Misma posicion que los elementos label para que esten alineados */
+}

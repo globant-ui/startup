@@ -1,0 +1,16 @@
+header{
+  margin: auto;
+  width: 400px;
+}
+
+table {
+  /* Centro la tabla y quito espacios entre las filas y columnas*/
+  margin: 0 auto;
+  width: 350px;
+  border-collapse: collapse;
+}
+
+td, th {
+  /* Agrego bordes a las filas y columnas */
+  border: 1px solid black;
+}
