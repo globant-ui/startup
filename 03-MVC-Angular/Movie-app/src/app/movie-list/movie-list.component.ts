@@ -20,6 +20,8 @@ export class MovieListComponent implements OnInit {
   addNew() {
     this.selectedMovie.id = this.movieList.length + 1;
     this.movieList.push(this.selectedMovie);
+
+    this.selectedMovie = new Movies();
   }
 
   ngOnInit() {
