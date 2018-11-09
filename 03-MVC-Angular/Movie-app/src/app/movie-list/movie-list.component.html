@@ -1,0 +1,40 @@
+<div class="card text-white bg-dark my-3">
+  <div class="card-body p-2">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">New Movie</span>
+      </div>
+      <input type="text" [(ngModel)]="selectedMovie.title" placeholder="title" class="form-control mx-1">
+      <input type="text" [(ngModel)]="selectedMovie.year" placeholder="year" class="form-control mx-1">
+      <input type="text" [(ngModel)]="selectedMovie.duration" placeholder="duration" class="form-control mx-1">
+      <button class="btn btn-success px-5" (click)="addNew()">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="card text-white bg-dark my-3 text-center">
+  <div class="card-body p-2 text-center">
+    <div class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Year</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let movies of movieList">
+          <td>{{movies.id}}</td>
+          <td>{{movies.title}}</td>
+          <td>{{movies.year}}</td>
+          <td>{{movies.duration}}</td>
+          <button class="btn btn-primary m-1%">Edit</button>
+          <button class="btn btn-danger m-1%">Delete</button>
+        </tr>
+      </tbody>
+    </div>
+  </div>
+</div>
