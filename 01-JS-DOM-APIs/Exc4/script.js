@@ -9,7 +9,6 @@ function getRepositorie() {
 function get_list(user) {
     var userList = document.getElementsByClassName("repositories")[0];
     var Ul = document.createElement("ul");
-    // document.getElementById('.user-list').style.visibility = 'visible';
     for (var count = 0; count < user.items.length; count++) {
         var Li = document.createElement("li");
         var user_Repo = document.createTextNode(user.items[count].name);
