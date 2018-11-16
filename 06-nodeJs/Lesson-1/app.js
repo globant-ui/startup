@@ -1,13 +1,10 @@
 const fs = require('fs');
+const getArg = require('./modules/consoleInput')
 
 let now= new Date();
 now_string = JSON.stringify(now);
 const file='./logger.log';
 
-function getArg (flag){
-    var index = process.argv.indexOf(flag);
-    return(index === -1) ? null : process.argv[index+1];
-}
 var user = getArg('--user');
 var psw = getArg('--psw');
 
