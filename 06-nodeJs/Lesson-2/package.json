@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "config.json": "0.0.4"
+    "config.json": "0.0.4",
+    "node-uid": "^0.1.3"
   }
 }
