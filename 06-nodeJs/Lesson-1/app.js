@@ -11,7 +11,7 @@ function getArg (flag){
 var user = getArg('--user');
 var psw = getArg('--psw');
 
-// Check if the file exists in the current directory.
+// Check if the file exists in the current directory. and commit the changes
 fs.access(file, fs.constants.F_OK, (err) => {
     console.log(`${file} ${err ? 'has benn created' : 'has been update'}`);
     fs.appendFile('logger.log',`
