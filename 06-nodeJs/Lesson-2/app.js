@@ -1,10 +1,11 @@
 const fs = require('fs');
-const getArg = require('./modules/consoleInput')
+const getArg = require('./modules/consoleInput');
+const fsPromises=fs.promises;
 
 let now = new Date();
 now_string = JSON.stringify(now);
 const file = './logger.log';
-const fsPromises = fs.promises;
+
 
 var user = getArg('--user');
 var psw = getArg('--psw');
@@ -17,12 +18,12 @@ data = [
 
 
 fsPromises.access(file, fs.constants.R_OK | fs.constants.W_OK)
-  .then(() =>console.log('the log file alredy exist'),
+  .then(() => console.log('the log file alredy exist'),
     fs.appendFile(file, data, (err) => {
       if (err) throw err;
     }),
     console.log('...has been updated')
-    )
+  )
 
   .catch(() =>
     fs.writeFile(file, data, (err) => {
