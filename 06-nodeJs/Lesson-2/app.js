@@ -1,11 +1,11 @@
 const fs = require('fs');
 const getArg = require('./modules/consoleInput');
 const fsPromises=fs.promises;
-let UUID = require("uuidjs");
+const UUID = require("node-uid");
 
 
 
-let uuid = UUID.generate();
+let uuid = UUID();
 let now = new Date();
 now_string = JSON.stringify(now);
 const file = './logger.log';
