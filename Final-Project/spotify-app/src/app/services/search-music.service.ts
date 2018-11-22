@@ -47,6 +47,22 @@ export class SearchMusicService {
 
   //.pipe(map(res=>res.json()));
 
+  generateRandomString = function(length) {
+    let text = '';
+    let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  
+    for (let i = 0; i < length; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+  };
+
+
+  login(){
+    return this._http.get('https://accounts.spotify.com/authorize?response_type=code&client_id='+btoa(this.client_id)+'&scope='+btoa(this.scopes)+'&redirect_uri='+btoa(this.redirect_uri))
+      .pipe(map(data => data));
+  }
+
   getToken() {
     let authorizationTokenUrl = `https://accounts.spotify.com/api/token`;
 
@@ -62,7 +78,6 @@ export class SearchMusicService {
       .pipe(tap(token => {
         this.accessToken = token.access_token;
         this.tokenType = token.token_type;
-        token.scope = this.scopes;
       }, error => console.log(error)));
   }
 
@@ -74,4 +89,5 @@ export class SearchMusicService {
     return this._http.get(url, options)
       .pipe(map(data => data.json()));
   }
+  
 }

@@ -1,0 +1,24 @@
+input {
+    margin: 5px;
+}
+
+.search-artist{
+    border-radius: 4px;
+    border: 1px solid rgb(42, 42, 42);
+    margin: 2px;
+}
+
+img{
+    float: left;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+h3{
+    margin: 0;
+}
+
+.search-artist:hover {
+    background-color: rgb(42, 42, 42);
+    cursor: pointer;
+}

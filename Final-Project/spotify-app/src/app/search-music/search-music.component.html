@@ -1,4 +1,20 @@
 
-<label>
-  Name:<input type="text" [(ngModel)]="search" placeholder="Search Music..."  (keyup)="searchMusic()">
-</label>
+<h2>Want some music?</h2>
+<p class="lead">You can search for any artist that exist at spottify.</p>
+<form >
+  <div class='form-group'> 
+    <input type='text' [(ngModel)]='search' placeholder='Search Music...'  (keyup)='searchMusic()' name='search' class='form-control'>
+  </div>
+</form>
+<div *ngIf='search'>
+  <div *ngFor='let artist of artists'>
+    <div class="row"> 
+      <div class="col-md-12">
+        <div class="search-artist" routerLink='/artist/{{artist.id}}'>
+          <img src={{artist.images[0]?.url}} alt='{{artist.name}}' width='45' height='45'>
+          <h3 >{{artist.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

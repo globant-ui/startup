@@ -13,9 +13,14 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  login(){
+  getToken(){
     this.test.getToken().subscribe( tokenObject => {
       console.log(tokenObject);
-    } );
+    } ); 
+  }
+
+  login(){
+    this.test.login();
+    console.log("l");
   }
 }

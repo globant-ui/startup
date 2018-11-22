@@ -6,17 +6,21 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchMusicComponent } from './search-music/search-music.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchMusicComponent
+    SearchMusicComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
