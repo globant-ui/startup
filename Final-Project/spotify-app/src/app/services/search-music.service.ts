@@ -89,5 +89,12 @@ export class SearchMusicService {
     return this._http.get(url, options)
       .pipe(map(data => data.json()));
   }
-  
+  getArtist(id:string){
+    let header = new Headers();
+    header.append('Authorization', this.tokenType + ' ' + this.accessToken);
+    let options = new RequestOptions({ headers: header });
+    let url = 'https://api.spotify.com/v1/artists/'+id;
+    return this._http.get(url, options)
+      .pipe(map(data => data.json()));
+  }
 }

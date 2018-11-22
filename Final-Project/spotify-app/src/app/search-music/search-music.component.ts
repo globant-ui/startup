@@ -19,7 +19,6 @@ export class SearchMusicComponent implements OnInit {
   searchMusic():void{
     this.test.searchMusic(this.search).subscribe((res)=>{
       if(res.status === 400){return;};
-      console.log(res.artists);
       this.artists = res.artists.items;
     });
   }

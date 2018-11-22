@@ -11,7 +11,9 @@
     <div class="row"> 
       <div class="col-md-12">
         <div class="search-artist" routerLink='/artist/{{artist.id}}'>
-          <img src={{artist.images[0]?.url}} alt='{{artist.name}}' width='45' height='45'>
+          <div *ngIf='artist.images.length > 0'>
+            <img src={{artist.images[0]?.url}} alt='{{artist.name}}' width='45' height='45'>
+          </div>
           <h3 >{{artist.name}}</h3>
         </div>
       </div>

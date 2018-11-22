@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchMusicComponent } from './search-music/search-music.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ArtistComponent } from './artist/artist.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SearchMusicComponent,
-    ArtistComponent
+    ArtistComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
