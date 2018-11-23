@@ -13,19 +13,18 @@ export class ProfileComponent implements OnInit {
 
   access_token:string;
   token_type:string;
+  arr:string[];
 
-  constructor(private route: Router) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.events
-    .subscribe((test) => {
-        if (test instanceof NavigationCancel) {
-          let params = new URLSearchParams(test.url.split('#')[1]);
-          this.access_token = params.get('access_token');
-          this.token_type = params.get('code');
-          console.log(this.access_token);
-          console.log(this.token_type);
-        }
-      });
+    this.route.fragment
+      .subscribe(params => {
+        this.arr = params.split(/[=&]+/);
+        this.access_token = this.arr[1];
+        this.token_type = this.arr[3];
+        console.log(this.access_token);
+        console.log(this.token_type);
+      })
   }
 }

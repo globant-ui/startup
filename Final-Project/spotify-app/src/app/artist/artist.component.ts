@@ -22,10 +22,12 @@ export class ArtistComponent implements OnInit {
     this.route.params
     .pipe(map(params => params['id']))
     .subscribe((id) => {
-      this.searchSpotify.getArtist(id).subscribe((res)=>{
-        this.artist = res;
-        this.id = res.id;
-        console.log(this.id);
+      this.searchSpotify.getArtist(id).subscribe((artist)=>{
+        this.artist = artist;
+        this.id = artist.id;
+      })
+      this.searchSpotify.getAlbums(id).subscribe((albums)=>{
+        this.albums = albums.items;
       })
     })
   }
