@@ -4,9 +4,9 @@ const request = require('request');
 
 
 const config= require('../config');
-const client_id = 'a67f6c836c82436b8931662947df8106'; 
-const client_secret = 'b7419ea9697f4e87889c62aa4051d8e5'; 
-const redirect_uri = 'http://localhost:3000/callback'; 
+const client_id = config.client_id; 
+const client_secret = config.client_secret; 
+const redirect_uri = config.redirect_uri; 
 
 
 var generateRandomString = function(length) {
@@ -41,11 +41,6 @@ loginCtrl.log= (req, res)=>{
 loginCtrl.auth= (req, res)=>{
 
   var code = req.query.code || null;
-  var state = req.query.state || null;
-  var storedState = req.cookies ? req.cookies[stateKey] : null;
-
- 
-
     var authOptions = {
       url: 'https://accounts.spotify.com/api/token',
       form: {
@@ -72,12 +67,16 @@ loginCtrl.auth= (req, res)=>{
           console.log('user id: ', body.id  ,'\n',
                       'name : ', body.display_name )
         });
-        config.token=body.access_token;
+        config.token= access_token;
+        console.log('Your Token is', config.token)
         res.redirect('http://localhost:3000/status');
+
       } else {
+
         res.redirect('/#' +
           querystring.stringify({
             error: 'invalid_token'
+
           }));
       }
     });
