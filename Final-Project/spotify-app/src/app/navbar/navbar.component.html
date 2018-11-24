@@ -4,7 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button> -->
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
+  <div  id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -16,14 +16,15 @@
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://accounts.spotify.com/authorize?client_id=df53d4e4d81941adbf9df3886a28aba1&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fprofile&scope=user-read-private%20user-read-email%20playlist-read-private&response_type=token&state=123">Profile</a>
+       <a class="nav-link" routerLink="/profile">Profile</a>
       </li>
     </ul>
   </div>
 <!--   <div>
       <button (click)='login()' class="btn btn-outline-secondary">Login</button>
   </div> -->
-  <div *ngIf='!test.accessToken || test.accessToken.expires_in === 0'>
-      <button (click)='getToken()' class="btn btn-outline-secondary">GetToken</button>
+  <div *ngIf='!test.accessToken'>
+     <!--  <button (click)='getToken()' class="btn btn-outline-secondary">GetToken</button> -->
+      <a class="nav-link btn btn-outline-secondary" href="https://accounts.spotify.com/authorize?client_id=df53d4e4d81941adbf9df3886a28aba1&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fprofile&scope=user-read-private%20user-read-email%20playlist-read-private%20user-read-birthdate&response_type=token&state=123">Login</a>
   </div>
 </nav>

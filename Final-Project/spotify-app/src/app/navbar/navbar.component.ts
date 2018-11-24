@@ -13,11 +13,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  getToken(){
+/*   getToken(){
     this.test.getToken().subscribe( tokenObject => {
       console.log(tokenObject);
     } ); 
-  }
+  } */
 
   login(){
     this.test.login();

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Router, NavigationCancel } from '@angular/router';
 import { URLSearchParams, } from '@angular/http';
+import {SearchMusicService} from '../services/search-music.service';
+import { Profile } from '../spotify-interface';
 
 @Component({
   selector: 'app-profile',
@@ -11,20 +13,24 @@ import { URLSearchParams, } from '@angular/http';
 })
 export class ProfileComponent implements OnInit {
 
-  access_token:string;
-  token_type:string;
+  access_token:string = '';
   arr:string[];
-
-  constructor(private route: ActivatedRoute) { }
+  profile:any;
+ 
+  constructor(private route: ActivatedRoute,
+              private spotifyService: SearchMusicService
+    ) { }
 
   ngOnInit() {
     this.route.fragment
       .subscribe(params => {
         this.arr = params.split(/[=&]+/);
         this.access_token = this.arr[1];
-        this.token_type = this.arr[3];
-        console.log(this.access_token);
-        console.log(this.token_type);
+        this.spotifyService.token(this.access_token);
       })
+      this.spotifyService.getCurrentProfile().subscribe( res => {
+        this.profile = res;
+        console.log(this.profile);
+      } );
   }
 }

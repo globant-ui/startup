@@ -16,7 +16,7 @@ export class SearchMusicService {
   private redirect_uri = 'http://localhost:4200'  ;//'REDIRECT_URI'; // Your redirect uri
   private scopes = 'user-read-private user-read-email'
 
-  accessToken: any;
+  accessToken: any = '';
   private tokenType: string;
 
   private configUrl:string;
@@ -47,6 +47,10 @@ export class SearchMusicService {
 
   //.pipe(map(res=>res.json()));
 
+  token(token:string){
+    this.accessToken = this.accessToken.concat('Bearer '+ token); 
+  }
+
   generateRandomString = function(length) {
     let text = '';
     let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -63,7 +67,7 @@ export class SearchMusicService {
       .pipe(map(data => data));
   }
 
-  getToken() {
+  /* getToken() {
     let authorizationTokenUrl = `https://accounts.spotify.com/api/token`;
 
     let header = new Headers();
@@ -79,11 +83,11 @@ export class SearchMusicService {
         this.accessToken = token.access_token;
         this.tokenType = token.token_type;
       }, error => console.log(error)));
-  }
+  } */
 
   searchMusic(str:string,type='artist'){
     let header = new Headers();
-    header.append('Authorization', this.tokenType + ' ' + this.accessToken);
+    header.append('Authorization',  this.accessToken);
     let options = new RequestOptions({ headers: header });
     let url = 'https://api.spotify.com/v1/search?q='+str+'&limit=5&type='+type;
     return this._http.get(url, options)
@@ -91,7 +95,7 @@ export class SearchMusicService {
   }
   getArtist(id:string){
     let header = new Headers();
-    header.append('Authorization', this.tokenType + ' ' + this.accessToken);
+    header.append('Authorization',  this.accessToken);
     let options = new RequestOptions({ headers: header });
     let url = 'https://api.spotify.com/v1/artists/'+id;
     return this._http.get(url, options)
@@ -100,11 +104,24 @@ export class SearchMusicService {
 
   getAlbums(id:string){
     let header = new Headers();
-    header.append('Authorization', this.tokenType + ' ' + this.accessToken);
+    header.append('Authorization', this.accessToken);
     let options = new RequestOptions({ headers: header });
     let url = 'https://api.spotify.com/v1/artists/'+id+'/albums';
     return this._http.get(url, options)
       .pipe(map(data => data.json()));
+    }
   
+    getCurrentProfile(){
+      let header = new Headers();
+      header.append('Authorization', this.accessToken);
+      let options = new RequestOptions({ headers: header });
+      let url = 'https://api.spotify.com/v1/me';
+      return this._http.get(url, options)
+        .pipe(map(data => data.json()));
+      }
+    
+    sendData(data:string){
+      let url = 'http://localhost:4000/message='+btoa(data);
+      return this._http.get(url);
     }
 }

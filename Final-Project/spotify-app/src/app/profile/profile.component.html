@@ -1,3 +1,18 @@
-<p>
-  profile works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 img">
+      <img src="{{profile.images[0].url}}"  alt="" class="img-rounded">
+    </div>
+    <div class="col-md-6 details">
+      <blockquote>
+        <h5>{{profile.display_name}}</h5>
+        <small><cite title="Source Title">Country: {{profile.country}}<i class="icon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>
+        {{profile.email}}<br>
+        <br>
+        Birthdate: {{profile.birthdate}}
+      </p>
+    </div>
+  </div>
+</div>

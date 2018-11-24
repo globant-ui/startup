@@ -12,12 +12,12 @@ export class SearchMusicComponent implements OnInit {
   search:string;
   artists: Artist[];
 
-  constructor(private test:SearchMusicService ) { }
+  constructor(private spotifyService:SearchMusicService ) { }
 
   ngOnInit() {
   }
   searchMusic():void{
-    this.test.searchMusic(this.search).subscribe((res)=>{
+    this.spotifyService.searchMusic(this.search).subscribe((res)=>{
       if(res.status === 400){return;};
       this.artists = res.artists.items;
     });

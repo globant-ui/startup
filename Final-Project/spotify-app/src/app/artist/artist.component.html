@@ -6,6 +6,7 @@
         <span *ngIf='artist.genres.length > 0'>
             Genres: <span *ngFor='let gen of artist.genres'>{{gen}}, </span>
         </span>
+       <!--  <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:{{artist.id}}&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>  -->
       </div>
       <div *ngIf='artist.images.length > 0' class="img-header">
         <img src={{artist.images[0]?.url}} alt='{{artist.name}}' class="circle">
@@ -20,9 +21,9 @@
         <div>
           <div class="well album">
             <div *ngIf='album.images.length > 0'>
-              <img src="{{album.images[0].url}}" alt="{{album.name}}" class='album-thumb img-thumbnail'>
+              <img src="{{album.images[0].url}}" alt="{{album.name}}" class='album-thumb '>
               <h6>{{album.name}}</h6>
-              <a href='https://open.spotify.com/album/{{album.id}}'>Open on Spotify</a>
+              <a href='https://open.spotify.com/album/{{album.id}}' target="_blank" >Open on Spotify</a>
             </div>
           </div>
         </div>
