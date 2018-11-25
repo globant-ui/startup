@@ -4,9 +4,9 @@
       <div class="text-header">
         <h3>{{artist.name}}</h3><br><br>
         <span *ngIf='artist.genres.length > 0'>
-            Genres: <span *ngFor='let gen of artist.genres'>{{gen}}, </span>
+            Genres: <span *ngFor='let gen of artist.genres' class="badge badge-secondary gen">{{gen}}</span>
         </span>
-       <!--  <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:{{artist.id}}&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>  -->
+     <!--  <iframe [src]="https://open.spotify.com/follow/1/?uri=spotify:artist:{{artist.id}}&size=detail&theme=light | safe" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe> -->
       </div>
       <div *ngIf='artist.images.length > 0' class="img-header">
         <img src={{artist.images[0]?.url}} alt='{{artist.name}}' class="circle">

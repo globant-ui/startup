@@ -39,3 +39,8 @@ header h3 {
 .album-thumb{
     width: 100%;
 }
+
+.gen{
+    margin: 5px;
+    font-weight: lighter;
+}

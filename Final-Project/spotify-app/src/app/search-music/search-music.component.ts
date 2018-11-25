@@ -11,6 +11,8 @@ export class SearchMusicComponent implements OnInit {
 
   search:string;
   artists: Artist[];
+  lastSearch:string[];
+  hide:boolean = false;
 
   constructor(private spotifyService:SearchMusicService ) { }
 
@@ -20,6 +22,15 @@ export class SearchMusicComponent implements OnInit {
     this.spotifyService.searchMusic(this.search).subscribe((res)=>{
       if(res.status === 400){return;};
       this.artists = res.artists.items;
+    });
+  }
+
+  showLastSearch(){
+    this.hide = !this.hide;
+    this.spotifyService.getData()
+    .subscribe((res:any)=>{
+      this.lastSearch = res.artist;
+      console.log(this.lastSearch);
     });
   }
 } 

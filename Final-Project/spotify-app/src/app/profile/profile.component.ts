@@ -27,10 +27,15 @@ export class ProfileComponent implements OnInit {
         this.arr = params.split(/[=&]+/);
         this.access_token = this.arr[1];
         this.spotifyService.token(this.access_token);
-      })
+      });
+
       this.spotifyService.getCurrentProfile().subscribe( res => {
+        if(res.status >= 400){return;};
         this.profile = res;
-        console.log(this.profile);
+       // console.log(this.profile);
       } );
+    
   }
+
+  
 }

@@ -22,3 +22,8 @@ h3{
     background-color: rgb(42, 42, 42);
     cursor: pointer;
 }
+
+.lastSearch{
+    color: white;
+    margin: 10px;
+}

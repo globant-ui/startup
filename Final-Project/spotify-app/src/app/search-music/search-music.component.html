@@ -1,6 +1,14 @@
 
 <h2>Want some music?</h2>
 <p class="lead">You can search for any artist that exist at spottify.</p>
+<button type="button" class="btn btn-outline-secondary btn-sm" (click)='showLastSearch()'>Show Last Search</button>
+<div *ngIf='lastSearch && hide'>
+  <div *ngFor='let last of lastSearch'>
+    <div class="lastSearch">
+     {{last}}
+    </div>
+  </div>
+</div>
 <form >
   <div class='form-group'> 
     <input type='text' [(ngModel)]='search' placeholder='Search Music...'  (keyup)='searchMusic()' name='search' class='form-control'>

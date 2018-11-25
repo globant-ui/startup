@@ -3,6 +3,7 @@ import {Http, Response, Request, RequestOptions, RequestOptionsArgs, Headers} fr
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { pipe } from '@angular/core/src/render3';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class SearchMusicService {
  
 
 
-  constructor(private _http:Http) { }
+  constructor(private _http:Http, private http:HttpClient) { }
 
  /*  searchMusic(str:string,type='artist'){
     this.url = 'https://api.spotify.com/v1/search?q='+str+'&limit=5&type='+type;
@@ -119,9 +120,20 @@ export class SearchMusicService {
       return this._http.get(url, options)
         .pipe(map(data => data.json()));
       }
-    
-    sendData(data:string){
-      let url = 'http://localhost:4000/message='+btoa(data);
-      return this._http.get(url);
+
+//Request for my api
+  
+    sendData(name:string,type:string){
+      let url = `http://localhost:4000/search/${type}/${name}`;
+      return this._http.get(url)
+      .subscribe((res)=>{
+        console.log(res);
+      });
+    }
+
+    getData(){
+      /* console.log(data); */
+      let url = `http://localhost:4000/get`;
+      return this.http.get(url)
     }
 }
