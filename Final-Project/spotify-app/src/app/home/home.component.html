@@ -1,3 +1,21 @@
-<p>
-  home works!
-</p>
+<div *ngIf="!playlist">
+  <h1>You need login</h1>
+</div>
+<div *ngIf="playlist">
+  <h2>{{playlist.message}}</h2>
+  <div class="artist-albums container"> 
+    <div class="row">
+      <div *ngFor='let list of playlistItems' class='col-md-3'>
+        <div>
+          <div class="well album">
+            <div *ngIf='list.images.length > 0'>
+              <img src="{{list.images[0].url}}" alt="{{playlist.name}}" class='album-thumb '>
+              <h6>{{list.name}}</h6>
+              <a href='{{list.external_urls.spotify}}' target="_blank" >Open on Spotify</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

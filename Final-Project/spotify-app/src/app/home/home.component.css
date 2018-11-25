@@ -1,0 +1,14 @@
+.artist-albums .well{
+    margin: 5px;
+    overflow: auto;
+    min-height: 200px;
+}
+
+.album {
+    border: white 1px solid;
+    padding: 5px;
+}
+
+.album-thumb{
+    width: 100%;
+}

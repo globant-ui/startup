@@ -121,6 +121,17 @@ export class SearchMusicService {
         .pipe(map(data => data.json()));
       }
 
+    getFeaturedPlaylists(){
+        let header = new Headers();
+        let date = new Date();
+        let isoDate = date.toISOString();
+        header.append('Authorization', this.accessToken);
+        let options = new RequestOptions({ headers: header });
+        let url = 'https://api.spotify.com/v1/browse/featured-playlists?&offset=0&timestamp='+isoDate;
+        return this._http.get(url, options)
+          .pipe(map(data => data.json()));
+        }
+
 //Request for my api
   
     sendData(name:string,type:string){
