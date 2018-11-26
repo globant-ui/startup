@@ -53,7 +53,7 @@
   <div *ngFor='let track of tracks'>
     <div class="row"> 
       <div class="col-md-12">
-        <div class="search-artist" (click)='openTrack(track)'>
+        <div class="search-artist" (click)='openSpotify(track)'>
           <h3 >{{track.name}}</h3>
         </div>
       </div>
@@ -64,7 +64,7 @@
     <div *ngFor='let playlist of playlists'>
       <div class="row"> 
         <div class="col-md-12">
-          <div class="search-artist" (click)='openPlaylist(playlist)'>
+          <div class="search-artist" (click)='openSpotify(playlist)'>
             <div *ngIf='playlist.images.length > 0'>
               <img src={{playlist.images[0]?.url}} alt='{{playlist.name}}' width='45' height='45'>
             </div>

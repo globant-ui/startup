@@ -54,12 +54,9 @@ export class SearchMusicComponent implements OnInit {
   typeChange(data){
     this.type = data;
   }
-  openTrack(track){
-    window.open(track.external_urls.spotify);
-    this.spotifyService.sendData(this.search,this.type);
-  }
-  openPlaylist(playlist){
-    window.open(playlist.external_urls.spotify);
+  
+  openSpotify(data){
+    window.open(data.external_urls.spotify);
     this.spotifyService.sendData(this.search,this.type);
   }
 } 
