@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parallax.component.css']
 })
 export class ParallaxComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

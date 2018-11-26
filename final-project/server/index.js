@@ -1,7 +1,10 @@
 const express= require('express');
 const config= require('./config');
 const morgan= require('morgan');
+const cors= require('cors');
 const app= express();
+
+
 
 
 //settings
@@ -13,7 +16,7 @@ app.use(express.json());
 
 //routes
 app.use(require('./routes/spotify.routes'))
-
+app.use(cors({origin:'http://localhost:4200/'}));
 //starting the server
 
 

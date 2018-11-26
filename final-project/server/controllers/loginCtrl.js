@@ -70,15 +70,14 @@ loginCtrl.auth= (req, res)=>{
         });
         config.token= access_token;
         console.log('Your Token is', config.token)
-        res.redirect('http://localhost:3000/status');
+        res.redirect('http://localhost:4200/');
 
       } else {
 
-        res.redirect('/#' +
-          querystring.stringify({
+        res.send({
             error: 'invalid_token'
 
-          }));
+          });
       }
     });
   

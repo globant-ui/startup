@@ -1,14 +1,11 @@
 <div class="parallax-container">
     <div class="parallax">
-      <img src="http://blogueras.cl/wp-content/uploads/2017/04/musica-electronica-libre-de-derechos.jpg">
+        <img src="http://materializecss.com/images/parallax1.jpg" />
     </div>
-  </div>
-<app-search-results></app-search-results>
+</div>
 
 <script>
- document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems, options);
+ $(document).ready(function(){
+    $('.parallax').parallax();
   });
 </script>
-

@@ -34,16 +34,16 @@ spotifyCtrl.getArtist = (req, res) => {
         var data = { 
 
             time : now_string,
-            searchParam : artistName,
-            artist_id : body.artists.items[5]};
+            searchParam : artistName
+        }
         console.log(data)
         fs.appendFile(file, JSON.stringify(data), (err) => {
                 if (err) throw err;
             }),
             console.log('the file has been updated')
+            console.log(body);  
     });
 
-    res.redirect('http://localhost:3000/status');
 }
 
 module.exports = spotifyCtrl;
