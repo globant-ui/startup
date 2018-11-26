@@ -1,7 +1,7 @@
 <div *ngIf='profile'>
 <div class="container">
   <div class="row">
-    <div class="col-md-6 img">
+    <div *ngIf='profile.images.length > 0' class="col-md-6 img">
       <img src="{{profile.images[0].url}}"  alt="" class="img-rounded">
     </div>
     <div class="col-md-6 details">

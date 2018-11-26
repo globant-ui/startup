@@ -27,26 +27,9 @@ export class SearchMusicService {
 
   constructor(private _http:Http, private http:HttpClient) { }
 
- /*  searchMusic(str:string,type='artist'){
-    this.url = 'https://api.spotify.com/v1/search?q='+str+'&limit=5&type='+type;
-    return this._http.get(this.url);
-  } */
-
-/*   getAuthorization(){
-    let authorizationTokenUrl = `https://accounts.spotify.com/api/token`;
-    let access_token = 'YourAccessToken'
-    let headers = new Headers({ 'Authorization': 'Bearer ' + access_token });
-    this.configUrl = 'https://accounts.spotify.com/authorize?client_id='+btoa(this.client_id)+'&response_type=code&redirect_uri='+btoa(this.redirect_uri)+'&scope='+btoa(this.scopes)+'&state=34fFs29kd09'
-    return this._http.post(authorizationTokenUrl, body, options)
-     .pipe(map(data => data.json()))
-      .pipe(tap(token => {
-        this.accessToken = token.access_token;
-        this.tokenType = token.token_type;
-      }, error => console.log(error)));
-  } */
 
 
-  //.pipe(map(res=>res.json()));
+
 
   token(token:string){
     this.accessToken = this.accessToken.concat('Bearer '+ token); 
@@ -63,10 +46,6 @@ export class SearchMusicService {
   };
 
 
-  login(){
-    return this._http.get('https://accounts.spotify.com/authorize?response_type=code&client_id='+btoa(this.client_id)+'&scope='+btoa(this.scopes)+'&redirect_uri='+btoa(this.redirect_uri))
-      .pipe(map(data => data));
-  }
 
   /* getToken() {
     let authorizationTokenUrl = `https://accounts.spotify.com/api/token`;

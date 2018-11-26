@@ -22,14 +22,15 @@
           <div class="well album">
             <div *ngIf='album.images.length > 0'>
               <img src="{{album.images[0].url}}" alt="{{album.name}}" class='album-thumb '>
+            </div>
               <h6>{{album.name}}</h6>
               <a href='https://open.spotify.com/album/{{album.id}}' target="_blank" >Open on Spotify</a>
-            </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
   
- <!--  <iframe src="" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe> -->
+
 </div>

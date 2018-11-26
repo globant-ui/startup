@@ -4,11 +4,29 @@
 }
 .container .img{
     text-align:center;
+    padding: 15px;
+
 }
-.container .details{
-    border-left:3px solid #ded4da;
+
+img {
+    border-radius: 2px;
+    padding: 5px;
+    border: 1px solid white;
 }
+
 .container .details p{
     font-size:15px;
     font-weight:bold;
+}
+
+@media (max-width: 766px) {
+    .container .details{
+        border-top:1px solid #ded4da;
+    }   
+}
+
+@media (min-width: 767px) {
+    .container .details{
+        border-left:1px solid #ded4da;
+    }   
 }
