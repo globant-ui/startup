@@ -64,7 +64,8 @@ loginCtrl.auth= (req, res)=>{
         };
         request.get(options, function(error, response, body) {
           
-          console.log('user id: ', body.id  ,'\n',
+          console.log('*····* You are logged in *····* ','\n',
+                      'user id: ', body.id  ,'\n',
                       'name : ', body.display_name )
         });
         config.token= access_token;

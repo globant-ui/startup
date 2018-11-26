@@ -7,5 +7,5 @@ const spotifyContorller = require('../controllers/spotifyCtrl');
 router.get('/login',loginController.log);
 router.get('/callback',loginController.auth);
 router.get('/status',spotifyContorller.status);
-router.get('/artist',spotifyContorller.getArtist);
+router.get('/artist/:q',spotifyContorller.getArtist);
 module.exports=router;
