@@ -1,20 +1,32 @@
 
 <h2>Want some music?</h2>
-<p class="lead">You can search for any artist that exist at spotify.</p>
-<button type="button" class="btn btn-outline-secondary btn-sm" (click)='showLastSearch()'>Last Searchs</button>
-<div *ngIf='lastSearch && hide'>
-  <div *ngFor='let last of lastSearch'>
+<p class="lead">You can search for any artist or track that exist at spotify.</p>
+<button type="button" class="btn btn-outline-info btn-sm" (click)='showLastSearch()'>Last Searchs</button>
+<div *ngIf='lastSearchArtist && hide'>
+  <h6>Artists:</h6>
+  <div *ngFor='let last of lastSearchArtist'>
     <div class="lastSearch">
      {{last}}
     </div>
   </div>
-</div>
+</div><br>
+<div *ngIf='lastSearchTrack && hide'>
+  <h6>Tracks:</h6>
+  <div *ngFor='let last of lastSearchTrack'>
+    <div class="lastSearch">
+     {{last}}
+    </div>
+  </div>
+</div><br>
+<h6>Chose type:</h6>
+<button type="button" class="btn btn-outline-info btn-sm" (click)='typeChange(ARTIST)'>Artist</button>
+<button type="button" class="btn btn-outline-info btn-sm" (click)='typeChange(TRACK)'>Track</button>
 <form >
   <div class='form-group'> 
     <input type='text' [(ngModel)]='search' placeholder='Search Music...'  (keyup)='searchMusic()' name='search' class='form-control'>
   </div>
 </form>
-<div *ngIf='search'>
+<div *ngIf='(search && artists) && type === ARTIST'>
   <div *ngFor='let artist of artists'>
     <div class="row"> 
       <div class="col-md-12">
@@ -23,6 +35,17 @@
             <img src={{artist.images[0]?.url}} alt='{{artist.name}}' width='45' height='45'>
           </div>
           <h3 >{{artist.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf='(search && tracks) && type === TRACK'>
+  <div *ngFor='let track of tracks'>
+    <div class="row"> 
+      <div class="col-md-12">
+        <div class="search-artist" (click)='openTrack(track)'>
+          <h3 >{{track.name}}</h3>
         </div>
       </div>
     </div>

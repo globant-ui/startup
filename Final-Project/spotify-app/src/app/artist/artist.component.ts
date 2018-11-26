@@ -3,7 +3,7 @@ import { SearchMusicService } from '../services/search-music.service';
 import { Artist, Album } from '../spotify-interface';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
-
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 
 @Component({
@@ -18,6 +18,7 @@ export class ArtistComponent implements OnInit {
 
   constructor(private searchSpotify:SearchMusicService,
               private route: ActivatedRoute,
+              private sanitizer:DomSanitizer
     ) {}
 
   ngOnInit() {
@@ -36,5 +37,8 @@ export class ArtistComponent implements OnInit {
     })
   
   }
-
+  transformUrl(id){
+    let url = 'https://open.spotify.com/follow/1/?uri=spotify:artist:'+id+'&size=detail&theme=dark';
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

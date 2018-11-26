@@ -5,6 +5,7 @@ import { ArtistComponent } from './artist/artist.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'search', component: SearchMusicComponent },
   { path: 'artist/:id', component: ArtistComponent },
   { path: 'profile', component: ProfileComponent },

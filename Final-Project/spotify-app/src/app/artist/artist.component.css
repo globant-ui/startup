@@ -28,7 +28,7 @@ header h3 {
 .artist-albums .well{
     margin: 5px;
     overflow: auto;
-    min-height: 200px;
+    min-height: 300px;
 }
 
 .album {
@@ -44,3 +44,8 @@ header h3 {
     margin: 5px;
     font-weight: lighter;
 }
+
+iframe{
+    display: inline;
+}
+

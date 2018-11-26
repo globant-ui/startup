@@ -65,7 +65,7 @@ export class SearchMusicService {
       }, error => console.log(error)));
   } */
 
-  searchMusic(str:string,type='artist'){
+  searchMusic(str:string,type){
     let header = new Headers();
     header.append('Authorization',  this.accessToken);
     let options = new RequestOptions({ headers: header });
