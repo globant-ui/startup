@@ -11,11 +11,15 @@ export class SearchMusicComponent implements OnInit {
 
   ARTIST = 'artist';
   TRACK = 'track';
+  PLAYLIST = 'playlist';
+
   search:string;
   artists: Artist[];
   tracks:Tracks[];
+  playlists:any;
   lastSearchArtist:string[];
   lastSearchTrack:string[];
+  lastSearchPlaylist:string[];
   hide:boolean = false;
   type:string;
 
@@ -30,7 +34,9 @@ export class SearchMusicComponent implements OnInit {
         this.artists = res.artists.items;
       } else if(this.type === 'track'){
         this.tracks = res.tracks.items;
-        console.log(res);
+      } else if(this.type === 'playlist'){
+        this.playlists = res.playlists.items;
+        console.log(this.playlists); 
       }
     });
   }
@@ -41,6 +47,7 @@ export class SearchMusicComponent implements OnInit {
     .subscribe((res:any)=>{
       this.lastSearchArtist = res.artist;
       this.lastSearchTrack = res.track;
+      this.lastSearchPlaylist = res.playlist;
       console.log(this.lastSearchArtist);
     });
   }
@@ -49,6 +56,10 @@ export class SearchMusicComponent implements OnInit {
   }
   openTrack(track){
     window.open(track.external_urls.spotify);
+    this.spotifyService.sendData(this.search,this.type);
+  }
+  openPlaylist(playlist){
+    window.open(playlist.external_urls.spotify);
     this.spotifyService.sendData(this.search,this.type);
   }
 } 

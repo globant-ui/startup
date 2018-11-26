@@ -3,14 +3,10 @@
     <div>
       <div class="text-header">
         <h3>{{artist.name}}</h3><br>
-       <!--  <iframe [src]='transformUrl(id)' width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe><br> -->
         <span *ngIf='artist.genres.length > 0'>
             Genres: <span *ngFor='let gen of artist.genres' class="badge badge-secondary gen">{{gen}}</span>
         </span>  
       </div>
-      <!-- <div *ngIf='artist.images.length > 0' class="img-header">
-        <img src={{artist.images[0]?.url}} alt='{{artist.name}}' class="circle">
-      </div> -->
       <iframe [src]='transformUrl(id)' width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true" class="img-header"></iframe><br>
     </div>
     <div style="clear:both"></div>

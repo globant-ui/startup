@@ -27,25 +27,9 @@ export class SearchMusicService {
 
   constructor(private _http:Http, private http:HttpClient) { }
 
-
-
-
-
   token(token:string){
     this.accessToken = this.accessToken.concat('Bearer '+ token); 
   }
-
-  generateRandomString = function(length) {
-    let text = '';
-    let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  
-    for (let i = 0; i < length; i++) {
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text;
-  };
-
-
 
   /* getToken() {
     let authorizationTokenUrl = `https://accounts.spotify.com/api/token`;

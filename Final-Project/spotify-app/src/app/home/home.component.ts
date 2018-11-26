@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
       .subscribe((data)=>{
         this.playlist = data;
         this.playlistItems = data.playlists.items;
-        console.log(this.playlistItems);
       });
   }
 }

@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { Router, NavigationCancel } from '@angular/router';
 import { URLSearchParams, } from '@angular/http';
 import {SearchMusicService} from '../services/search-music.service';
-import { Profile } from '../spotify-interface';
+
 
 @Component({
   selector: 'app-profile',
