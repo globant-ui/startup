@@ -12,6 +12,6 @@ router.get('/status',spotifyContorller.status);
 router.get('/Artist/:q',spotifyContorller.getArtist);
 router.get('/artistProfile/:id',spotifyContorller.getArtistTopTracks);
 router.get('/artisTop/:id',spotifyContorller.getArtist);
-router.get('/new',spotifyContorller.getArtist);
+router.get('/new',spotifyContorller.getNewReleases);
 
 module.exports=router;

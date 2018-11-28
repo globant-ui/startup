@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistSearchService } from '../../services/artist-search.service';
-import { NgForm } from '@angular/forms';
+
 
 
 
@@ -20,7 +20,7 @@ export class ArtistSearchComponent implements OnInit {
     return this.searchArtistService.search(this.searchStr)
       .subscribe(res =>
         this.artists = res['items']),
-console.log(this.artists);
+        console.log(this.artists);
   }
 
   ngOnInit() {

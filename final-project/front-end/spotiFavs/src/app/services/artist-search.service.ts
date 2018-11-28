@@ -22,7 +22,6 @@ export class ArtistSearchService {
     });
   }
 
-
   // returns de artist Profile
   getArtist(id: string) {
     return this.http.get(this.URL_API + `artistProfile/${id}`);
@@ -39,12 +38,12 @@ export class ArtistSearchService {
   getProfile() {
     return this.http.get(this.URL_API + 'login');
   }
+
   // shows the "new releases" of spotify
   getNewReleases() {
-    return this.http.get(this.URL_API + 'new').pipe(
-      map(res => {
-        return res['albums'].items;
-      })
-    );
+    return this.http.get(this.URL_API + `new`
+    ).pipe(res => {
+      return res;
+    });
   }
 }

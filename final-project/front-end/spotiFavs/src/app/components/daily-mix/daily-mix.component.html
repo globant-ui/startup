@@ -1,11 +1,9 @@
-
-<div class="carousel">
-  <a class="carousel-item" href="#one!"><img src="https://pbs.twimg.com/media/DXYVpG6U8AEjb8z.jpg"></a>
-  <a class="carousel-item" href="#two!"><img src="https://pbs.twimg.com/media/DXYVpG6U8AEjb8z.jpg"></a>
-  <a class="carousel-item" href="#three!"><img src="https://pbs.twimg.com/media/DXYVpG6U8AEjb8z.jpg"></a>
-  <a class="carousel-item" href="#four!"><img src="https://pbs.twimg.com/media/DXYVpG6U8AEjb8z.jpg"></a>
-  <a class="carousel-item" href="#five!"><img src="https://pbs.twimg.com/media/DXYVpG6U8AEjb8z.jpg"></a>
+<div class="row" style="margin-top: 20%">
+  <a class="waves-effect waves-light btn green" (click)="loadCarousel()">ASDASDASDAS</a>
 </div>
-<div class="row green-text z-depth-5 center" style="margin-top: 2%">
-    <h3 class="">Today's Hit</h3>
+
+<div class="collection">
+  <div *ngFor="let new of news" >
+    <a class="collection-item" href="{{new.external_urls['spotify']}}"> {{new.name}}</a>
+  </div>
 </div>

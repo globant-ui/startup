@@ -4,20 +4,20 @@
       <form>
         <div class="input-field">
           <input class="green" type="search" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchArtist()"
-            placeholder="search Music">
+            placeholder="search Music" autocomplete="off">
           <label class="label-icon" for="search">
             <i class="material-icons">search</i>
           </label>
-
-            <div *ngFor="let artist of artists" style="background-color: black">
-            <li>
-              <img src="{{artist.images['2']?.url}}" alt="">
-              <span>{{artist.name}}</span>
-            </li>
-          </div>
-
+          <ul *ngIf="searchStr != '' " class="collection" style="border:none;height: 300px; overflow: auto">
+            <div *ngFor="let artist of artists">
+              <a href="{{artist.external_urls.spotify}}" class="collection-item left" style="width: 100%;" >
+                <img src="{{artist.images['2']?.url}}" class="circle" height="50" width="50">   {{artist.name}}
+              </a>
+            </div>
+          </ul>
         </div>
       </form>
     </div>
   </nav>
 </div>
+

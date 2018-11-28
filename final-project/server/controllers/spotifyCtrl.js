@@ -17,7 +17,7 @@ spotifyCtrl.status = (req, res) => {
 spotifyCtrl.getArtist = (req, res) => {
     artistName = req.params.q;
     var options = {
-        url: 'https://api.spotify.com/v1/search?q=' + artistName + '&type=artist%2Cartist&limit=5&offset=3',
+        url: 'https://api.spotify.com/v1/search?q=' + artistName + '&type=artist%2Cartist&limit=10&offset=5',
         headers: {
             'Authorization': 'Bearer ' + config.token
         },
@@ -64,7 +64,7 @@ spotifyCtrl.getArtistTopTracks = (req, res) => {
 spotifyCtrl.getNewReleases = (req, res) => {
     Id = req.params.id;
     var options = {
-        url: 'https://api.spotify.com/v1/artists/' + Id + '/top-tracks?country=us',
+        url: 'https://api.spotify.com/v1/browse/new-releases',
         headers: {
             'Authorization': 'Bearer ' + config.token
         },
@@ -72,7 +72,7 @@ spotifyCtrl.getNewReleases = (req, res) => {
     };
 
     request.get(options, function (error, response, body) {
-        res.send(body)
+        res.send(body["albums"]);
         }
     );
 }
