@@ -17,12 +17,17 @@ export class ArtistSearchComponent implements OnInit {
   artists: any[] = [];
 
   searchArtist() {
+
     return this.searchArtistService.search(this.searchStr)
       .subscribe(res =>
-        this.artists = res['items']),
-        console.log(this.artists);
-  }
+        this.artists = res['items']);
 
+  }
+  sendSearchParam() {
+    setTimeout(() => {
+     return this.searchArtistService.saveHistory(this.searchStr);
+    }, 2000);
+  }
   ngOnInit() {
 
   }

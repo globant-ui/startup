@@ -28,37 +28,14 @@ spotifyCtrl.getArtist = (req, res) => {
     });
 }
 
-spotifyCtrl.getArtistProfile = (req, res) => {
-    Id = req.params.id;
+spotifyCtrl.sendSearchs = (req, res) => {
     
-    var options = {
-        url: 'https://api.spotify.com/v1/artists/' + Id,
-        headers: {
-            'Authorization': 'Bearer ' + config.token
-        },
-        json: true
-    };
-
-    request.get(options, function (error, response, body) {
-        res.send(body)
-        }
-    );
+  
 }
 
-spotifyCtrl.getArtistTopTracks = (req, res) => {
-    Id = req.params.id;
-    var options = {
-        url: 'https://api.spotify.com/v1/artists/' + Id + '/top-tracks?country=us',
-        headers: {
-            'Authorization': 'Bearer ' + config.token
-        },
-        json: true
-    };
+spotifyCtrl.save = (req, res) => {
 
-    request.get(options, function (error, response, body) {
-        res.send(body)
-        }
-    );
+    console.log('bla bla ');
 }
 
 spotifyCtrl.getNewReleases = (req, res) => {

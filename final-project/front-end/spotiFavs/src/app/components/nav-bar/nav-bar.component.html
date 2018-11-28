@@ -1,15 +1,31 @@
 <div class="row blue-grey darken-3 ">
-  <div class="col s12 m1">
+  <div class="col s12 m2">
     <div class="section">
-      <a *ngIf="profile == []" class="waves-effect waves-light btn green " href="http://localhost:3000/login">Loggin
-      </a>
-      <a *ngIf="profile != []" href="#" data-target="slide-out" class="sidenav-trigger"><i class="small material-icons">person</i>Profile</a>
+      <a class="waves-effect waves-light btn green "  href="http://localhost:3000/login">Loggin</a>
+      <a class="waves-effect waves-light btn green " id="menu" onclick="$('.tap-target').tapTarget('open')"><i class="small material-icons">person</i></a>
+
+    <!-- Element Showed -->
+
+
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-target="menu">
+      <div class="tap-target-content">
+        <h3><img class="circle" src="{{profile['images']['0']?.url}}" height="50" width="50" alt=""> Welcome!  <h6>{{profile['display_name']}}</h6></h3>
+        
+        <span><i class="tiny material-icons">format_list_numbered</i>Id: {{profile['id']}}</span><br>
+        <span><i class="tiny material-icons">email</i>Email: {{profile['email']}}</span><br>
+        <span><i class="tiny material-icons">public</i>Country: {{profile['country']}}</span><br>
+        <span><i class="tiny material-icons">attach_money</i>Product: {{profile['product']}}</span>
+      </div>
+    </div>
+
+      <a href="#" data-target="slide-out" class="waves-effect waves-light btn green sidenav-trigger"><i class="small material-icons">history</i></a>
     </div>
   </div>
 
 
 
-  <div class="col s12 m5">
+  <div class="col s12 m4">
     <div class="brand-logo right">
       <h5 class="green-text "><i class="material-icons">music_note</i>SpotiFavs</h5>
     </div>
@@ -24,13 +40,7 @@
 <ul id="slide-out" class="sidenav" style="background-color: rgb(0, 0, 0); width: 30%">
   <li>
     <div class="user-view white-text">
-      <img class="circle" src="{{profile['images']['0']?.url}}" alt="">
-      <span><i class="tiny material-icons">account_circle</i>Name: {{profile['display_name']}}</span><br>
-      <span><i class="tiny material-icons">cake</i>Birthdate: {{profile['birthdate']}}</span><br>
-      <span><i class="tiny material-icons">format_list_numbered</i>Id: {{profile['id']}}</span><br>
-      <span><i class="tiny material-icons">email</i>Email: {{profile['email']}}</span><br>
-      <span><i class="tiny material-icons">public</i>Country: {{profile['country']}}</span><br>
-      <span><i class="tiny material-icons">attach_money</i>Product: {{profile['product']}}</span>
+      <h4>Search History</h4>
     </div>
   </li>
 </ul>

@@ -10,10 +10,10 @@
           </label>
           <ul *ngIf="searchStr != '' " class="collection" style="border:none;height: 300px; overflow: auto">
             <div *ngFor="let artist of artists">
-              <a href="{{artist.external_urls.spotify}}" class="collection-item left" style="width: 100%;" >
-                <img src="{{artist.images['2']?.url}}" class="circle" height="50" width="50">   {{artist.name}}
+              <a tarjet="_blank" href="{{artist.external_urls.spotify}}" class="collection-item left"  style="width: 100%;" >
+                <img src="{{artist.images['2']?.url}}" class="circle" height="50" width="50"> {{artist.name}}
               </a>
-            </div>
+           </div>
           </ul>
         </div>
       </form>
