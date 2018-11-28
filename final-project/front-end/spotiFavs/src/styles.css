@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body
  {
-background-image: url(https://store-images.s-microsoft.com/image/apps.32521.13571498826857201.95677c47-950c-4d90-80e4-2359f8f477ff.96e7a8d1-c501-429b-b7eb-3e3ebfe68f62?mode=scale&q=90&h=1080&w=1920);
-background-size: 100% 100%;
-background-attachment: fixed;
+  background: #3a6186;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
  }
 
- app-artist-search {
+ app-nav-bar {
    position: fixed;
    top: 0;
    width: 100%;

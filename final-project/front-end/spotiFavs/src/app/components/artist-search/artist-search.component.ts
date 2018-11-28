@@ -14,16 +14,15 @@ export class ArtistSearchComponent implements OnInit {
 
   constructor(private searchArtistService: ArtistSearchService) { }
   searchStr: string;
-
+  artists: any[] = [];
 
   searchArtist() {
-    console.log(this.searchStr);
-    this.searchArtistService.search(this.searchStr)
-    .subscribe(res => {
-      console.log(res);
-    });
-
+    return this.searchArtistService.search(this.searchStr)
+      .subscribe(res =>
+        this.artists = res['items']),
+console.log(this.artists);
   }
+
   ngOnInit() {
 
   }
