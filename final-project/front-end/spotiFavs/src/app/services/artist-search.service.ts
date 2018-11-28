@@ -34,9 +34,13 @@ export class ArtistSearchService {
       })
     );
   }
+
   // login
   getProfile() {
-    return this.http.get(this.URL_API + 'login');
+    return this.http.get(this.URL_API + 'profile'
+    ).pipe( res => {
+      return res;
+    });
   }
 
   // shows the "new releases" of spotify

@@ -58,7 +58,7 @@ loginCtrl.auth = (req, res) => {
       var access_token = body.access_token;
       config.token = access_token;
       console.log('Your Token is', config.token)
-      res.redirect('http://localhost:3000/profile');
+      res.redirect('http://localhost:4200/');
     } else {
       res.send({
         error: 'invalid_token'

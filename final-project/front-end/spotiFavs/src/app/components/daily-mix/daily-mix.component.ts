@@ -9,19 +9,15 @@ import { ArtistSearchService } from '../../services/artist-search.service';
 })
 export class DailyMixComponent implements OnInit {
   news: any[] = [];
+
+
   constructor(private searchArtistService: ArtistSearchService) {
 
   }
-  loadCarousel() {
-
-
+  ngOnInit() {
     return this.searchArtistService.getNewReleases()
         .subscribe(res =>
-          this.news = res['items']),
-          console.log(this.news);
-  }
-
-  ngOnInit() {
+          this.news = res['items']);
 
   }
 

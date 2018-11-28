@@ -1,9 +1,44 @@
-<div class="row" style="margin-top: 20%">
-  <a class="waves-effect waves-light btn green" (click)="loadCarousel()">ASDASDASDAS</a>
+
+
+
+
+<div class="row center z-depth-5" style="color:white; background-color: rgba(0, 0, 0, 0.699); text-shadow: 3px 2px rgba(14, 163, 0, 0.74)">
+  <h3>Spotify®  New release
+    <i class="small material-icons">
+      music_note
+    </i>
+    <i class="small material-icons">
+      whatshot
+    </i>
+    <i class="small material-icons">
+      trending_up
+    </i>
+  </h3>
 </div>
 
-<div class="collection">
-  <div *ngFor="let new of news" >
-    <a class="collection-item" href="{{new.external_urls['spotify']}}"> {{new.name}}</a>
-  </div>
+
+
+<!-- create the newRealese Albums List -->
+
+<div style=" border:none; height:400px; overflow: auto; border: none;">
+  <ul *ngFor="let new of news" class="collection z-depth-5" style="border: none">
+    <div class="row z-depth-5" style="color:rgb(41, 151, 50);background-color:rgba(0, 0, 0, 0.48); ">
+      <div class="col s2 m1">
+        <img src="{{new.images['2']?.url}}" alt="" height="100">
+      </div>
+      <div class="col s8 m10 left">
+        <div class="chip">Album: {{new.name}}</div><br>
+        <div class="chip">Artist: {{new.artists['0'].name}}</div><br>
+        <div class="chip">tracks: {{new.total_tracks}}</div>
+      </div>
+      <a class="col s2 m1" >
+        <a href="{{new.external_urls['spotify']}}" class="btn-large btn-floating pulse" style="margin-top: 25%">
+          <i class="large material-icons">
+            play_circle_outline
+          </i>
+        </a>
+      </a>
+    </div>
+
+  </ul>
 </div>

@@ -1,14 +1,36 @@
 <div class="row blue-grey darken-3 ">
-    <div class="col s12 m1">
-      <div class="section">
-        <a class="waves-effect waves-light btn green "  href="http://localhost:3000/login">Loggin </a>
+  <div class="col s12 m1">
+    <div class="section">
+      <a *ngIf="profile == []" class="waves-effect waves-light btn green " href="http://localhost:3000/login">Loggin
+      </a>
+      <a *ngIf="profile != []" href="#" data-target="slide-out" class="sidenav-trigger"><i class="small material-icons">person</i>Profile</a>
     </div>
+  </div>
+
+
+
+  <div class="col s12 m5">
+    <div class="brand-logo right">
+      <h5 class="green-text "><i class="material-icons">music_note</i>SpotiFavs</h5>
     </div>
-    <div class="col s12 m6">
-      <div class="brand-logo right">
-        <h5 class="green-text "><i class="material-icons">music_note</i>SpotiFavs</h5>
-      </div>
-    </div>
-  <div class="col s12 m3"></div>
-<app-artist-search></app-artist-search>
+  </div>
+  <div class="col s12 m6">
+    <app-artist-search></app-artist-search>
+  </div>
 </div>
+
+
+
+<ul id="slide-out" class="sidenav" style="background-color: rgb(0, 0, 0); width: 30%">
+  <li>
+    <div class="user-view white-text">
+      <img class="circle" src="{{profile['images']['0']?.url}}" alt="">
+      <span><i class="tiny material-icons">account_circle</i>Name: {{profile['display_name']}}</span><br>
+      <span><i class="tiny material-icons">cake</i>Birthdate: {{profile['birthdate']}}</span><br>
+      <span><i class="tiny material-icons">format_list_numbered</i>Id: {{profile['id']}}</span><br>
+      <span><i class="tiny material-icons">email</i>Email: {{profile['email']}}</span><br>
+      <span><i class="tiny material-icons">public</i>Country: {{profile['country']}}</span><br>
+      <span><i class="tiny material-icons">attach_money</i>Product: {{profile['product']}}</span>
+    </div>
+  </li>
+</ul>
