@@ -1,3 +1,5 @@
-#secret{
-	display:none;
+#oculto {
+	font-style:italic;
+	opacity: 0;
+	transition: 0.5s;
 }
