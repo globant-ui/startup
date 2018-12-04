@@ -1,8 +1,4 @@
-function miFuncion() {
-    var x = document.getElementById("seccionoculta");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+function mostrarSecreto(){
+	var x = document.getElementById("secret");
+	x.style.display = "block";
 }

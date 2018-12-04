@@ -11,20 +11,21 @@ When the page finished loading the section must fade in.-->
 <html>
     <head>
         <title>HTML con JS!</title>
-        <script src="jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="prueba.css">
+        <script src="prueba.js"></script>
     </head>
 
-    <body>
+    <body onload="mostrarSecreto()">
             <header>Cabecera de la pagina</header>
             
             <div class="contenedor">
-                <h1>Esto es una caja de prueba</h1>
-                <h2>No le den mucha importancia a este renglon</h2>
-                <h3>A este menos todavia</h3>
+                <h1>Titulo de prueba</h1>
+                <h2>Subtitulo de prueba</h2>
+                <h3>Subsubtitulo de prueba</h3>
             </div>
 
-            <button>Oa</button>
-
+            <section id="secret">Hello World</section>
+            
         
     </body>
 </html>
