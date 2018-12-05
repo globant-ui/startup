@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <title>HTML con JS!</title>
@@ -17,27 +17,17 @@
                 <h2>Subtitulo de prueba</h2>
                 <h3>Subsubtitulo de prueba</h3>
             </div>
+
+            <script>generate_table()</script>
             
             <section id="oculto">
-                <h1>Hello World</h1>
+                <header>Hello World</header>
                 <p>Ingresa el topico que quieras buscar: <input type="text" id="nombre_topic"></p><br>
-                <button onclick="getOtherDataWithAjax()"> Clickeame!</button><!--muestra el boton que dispara el cartel-->
+                <button onclick="getOtherDataWithAjax()"> Clickeame!</button><!--muestra el boton que dispara el evento-->
                 <p id="destino"></p>
-                <ul id="listaDeRepos">
+                <ul id="listaDeRepos"> <!--Lista que se despliega al recibir los datos del json-->
                 </ul>
             </section>
         
     </body>
 </html>
-
-<!--Create a function to get the response from http://api.icndb.com/jokes/random.
-
-Replace the button's click event with this new function.
-
-Write the response inside the section element.
-
-Create a reusable function to perform AJAX calls. This function must accept a config object and return an ES6 Promise.
-
-If a server error occurs section content must turn red.
-
-Hint: Use the XMLHttpRequest to fetch data from the service.-->
