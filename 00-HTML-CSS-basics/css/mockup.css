@@ -1,0 +1,58 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+html{
+  font-family: 'Lato', sans-serif;
+}
+header,.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.header{
+  height: 25vh;
+  padding: 20px;
+}
+  .header h1{
+    float: left;
+    width: 50%;
+  }
+  .header p{
+    float: right;
+    width:50%;
+  }
+.container{
+
+  }
+.item{
+  position: relative;
+  float: left;
+  width: calc(33% - 10px);
+  margin: 5px;
+}
+  .item img{
+    width:100%;
+    height: auto;
+  }
+.overlay{
+  padding:10px;
+  position: absolute;
+  left:0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  opacity: 0;
+  background: black;
+  transition: 0.5s ease;
+}
+  .overlay p,.overlay h3{
+    font-size: 16px;
+    color:white;
+  }
+.item:hover .overlay{
+  opacity: 0.5;
+}
