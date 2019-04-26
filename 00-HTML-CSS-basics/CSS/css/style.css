@@ -5,16 +5,20 @@ html {
 .header {
 	text-align: center;
 	background-color: #696969;
+	font-size: 46px;
 }
 .footer {
 	text-align: center;
 	background-color: #696969;
+	font-size: 10px;
 }
 .sidebar {
 	background-color: #696969;
+	font-size: 10px;
 }
 .navigation {
 	background-color: #696969;
+	font-size: 12px;
 }
 .content header {
 	text-align: left;
