@@ -1,0 +1,28 @@
+#Table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #Table td, #Table th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  #Table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #Table tr:hover {background-color: #ddd;}
+  
+  #Table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .title{
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      color: blue;
+  }
