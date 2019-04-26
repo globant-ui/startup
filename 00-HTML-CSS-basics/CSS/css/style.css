@@ -2,28 +2,28 @@ html {
 	font-size: 14px;
 }
 
-header {
+.header {
 	text-align: center;
 	background-color: #696969;
 }
-footer {
+.footer {
 	text-align: center;
 	background-color: #696969;
 }
-aside {
+.sidebar {
 	background-color: #696969;
 }
-nav {
+.navigation {
 	background-color: #696969;
 }
-section header {
+.content header {
 	text-align: left;
 	background-color: #FFFFFF;
 }
-section article {
+.content article {
 	background-color: #FFFFFF;
 }
-section footer {
+.content footer {
 	text-align: left;
 	background-color: #FFFFFF;
 }
