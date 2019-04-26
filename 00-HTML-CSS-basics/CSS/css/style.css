@@ -1,0 +1,25 @@
+header {
+	text-align: center;
+	background-color: #696969;
+}
+footer {
+	text-align: center;
+	background-color: #696969;
+}
+aside {
+	background-color: #696969;
+}
+nav {
+	background-color: #696969;
+}
+section header {
+	text-align: left;
+	background-color: #FFFFFF;
+}
+section article {
+	background-color: #FFFFFF;
+}
+section footer {
+	text-align: left;
+	background-color: #FFFFFF;
+}
