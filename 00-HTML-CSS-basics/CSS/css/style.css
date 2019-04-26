@@ -7,27 +7,37 @@ html {
 	background-color: #696969;
 	font-size: 46px;
 }
+
 .footer {
 	text-align: center;
 	background-color: #696969;
 	font-size: 10px;
 }
+
 .sidebar {
 	background-color: #696969;
 	font-size: 10px;
 }
+
 .navigation {
 	background-color: #696969;
 	font-size: 12px;
 }
+
 .content header {
 	text-align: left;
 	background-color: #FFFFFF;
 }
+
 .content article {
 	background-color: #FFFFFF;
 }
+
 .content footer {
 	text-align: left;
 	background-color: #FFFFFF;
+}
+
+[class$="r"] {
+	background-color: #FF00FF;
 }
