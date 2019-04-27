@@ -3,34 +3,76 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  margin:0;
+  padding: 0;
 }
+
 html{
   font-family: 'Lato', sans-serif;
 }
-header,.container{
+body{
   width: 90%;
   margin: 0 auto;
 }
 .header{
   height: 25vh;
-  padding: 20px;
+  padding: 25px;
 }
-  .header h1{
-    float: left;
-    width: 50%;
-  }
-  .header p{
-    float: right;
-    width:50%;
-  }
+.clearfix{
+  clear: both;
+  padding:20px;
+}
 .container{
-
+  width: 100%;
+}
+ 
+.column{
+  padding: 2px;
+  float:left;
+}
+.column.two-thirds { 
+  width: 66.7%;
   }
+  @media all and (max-width: 700px){
+    .column.two-thirds{
+      width:50%;
+    }
+    p.column.two-thirds{
+      width: 100%;
+    }
+}
+ @media all and (min-width: 700px) and (max-width:900px){
+    .column.two-thirds{
+      width:50%;
+    }
+    p.column.two-thirds{
+      width: 50%;
+    }
+}
+
+.column.third { 
+  width: 33.3%;  
+}
+
+@media all and (max-width: 700px){
+    .column.third{
+      width:50%;
+    }
+    h1.column.third{
+      width: 100%;
+    }
+}
+@media all and (min-width: 700px) and (max-width:900px){
+    .column.third{
+      width:50%;
+    }
+    h1.column.third{
+      width: 50%;
+    }
+}
 .item{
   position: relative;
-  float: left;
-  width: calc(33% - 10px);
-  margin: 5px;
+  width: 100%;
 }
   .item img{
     width:100%;
@@ -52,6 +94,7 @@ header,.container{
   .overlay p,.overlay h3{
     font-size: 16px;
     color:white;
+
   }
 .item:hover .overlay{
   opacity: 0.5;
