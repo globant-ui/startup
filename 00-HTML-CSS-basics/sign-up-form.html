@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <header>
+        <h1>Sign-Up</h1>
+        <p>Please,complete the sign-up form to join us</p>
+    </header>
+    <p>The (*) fields are required</p>
+    <form action="">
+        <fieldset>
+                <legend>Personal information:</legend>
+            *First Name:<br>
+                <input type="text" name="firstName" required><br>
+            *Last Name:<br>
+                <input type="text" name="lastName" required><br>
+            *Email:<br>
+                <input type="email" name="email" required><br>
+            *Birthday:<br>
+                <input type="date" name="birthday" required><br>
+            Favorite Sport:<br>
+                <select name="sports"required>
+                    <option value="none">--</option>
+                    <option value="football">Football</option>
+                    <option value="basket">Basketball</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="martialArts">Martial Arts</option>
+                </select><br>
+            Something About you:<br>
+                <textarea name="Userbio" cols="30" rows="10"></textarea> <br>
+                <input type="submit" value="Submit"> <input type="reset">
+        </fieldset>
+    </form>    
+</body>
+</html>

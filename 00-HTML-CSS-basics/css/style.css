@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black;
+}
+html{
+  font: 14px Arial, sans-serif;
+}
+.header{
+  margin: 5px;
+  font-size: 46px;
+}
+.navigation{
+  float: left;
+  margin: 5px;
+  width:24%;
+  height: 500px;
+  font-size: 12px;
+}
+.content{
+  float: left;
+  margin: 4px;
+  font-size: 14px;
+  width: 50%;
+  height: 500px;
+}
+.content article{
+  margin:5px;
+  height: 70%;
+}
+.content .footer{
+  margin: 4px;
+  height:10%;
+}
+.sidebar{
+  float: left;
+  width: 24%;
+  margin:4px;
+  height: 500px;
+  font-size: 10px;
+}
+.footer{
+  clear:left;
+  font-size: 10px;
+  margin: 4px;
+  height: 65px;
+}
+
+[class*="a"],:not([class$="r"]) {
+	background-color: blue;
+}
+[class$="r"]{
+  background-color: magenta;
+}
+ 
