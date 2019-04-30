@@ -9,6 +9,8 @@ const showAlert = () => {
     alert("Think twice, code once!");
 }
 
+
+//Getting response from Random Jokes API
 const getApiResponse = (url) => {
     let sectionOne = document.getElementById("sectionOne");
     fetch(url)
@@ -18,77 +20,106 @@ const getApiResponse = (url) => {
         .then((data) => {
             sectionOne.innerHTML = data.value.joke; /*Replacing sectionOne text with the joke from api*/
         });
-
 }
 
+//********************   Geting repos from API with parameters  *****************************/
+const getRepos = (url) => {
+    document.getElementById("reposTable").removeAttribute("hidden");
 
+    fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            for (let i = 0; i < 10; i++) {
+                var li = document.createElement('li');
+                li.id = "newLi";
+                li.innerHTML = data.items[i].description;
+                document.getElementById("reposList").appendChild(li);
 
+            }
+            repos = data.items;
+        })
+}
 
-/* ****************************Data fetch points 5 y 6 Incomplete******************************************/
+let repos; //Here the array of repos from getRepos() to manipulate the data after
 
-const createCORSRequest = (method, url) => {
-    let xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-        // XHR for Chrome/Firefox/Opera/Safari.
-        xhr.open(method, url, true);
-    } else if (XDomainRequest != "undefined") {
-        // XDomainRequest for IE.
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    } else {
-        // CORS not supported.
-        xhr = null;
+const getDescriptions = () => { //Return an array of descriptions to filter 
+    let filteredRepos = [];
+    for (let i = 0; i < 10; i++) {
+        filteredRepos[i] = repos[i].description;
     }
-    return xhr;
+    return filteredRepos;
 }
 
-// Helper method to parse the title tag from the response.
-const getTitle = (text) => {
-    return text.match('<title>(.*)?</title>')[1];
+const filterItems = (toFilter) => {   //Return an array filtered
+    let reposFiltrados = getDescriptions();
+    return reposFiltrados.filter((el) => {
+        return el.toLowerCase().indexOf(toFilter.toLowerCase()) > -1;
+    })
+
 }
 
-// Make the actual CORS request.
-const makeCorsRequest = () => {
-    // This is a sample server that supports CORS.
-    let url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html'; //to test the response
+const filterRepo = (toFilter) => { //
+    let filteredItems = filterItems(toFilter);
+    document.getElementById("reposList").innerHTML = "";
 
-    let xhr = createCORSRequest('GET', url);
-    if (!xhr) {
-        alert('CORS not supported');
-        return;
+    for (let i = 0; i < filteredItems.length; i++) {
+        console.log("repeticiones : " + i);
+        let li = document.createElement('li');
+        li.id = "newLi";
+        li.innerHTML = filteredItems[i];
+        document.getElementById("reposList").appendChild(li);
     }
 
-    // Response handlers.
-    xhr.onload = () => {
-        let text = xhr.responseText;
-        let title = getTitle(text);
-        document.getElementById("ajax_response").innerHTML = title;
-    };
-
-    xhr.onerror = () => {
-        document.getElementById("ajax_response").style.color = "red"; //IF an error appears section must turn red
-    };
-
-    xhr.send();
 }
 
-//Promises  
 
-let doThat = true;
 
-let promise = new Promise((resolve, reject) => {
-    if (doThat) {
-        resolve("Resolving this!"); //Method invocation with string ass parameter
-    } else reject("rejecting this!")
-});
+/************************************************************** Reutilizable AJAX Call  ************************/
 
-promise.then((message) => { //resolve body / method running
-    console.log(message);
 
-}).catch((message) => {  //Reject body
-    console.log(message);
-});
 
+let config = {
+    method: "GET",
+    url: "http://api.icndb.com/jokes/random",
+    async: true
+}
+
+
+
+const AJAXcall = (config) => {
+    const req = new XMLHttpRequest();
+    req.open(config.method, config.url, config.async);
+
+    let myPromise = new Promise((resolve, reject) => {
+        req.onreadystatechange = () => {
+            if (req.readyState == 4 && req.status == 200) {
+                document.getElementById("ajax_response").style.color = "green"; //Change color to green if success              
+                document.getElementById("ajax_response").innerHTML = "AJAX call working fine";
+                resolve(req.responseText); //the responseText must be an object but its a String
+            }
+            else {
+                if (req.status == 500 || req.status == 401 || req.status == 403) { //chekear otros datos! porq no logro q tire error!
+                    document.getElementById("ajax_response").style.color = "red"; //Change section to red                  
+                    document.getElementById("ajax_response").innerHTML = "AJAX call not working";
+                    reject("ERROR !!!");
+                }
+
+            }
+        }
+
+    });
+    req.send(config.url);
+    return myPromise;
+}
+
+// let promesa = AJAXcall(config);
+// promesa.then((val) =>{
+//     console.log(val+"Promise resolved!!");
+// }).catch((val)=>{
+//     console.log(val +"Promise Rejected!!");
+// });
 
 //******************Point 7 DOM Manipulation */
 
@@ -111,8 +142,8 @@ const matrixGenerator = () => {
 
 
 const createTable = () => { //I made this method only for 3 cases because i dont have where pull info so i made the matrixGenerator() 
-    let matrix = matrixGenerator(); //Here the input matrix to extract de info
-   //First i grab body and create de table and his body
+    let matrix = matrixGenerator(); //Here the matrix to extract de info
+    //First i grab body and create de table and his body
     let body = document.getElementsByTagName("body")[0];
     let table = document.createElement("table");
     let tableBody = document.createElement("tableBody");
@@ -120,8 +151,8 @@ const createTable = () => { //I made this method only for 3 cases because i dont
     for (let x = 0; x < 3; x++) {
         let fila = document.createElement("tr"); //Row
         for (let i = 0; i < 3; i++) {
-            let celda = document.createElement("td"); 
-            let textoCelda = document.createTextNode(matrix[x][i]); 
+            let celda = document.createElement("td");
+            let textoCelda = document.createTextNode(matrix[x][i]);
             celda.appendChild(textoCelda); //inserto texto en celda
             fila.appendChild(celda);
         }
@@ -132,9 +163,16 @@ const createTable = () => { //I made this method only for 3 cases because i dont
     body.appendChild(table);
     // modifica el atributo "border" de la tabla y lo fija a "2";
     table.setAttribute("border", "3");
-    
-  
+
+
 }
 
 
 
+
+
+
+
+
+
+////////////////////////////////////

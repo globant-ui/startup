@@ -1,25 +1,40 @@
+.wraper {
+  float: left;
+  text-align: center;
+  border: 2px solid black;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+#reposTable {  
+  max-width: 400px;
+  position: relative;
+  margin-left: 65%;  
+}
+
+#searchInput {
+  margin-left: 15%;
+}
 section {
 
-    text-align: center; /* Add a stylesheet to the HTML file and use it to center the texts of all section elements.*/
+    text-align: center;/* Add a stylesheet to the HTML file and use it to center the texts of all section elements.*/
     margin-top: 10px;
 }
 
-button {
-    
-   margin: auto;
-   display: block;
-    margin-top: 10px;
-    text-align: center;
+button {    
+    margin: auto;
+     display: block;
+     margin-top: 10px;
+     text-align: center;
 }
 
-h1{
-  text-align: center;
-}
+
 
 table {
-  text-align: center;
-  margin-left: 35%;
-  margin-top: 20px;
+ margin: auto;
+ display: center;
+ margin-top: 10px;
+ text-align: center;
 }
 
 
