@@ -1,0 +1,25 @@
+.container{
+	width:1200px;
+	height: 1000px;
+	margin: 10px auto;
+	padding: 10px;
+
+}
+
+.header, .footer{
+	height: 20%;
+	margin: 20px;
+	border: 1px solid black;
+	background: gray;
+	color: white;
+}
+
+.section{
+	display: block;
+	border: 1px solid black;
+	margin-right: 20px;
+	margin-left: 20px; 
+	background: silver;
+	color: purple;
+}
+

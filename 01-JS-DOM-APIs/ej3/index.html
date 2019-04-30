@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+		function hide(){
+			document.getElementById("hidden").style.display = "none";
+		}
+
+		
+		function ajaxFunction(url, methodType){
+			return new Promise(function(resolve, reject) {
+				/**The XMLHttpRequest() constructor creates a new XMLHttpRequest.*/
+				var req = new XMLHttpRequest();
+				/**The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
+				Requests using GET should only retrieve data.*/
+				req.open(methodType,url);
+				/**onload() function process the response what we receive*/
+				req.onload = function() {
+					/**@200 typically the response you're hoping for when trying to get information from an API*/
+					if(req.status===200){
+						resolve(JSON.parse(req.responseText));
+						/**responseText returns the text received from a server following a request being sent.*/
+					}	
+					else
+						reject(req.status);					
+				};
+				/**The XMLHttpRequest method send() sends the request to the server. */
+				req.send();	
+			})
+		}
+		function showJoke(){
+			var url="http://api.icndb.com/jokes/random";
+ 			var promise=ajaxFunction(url, "GET");
+			promise.then(function(result) { 
+				console.log(result);
+		   		document.getElementById("request").innerHTML =result.value.joke;
+				}, function(error) {
+		    		document.getElementById("request").innerHTML=error.message;
+				});
+		}
+		
+
+	</script>
+</head>
+<body onload="hide()">
+	<div class="container">
+		<header class="header"><h1>Header</h1></header>
+		<section class="section">
+			<p>Section1</p>
+			<section id="hidden">
+				<p>Hello world!</p>
+			</section>
+			<button id="btn" onclick="showJoke()">
+				Button
+			</button>
+			
+			<section id="request">
+				
+			</section>
+			
+		</section>
+		<section class="section">
+			<h1>Seccion2</h1>
+			<p>Section2</p>
+		</section>
+		<section class="section"><p>Section3</p></section>
+		<footer class="footer"><h1>Footer</h1></footer>	
+	</div>
+	
+</body>
+</html>

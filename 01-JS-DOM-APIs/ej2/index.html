@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+		function hide(){
+			document.getElementById("hidden").style.display = "none";
+		}
+		function alertMessage(){
+			alert("Alert message");
+		}
+	</script>
+</head>
+<body onload="hide()">
+	<div class="container">
+		<header class="header"><h1>Header</h1></header>
+		<section class="section">
+			<p>Section1</p>
+			<section id="hidden">
+				<p>Hello world!</p>
+			</section>
+			<button onclick="alertMessage()">
+				Button
+			</button>
+		</section>
+		<section class="section">
+			<h1>Seccion2</h1>
+			<p>Section2</p>
+		</section>
+		<section class="section"><p>Section3</p></section>
+		<footer class="footer"><h1>Footer</h1></footer>	
+	</div>
+	
+</body>
+</html>
