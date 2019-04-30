@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<form method="POST">
+		<p>
+			<label>Nombre</label>
+			<input type="text" name="name" required>
+		</p>
+		<p>
+			<label>Apellido</label>
+			<input type="text" name="lastName" required>
+		</p>
+		<p>
+			<label>Cumplea&ntilde;os</label>
+			<input type="date" name="birthday" max="2019-04-25" required>
+		</p>
+		<p>
+			<label>Correo electronico</label>
+			<input type="email" name="email" required>
+		</p>
+		<p>
+			<label>Deporte favorito</label>
+			<select>
+				<option>Futbol</option>
+				<option>Handball</option>
+				<option>Rugby</option>
+				<option>Hockey</option>
+			</select>
+		</p>
+		<p>
+			<label>Biografia</label>
+			<textarea name="bio" required>Write a small bio here</textarea> 
+		</p>
+		<input type="submit" name="btnSubmit" value="Enviar">
+		<input type="reset" name="btnReset" value="Borrar">
+	</form>
+</body>
+</html>

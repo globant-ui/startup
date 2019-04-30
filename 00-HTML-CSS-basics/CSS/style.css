@@ -1,0 +1,91 @@
+*{
+	margin:0;
+	padding: 0; 
+	color:white;
+	font-size: 14px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.caja{
+	width:1200px;
+	height: 1000px;
+	background: #000 !important;
+	margin: 10px auto;
+	padding: 10px;
+
+}
+
+.header{
+	height: 20%;
+	background: #696969;
+	border-radius:10px;
+	margin: 20px;
+	font-size: 46px;
+	text-align: center;
+	display: block;
+}
+
+
+.footer{
+	height: 20%;
+	background: #696969;
+	border-radius: 10px;
+	margin: 20px;
+	clear: both;
+	font-size: 10px;
+	text-align: center;
+	display: block;
+}
+
+
+.nav{
+	width: 15%;
+	height: 45%;
+	background: #696969;
+	border-radius: 10px;
+	float: left;
+	margin:10px;
+	font-size: 12px;
+	display: inline-block;
+}
+.section{
+	width:63%;
+	height: 45%;
+	background: #696969;
+	border-radius: 10px;
+	float: left;
+	margin: 10px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.aside{
+	height: 45%;
+	width: 15%;
+	background: #696969;
+	border-radius: 10px;
+	margin: 10px;
+	font-size: 10px;
+	display: inline-block;
+}
+
+
+.article{
+	
+	height: 35%;
+	background: #A4A4A4;
+	margin: 20px;
+	border-radius: 10px;
+
+}
+
+[class$="r"]{
+  background: #FF00FF;
+}
+
+[class*="a"]:not([class$="r"]){
+  background: blue;
+}
+
+
+

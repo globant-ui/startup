@@ -1,0 +1,79 @@
+
+
+.container {
+   margin: 0 auto;
+  
+
+}
+
+@media (min-width: 40rem){
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+
+  }
+  
+   .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 30%; }
+  .column.fourth { width: 25%; }
+  .column.sixth{width: 16.6%;}
+  .column.flow-opposite { float: right; } 
+}
+
+h1{
+	font-family: 'Aktiv Grotesk W01 Bold',sans-serif;
+	font-size: 22px;
+}
+
+p{
+	font-family:'AktivGroteskW01-Regular', sans-serif;
+	font-size: 16px;
+}
+
+.contenedorimagen { 
+  position:relative;
+  width: 100%;
+  
+}
+.img{
+  filter: grayscale(100%);
+  width: 100%;
+}
+
+.descripcion{
+  display: none;
+  position:absolute;
+  background-color: rgba(0, 0, 0, .3);
+  top:0;
+  z-index:1;
+  transition-property: filter;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  width: 100%;
+}
+.contenedorimagen :hover .descripcion{
+  display: block;
+  
+}
+.contenedorimagen .img:hover{
+  filter: grayscale(0%);
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
