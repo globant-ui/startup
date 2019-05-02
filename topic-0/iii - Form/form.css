@@ -1,0 +1,15 @@
+input {
+    background: none;
+    border-radius: 1px;
+    border: 1px solid gray;
+}
+
+form {
+    width: 50%;
+}
+
+form div {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
