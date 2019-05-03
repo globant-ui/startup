@@ -1,0 +1,90 @@
+.wraper {
+  float: left;
+  text-align: center;
+  border: 2px solid black;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+#reposTable {  
+  max-width: 400px;
+  position: relative;
+  margin-left: 65%;  
+}
+
+#searchInput {
+  margin-left: 15%;
+}
+section {
+
+    text-align: center;/* Add a stylesheet to the HTML file and use it to center the texts of all section elements.*/
+    margin-top: 10px;
+}
+
+button {    
+    margin: auto;
+     display: block;
+     margin-top: 10px;
+     text-align: center;
+}
+
+
+
+table {
+ margin: auto;
+ display: center;
+ margin-top: 10px;
+ text-align: center;
+}
+
+
+
+/*Here the fade-in animation*/
+.fade-in {
+    animation: fadeIn 3.0s ease forwards;    /*When the page finished loading the section must fade in.*/
+  }
+/* Here the vendor codes to make it compatible with all browsers*/
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
