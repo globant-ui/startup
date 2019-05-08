@@ -108,7 +108,7 @@ article {
 
 
 /*Overriding classes */
-.header,footer {
+[class$="r"]{ /*Finished in r background must be magenta*/
 background-color:magenta;	
 }
 .header {
@@ -117,9 +117,9 @@ background-color:magenta;
 .footer {
 	font-size: 10px;	
 }
-article,nav,aside {
-	background-color: blue;
-}
+[class*="a"]:not([class$="r"] ){ /*Contains an a but not finish with r*/
+	background: blue;
+  }
 .article {	
 	font-size: 14px;
 }
