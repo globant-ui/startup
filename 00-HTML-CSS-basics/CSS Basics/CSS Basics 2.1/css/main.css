@@ -1,7 +1,16 @@
 
-header,footer{ /*  Selecciona todos pero se redeclara el background en los header y footer de section*/
+/* This is the older 
+header,footer{ 
 	background: magenta;
-}
+} */
+
+/*If i have n classes finished in r , we can do : */
+/*Selecting all classes in html and finished in r*/
+[class$="r"]{
+	background: magenta;
+} 
+
+
 
 .container{
 	text-align:center;
