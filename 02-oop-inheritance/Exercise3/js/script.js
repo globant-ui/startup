@@ -1,15 +1,12 @@
 class EventEmitter {
-    func(event, logger) {
-        logger(event, "Triggered");
-    }
-    on(event, logger) {
-        document.addEventListener(event.type, this.func(event, logger));
+    on(event, callback) {
+        document.addEventListener(event, callback);
     }
     emit(event) {
         document.dispatchEvent(event);
     }
-    off(event, logger) {
-        document.removeEventListener(event.type, this.func(event, logger))
+    off(event) {
+        document.removeEventListener(event, callback);
     }
 }
 
@@ -20,27 +17,25 @@ class Actor {
     }
 }
 
-class Movie {
+class Movie extends EventEmitter {
     constructor(name, year, duration) {
+        super();
         this.name = name;
         this.year = year;
         this.duration = duration;
         this.cast = [];
+        this.playEvent = new CustomEvent("play");
+        this.pauseEvent = new CustomEvent("pause");
+        this.resumeEvent = new CustomEvent("resume");
     }
-    play(logger) {
-        let play = new CustomEvent("play");
-        this.on(play, logger);
-        this.emit(play);
+    play() {
+        this.emit(this.playEvent);
     }
-    pause(logger) {
-        let pause = new CustomEvent("pause");
-        this.on(pause);
-        this.emit(pause);
+    pause() {
+        this.emit(this.pauseEvent);
     }
-    resume(logger) {
-        let resume = new CustomEvent("resume");
-        this.on(resume);
-        this.emit(resume);
+    resume() {
+        this.emit(resumeEvent);
     }
     addCast(cast) {
         if (Array.isArray(cast)) {
@@ -52,11 +47,11 @@ class Movie {
 }
 
 class Logger {
-    log(event, info) {
-        console.log(event.type + " " + info);
+    log(event) {
+        console.log(`The ${event}'s event has been emited`);
     }
 }
-
+const logger = new Logger();
 const terminator = new Movie('Terminator I', 1985, 60);
 const arnold = new Actor('Arnold Schwarzenegger', 50);
 const actors = [
@@ -67,4 +62,5 @@ const actors = [
 
 terminator.addCast(arnold);
 terminator.addCast(actors);
-console.log(terminator.cast);
+
+terminator.on('play', logger.log("play"));
