@@ -1,0 +1,45 @@
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+p.oculto {
+    visibility: hidden;
+}
+
+p.visible {
+    visibility: visible;
+}
+
+ul.lista {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    display: flexbox;
+    float: right;
+}
+
+#pa {
+    display: none;
+}
+
+#p1 {
+    font-family: 'Droid serif', serif;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 15px;
+    margin: auto;
+    width: 100%;
+}
+
+div {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
