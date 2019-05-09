@@ -51,6 +51,18 @@ class Logger {
         console.log(`The ${event}'s event has been emited`);
     }
 }
+
+let Social = {
+    share(friendName) {
+        console.log(friendName + " shares " + this.title);
+    },
+    like(friendName) {
+        console.log(friendName + " likes " + this.title);
+    }
+};
+
+Object.assign(Movie.prototype, Social);
+
 const logger = new Logger();
 const terminator = new Movie('Terminator I', 1985, 60);
 const arnold = new Actor('Arnold Schwarzenegger', 50);
@@ -62,5 +74,5 @@ const actors = [
 
 terminator.addCast(arnold);
 terminator.addCast(actors);
-
-terminator.on('play', logger.log("play"));
+terminator.share("Chuck Norris");
+terminator.like("Chuck Norris");
