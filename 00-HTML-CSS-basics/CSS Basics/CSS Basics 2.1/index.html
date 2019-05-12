@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS PRACTICE</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <link id="LinkCSS" rel="stylesheet" href="css/firstLayout.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  
+  
+    <header class="header">&lt; Header&gt; </header>
+    <nav class="nav">&lt; Nav&gt; </nav>
+
+    <section class="section">
+      &lt; Section&gt; 
+      <header class="sectionHeader">&lt; Header&gt; </header>
+      <article class="article">  <p>&lt; Article&gt;    </p>
+            <button onClick="changeCSS('css/main.css',1)">Worked Layout</button>  
+            <button onClick="changeCSS('css/firstLayout.css',1)">First Layout</button>     
+      </article>
+      
+      <footer class="sectionFooter">&lt; Footer&gt; </footer>
+    </section>
+
+    <aside class="aside">&lt; Aside&gt; </aside>
+    <footer class="footer">&lt; Footer&gt; </footer>
+
+  
+
+
+<!--Out of de container i made a div with nline style for excercise 2.3/7-->
+  <div class="oh-no-inline-styles" style="background:red"> Red Background inline style override green in css</div>
+  <!--Background is red but we can override this in css file with an !important-->
+
+
+
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/actions.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
