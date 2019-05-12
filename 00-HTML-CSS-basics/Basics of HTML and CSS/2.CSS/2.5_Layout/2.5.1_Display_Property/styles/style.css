@@ -1,0 +1,49 @@
+*{
+  box-sizing : border-box;
+  font-family : "Palatino Linotype","Times New Roman";
+}
+.body{
+  background-color: rgb(31, 30, 30)
+}
+.header{
+  background-color : grey;
+  display : block;
+}
+.navigation{
+  display: inline-block;
+  width : 200px;
+  height : 200px;
+  background-color : lightblue
+}
+.navigation ul{
+  position: relative;
+}
+.navigation ul li {
+  position: relative;
+  list-style-type : none;
+}
+
+.content{
+  display: inline-block;
+  width : 200px;
+  height : 400px;
+
+  background-color : purple
+}
+.content header {
+  position : relative;
+}
+.mid-article p {
+  position: relative;
+}
+.sidebar{
+  display: inline-block;
+  width : 200px;
+  height : 200px;
+
+  background-color : pink
+}
+.footer{
+  display : block;
+  background-color : green
+}

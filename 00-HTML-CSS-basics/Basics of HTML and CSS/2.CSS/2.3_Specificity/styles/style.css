@@ -1,0 +1,105 @@
+*{
+  font-family : "Palatino Linotype", "Times New Roman";
+  font-size : 14px;
+  font-weight : bold; /* EXC 6) In this case, considering that there aren't any font-weight declarations in any of the 
+  classes defined earlier (header, footer, content, navigation and their correspondent font sizes), it's possible to apply 
+  'font-weight : bold;' without inconvenience. If, however, the classes mentioned earlier had any sort of font-weight applied to them,
+  then this global font-weight wouldn't have any effect, unless we append the  !important declaration to it, so that it can win over 
+  other declarations, no matter how specific.*/
+  color : #5a5858;
+}
+.container{
+  width : 100%;
+}
+.header {
+  width : 100%;
+  height : 10%;
+  margin-bottom : 1%;
+  background-color : #a5a4a4;
+  background-color : magenta; /* EXC 4) Due to the fact that this new background color comes last in order, the header
+  will actually be magenta. This will be the case of all other classes ending in -r*/
+}
+.header h1 {
+  text-align : center;
+  font-size : 46px; /*EXC 3) Here, the new font-size overrides the general one (14px)
+  due to the fact that I'm using a class and a descendant selector, increasing the specificity*/
+}
+.navigation {
+  width : 20%;
+  height : 70%;
+  background-color : #baa88b;
+  position : absolute;
+  background-color : blue; /* EXC 5) The original background color is overrun by the new one (blue)*/
+}
+.navigation ul {
+  padding : 30%;
+}
+.navigation ul li {
+  list-style-type : none;
+  margin : 20%;
+}
+.navigation ul li a{
+  text-decoration : none;
+  color : grey;
+  font-size : 12px; /* EXC 3) In this case, the use of classes and descendant selectors allow the original 
+  font-size(14px) to be overrun by a new one (12px)*/
+}
+.sidebar {
+  width : 20%;
+  height : 70%;
+  background-color : #baa88b;
+  position : absolute;
+  right : 0%;
+  background-color : magenta; /* EXC 4) */
+}
+.sidebar h3 {
+  text-align : center;
+}
+.sidebar p {
+  text-align : center;
+  padding : 5%;
+  font-size : 10px; /* EXC 3) The original size (14px) is overrun due to the greater specificity attained through 
+  the use of descendant selectors*/
+}
+.content {
+  /* EXC 3) In this case, it wouldn't be necessary to update the font-size, since it's the same as
+  the one initially established for all elements.*/
+  width : 60%;
+  height : 70%;
+  background-color : #d8ccb8;
+  position : absolute;
+  right : 20%;
+
+}
+.mid-sect-article {
+  background-color : #e2c79e;
+  background-color : blue; /* EXC 5) */
+}
+.mid-sect-header h2 {
+  text-align : center;
+}
+.mid-sect-article p {
+  padding : 10%;
+  margin : 1%;
+  text-align : center;
+}
+.mid-sect-footer{
+  text-align : center;
+  background-color : #a5a4a4;
+  margin : 2%;
+  background-color : magenta; /* EXC 4) */
+}
+.footer {
+  position : absolute;
+  bottom : 0;
+  width : 100%;
+  height : 60px;
+  background-color : #a5a4a4;
+  background-color : magenta; /* EXC 4) Here, the second background-color option (magenta) is declared AFTER the first one.
+  Therefore, it's last in terms of order, and so the footer will become magenta.*/
+}
+.footer p {
+  text-align : center;
+  font-size : 10px; /* EXC 3) Here, the new font-size overrides the general one (14px)
+  due to the fact that I'm using a class and a descendant selector, increasing the specificity (same as in the case of the header)*/
+}
