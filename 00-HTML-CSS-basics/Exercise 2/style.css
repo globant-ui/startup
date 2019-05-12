@@ -1,0 +1,61 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+
+}
+
+
+header,footer,aside,nav {
+    background-color: blueviolet;
+    margin: 1%;
+    height: 25vh;
+}
+
+header,footer {
+    text-align: center;
+}
+
+.header {
+    font-size: 46px;
+   
+}
+
+
+[class*="a"]{
+    background-color: blue;
+}
+
+[class$="r"]{
+    background-color: magenta;
+}
+
+.footer {
+    font-size: 10px;
+    float: left;
+    clear: both;
+    width: 100%
+}
+
+.content {
+    font-size: 14px;
+    margin: 1%;
+    width: 50%;
+    float: left;
+    height: 25vh;
+}
+
+.content header,footer{
+    height: 5vh;
+}
+
+.navigation {
+    font-size: 12px;
+    width: 20%;
+    float: left;
+}
+
+.sidebar {
+    font-size: 10px;
+    width: 20%;
+    float: left;
+}
