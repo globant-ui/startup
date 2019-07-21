@@ -1,0 +1,2 @@
+IV) Considering that the viewport tag is composed of many important elements, without such tag, the efectivity of all those elements will be lost. This means that, for example, without the ' content= width=device-width ' part, we would not be able to count on a set width for the page depending on the screens we visualize it from. Therefore, removing this tag would greatly affect our capability for visualizing the site in diferent mobile devices and different-sized screens.
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">

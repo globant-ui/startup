@@ -1,0 +1,8 @@
+Whenever we're using inline styles, the only way we have to override them is to use the !important declaration. For example:
+HTML -->
+	<div class="oh-no-inline-styles" id="inline" style="background : red"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+
+CSS-->
+	.oh-no-inline-styles  {
+   		 background-color : green!important;
+	}

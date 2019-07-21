@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+</head>
+<body>
+  <h1>Sign up:</h1>
+  <form>
+    <label for="first-name">First Name:</label>
+    <br>
+    <input type="text" id="first-name" placeholder="John" required minlength="3">
+    <br><br>
+    <label for="last-name">Last Name:</label>
+    <br>
+    <input type="text" id="last-name" placeholder="Doe" required minlength="2">
+    <br><br>
+    <label for="email">Email Address:</label>
+    <br>
+    <input type="email" id="email" placeholder="johnD@gmail.com" required>
+    <br><br>
+    <label for="birth_date">When is your birthday?</label>
+      <br>
+      <input type="date" id="birth_date" required>
+    <br><br>
+    <label for="fav_sport">Choose your favourite sport:</label>
+      <br>
+      <select required name="sports" id="fav_sport">
+        <option value="">Choose</option>
+        <option value="Football">Football</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Golf">Golf</option>
+        <option value="Basketball">Basketball</option>
+      </select>
+    <br><br>
+      <label for="bio">Tell us something about you:</label>
+    <br><br>
+      <textarea name="user_bio" id="bio" cols="30" rows="10" required></textarea>
+    <br>
+    <button type="submit">Submit</button> 
+    <button type="reset">Clear form</button>
+  </form>
+</body>
+</html>

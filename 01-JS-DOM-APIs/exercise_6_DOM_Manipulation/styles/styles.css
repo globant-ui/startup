@@ -1,0 +1,61 @@
+body {
+  background-color : rgb(166, 166, 245);
+}
+.wrapper {
+  display : grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  grid-template-rows: 50px 300px 200px 50px;
+  grid-template-areas : 'header header header header'
+                        'section-one section-one section-two section-two'
+                        'hidden-section hidden-section hidden-section hidden-section'
+                        'footer footer footer footer'; 
+  grid-gap : 10px;
+}
+.header {
+  grid-area : header;
+  background-color : rgba(67, 67, 129, 0.76);
+}
+.header h1 {
+  margin : 0%;
+  padding : 5px;
+  text-align : center;
+}
+.section1 {
+  grid-area : section-one;
+  background-color : rgba(67, 67, 129, 0.76);
+}
+.section1 h2, p {
+  padding : 1%;
+  text-align : center;
+}
+.section2 {
+  grid-area : section-two;
+  background-color : rgba(67, 67, 129, 0.76);
+}
+.section2 h2, p {
+  padding : 1%;
+  text-align : center;
+}
+.hidden-section {
+  grid-area : hidden-section;
+  padding : 2%;
+  opacity : 0;
+  transition : opacity;
+  transition-duration : .90s; 
+  transition-timing-function : ease-in-out;
+  background-color : rgba(67, 67, 129, 0.76);
+  text-align : center;
+}
+.hidden-section-show {
+  opacity : 1;
+}
+.hidden-section table {
+  margin-left : auto;
+  margin-right : auto;
+  border : 1px solid black;
+}
+.footer {
+  grid-area : footer;
+  background-color : rgba(67, 67, 129, 0.76);
+  text-align : center;
+}
