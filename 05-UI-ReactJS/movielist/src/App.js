@@ -17,7 +17,7 @@ class App extends Component {  /*note: child doesn't chage props, only change st
         {id: 2 , name: "The Shining"},
       ],
       nextId: 3
-    }
+    };
 
     this.addMovie = this.addMovie.bind(this);
     this.removeMovie = this.removeMovie.bind(this);
